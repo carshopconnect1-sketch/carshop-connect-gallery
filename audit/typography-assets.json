@@ -1,0 +1,34 @@
+{
+  "family": "Josefin Sans",
+  "package": "@fontsource/josefin-sans",
+  "version": "5.3.0",
+  "license": "OFL-1.1",
+  "licenseFile": "public/assets/fonts/josefin-sans-OFL.txt",
+  "date": "2026-09-15",
+  "assets": [
+    {
+      "file": "public/assets/fonts/josefin-sans-latin-400-normal.woff2",
+      "source": "prototype/node_modules/@fontsource/josefin-sans/files/josefin-sans-latin-400-normal.woff2",
+      "weight": 400,
+      "sha256": "242e98782313218a60ac5397a94a49bbe4cf3dbf4ca31039acacd801d957b13a",
+      "sourceMatches": true,
+      "httpStatus": 200
+    },
+    {
+      "file": "public/assets/fonts/josefin-sans-latin-500-normal.woff2",
+      "source": "prototype/node_modules/@fontsource/josefin-sans/files/josefin-sans-latin-500-normal.woff2",
+      "weight": 500,
+      "sha256": "5bea0a1c4f8083b261569b8f78c79ceaba9a1f31ebc4248ec99006f253e1bca6",
+      "sourceMatches": true,
+      "httpStatus": 200
+    },
+    {
+      "file": "public/assets/fonts/josefin-sans-latin-600-normal.woff2",
+      "source": "prototype/node_modules/@fontsource/josefin-sans/files/josefin-sans-latin-600-normal.woff2",
+      "weight": 600,
+      "sha256": "56c4c27838da388e0b669e99a58034dc17c42ca551d4ae97fe904d00a728c2e9",
+      "sourceMatches": true,
+      "httpStatus": 200
+    }
+  ]
+}

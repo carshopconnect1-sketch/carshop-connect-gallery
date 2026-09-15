@@ -1,0 +1,1164 @@
+{
+  "files": 396,
+  "rawRecords": 3500,
+  "deduplicated": 168,
+  "duplicateDetails": [
+    {
+      "kept": "suzuki_jimnysierra.html",
+      "omitted": "suzuki_jimnysierra.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/05/IMG_9020.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah-voxy-esquire-3row.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/03/B4F186E4-FBCF-43D6-BBCA-ADA3087BC583.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/10/IMG_5541.jpg"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/07/2_IMG_4579.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/11/1396-ide-2.jpg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/05/0944-ide-2-1.jpg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/01/0723-ide-3.jpg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/12/DSC_0096.jpg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/11/0605-ide-1.jpg.webp"
+    },
+    {
+      "kept": "toyota_noah.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/03/B4F186E4-FBCF-43D6-BBCA-ADA3087BC583.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/06/IMG_3617.jpeg"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/09/IMG_4524.jpeg"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/10/IMG_2050.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/09/IMG_8717.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/07/IMG_1615.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/07/66C44950-A97F-4590-A5B5-6C4AE4620C25.jpeg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/06/IMG_3094.jpg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/03/cec2f3de82f2010c35665b199416ee86e43d1335.71.9.8.3.jpg.webp"
+    },
+    {
+      "kept": "toyota_noahhybrid.html",
+      "omitted": "toyota_noah_series.html",
+      "image": "https://refinad.com/wp-content/uploads/2019/12/0076.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_01.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/01.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/image-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/251220145805578.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/12/IMG_4548.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/11/IMG_2700.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/10/20251011_144931.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/10/IMG_3928.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/07/image0.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/07/IMG_7022.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/1748161063532.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/IMG_5674.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/IMG_2725.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/IMG_7335.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/20250505_082413.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/04/IMG_8732.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/04/image-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/04/IMG_9920.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/02/IMG_0974.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/02/IMG_1068.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/02/IMG_2154.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/01/IMG_4829.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2025/01/1736130563528.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/11/IMG_8393.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/11/IMG_0695.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/10/IMG_7524.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/07/489af31fc07d748621732ffdec5038859c9763cc.54.9.8.3.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/07/IMG_0955-e1719896176473.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/06/IMG_0329.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/05/IMG_4923.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/03/IMG_7854.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/03/IMG_3659-e1709616860816-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/03/IMG_2120-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2024/01/IMG_6708-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/12/IMG_6333-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/12/A571989F-0CD8-473F-AE96-1EB63E67C4C9-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/11/372149fe-5c8b-4cd4-ba5c-949cfbcac533-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/07/IMG_5442.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/07/0fc40fe6-1d23-4169-9235-a8553e8319bb-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/07/cd3e2e173438726c1dd8a49dc32c0c320194d255.08.9.8.3-e1689646770969-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/06/A014FE90-7B3C-41D1-B68F-855C5AA2F1CD-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/06/1685867572091-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/05/EA876DD7-E6B9-489D-909A-6E7BFF84EA63-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/05/8d4781ccab9077b1f91c2c55a62f532a5b89125e.13.9.8.3-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/05/IMG_5401-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/05/IMG_1276-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/04/20230410_090053-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/04/53D2BD73-A7E5-4844-8AFD-284C243CFE55-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/02/463D9911-6E38-4DB9-B5FD-D39F16DB6395-2.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/02/a0b404a543a18a4183b05df37686fa36f5e911bc.98.9.8.3-1.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2023/01/148F1E1A-F6C6-4ED1-8193-374FB71FB27B-1-e1712542148707.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/12/2023-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/12/e6f3d93f28bdd462ff25d33dd53fc70d0f8f89e8.83.9.8.3-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/11/C1439BC6-BEC3-4A61-AC10-1D996CDB9848.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/10/DSC_0215-2.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/08/F188F797-6E67-4DDF-A030-AEF4C6813D84.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/05/1660.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/05/5E15DEF0-723F-4D16-AF8B-1622A7420F81.jpeg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/05/1543.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2022/01/1524-ide-1-3.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/12/1463-ide-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/10/1358-ide-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/10/1250-ide-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/08/1172-ide-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/07/1106-ide-1-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2021/05/0857-ide-2-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2020/12/0625-ide-2.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2020/09/0512-ide-3.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2020/09/0374-ide-2.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://sandii.net/wp-content/uploads/2019/11/1559599155484-1.jpg"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2026/01/image1-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/12/IMG_2966.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/12/IMG_0958.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/10/IMG_2834.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/10/IMG_2772.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/08/IMG_7762.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/07/IMG_20250712_064440.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/06/IMG_9719.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/06/17485066342756076513460577657986.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/05/IMG_1025.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/12/IMG_8143.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/11/0_IMG_2273.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/11/5399664_533846214299877793.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/10/IMG_4647.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/10/IMG_2673.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/06/Jimny_JB64W-33.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/06/022c452d03b7500d74bd53cf2bcf95de.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/05/IMG_5131.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/03/IMG_5273.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/03/IMG_9697.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/12/FC1711B7-7372-420E-B6E8-BBB404BDE46E-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/12/8E547762-860A-45FD-8CBC-9A1C80FB36B0-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/12/8E547762-860A-45FD-8CBC-9A1C80FB36B0-3.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/08/c43b9956-13e2-4f70-b262-20c381797267.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/07/3467-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/06/a7c5588474d3f25556c145555229ad13.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/05/ad9a425cb5d033bcff727a9ca092203a3f64ee35.56.9.8.3.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/01/3091.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/01/6447C128-DB65-4F02-B65C-5728EE3AC9A5-2.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/12/2033-1-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/12/50060248b8deee923875b2af753eb73dd18f68f5.78.9.8.3.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/12/1998-2.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/12/1984.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/11/3DBC8175-3B77-4F42-AF0F-68D001B931D7-2.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/10/Polish_20221022_125846977.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/09/B88A965D-D5AF-4B94-844A-E4D3B4E9D905-2.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/09/20220807_144023_r.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/09/DSC_1062.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/08/DSC_0293.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/08/DSC_1607.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/06/IMG_7198.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/06/IMG_7033-4-scaled.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/06/1704.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/05/66369FFA-B639-4982-A766-3075BBC2F171-1.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/05/B6C780F7-173E-4F7D-BE9B-875CFF88F5FF-1-2.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/05/1593-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/12/1418-ide-2.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/11/1388-ide-1.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/10/0976-ide-2.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/10/1003-ide-2.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/09/1239-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/08/1171-ide-1-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/06/1027-ide-1-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/05/0973-ide-4-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/05/0890-ide-2-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/05/0865-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/12/IMG_20200809_101842-2.jpg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/11/0645-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/11/0686-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/10/0468-ide-2.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/07/0392-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/07/0407-ide-1.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/05/IMG_9275.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/01/00902F617BE0-2C2D-4A98-BD78-9052ED4FDE73_oe.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "suzuki_jimny.html",
+      "omitted": "suzuki_jimny_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2019/12/0073IMG_1824.jpg-1.jpeg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2025/06/IMG_1992.jpeg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2024/07/2024-07-18-10-13-28.jpeg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/12/d3a78bd693829f0b8ba14d48e3207c1b.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/05/71B381A2-A47E-4BFB-9610-09469AD95DD7.jpeg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/04/f959a25ad5c77a39150dffd71a166a4eddbd7bd0.37.9.8.3.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/03/fe772d0b-984e-44e3-86cb-67b4bef262e3.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/03/5be072aad1e8ec139ca13aba0be7fba4ee2f1817.18.9.8.3.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2023/03/20230224_163442.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/11/A5FFD080-0884-433C-841F-BB364940CB8E.jpeg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/08/IMG_3271.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2022/05/IMG20220410111710-scaled.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2021/12/1419-ide-2.jpg.webp"
+    },
+    {
+      "kept": "toyota_harrier.html",
+      "omitted": "toyota_harrier_combined.html",
+      "image": "https://refinad.com/wp-content/uploads/2020/12/0522-ide-1.jpg.webp"
+    }
+  ],
+  "excluded": [
+    {
+      "file": "mercedes_aclass.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 144
+    },
+    {
+      "file": "mercedes_bclass.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 1
+    },
+    {
+      "file": "mercedes_cclass.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 144
+    },
+    {
+      "file": "mercedes_eclass.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 144
+    },
+    {
+      "file": "mercedes_vclass.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 144
+    },
+    {
+      "file": "welfare_welfare-cx5.html",
+      "reason": "vehicle identity conflict; quarantined for source review",
+      "count": 1
+    }
+  ],
+  "caseCount": 2897,
+  "makers": 24,
+  "cars": 353,
+  "brands": {
+    "Refinad": 1502,
+    "Sandii": 1097,
+    "Dotty": 155,
+    "IXUS": 143
+  },
+  "sourceDate": "2026-06-04",
+  "catalogBytes": 1100444,
+  "featured": [
+    {
+      "id": "33b662261b8e",
+      "maker": "スズキ",
+      "car": "ジムニー",
+      "brand": "Refinad",
+      "series": "Heritage Mesh",
+      "category": "seatcover",
+      "image": "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg",
+      "photoCount": 1,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/suzuki_jimny.html#card-0",
+      "hasReview": false,
+      "colorName": "",
+      "colors": [],
+      "thumbnail": "/assets/gallery/33b662261b8e-480.webp",
+      "previewImage": "/assets/gallery/33b662261b8e-960.webp"
+    },
+    {
+      "id": "1dd0d70f1d43",
+      "maker": "ダイハツ",
+      "car": "ムーヴキャンバス",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2025/12/DSC_0160.jpg",
+      "photoCount": 4,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/daihatsu_movecanbus.html#card-3",
+      "hasReview": false,
+      "colorName": "アクアマリン",
+      "colors": [
+        "blue"
+      ],
+      "thumbnail": "/assets/gallery/1dd0d70f1d43-480.webp",
+      "previewImage": "/assets/gallery/1dd0d70f1d43-960.webp"
+    },
+    {
+      "id": "374657385fa0",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "category": "seatcover",
+      "image": "https://refinad.com/wp-content/uploads/2025/08/IMG_4213.jpeg.webp",
+      "photoCount": 5,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/toyota_hiace2.html#card-87",
+      "hasReview": true,
+      "colorName": "ブラック",
+      "colors": [
+        "black"
+      ],
+      "thumbnail": "/assets/gallery/374657385fa0-480.webp",
+      "previewImage": "/assets/gallery/374657385fa0-960.webp"
+    },
+    {
+      "id": "e77c21564a8f",
+      "maker": "ホンダ",
+      "car": "N-BOX・N-BOXカスタム",
+      "brand": "Sandii",
+      "series": "オールドカヌレ",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/IMG_20260119_091304568_HDR_copy_2313x3072.jpg",
+      "photoCount": 4,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/honda_nbox.html#card-0",
+      "hasReview": true,
+      "colorName": "キャメル",
+      "colors": [
+        "brown"
+      ],
+      "thumbnail": "/assets/gallery/e77c21564a8f-480.webp",
+      "previewImage": "/assets/gallery/e77c21564a8f-960.webp"
+    },
+    {
+      "id": "2b00887e3574",
+      "maker": "スズキ",
+      "car": "ハスラー",
+      "brand": "Sandii",
+      "series": "カヌレ",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/IMG_3975.jpeg",
+      "photoCount": 3,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/suzuki_hustler.html#card-2",
+      "hasReview": false,
+      "colorName": "ベージュ",
+      "colors": [
+        "beige"
+      ],
+      "thumbnail": "/assets/gallery/2b00887e3574-480.webp",
+      "previewImage": "/assets/gallery/2b00887e3574-960.webp"
+    },
+    {
+      "id": "4d4380a47a7b",
+      "maker": "トヨタ",
+      "car": "アルファード",
+      "brand": "Refinad",
+      "series": "Quilt Series",
+      "category": "seatcover",
+      "image": "https://refinad.com/wp-content/uploads/2021/03/0816-ide-1.jpg.webp",
+      "photoCount": 3,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/toyota_alphard.html#card-20",
+      "hasReview": true,
+      "colorName": "ブラック",
+      "colors": [
+        "black"
+      ],
+      "thumbnail": "/assets/gallery/4d4380a47a7b-480.webp",
+      "previewImage": "/assets/gallery/4d4380a47a7b-960.webp"
+    },
+    {
+      "id": "ed4a78adcd33",
+      "maker": "三菱",
+      "car": "デリカ:D5",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "category": "seatcover",
+      "image": "https://refinad.com/wp-content/uploads/2025/02/IMG_7913.jpeg-1.jpg.webp",
+      "photoCount": 5,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/mitsubishi_delicad2.html#card-0",
+      "hasReview": true,
+      "colorName": "ブラック",
+      "colors": [
+        "black"
+      ],
+      "thumbnail": "/assets/gallery/ed4a78adcd33-480.webp",
+      "previewImage": "/assets/gallery/ed4a78adcd33-960.webp"
+    },
+    {
+      "id": "883b0a01de5d",
+      "maker": "トヨタ",
+      "car": "シエンタ",
+      "brand": "Sandii",
+      "series": "ビスキュイ",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2024/07/IMG_2330.jpeg",
+      "photoCount": 4,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/toyota_sienta.html#card-4",
+      "hasReview": false,
+      "colorName": "スノーホワイト",
+      "colors": [
+        "white"
+      ],
+      "thumbnail": "/assets/gallery/883b0a01de5d-480.webp",
+      "previewImage": "/assets/gallery/883b0a01de5d-960.webp"
+    },
+    {
+      "id": "81a9c0f96626",
+      "maker": "ルノー",
+      "car": "ルノー カングー",
+      "brand": "Sandii",
+      "series": "CANELE GLACE カヌレグラッセ シリーズ",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2021/02/1030-ide-1.jpg",
+      "photoCount": 2,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/renault_kangoo.html#card-0",
+      "hasReview": true,
+      "colorName": "マスタード",
+      "colors": [
+        "yellow"
+      ],
+      "thumbnail": "/assets/gallery/81a9c0f96626-480.webp",
+      "previewImage": "/assets/gallery/81a9c0f96626-960.webp"
+    },
+    {
+      "id": "0a5efd469552",
+      "maker": "フィアット",
+      "car": "FIAT/フィアット500/500Cチンクエチェント",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2021/09/1224-ide-1-1.jpeg",
+      "photoCount": 4,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/fiat_fiat500-500c.html#card-0",
+      "hasReview": false,
+      "colorName": "アクアマリン",
+      "colors": [
+        "blue"
+      ],
+      "thumbnail": "/assets/gallery/0a5efd469552-480.webp",
+      "previewImage": "/assets/gallery/0a5efd469552-960.webp"
+    },
+    {
+      "id": "303573e8f84f",
+      "maker": "トヨタ",
+      "car": "ヤリス",
+      "brand": "Refinad",
+      "series": "Old Leather Series",
+      "category": "seatcover",
+      "image": "https://refinad.com/wp-content/uploads/2024/08/DSC_0021.jpg.webp",
+      "photoCount": 5,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/toyota_yaris.html#card-2",
+      "hasReview": true,
+      "colorName": "キャメル",
+      "colors": [
+        "brown"
+      ],
+      "thumbnail": "/assets/gallery/303573e8f84f-480.webp",
+      "previewImage": "/assets/gallery/303573e8f84f-960.webp"
+    },
+    {
+      "id": "18f9ca69a9aa",
+      "maker": "スズキ",
+      "car": "ラパン",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "category": "seatcover",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/20251224_085705.jpg",
+      "photoCount": 3,
+      "galleryUrl": "https://seatcover.jp/gallerys/gallery/suzuki_lapin.html#card-0",
+      "hasReview": false,
+      "colorName": "シルキーベージュ",
+      "colors": [
+        "beige"
+      ],
+      "thumbnail": "/assets/gallery/18f9ca69a9aa-480.webp",
+      "previewImage": "/assets/gallery/18f9ca69a9aa-960.webp"
+    }
+  ],
+  "importedRecords": 143,
+  "enrichedSeries": 0,
+  "withColorName": 2706,
+  "withoutColorName": 191,
+  "colorNames": [
+    "アイボリー",
+    "アクアマリン",
+    "アロマワイン",
+    "アースブラウン",
+    "インディゴブルー",
+    "ガーネット",
+    "キャメル",
+    "クリームイエロー",
+    "グリーン",
+    "グレー",
+    "グレージュ",
+    "ココアブラウン",
+    "シャインホワイト",
+    "ショコラベージュ",
+    "シルキーベージュ",
+    "シルバー",
+    "スカイブルー",
+    "スカーレット",
+    "スノーホワイト",
+    "スプリンググリーン",
+    "セルリアンブルー",
+    "セレストブルー",
+    "ダークグリーン",
+    "ダークグレー",
+    "ダークブラウン",
+    "チャコールグレー",
+    "ディープグリーン",
+    "ナチュラルブラウン",
+    "ネイビー",
+    "バーガンディ",
+    "ビターショコラ",
+    "ビンテージ",
+    "ピオニーパープル",
+    "ピーチピンク",
+    "ブラウン",
+    "ブラック",
+    "ブルー",
+    "ブルーグレー",
+    "ベージュ",
+    "ホワイト",
+    "ボルドー",
+    "マスタード",
+    "ミストグレー",
+    "ミッドオレンジ",
+    "モカブラウン",
+    "ライトグレー",
+    "ライトブルー",
+    "レッド",
+    "レトロオレンジ",
+    "レモンイエロー",
+    "ローズピンク",
+    "ワインレッド"
+  ]
+}

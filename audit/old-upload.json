@@ -1,0 +1,17 @@
+{
+  "source": "old.zip",
+  "receivedDate": "2026-09-14",
+  "entries": [
+    {
+      "entry": "old/index.html",
+      "sha256": "fd6dfcb4aafbcf2a755d82b37c71fed32d156d3851df0f3f01c153c610471a87",
+      "records": 3529
+    },
+    {
+      "entry": "old/v2/index.html",
+      "sha256": "2b42a8b38894b4891b78c41cb65dc0e0e60c27680b66353aa07ff27461716d59",
+      "records": 3541
+    }
+  ],
+  "note": "No dedicated color field or color filter in either supplied gallery."
+}

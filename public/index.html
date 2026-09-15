@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>装着ギャラリー｜CAR SHOP CONNECT</title>
+  <meta name="description" content="メーカー・車種・ブランド・シリーズから、実際のシートカバー装着写真を探す。カーショップコネクトの新しい装着ギャラリー。">
+  <link rel="preload" href="/assets/fonts/josefin-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/hero-video.css"><link rel="stylesheet" href="/discovery-filters.css"><link rel="stylesheet" href="/finder-workbench.css"><link rel="stylesheet" href="/typography.css"><script type="module" src="/app.js"></script><script type="module" src="/hero-video.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">装着写真へ進む</a>
+  <div class="announcement">車種専用シートカバーの専門店 <span>CAR SHOP CONNECT</span></div>
+  <header class="site-header">
+    <a class="logo" href="http://127.0.0.1:4173/" aria-label="新TOP案へ"><img src="/assets/logo.svg" alt="carshop connect" width="216" height="35"></a>
+    <nav aria-label="メインナビゲーション"><a class="current" href="/">GALLERY</a><a href="https://seatcover.jp/clog/">C/LOG <span>↗</span></a><a href="https://seatcover.jp/">ONLINE SHOP <span>↗</span></a></nav>
+    <a class="header-search" href="#finder"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>写真を探す</span></a>
+  </header>
+  <main>
+    <section class="hero hero--video" aria-labelledby="gallery-title">
+      <div class="hero-video-background" aria-hidden="true">
+        <video id="heroVideo" muted loop playsinline preload="metadata" tabindex="-1" data-src="https://seatcover.jp/gallerys/v2/alphard.mp4"></video>
+      </div>
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> DRIVE YOUR STYLE. CONNECT YOUR LIFE.</div>
+        <h1 id="gallery-title">INSTALLATION<br><span>GALLERY</span></h1>
+        <p class="hero-jp">写真で見つける、自分らしい車内。</p>
+        <p class="hero-description">愛車に似合う色、好きな素材感。<br>実際の装着写真から、理想の一枚を探しませんか。</p>
+        <a href="#finder" class="hero-action">装着写真を探す <span>↓</span></a>
+        <div class="hero-foot"><span>SEAT COVER / INTERIOR PANEL</span><span>REAL CARS. REAL STYLE.</span></div>
+      </div>
+      <div class="hero-video-tools"><span>SEAT COVER GALLERY</span><button type="button" id="heroVideoToggle" aria-controls="heroVideo" aria-label="背景動画を再生" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg><span>再生</span></button></div>
+    </section>
+    <div class="gallery-intro wrap"><p>GALLERY <span>/</span> 装着ギャラリー</p><p><strong id="totalCases">—</strong> 件の装着事例 <span class="vehicle-count"><span class="intro-dot">·</span> <span id="totalCars">—</span> 車種・仕様</span></p></div>
+    <section class="finder wrap" id="finder" aria-labelledby="finder-title">
+      <div class="section-head finder-heading"><h2 id="finder-title">装着写真を探す</h2><button type="button" class="keyword-toggle" id="keywordToggle" aria-controls="keywordSearch" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>キーワード検索</span></button></div>
+      <div id="filterWorkbench" class="filter-workbench" tabindex="-1">
+        <div class="search-row" id="keywordSearch" hidden><form id="searchForm" role="search"><label class="sr-only" for="keyword">車種名・ブランド・シリーズ・色名を検索</label><input id="keyword" type="search" placeholder="例：ジムニー、マカロン、ベージュ" autocomplete="off"><button type="submit">検索</button></form></div>
+        <p class="finder-filter-label" id="finder-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg><span>絞り込み</span></p>
+        <div class="finder-tabs" role="tablist" aria-labelledby="finder-filter-label">
+          <button type="button" role="tab" id="tab-vehicle" data-panel="vehicle" aria-controls="panel-vehicle" aria-selected="true" aria-label="車種で探す">車種</button>
+          <button type="button" role="tab" id="tab-brand" data-panel="brand" aria-controls="panel-brand" aria-selected="false" tabindex="-1" aria-label="ブランド・シリーズで探す">ブランド</button>
+          <button type="button" role="tab" id="tab-color" data-panel="color" aria-controls="panel-color" aria-selected="false" tabindex="-1" aria-label="カラーで探す">カラー</button>
+          <button type="button" role="tab" id="tab-other" data-panel="other" aria-controls="panel-other" aria-selected="false" tabindex="-1" aria-label="その他の条件">その他</button>
+        </div>
+        <div class="filter-overview" id="filterOverview" tabindex="-1" hidden><div class="selection-row"><div class="selected-filters" id="selectedFilters" aria-label="選択中の検索条件"></div><button type="button" id="resetAll" class="text-button">すべて解除</button></div><div id="filterFeedback" class="filter-feedback" hidden><p>条件に合う写真がありません。条件を外すと見つかります。</p><div id="recoveryOptions" class="recovery-options"></div></div></div>
+        <div class="filter-panels">
+          <section class="finder-panel" id="panel-vehicle" role="tabpanel" aria-labelledby="tab-vehicle" tabindex="0">
+            <div class="panel-heading"><h3>車メーカーを選ぶ</h3><div class="maker-regions" role="group" aria-label="車メーカーの地域"><button type="button" data-maker-region="domestic" aria-pressed="true" aria-controls="makerGrid">国産車</button><button type="button" data-maker-region="imported" aria-pressed="false" aria-controls="makerGrid">輸入車</button></div></div>
+            <div class="maker-grid" id="makerGrid" role="group" aria-label="車メーカーで絞り込む"></div>
+            <section class="car-chooser" id="carChooser" aria-labelledby="carTitle" hidden><div class="panel-heading"><h3 id="carTitle">車種を選ぶ</h3></div><label class="car-search" for="carSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="carSearch" type="search" aria-label="車種名で候補を絞る" placeholder="車種名で候補を絞る" autocomplete="off"></label><p id="carCandidateStatus" class="car-candidate-status" role="status"></p><div class="car-options" id="carOptions" role="group" aria-label="車種の候補"></div><p id="noCarCandidates" class="car-empty" hidden></p></section>
+          </section>
+          <section class="finder-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand" tabindex="0" hidden>
+            <div class="panel-heading"><h3>ブランドを選ぶ</h3></div>
+            <div class="brand-tabs" role="group" aria-label="ブランドで絞り込む" id="brandTabs"></div>
+            <section class="series-picker" id="seriesPicker" aria-labelledby="seriesTitle" hidden><div class="filter-group-heading"><h3 class="filter-group-title" id="seriesTitle">シリーズを選ぶ</h3></div><div class="series-grid" id="seriesGrid" role="group" aria-label="代表イメージからシリーズで絞り込む"></div><div id="seriesOtherWrap" class="series-other" hidden><p>その他の掲載シリーズ</p><div id="seriesOther"></div></div><p class="series-caption">写真は各シリーズの代表イメージです</p></section>
+          </section>
+          <section class="finder-panel" id="panel-color" role="tabpanel" aria-labelledby="tab-color" tabindex="0" hidden><div class="panel-heading"><h3 id="colorTitle">カラーを選ぶ</h3></div><section class="color-picker" aria-labelledby="colorTitle"><div class="color-options" id="colorOptions" role="group" aria-label="色系統で絞り込む"></div><p id="colorStatus" class="sr-only"></p></section><details class="exact-color-details" id="exactColorDetails"><summary>詳しい色名で絞る</summary><div class="design-selects exact-color"><label class="sr-only" for="colorName">掲載色名</label><select id="colorName" name="colorName"><option value="">色名は指定しない</option></select></div></details></section>
+          <section class="finder-panel" id="panel-other" role="tabpanel" aria-labelledby="tab-other" tabindex="0" hidden><div class="panel-heading"><h3>その他の条件</h3></div><form class="filter-form" id="filterForm"><label for="category">写真のカテゴリ<select id="category" name="category"><option value="">指定しない</option><option value="seatcover">シートカバー</option><option value="panel">インテリアパネル</option></select></label><label class="check-label"><input type="checkbox" name="review" id="reviewOnly">掲載コメントのある事例のみ</label></form></section>
+        </div>
+        <div class="finder-submit" id="finderSubmit"><div class="finder-action" id="finderAction"><p id="inlineCount" class="sr-only" role="status">装着写真を読み込んでいます…</p><button type="button" class="primary" id="showPhotos">写真を見る ↓</button></div></div>
+      </div>
+      <div class="results-area" id="results" tabindex="-1"><div class="result-toolbar" id="photoResults" tabindex="-1"><div><p><strong id="resultCount">—</strong> <span>件の装着写真</span></p><p class="results-summary" id="resultsSummary">すべての装着写真</p></div><button type="button" class="secondary edit-filters" data-edit-filters>絞り込みを変更 ↑</button></div><div id="loading" class="loading">装着写真を読み込んでいます…</div><div class="empty-state" id="emptyState" hidden><span>NO RESULTS</span><h3>条件に合う装着写真がありません。</h3><p>選択した条件を減らすと、写真が見つかることがあります。</p><div id="emptyRecoveryOptions" class="recovery-options"></div><button class="primary" id="resetEmpty">条件をすべて解除する →</button></div><div class="photo-grid" id="photoGrid"></div><div class="load-more-wrap" id="loadMoreWrap" hidden><p id="shownCount"></p><button id="loadMore" class="secondary">もっと装着写真を見る <span>＋</span></button></div></div>
+    </section>
+    <section class="support-section"><div class="wrap support-inner"><div><div class="eyebrow red">BEFORE YOU CHOOSE</div><h2>その一枚を、<br>安心して選ぶために。</h2></div><div class="support-links"><a href="https://seatcover.jp/support/matchform/"><span><strong>愛車への適合を相談する</strong><small>年式・型式・グレードをもとに、専門スタッフが確認。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/inquiry_renewal.html"><span><strong>生地サンプルを取り寄せる</strong><small>画面ではわからない色味や手触りを、購入前に。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/installation_renewal.html"><span><strong>取付けガイドを見る</strong><small>写真と動画で、装着の手順を確認。</small></span><b>↗</b></a></div></div></section>
+  </main>
+  <footer><div class="wrap"><div class="footer-top"><img src="/assets/logo.svg" width="216" height="35" alt="carshop connect"><p>DRIVE YOUR STYLE. CONNECT YOUR LIFE.</p><a href="#gallery-title">ページ上部へ ↑</a></div><div class="footer-bottom"><p>© CAR SHOP CONNECT</p><a href="/compare.html">制作プレビュー・旧版との比較</a></div><p class="source-note" id="sourceNote">制作プレビュー。掲載内容は保存資料をもとにしています。</p></div></footer>
+  <dialog id="photoDialog" class="photo-dialog" aria-labelledby="detailCar"><div class="dialog-head"><span class="eyebrow">INSTALLATION DETAIL</span><button class="icon-button" id="closePhoto" aria-label="装着写真の詳細を閉じる">×</button></div><div id="detailContent"></div></dialog>
+  <noscript><p class="wrap">検索と写真表示にはJavaScriptが必要です。<a href="https://seatcover.jp/gallerys/">公開中の装着ギャラリーを見る</a></p></noscript>
+</body>
+</html>

@@ -1,0 +1,512 @@
+[
+  {
+    "name": "キャンバス",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-galette",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_galette.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_galette.webp",
+    "sha256": "5162ae213d3dba2123e1b97d02e26a2a72dbcaebe0d3a21eb5673bae58c3bf4f"
+  },
+  {
+    "name": "コロール",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-color",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new1.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new1.webp",
+    "sha256": "18182f241dc2eae712f0651a6a94661b58d9cfd3c014fb967f00324bc580d626"
+  },
+  {
+    "name": "マカロン",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-macaron",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new2.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new2.webp",
+    "sha256": "a236fc3e134a3f460ed18fa3f7ab34a384882fbd6eb603595c4efc544170e11f"
+  },
+  {
+    "name": "ワッフル",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-waffle",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new3.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new3.webp",
+    "sha256": "2820b3cbf356d61e69665eb9a3037bfa9ca74c4a2ca2a0c0c49d253a96b3ed2b"
+  },
+  {
+    "name": "ドルチェ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-dolce",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new4.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new4.webp",
+    "sha256": "5e45f393e72afa28c86d868bff81745f3464964eef2514b14aca45f3ea1c8a12"
+  },
+  {
+    "name": "カヌレ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canele",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new5.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new5.webp",
+    "sha256": "7ee2491a163d1fe2cd7b24d422ab0ddd36dac55440a97fa0c3c88a3496b1d481"
+  },
+  {
+    "name": "カヌレグラッセ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canelegrace",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new6.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new6.webp",
+    "sha256": "7126ad86250284b34d854c412fa71313d5beabfdad465739b5cbfe014873233c"
+  },
+  {
+    "name": "ビスキュイ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/biscuit",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new7.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new7.webp",
+    "sha256": "e52a090e78a01289d85ecb97069c5a0ce2db822a557366aef1ebf5bbd5d0082d"
+  },
+  {
+    "name": "オールドカヌレ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-oldcanele",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new8.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new8.webp",
+    "sha256": "381693dcaa28bcccd63cbd9d3b61c5a52b1fb26a402c3d194aeb83b5b93abaa4"
+  },
+  {
+    "name": "デニムサンド",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/denimsand",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new9.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new9.webp",
+    "sha256": "075868f83049f26bebfdb735ef9e9049a5bd8a43fbb0d7d0f55546386c1ab9f3"
+  },
+  {
+    "name": "デニムロール",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/denimroll",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new10.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new10.webp",
+    "sha256": "01d688e2954b102393bc8f8b7e1f8ff96a1e1fdf067e15d7f2e059abf24abc16"
+  },
+  {
+    "name": "エクレア",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-eclair",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new11.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new11.webp",
+    "sha256": "6bea347a44a9cfd830c359e82bbd52517d26ecec01918a0d19ca41fba0490088"
+  },
+  {
+    "name": "カチナ",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-kachina",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new12.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new12.webp",
+    "sha256": "089c02ec03c12ba3cb58a89b5b9a9c1ec945ac56e20e996b316d55babebb2d9f"
+  },
+  {
+    "name": "キャンバス",
+    "page": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canvas",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new13.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new13.webp",
+    "sha256": "7964bac35c4c408685d69ae3217f18efd40357369951c7ee21a8912083d75ed8"
+  },
+  {
+    "name": "アストレア レリーフ",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-astraearelief",
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/sample/pickup_astraea-relief.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_astraea-relief.webp",
+    "sha256": "254d6c47219348529f7e19aba3961cf2838323f002812f8c5bdc531fe6d67874"
+  },
+  {
+    "name": "ヘリテージフィールド",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritagefield",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_heritagefield.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_heritagefield.webp",
+    "sha256": "ece5a0bfc7586fc3cbf5b90766a56b98bedde5a77045606a9925ee16f15cb9ab"
+  },
+  {
+    "name": "ヘリテージ",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritage",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new37.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new37.webp",
+    "sha256": "a65ac7cda8a6144dd3aa116877c6f235c13daeaf0e2f9ed878a7cd85e28ef76a"
+  },
+  {
+    "name": "ヘリテージメッシュ",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritagemesh",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new47.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new47.webp",
+    "sha256": "c7b7763765f4edfafef5f3d644c04a66b761ea07f9db462b30dee9763e7bf02e"
+  },
+  {
+    "name": "コーデュロイ",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-corduroy",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new14.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new14.webp",
+    "sha256": "0cdda12c7e7dc665fc9a3c4373a2efa40fea0e10bc458c291e2245ffa1975ff6"
+  },
+  {
+    "name": "アルカンターラ",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-alcantara",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new15.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new15.webp",
+    "sha256": "277ddf34c153ad1396562b84298a3d239c3fcad5fc8287fc0832ba31b1d5543f"
+  },
+  {
+    "name": "カスタム",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-custom",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new16.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new16.webp",
+    "sha256": "6248b634c91695660889d77a5b301cf17526b87726070bd0c38e469f7211c976"
+  },
+  {
+    "name": "レザーデラックス",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new17.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new17.webp",
+    "sha256": "a0a0476e52cf1df522d94dabb4c2afb27caa08a4f35ec337358618c657c1db34"
+  },
+  {
+    "name": "エクスクルーシブデザイン",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-exclusive",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new18.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new18.webp",
+    "sha256": "fcd1c5fe33bcd93b877063707db79918c5f1a4d2f27aac99914ef2f7c9504a94"
+  },
+  {
+    "name": "アバンギャルド",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-avantgarde",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new19.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new19.webp",
+    "sha256": "d779cd9678a993e3b92ece118e347fec0656ab6ad290f82432f83e47ed02c522"
+  },
+  {
+    "name": "ハーモニアス",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-harmonious",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new20.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new20.webp",
+    "sha256": "2c8fab12517f67e8e76fab3dcba1d802e3acdef0ba653661cb96260b44d7401a"
+  },
+  {
+    "name": "レザー",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new21.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new21.webp",
+    "sha256": "26918c2636b15c99159b4f205ebac1bee70370000e2727781d97a847ecb249e9"
+  },
+  {
+    "name": "キルト",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-quilt",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new34.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new34.webp",
+    "sha256": "e8e8e4da130cfdd13827da01bbedf60482a617772880a40a651559a9eb2be31b"
+  },
+  {
+    "name": "オールドレザー",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-oldleather",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new35.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new35.webp",
+    "sha256": "1e97df4210b6056a6ed69ea65ff43907a51129488a7f32876b2230a77ebe420a"
+  },
+  {
+    "name": "アストレア",
+    "page": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-astraea",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new36.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new36.webp",
+    "sha256": "0d4b626c98efe42b0532d7f7a24fe676894debe6420f48520d7a235207bef1cd"
+  },
+  {
+    "name": "コーディロイ",
+    "page": "https://seatcover.jp/c/seatcovermaker/ixus/ixus-denim",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new22.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new22.webp",
+    "sha256": "fea743fdfb616ab781b7bdd39f3d367bfb4e305be45938c228eb7583c54ed50a"
+  },
+  {
+    "name": "PUレザー",
+    "page": "https://seatcover.jp/c/seatcovermaker/ixus/ixus-pu",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new23.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new23.webp",
+    "sha256": "6c9379c7f812e1f2fa652eaca5d04cbd64ab7687b8a93e6043caf04472dda8e0"
+  },
+  {
+    "name": "レザリー スタンダード",
+    "page": "https://seatcover.jp/c/seatcovermaker/ixus/ixus-ls",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new24.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 577,
+    "height": 680,
+    "local": "/assets/series/pickup_new24.webp",
+    "sha256": "266822ed42b6b927849460122caea7d7b06b94b2b5478ecb99a20232d1b686ed"
+  },
+  {
+    "name": "レザリー キルト",
+    "page": "https://seatcover.jp/c/seatcovermaker/ixus/ixus-lq",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new25.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new25.webp",
+    "sha256": "410136b848c9f27100dbde09d03e591b34bfbc78b22beae66bbb6326afca8856"
+  },
+  {
+    "name": "レザリー デニム",
+    "page": "https://seatcover.jp/c/seatcovermaker/ixus/ixus-ly",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new26.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new26.webp",
+    "sha256": "e1d9c209627517fc2f103e25c447950099861f6742479607c8f801311662566f"
+  },
+  {
+    "name": "LUXUR-ANTIQUE",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-luxurantique",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new46.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new46.webp",
+    "sha256": "5989f5f4a60c07669d04e24c4207aa2087c780e02c00fec10c98fff3a6bfb669"
+  },
+  {
+    "name": "URBAN-SP-Leather",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-urbanspleather",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_urbanspleather.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_urbanspleather.webp",
+    "sha256": "79bb26c6ae3c1b0b09f09d193922512cf642704c409dc668b13b4d26e36c86ad"
+  },
+  {
+    "name": "CROSSLINE-SP",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-crosslinesp",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_crosslinesp.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_crosslinesp.webp",
+    "sha256": "e6c7339dd2c1d770dd543abbd744acbadbe8a863257d10bd53e9b17614491971"
+  },
+  {
+    "name": "EURO-LUX",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-eurolux",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new27.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new27.webp",
+    "sha256": "5b8e59f57ca28b73bce50f00f0b2464d97aa827235fc686a424bb9b6045e9d11"
+  },
+  {
+    "name": "LUXUR-SPOLT",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-luxurspolt",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new28.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new28.webp",
+    "sha256": "314a5ef63d48e481f6c0b200c3f5fdebba0776db49624db36ddd4ec962209dae"
+  },
+  {
+    "name": "DIA-LUX",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-dialux",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new29.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 577,
+    "height": 680,
+    "local": "/assets/series/pickup_new29.webp",
+    "sha256": "93f3c6b8ba2b0cf70504e4e1a308b33a807c0ec8babd7d37ed90a557cdc9e7cd"
+  },
+  {
+    "name": "COX-SPORTS",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-coxsports",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new30.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new30.webp",
+    "sha256": "8347206183a441c9152ca07acf8788d1af63f0dccae8e0daf88d3c87a566a1a6"
+  },
+  {
+    "name": "LUXUR-ALCANTARA",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-luxurbs",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new31.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new31.webp",
+    "sha256": "8e16667fe0db0c130eda6295fc96980a88ec82a83feeea987be8c7c7466b0511"
+  },
+  {
+    "name": "EURO-GT",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-eurogt",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new32.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new32.webp",
+    "sha256": "f294a615cf48563560ecc1d686f8019d359b3ae69df79a8d210bcb797ca111cc"
+  },
+  {
+    "name": "FN class",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/fnclass",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new33.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new33.webp",
+    "sha256": "8bbdb5142d5e315bb619e0a67963ed5b59ab72e82fadf9f4af716ec18b20f2d1"
+  },
+  {
+    "name": "DIA-GT",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-diagt",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new38.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new38.webp",
+    "sha256": "0741d9d07962541d3ab44221fb8d9ff5f5422bef94b424ba4ed77b7758a03013"
+  },
+  {
+    "name": "DEP-M",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dep-m",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new39.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new39.webp",
+    "sha256": "3090163746801fab8d698aa40cf9e1608293682da39416c37acbd1e057d0c367"
+  },
+  {
+    "name": "DEP-H",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dep-h",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new40.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new40.webp",
+    "sha256": "78c272c4f13be7754d71cfd3436e1a12c5b43d961bed6afd0b3dfaa2464424b1"
+  },
+  {
+    "name": "DEP-V",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dep-v",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new41.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new41.webp",
+    "sha256": "833ef62bb872aff7f74551f5c433da968d8bc0d85406ada92471265ab0b60d89"
+  },
+  {
+    "name": "DEP-SPYDER",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dep-spyder",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new42.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new42.webp",
+    "sha256": "c21689c8f3c0f1ec7e2fcd4bcec8849d430618778946f6f727a92227331d8668"
+  },
+  {
+    "name": "LUXUR-SPOLT本革",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-luxurspolt-leather",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new43.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new43.webp",
+    "sha256": "ef8bf499553048b8d33a9b2d37b0cb5e184a6057292689b34c2e03a1b45148e4"
+  },
+  {
+    "name": "DIA-LUX本革パンチング",
+    "page": "https://seatcover.jp/c/seatcovermaker/dotty/dotty-dialux-leather",
+    "url": "https://carshopconnect.itembox.design/item/css/images/sample/pickup_new44.webp",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "width": 576,
+    "height": 680,
+    "local": "/assets/series/pickup_new44.webp",
+    "sha256": "ef9af158dd6f58573810ddefcd167987e430462554d447f58068fd69b492bd31"
+  }
+]

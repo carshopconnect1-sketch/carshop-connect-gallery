@@ -1,0 +1,174 @@
+[
+  {
+    "name": "トヨタ",
+    "local": "public/assets/makers/maker-toyota.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-toyota.webp",
+    "sha256": "cc6722e68f57913e19a4b97d21e7a876ada56f41278842c43a6c0f13f31328b4"
+  },
+  {
+    "name": "日産",
+    "local": "public/assets/makers/maker-nissan.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-nissan.webp",
+    "sha256": "7dd7de349f0c561c4a99d6bc89ca22fa4bb9d489c70126ccf108fb5a3b81e759"
+  },
+  {
+    "name": "ホンダ",
+    "local": "public/assets/makers/maker-honda.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-honda.webp",
+    "sha256": "c297cbe456d84ab7cc91a69c5dcbf128f51e27351c7795664481c4a88fbfb38c"
+  },
+  {
+    "name": "マツダ",
+    "local": "public/assets/makers/maker-mazda.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-mazda.webp",
+    "sha256": "7c99fcebab7b32f6b20e61f5027b164534d1ff6b6e2628d78ce2eb70ead90f59"
+  },
+  {
+    "name": "三菱",
+    "local": "public/assets/makers/maker-mitsubishi.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-mitsubishi.webp",
+    "sha256": "9ffdfc24b1851bfad20f47ba5bea6501dc5ffce02f1692e93043b2147a85d03c"
+  },
+  {
+    "name": "ダイハツ",
+    "local": "public/assets/makers/maker-daihatsu.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-daihatsu.webp",
+    "sha256": "22cebe7ce8a6436e2e3cae2d7e266231ca0493400d8e9b0c1c9aa8fad40fa224"
+  },
+  {
+    "name": "スズキ",
+    "local": "public/assets/makers/maker-suzuki.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-suzuki.webp",
+    "sha256": "af2dbb49709224dd2639b4a44ff3170e7ddc7ee0bfbcba8576ffddc5384b7c0e"
+  },
+  {
+    "name": "スバル",
+    "local": "public/assets/makers/maker-subaru.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-subaru.webp",
+    "sha256": "8a4a615b67bdb2904cb03ccc0e127bae6c4d6628e5d1a19c73d6e4b4af61d3c8"
+  },
+  {
+    "name": "レクサス",
+    "local": "public/assets/makers/maker-lexus.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-lexus.webp",
+    "sha256": "d97bbf2ca303de454a54dd7a45af821a873bc88fa9ef79acfad391867a97ac2a"
+  },
+  {
+    "name": "いすゞ",
+    "local": "public/assets/makers/maker-isuzu.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-isuzu.webp",
+    "sha256": "905c384b4f98608c1f6129b9293d8952f26a1d54940545ab8d6443686a56f469"
+  },
+  {
+    "name": "ジープ",
+    "local": "public/assets/makers/maker-jeep.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-jeep.webp",
+    "sha256": "a0323829f8f368d3ee67b4bf225a2e3702c4fbcb4d5fe5ffd4a79b0d80c2af4b"
+  },
+  {
+    "name": "アウディ",
+    "local": "public/assets/makers/maker-audi.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-audi.webp",
+    "sha256": "f318ce074c66c20d1929c7891a4cc37bc67467e3f8ea6d7ade7df39421f4a948"
+  },
+  {
+    "name": "BMW",
+    "local": "public/assets/makers/maker-bmw.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-bmw.webp",
+    "sha256": "4b91d05a97093fd2ee9dc60c2a6f3b75219e8313c7d74a4be7736b4b82a0d7fb"
+  },
+  {
+    "name": "メルセデス・ベンツ",
+    "local": "public/assets/makers/maker-mercedes-benz.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-mercedes-benz.webp",
+    "sha256": "feccffce15c0fea95a1b30acef39107514d0eb7fd0c8a3c53c92ca22e692004c"
+  },
+  {
+    "name": "ボルボ",
+    "local": "public/assets/makers/maker-volvo.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-volvo.webp",
+    "sha256": "acc9a6196f3f5ed15f9448fc4f9aaa7294c9f27c1b82bb3f47b16d234f0ceb68"
+  },
+  {
+    "name": "クライスラー",
+    "local": "public/assets/makers/maker-chrysler.webp",
+    "source": "https://carshopconnect.itembox.cloud/item/css/images/sample/top-logo-sample18.webp",
+    "sha256": "ecbbb6551ef469e5b418d1825ff045b427175085fe53eac0e4b98c5e4c83a18e"
+  },
+  {
+    "name": "フォード",
+    "local": "public/assets/makers/maker-ford.webp",
+    "source": "https://carshopconnect.itembox.cloud/item/css/images/sample/top-logo-sample20.webp",
+    "sha256": "d72555c91197d7a206f3da2d48ebb58ebfbea55d96695f947cd6de07a54b66f8"
+  },
+  {
+    "name": "MINI",
+    "local": "public/assets/makers/maker-mini.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-mini.webp",
+    "sha256": "351d419f9adef37bfa329b9cb28fec27a2c4dea9c8f7f733218aad1d20fd785c"
+  },
+  {
+    "name": "プジョー",
+    "local": "public/assets/makers/maker-peugeot.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-peugeot.webp",
+    "sha256": "26f510e5e9ed00ecc6d9a61a264290fea4f952b4267afa468c6fd1e2ed0a65f9"
+  },
+  {
+    "name": "フォルクスワーゲン",
+    "local": "public/assets/makers/maker-volkswagen.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-volkswagen.webp",
+    "sha256": "761be923b6783afa5008e722265062031fce76fc4faebabc01f62b761e7d0ca3"
+  },
+  {
+    "name": "フィアット",
+    "local": "public/assets/makers/maker-fiat.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-fiat.webp",
+    "sha256": "a4fa6e7ff336601fdbb8dd264c99a09deb13cbf3e03e2c66416a7532ce6b8029"
+  },
+  {
+    "name": "ルノー",
+    "local": "public/assets/makers/maker-renault.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-renault.webp",
+    "sha256": "867bd3e663e1debb854904f268482d40d66240d55ed25d9e46726f7db8c8c40f"
+  },
+  {
+    "name": "シトロエン",
+    "local": "public/assets/makers/maker-citroen.webp",
+    "source": "../prototype/public/assets/site/maker-logos/maker-citroen.webp",
+    "sha256": "2a3a0d3046de11642d33737cbd83d048189a90cd85f7bd3adc9ce6bfa2feec6f"
+  },
+  {
+    "name": "ポルシェ",
+    "local": "public/assets/makers/maker-porsche.webp",
+    "source": "https://carshopconnect.itembox.cloud/item/css/images/sample/top-logo-sample34.webp",
+    "sha256": "ac34d13bc19eab319c19d0196d341ec5c4eada6866bf635397c3b6ffe6d619c8"
+  },
+  {
+    "name": "refinad",
+    "local": "public/assets/brands/brand-refinad.jpg",
+    "source": "https://carshopconnect.itembox.cloud/category/001/000000000180/000000000180.jpg",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "sha256": "eec29b7908a79c1f40c7c92930c861dbe638d09dc3a88f6f4b30fe69a18f2a2c"
+  },
+  {
+    "name": "sandii",
+    "local": "public/assets/brands/brand-sandii.jpg",
+    "source": "https://carshopconnect.itembox.cloud/category/001/000000000191/000000000191.jpg",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "sha256": "ba21237cf16111ca3bf9ec556447f47f8dbdc9566af21097dd8e1357dcbf25ae"
+  },
+  {
+    "name": "dotty",
+    "local": "public/assets/brands/brand-dotty.jpg",
+    "source": "https://carshopconnect.itembox.cloud/category/002/000000000215/000000000215.jpg",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "sha256": "7b7aaa70b4f4e68a7425db0311f3aabe4e802be3b43b1bc0fcdd7d50b5a84cab"
+  },
+  {
+    "name": "ixus",
+    "local": "public/assets/brands/brand-ixus.jpg",
+    "source": "https://carshopconnect.itembox.cloud/category/001/000000000198/000000000198.jpg",
+    "sourcePage": "https://seatcover.jp/c/seatcovermaker",
+    "sha256": "b1568e5054fded2a212a6a060bcd92d09b19b96e88601d3e8d4b42328658fc60"
+  }
+]

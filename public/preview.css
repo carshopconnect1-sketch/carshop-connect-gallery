@@ -1,0 +1,22 @@
+:root{font-family:"Yu Gothic",Meiryo,sans-serif;color:#242323;background:#e9e9e7;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-width:780px;height:100dvh;min-height:480px;display:flex;flex-direction:column}
+.preview-header{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding:12px 20px;background:#fff;border-bottom:1px solid #d8d7d4}
+h1,h2{margin:0}
+h1{font-size:16px;white-space:nowrap}
+h1 span{font-weight:400;font-size:12px;color:#777;margin-left:12px}
+nav{display:flex;gap:6px;margin-left:auto}
+button,.preview-header a{font:inherit;font-size:12px;white-space:nowrap}
+button{min-height:36px;padding:7px 14px;border:1px solid #d8d5d2;border-radius:6px;background:white;color:inherit;cursor:pointer}
+button:hover{border-color:#a92539;color:#a92539;background:#fbf4f5}
+button:focus-visible,a:focus-visible{outline:2px solid #a92539;outline-offset:3px}
+.preview-header a{color:#605b5b;text-underline-offset:4px}
+.preview-pair{display:grid;grid-template-columns:minmax(220px,390fr) minmax(500px,1440fr);gap:20px;padding:14px 20px 0;flex:1;min-height:0}
+.device{min-width:0;min-height:0;display:flex;flex-direction:column}
+.device-heading{height:32px;flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:8px;color:#666}
+h2{font-size:14px;font-weight:700;letter-spacing:.04em;color:#222}
+h2 span{font-size:11px;letter-spacing:0;color:#777;font-weight:400;margin-left:8px}
+.device-heading>span{font-size:11px}
+.device-stage{position:relative;flex:1;min-height:0;overflow:hidden;border-radius:8px;background:#fff;box-shadow:0 2px 12px #00000012}
+iframe{display:block;position:absolute;top:0;left:0;border:0;transform-origin:top left;background:#fff}
+footer{flex:none;padding:10px 20px;font-size:11px;color:#777;text-align:center}

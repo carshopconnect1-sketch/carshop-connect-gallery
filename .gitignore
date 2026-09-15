@@ -1,0 +1,6 @@
+.source/
+.preview/
+__pycache__/
+audit/screenshots/
+dist/
+.deploy/
