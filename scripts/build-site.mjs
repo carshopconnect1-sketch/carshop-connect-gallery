@@ -4,12 +4,12 @@ import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const output = path.join(dist, 'public');
+const output = path.join(dist, 'client');
 const localOnly = new Set(['compare.html', 'compare.css', 'compare.js']);
 const topUrl = 'https://carshop-connect-internal-preview.connect369.chatgpt.site/';
 const hosting = JSON.parse(await readFile(path.join(root, '.openai/hosting.json'), 'utf8'));
-if (!hosting.project_id || hosting.static?.directory !== 'public') {
-  throw new Error('Expected a Sites project with static.directory = public');
+if (!hosting.project_id || hosting.static?.directory !== 'dist/client') {
+  throw new Error('Expected a Sites project with static.directory = dist/client');
 }
 // The only removable output is this project's fixed dist directory.
 if (path.dirname(dist) !== root || path.basename(dist) !== 'dist') throw new Error('Invalid build output');
