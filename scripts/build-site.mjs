@@ -6,7 +6,6 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const output = path.join(dist, 'client');
 const localOnly = new Set(['compare.html', 'compare.css', 'compare.js']);
-const topUrl = 'https://carshop-connect-internal-preview.connect369.chatgpt.site/';
 const hosting = JSON.parse(await readFile(path.join(root, '.openai/hosting.json'), 'utf8'));
 if (!hosting.project_id || hosting.static?.directory !== 'dist/client') {
   throw new Error('Expected a Sites project with static.directory = dist/client');
@@ -21,11 +20,10 @@ await cp(path.join(root, 'public'), output, {
 });
 const indexPath = path.join(output, 'index.html');
 let html = await readFile(indexPath, 'utf8');
-if (!html.includes('http://127.0.0.1:4173/') || !html.includes('/compare.html')) {
+if (!html.includes('class="store-home" href="https://seatcover.jp/"') || !html.includes('/compare.html')) {
   throw new Error('Local preview links changed; review the hosted link mapping');
 }
-html = html.replace('http://127.0.0.1:4173/', topUrl)
-  .replace('<a href="/compare.html">制作プレビュー・旧版との比較</a>', '<a href="/preview.html">SP・PCの表示を比較</a>');
+html = html.replace('<a href="/compare.html">制作プレビュー・旧版との比較</a>', '<a href="/preview.html">SP・PCの表示を比較</a>');
 await writeFile(indexPath, html);
 await writeFile(path.join(dist, '.openai/hosting.json'), JSON.stringify(hosting, null, 2) + '\n');
 

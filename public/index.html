@@ -6,16 +6,38 @@
   <title>装着ギャラリー｜CAR SHOP CONNECT</title>
   <meta name="description" content="メーカー・車種・ブランド・シリーズから、実際のシートカバー装着写真を探す。カーショップコネクトの新しい装着ギャラリー。">
   <link rel="preload" href="/assets/fonts/josefin-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/hero-video.css"><link rel="stylesheet" href="/discovery-filters.css"><link rel="stylesheet" href="/finder-workbench.css"><link rel="stylesheet" href="/typography.css"><script type="module" src="/app.js"></script><script type="module" src="/hero-video.js"></script>
+  <link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/hero-video.css"><link rel="stylesheet" href="/discovery-filters.css"><link rel="stylesheet" href="/finder-workbench.css"><link rel="stylesheet" href="/typography.css"><link rel="stylesheet" href="/store-chrome.css"><script type="module" src="/store-chrome.js"></script><script type="module" src="/app.js"></script><script type="module" src="/hero-video.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#results">装着写真へ進む</a>
-  <div class="announcement">車種専用シートカバーの専門店 <span>CAR SHOP CONNECT</span></div>
-  <header class="site-header">
-    <a class="logo" href="http://127.0.0.1:4173/" aria-label="新TOP案へ"><img src="/assets/logo.svg" alt="carshop connect" width="216" height="35"></a>
-    <nav aria-label="メインナビゲーション"><a class="current" href="/">GALLERY</a><a href="https://seatcover.jp/clog/">C/LOG <span>↗</span></a><a href="https://seatcover.jp/">ONLINE SHOP <span>↗</span></a></nav>
-    <a class="header-search" href="#finder"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>写真を探す</span></a>
+  <header class="store-header" id="storeHeader">
+    <div class="store-announcement">毎日が特別になる、愛車がもっと好きになる。</div>
+    <div class="store-header-row">
+      <button type="button" class="store-menu-toggle" id="storeMenuToggle" aria-controls="storeMenu" aria-expanded="false"><span>MENU</span><i aria-hidden="true"></i></button>
+      <a class="store-home" href="https://seatcover.jp/" aria-label="カーショップコネクト トップへ"><img src="/assets/store/logo.svg" alt="carshop connect" width="160" height="26"></a>
+      <a class="store-dealer" href="https://seatcover.jp/f/dealer_renewal.html"><img src="/assets/store/header-menu-building-icon.svg" width="13" height="13" alt=""><span>業販はこちら</span><img src="/assets/store/header-menu-arrow-right.svg" width="5" height="8" alt=""></a>
+      <nav class="store-nav" aria-label="ショップのメインメニュー">
+        <a href="https://seatcover.jp/f/carlist_renewal.html">車種別に探す</a>
+        <a href="https://seatcover.jp/c/seatcovermaker">シートカバー</a>
+        <a href="https://seatcover.jp/c/accessories">アクセサリー</a>
+        <details class="store-column"><summary>コラム</summary><div class="store-column-links"><a href="https://seatcover.jp/f/choice_renewal.html">シートカバーの選び方</a><a href="https://seatcover.jp/f/installation_renewal.html">シートカバーの装着方法</a><a href="https://seatcover.jp/f/voice_renewal.html">お客様の声</a><a href="https://seatcover.jp/clog/">C/LOG</a></div></details>
+        <a href="https://m-connect.co.jp/development/">開発車両募集</a>
+      </nav>
+      <div class="store-actions">
+        <form class="store-search" action="https://seatcover.jp/p/search" method="get" role="search" aria-label="ショップの商品検索"><label class="sr-only" for="storeKeyword">ショップの商品を検索</label><input id="storeKeyword" type="search" name="keyword" placeholder="何をお探しですか？" maxlength="1000" required><input type="hidden" name="sort" value="priority"><button type="submit" aria-label="商品を検索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg></button></form>
+        <a class="store-icon" href="https://seatcover.jp/f/match_renewal" aria-label="マイカーを選択する"><img src="/assets/store/header-menu-mycar.svg" alt="マイカー選択" width="42" height="29"></a>
+        <a class="store-icon" href="https://seatcover.jp/p/login?redirect=%2Fmy%2Ftop" aria-label="マイページ"><img src="/assets/store/header-menu-account.svg" alt="アカウント" width="49" height="29"></a>
+        <a class="store-icon store-desktop-icon" href="https://seatcover.jp/my/wishlist" aria-label="お気に入り"><img src="/assets/store/header-menu-favorite.svg" alt="お気に入り" width="42" height="29"></a>
+        <a class="store-icon" href="https://seatcover.jp/p/cart" aria-label="カート"><img src="/assets/store/header-menu-cart.svg" alt="カート" width="28" height="29"></a>
+        <a class="store-icon store-desktop-icon" href="https://seatcover.jp/f/guide_renewal" aria-label="ご利用ガイド"><img src="/assets/store/header-menu-guide.svg" alt="ガイド" width="28" height="29"></a>
+        <a class="store-icon" href="https://seatcover.jp/clog/" aria-label="C/LOG"><img src="/assets/store/header-menu-clog.svg" alt="C/LOG" width="28" height="29"></a>
+      </div>
+    </div>
   </header>
+  <dialog class="store-menu-dialog" id="storeMenu" aria-labelledby="storeMenuTitle">
+    <div class="store-menu-head"><h2 id="storeMenuTitle">MENU</h2><button type="button" id="storeMenuClose" aria-label="メニューを閉じる">×</button></div>
+    <nav aria-label="ショップメニュー"><a href="https://seatcover.jp/f/carlist_renewal.html">車種別に探す<span>→</span></a><a href="https://seatcover.jp/c/seatcovermaker">シートカバー<span>→</span></a><a href="https://seatcover.jp/c/accessories">アクセサリー<span>→</span></a><a href="https://seatcover.jp/clog/">コラム・C/LOG<span>→</span></a><a href="https://m-connect.co.jp/development/">開発車両募集<span>→</span></a><a href="https://seatcover.jp/f/match_renewal">適合検索・マイカー選択<span>→</span></a><a href="https://seatcover.jp/f/inquiry_renewal.html">生地サンプル申請<span>→</span></a><a href="https://seatcover.jp/f/guide_renewal">ご利用ガイド<span>→</span></a><a href="https://seatcover.jp/my/wishlist">お気に入り<span>→</span></a><a href="https://seatcover.jp/f/question_renewal">お問い合わせ<span>→</span></a></nav>
+  </dialog>
   <main>
     <section class="hero hero--video" aria-labelledby="gallery-title">
       <div class="hero-video-background" aria-hidden="true">
@@ -64,7 +86,126 @@
     </section>
     <section class="support-section"><div class="wrap support-inner"><div><div class="eyebrow red">BEFORE YOU CHOOSE</div><h2>その一枚を、<br>安心して選ぶために。</h2></div><div class="support-links"><a href="https://seatcover.jp/support/matchform/"><span><strong>愛車への適合を相談する</strong><small>年式・型式・グレードをもとに、専門スタッフが確認。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/inquiry_renewal.html"><span><strong>生地サンプルを取り寄せる</strong><small>画面ではわからない色味や手触りを、購入前に。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/installation_renewal.html"><span><strong>取付けガイドを見る</strong><small>写真と動画で、装着の手順を確認。</small></span><b>↗</b></a></div></div></section>
   </main>
-  <footer><div class="wrap"><div class="footer-top"><img src="/assets/logo.svg" width="216" height="35" alt="carshop connect"><p>DRIVE YOUR STYLE. CONNECT YOUR LIFE.</p><a href="#gallery-title">ページ上部へ ↑</a></div><div class="footer-bottom"><p>© CAR SHOP CONNECT</p><a href="/compare.html">制作プレビュー・旧版との比較</a></div><p class="source-note" id="sourceNote">制作プレビュー。掲載内容は保存資料をもとにしています。</p></div></footer>
+  <footer class="store-footer" id="storeFooter">
+    <div class="store-footer-inner">
+        <div class="store-inner">
+            <div class="store-footer-intro">
+                <div class="store-intro">
+                    <details class="store-intro-box" open><summary class="store-intro-title">お支払い</summary><div class="store-intro-text">
+                        Amazon Pay、クレジットカード、代金引換、銀行振込がご利用になれます。詳しくはご利用ガイドをご利用ください。<br/>
+                        <br/>
+                        ■銀行振込■<br/>
+                        ・三井住友銀行 あざみ野支店 普通 6700154<br/>
+                        ・楽天銀行 オペラ支店 普通 7009945<br/>
+                        ・ゆうちょ銀行 口座番号 10290-96173471<br/>
+                        ※銀行振込でのお支払いは先払いとなります。<br/>
+                        振り込み手数料はお客様負担になりますのでご了承ください。<br/>
+                        <br/>
+                        ■代金引換■<br/>
+                        ・ヤマト運輸<br/>
+                        ・佐川急便<br/>
+                        ・福山通運<br/>
+                        ・西濃運輸<br/>
+                        ※代金引換便をご利用の場合は、お支払い合計金額に応じて代引手数料をご負担いただきます。<br/>
+                        商品代金が30,000円未満(送料別・税込)の場合、全国一律550円。<br/>
+                        30,000円(送料別・税込)以上の場合は全国一律770円になります。<br/>
+                        <br/>
+                        ■クレジットカード決済｜Paidy■<br/>
+                         クレジットカード（VISA／MasterCard／JCB／AMEX／Diners）がご利用いただけます。<br/>
+                         リボ払い・分割払いもご利用可能です。<br/><br/>
+                         【即納商品】の場合は、ペイディ（あと払い）を含むすべての支払方法において、
+                         ご注文確定時点で決済が確定いたします。<br/>
+                         また、ご注文をいただいてから製作するオーダー商品の場合には、先払いとなります。<br/>
+                        <br/>
+                        ■Amazon Pay■<br/>
+                        Amazon Payがご利用いただけます。
+                    </div></details>
+                </div>
+                <div class="store-intro">
+                    <details class="store-intro-box" open><summary class="store-intro-title">配送・送料</summary><div class="store-intro-text">
+                            宅配便　全国一律1,430円（税込）<br/>
+                            10,000円以上のご購入で送料無料<br/>
+                            ※北海道：2,200円（税込）、沖縄県・その他離島：2,970円（税込）となります。<br/>
+                            ※パーツ注文の場合は送料がかかります。<br/>
+                            ■代引き手数料（税込）<br/>
+                            30,000円未満 550円 / 30,000円以上 770円
+                        </div></details>
+                    <details class="store-intro-box" open><summary class="store-intro-title">ポイントについて</summary><div class="store-intro-text">
+                            ご購入いただくと、商品代金（税抜）の1％をポイントにて還元され、「1ポイント=1円」として次回以降のお買い物にご利用いただけます。<br/>
+                            レビューが掲載されたら300ポイントプレゼントというキャンペーンも行っております。
+                        </div></details>
+                    <details class="store-intro-box" open><summary class="store-intro-title">キャンセルについて</summary><div class="store-intro-text">
+                            ご注文をいただいてから製作する商品の場合、一度製作に取り掛かりますとご注文内容の変更やキャンセルを承ることができません。
+                        </div></details>
+                </div>
+                <div class="store-intro">
+                    <details class="store-intro-box" open><summary class="store-intro-title">返品・交換</summary><div class="store-intro-text">
+                            ■商品がお手元に届きましたら、梱包箱に記載されている品番とカラーを必ずご確認ください。<br/>
+                            商品の製造、発送には万全の注意を期しておりますが、万が一お届けした商品に不備があった場合は、商品到着後7日以内にお手数ですが弊社までご連絡ください。<br/>
+                            <br/>
+                            ■お客様のご都合による返品・交換はお受けしておりませんので予めご了承ください。<br/>
+                            ・お客様による品番やカラー間違いによるご注文<br/>
+                            ・想像していた色味と違った<br/>
+                            ・装着が難しくてできない等、商品自体に不都合がない場合<br/>
+                            <br/>
+                            ■商品に明らかな欠陥がある場合には、商品到着後7日以内であれば交換・修正等対応をいたします。<br/>
+                            ・シートカバーに傷や縫製不良(ほつれ)がある場合<br/>
+                            ※製品の性質上一度でも商品を装着された場合には交換の対応は行えません。商品装着前に必ずご確認いただきますようお願い致します。
+                        </div></details>
+                </div>
+                <div class="store-intro">
+                    <details class="store-intro-box" open><summary class="store-intro-title">その他の注意点</summary><div class="store-intro-text">
+                            ■取付費用に関して■<br/>
+                            シートカバーの取付業者に取付を委託した場合の費用は一切負担致しておりません。<br/>
+                            ※交換や修正による対応を行った場合も、再度取付業者に委託した場合の取付費用は一切負担致しておりませんので、予めご了承ください。<br/>
+                            <br/>
+                            ■商品のにおいに関して■<br/>
+                            お届けしてすぐのシートカバーは、商品製造の際に使用された原料のにおいがする場合がございます。<br/>
+                            揮発性ですのでカバー装着後約1ヶ月でにおいはなくなりますが、気になる場合には商品装着前にカバーを2～3日陰干ししていただきますと、ほとんどにおいは気にならなくなります。<br/>
+                            <br/>
+                            ■メールが届かない場合■<br/>
+                            誠に恐れ入りますが、迷惑メールなどに振分けられている可能性もございますので、ご確認をお願いいたします。<br/>
+                            またドメイン指定の設定などもご確認いただけますと幸いでございます。
+                        </div></details>
+                    <details class="store-intro-box" open><summary class="store-intro-title">会社概要</summary><div class="store-intro-text">
+                            株式会社コネクト<br/>
+                            810-0071<br/>
+                            福岡県福岡市中央区那の津2丁目6-4<br/>
+                            九州産業東ビル3F<br/>
+                            <br/>
+                            対応時間：10:00-17:00<br/>
+                            メール：info@carshopconnect.com<br/>
+                            定休日：土・日・祝祭日
+                        </div></details>
+                </div>
+            </div>
+            <div class="store-footer-menu store-fs-clientInfo">
+                <a href="https://seatcover.jp/p/login" class="store-login">ログイン</a>
+                <a href="https://seatcover.jp/p/register">会員登録</a>
+                <a href="https://seatcover.jp/f/outline_renewal.html">会社概要</a>
+                <a href="https://seatcover.jp/f/guide_renewal">ご利用ガイド</a>
+                <a href="https://seatcover.jp/p/about/terms">特定商取引法に基づく表示</a>
+                <a href="https://seatcover.jp/f/question_renewal">お問い合わせ</a>
+                <a href="https://seatcover.jp/p/about/privacy-policy">プライバシーポリシー</a>
+            </div>
+            <div class="store-footer-logo">
+                <div class="store-logo-list">
+                    <a href="https://www.facebook.com/carshopconnect" target="_blank" rel="noopener"><img src="/assets/store/facebook.svg" alt="facebook"></a>
+                    <a href="https://www.instagram.com/carshopconnect" target="_blank" rel="noopener"><img src="/assets/store/instagram.svg" alt="instagram"></a>
+                    <a href="https://twitter.com/carshopconnect" target="_blank" rel="noopener"><img src="/assets/store/X.svg" alt="X"></a>
+                    <a href="https://www.youtube.com/c/carshopconnect" target="_blank" rel="noopener"><img src="/assets/store/youtube.svg" alt="youtube"></a>
+                    <a href="https://page.line.me/017rcvan" target="_blank" rel="noopener"><img src="/assets/store/line.svg" alt="line"></a>
+                </div>
+                <a class="store-logo" href="https://seatcover.jp/"><img src="/assets/store/logo.svg" alt="carshop connect"></a>
+            </div>
+            <div class="store-footer-copyright">
+                このホームページ上の写真・映像・文章・図表などの著作物を、弊社の了承なく複製、使用することを禁じます。<br/>
+                Copyright (C) 2021 Connect.,Ltd All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+  <div class="gallery-preview-note wrap"><a href="/compare.html">制作プレビュー・旧版との比較</a><p class="source-note" id="sourceNote">制作プレビュー。掲載内容は保存資料をもとにしています。</p></div>
   <dialog id="photoDialog" class="photo-dialog" aria-labelledby="detailCar"><div class="dialog-head"><span class="eyebrow">INSTALLATION DETAIL</span><button class="icon-button" id="closePhoto" aria-label="装着写真の詳細を閉じる">×</button></div><div id="detailContent"></div></dialog>
   <noscript><p class="wrap">検索と写真表示にはJavaScriptが必要です。<a href="https://seatcover.jp/gallerys/">公開中の装着ギャラリーを見る</a></p></noscript>
 </body>

@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/logo.svg",
+    "file": "public\\assets\\store\\logo.svg",
+    "sha256": "5110254AB12586A21DBFCA59FAD1DA5885175792AE6D77E6D95C0039534C6B02"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-building-icon.svg",
+    "file": "public\\assets\\store\\header-menu-building-icon.svg",
+    "sha256": "40FD030B6038021D534FC97C33015CD9E612B884FE9B5D65F54469345CADAFBD"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-arrow-right.svg",
+    "file": "public\\assets\\store\\header-menu-arrow-right.svg",
+    "sha256": "9036461F16DB0E5A0673F4F2DB92B632573B832E804B39C0A2D38793F0D47723"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-mycar.svg",
+    "file": "public\\assets\\store\\header-menu-mycar.svg",
+    "sha256": "A1F1F065B0918A418F57CDEB730C883D9231C12A0D20DF01DAB6F314278ECE6C"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-account.svg",
+    "file": "public\\assets\\store\\header-menu-account.svg",
+    "sha256": "367CBF01D3A5A9BB5DDA0EEC23A0084F6260A8A1DBD59D4A33558F8970BDDD0C"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-favorite.svg",
+    "file": "public\\assets\\store\\header-menu-favorite.svg",
+    "sha256": "72389575258FD6F21CA5E1D72C2CEA677999822BC0093DA3DDC41762DA247D12"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-cart.svg",
+    "file": "public\\assets\\store\\header-menu-cart.svg",
+    "sha256": "64B51D2A3D82E84798D252EB36E37201D61C2E35D43AA8597CBE7991D2BF3667"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-guide.svg",
+    "file": "public\\assets\\store\\header-menu-guide.svg",
+    "sha256": "AE5865B93438C9CFF1CED3BE0C15F5FAF6A0E7F54B7A1BC8D688E88AA9096104"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/top_renewal/image/header-menu-clog.svg",
+    "file": "public\\assets\\store\\header-menu-clog.svg",
+    "sha256": "E4663E383B834624D33B09BA5880593EE2F76DCC7677C16349774A7831F1364F"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/footer/facebook.svg",
+    "file": "public\\assets\\store\\facebook.svg",
+    "sha256": "619F7F3B0518359B99CA72A33A927E7511AAAEF7C67503FC81A799DF6E5B9C6D"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/footer/instagram.svg",
+    "file": "public\\assets\\store\\instagram.svg",
+    "sha256": "DCA8EA5A10C3D74EF0E8BD1F0C0D5C8E01969BF855E8DA8DA34F149AED56C0F9"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/footer/X.svg",
+    "file": "public\\assets\\store\\X.svg",
+    "sha256": "064954138ED411D4EE295AF79F2733528B67B3CE86EC46A45EE303C39467A332"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/footer/youtube.svg",
+    "file": "public\\assets\\store\\youtube.svg",
+    "sha256": "7A96BC97875477879AFE40CDD72F8F0BDBEA3C695A685F2ABAEEDE759C297166"
+  },
+  {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/footer/line.svg",
+    "file": "public\\assets\\store\\line.svg",
+    "sha256": "5F2F7E3BF77C47AADB4C89CCDA9F1FDA9D7B81C5F642723589DB2B6021309E0B"
+  }
+]
