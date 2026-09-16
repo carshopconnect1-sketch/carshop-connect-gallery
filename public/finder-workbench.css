@@ -2,6 +2,7 @@
 .finder.wrap{max-width:1320px;padding-bottom:65px}
 .finder .finder-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:26px}
 .finder .finder-heading h2{font-size:30px;margin:0;letter-spacing:.05em}
+.finder .finder-heading h2 span{display:inline-block;white-space:nowrap}
 .keyword-toggle{display:flex;align-items:center;gap:8px;min-height:44px;font-size:13px;color:#68645f;white-space:nowrap}
 .keyword-toggle svg{width:19px;height:19px}.keyword-toggle[aria-expanded=true]{color:var(--red)}
 .filter-workbench{scroll-margin-top:22px}.search-row{margin:0 0 24px}.search-row form{min-height:58px;padding:5px 5px 5px 17px}.search-row input{font-size:16px}.search-row form button{height:46px;font-size:14px;min-width:90px}
