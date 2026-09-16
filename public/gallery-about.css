@@ -1,0 +1,21 @@
+.gallery-about {padding-block:72px 80px;scroll-margin-top:calc(var(--store-header-height) + 22px)}
+.gallery-about-inner {max-width:1120px;margin-inline:auto}
+.gallery-about h2 {margin:0 0 26px;padding-bottom:24px;border-bottom:1px solid var(--line);font-size:22px;font-weight:600;letter-spacing:.035em;line-height:1.7}
+.gallery-about h2 span {display:inline-block}
+.gallery-about-copy {font-size:14px;line-height:2.1;color:var(--muted);overflow-wrap:anywhere}
+.gallery-about-copy p+p {margin-top:14px}
+.gallery-about-copy strong {color:var(--ink);font-weight:600}
+.gallery-about h3 {margin-top:36px;font-size:15px;font-weight:600;letter-spacing:.04em}
+.gallery-about-brands {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 48px;margin:22px 0 0}
+.gallery-about-brands dt {font-size:12px;font-weight:500;line-height:1.8}
+.gallery-about-brands dt span {margin-right:5px;font-family:var(--font-latin);font-size:19px;font-weight:500;letter-spacing:.025em}
+.gallery-about-brands dd {margin:8px 0 0;font-size:13px;line-height:2;color:var(--muted);overflow-wrap:anywhere}
+@media(max-width:760px) {
+  .gallery-about {padding-block:42px 48px}
+  .gallery-about h2 {font-size:18px;line-height:1.8;padding-bottom:19px;margin-bottom:20px}
+  .gallery-about-copy {font-size:13px;line-height:2}
+  .gallery-about h3 {margin-top:28px;font-size:14px}
+  .gallery-about-brands {grid-template-columns:1fr;gap:24px;margin-top:20px}
+  .gallery-about-brands dt span {font-size:18px}
+  .gallery-about-brands dd {font-size:12px;line-height:2}
+}

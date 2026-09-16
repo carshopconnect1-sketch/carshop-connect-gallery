@@ -313,6 +313,7 @@ async function start(){
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
+    $('aboutCaseCount').textContent=number(cases.length)+'件の';
     $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。公開サイトの最新データとの照合は未実施です。`;
     updateResults();
     if(location.hash==='#photoResults')requestAnimationFrame(showPhotos);

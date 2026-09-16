@@ -8,6 +8,7 @@
   <link rel="preload" href="/assets/fonts/josefin-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/hero-video.css"><link rel="stylesheet" href="/discovery-filters.css"><link rel="stylesheet" href="/finder-workbench.css"><link rel="stylesheet" href="/typography.css"><link rel="stylesheet" href="/store-chrome.css"><script type="module" src="/store-chrome.js"></script><script type="module" src="/app.js"></script><script type="module" src="/hero-video.js"></script>
   <link rel="stylesheet" href="/photo-story.css">
+  <link rel="stylesheet" href="/gallery-about.css">
 </head>
 <body>
   <a class="skip-link" href="#results">装着写真へ進む</a>
@@ -97,6 +98,22 @@
       <div class="results-area" id="results" tabindex="-1"><div class="result-toolbar" id="photoResults" tabindex="-1"><div><p><strong id="resultCount">—</strong> <span>件の装着写真</span></p><p class="results-summary" id="resultsSummary">すべての装着写真</p></div><button type="button" class="secondary edit-filters" data-edit-filters>絞り込みを変更 ↑</button></div><div id="loading" class="loading">装着写真を読み込んでいます…</div><div class="empty-state" id="emptyState" hidden><span>NO RESULTS</span><h3>条件に合う装着写真がありません。</h3><p>選択した条件を減らすと、写真が見つかることがあります。</p><div id="emptyRecoveryOptions" class="recovery-options"></div><button class="primary" id="resetEmpty">条件をすべて解除する →</button></div><div class="photo-grid" id="photoGrid"></div><div class="load-more-wrap" id="loadMoreWrap" hidden><p id="shownCount"></p><button id="loadMore" class="secondary">もっと装着写真を見る <span>＋</span></button></div></div>
     </section>
     <section class="support-section"><div class="wrap support-inner"><div><div class="eyebrow red">BEFORE YOU CHOOSE</div><h2>その一枚を、<br>安心して選ぶために。</h2></div><div class="support-links"><a href="https://seatcover.jp/support/matchform/"><span><strong>愛車への適合を相談する</strong><small>年式・型式・グレードをもとに、専門スタッフが確認。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/inquiry_renewal.html"><span><strong>生地サンプルを取り寄せる</strong><small>画面ではわからない色味や手触りを、購入前に。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/installation_renewal.html"><span><strong>取付けガイドを見る</strong><small>写真と動画で、装着の手順を確認。</small></span><b>↗</b></a></div></div></section>
+    <section class="gallery-about wrap" id="galleryAbout" aria-labelledby="gallery-about-title">
+      <div class="gallery-about-inner">
+        <h2 id="gallery-about-title"><span>シートカバー装着写真</span><wbr><span>ギャラリーについて</span></h2>
+        <div class="gallery-about-copy">
+          <p>カーショップコネクトのシートカバー装着写真ギャラリーでは、<strong id="aboutCaseCount"></strong>装着事例をご紹介しています。Refinad（レフィナード）・Sandii（サンディ）・IXUS（イクサス）・Dotty（ダティ）の4ブランドから、実際の車内の仕上がりをご覧いただけます。</p>
+          <p>メーカー・車種・ブランド・シリーズ・カラーから絞り込み、愛車に合うシートカバーをお探しいただけます。写真の詳細では、掲載されているお客様のコメントや商品ページへのリンクもご確認いただけます。</p>
+        </div>
+        <h3>取扱ブランド</h3>
+        <dl class="gallery-about-brands">
+          <div><dt><span>Refinad</span>（レフィナード）</dt><dd>本革・PVCレザー・アルカンターラなど、上質な素材で仕上げる定番からプレミアムまでのシリーズ。Leather Deluxe、Astraea、Heritage、Avant-Garde、Customなどを展開しています。</dd></div>
+          <div><dt><span>Sandii</span>（サンディ）</dt><dd>レトロ＆ヴィンテージテイストの個性派シリーズ。オールドカヌレ、カヌレ、エクレア、デニムサンド、マカロン、ビスキュイ、コロール、ワッフルなどを展開しています。</dd></div>
+          <div><dt><span>IXUS</span>（イクサス）</dt><dd>PUレザー、デニム、本革を中心に、車種専用設計でフィット感を追求したカジュアル＆スポーティシリーズです。</dd></div>
+          <div><dt><span>Dotty</span>（ダティ）</dt><dd>DEP-V、DEP-H、DEP-M、EURO-LUXなど、欧州車を含む多車種に対応する老舗ブランドのシートカバーシリーズです。</dd></div>
+        </dl>
+      </div>
+    </section>
   </main>
   <footer class="store-footer" id="storeFooter">
     <div class="store-footer-inner">
