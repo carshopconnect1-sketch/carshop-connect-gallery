@@ -1,5 +1,7 @@
-// The photo rail shares the catalog and detail dialog with the filtered results.
-export function mountPhotoStory(cases, featuredIds, openDetail) {
+import {emptyFilters, filtersToParams} from './filter.js';
+
+// Each representative photo leads to all brands for the pictured vehicle.
+export function mountPhotoStory(cases, featuredIds, openVehicleGallery) {
   const section = document.getElementById('inspiration');
   const rail = document.getElementById('inspirationRail');
   const previous = document.getElementById('inspirationPrevious');
@@ -10,11 +12,12 @@ export function mountPhotoStory(cases, featuredIds, openDetail) {
 
   for (const item of items) {
     const slide = document.createElement('li');
-    const button = document.createElement('button');
-    button.className = 'inspiration-card';
-    button.type = 'button';
-    button.dataset.id = item.id;
-    button.setAttribute('aria-label', `${item.car} / ${item.brand} ${item.series}の装着写真を見る`);
+    const card = document.createElement('a');
+    card.className = 'inspiration-card';
+    card.dataset.id = item.id;
+    const vehicleFilters = {...emptyFilters(), maker: item.maker, car: item.car};
+    card.href = `${location.pathname}?${filtersToParams(vehicleFilters)}#photoResults`;
+    card.setAttribute('aria-label', `${item.car}の装着ギャラリーを見る`);
 
     const photo = document.createElement('img');
     photo.src = item.previewImage || item.thumbnail || item.image;
@@ -29,13 +32,17 @@ export function mountPhotoStory(cases, featuredIds, openDetail) {
       text.textContent = value;
       caption.append(text);
     }
-    const arrow = document.createElement('span');
-    arrow.className = 'inspiration-open';
-    arrow.setAttribute('aria-hidden', 'true');
-    arrow.textContent = '↗';
-    button.append(photo, caption, arrow);
-    button.addEventListener('click', () => openDetail(item));
-    slide.append(button);
+    const action = document.createElement('span');
+    action.className = 'inspiration-link';
+    action.textContent = 'この車種の写真を見る →';
+    caption.append(action);
+    card.append(photo, caption);
+    card.addEventListener('click', event => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openVehicleGallery(vehicleFilters, card.getAttribute('href'));
+    });
+    slide.append(card);
     rail.append(slide);
   }
   section.hidden = false;
@@ -56,17 +63,17 @@ export function mountPhotoStory(cases, featuredIds, openDetail) {
   previous.addEventListener('click', () => step(-1));
   next.addEventListener('click', () => step(1));
   rail.addEventListener('scroll', updateControls, {passive: true});
-  // Arrow keys move focus among the actual photo buttons; Tab stays native.
+  // Arrow keys move focus among the vehicle links; Tab stays native.
   rail.addEventListener('keydown', event => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-    const buttons = [...rail.querySelectorAll('button')];
-    const current = buttons.indexOf(event.target);
+    const cards = [...rail.querySelectorAll('.inspiration-card')];
+    const current = cards.indexOf(event.target);
     if (current < 0) return;
     event.preventDefault();
-    const index = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1
-      : Math.max(0, Math.min(buttons.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1)));
-    buttons[index].focus({preventScroll: true});
-    buttons[index].scrollIntoView({behavior: 'instant', block: 'nearest', inline: 'nearest'});
+    const index = event.key === 'Home' ? 0 : event.key === 'End' ? cards.length - 1
+      : Math.max(0, Math.min(cards.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1)));
+    cards[index].focus({preventScroll: true});
+    cards[index].scrollIntoView({behavior: 'instant', block: 'nearest', inline: 'nearest'});
   });
   new ResizeObserver(updateControls).observe(rail);
   updateControls();

@@ -146,6 +146,15 @@ function showPhotos(){
   const target=filtered.length?$('photoResults'):$('filterOverview');
   target.scrollIntoView({block:'start',behavior:'instant'});target.focus({preventScroll:true});scheduleFinderAction();
 }
+function openVehicleGallery(next, url){
+  $('carSearch').value='';
+  commit(next,false);
+  setPanel('vehicle');
+  $('keywordSearch').hidden=true;$('keywordToggle').setAttribute('aria-expanded','false');
+  $('exactColorDetails').open=false;
+  if(url!==location.pathname+location.search+location.hash)window.history.pushState(null,'',url);
+  showPhotos();
+}
 function scheduleFinderAction(){
   if(dockFrame)return;
   dockFrame=requestAnimationFrame(()=>{
@@ -302,10 +311,11 @@ async function start(){
   try{
     const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
-    mountControls();mountPhotoStory(cases,data.featuredIds,openDetail);$('loading').hidden=true;
+    mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
     $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。公開サイトの最新データとの照合は未実施です。`;
     updateResults();
+    if(location.hash==='#photoResults')requestAnimationFrame(showPhotos);
   }catch(error){$('loading').textContent='装着事例を読み込めませんでした。接続を確認して、再読み込みしてください。';const b=el('button','secondary','再読み込み');b.addEventListener('click',()=>location.reload());$('loading').append(b);}
 }
 start();
