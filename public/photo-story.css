@@ -28,7 +28,17 @@
   scroll-snap-type:x mandatory;
   scroll-padding-inline:var(--story-gutter);
   scrollbar-width:thin;
-  scrollbar-color:#b6b2b0 #f2f1f0;
+  scrollbar-color:var(--red) #f1eeed;
+}
+/* Keep native dragging, while removing the heavy platform scrollbar chrome. */
+@supports selector(::-webkit-scrollbar) {
+  .inspiration-rail {scrollbar-width:auto;scrollbar-color:auto}
+  .inspiration-rail::-webkit-scrollbar {height:3px}
+  .inspiration-rail::-webkit-scrollbar-track {background:#f1eeed;border-radius:999px;margin-inline:var(--story-gutter)}
+  .inspiration-rail::-webkit-scrollbar-thumb {background:var(--red);border-radius:999px}
+  .inspiration-rail::-webkit-scrollbar-thumb:hover {background:#7f1e2a}
+  .inspiration-rail::-webkit-scrollbar-button {display:none;width:0;height:0}
+  .inspiration-rail::-webkit-scrollbar-corner {background:transparent}
 }
 .inspiration-rail li {min-width:0;scroll-snap-align:start}
 .inspiration-rail li:nth-child(even) {margin-top:36px}
