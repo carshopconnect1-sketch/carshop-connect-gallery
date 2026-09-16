@@ -2,6 +2,7 @@ import {emptyFilters, filterCases, facet, readFilters, filtersToParams, colorOpt
 import {seriesCatalog, findSeries} from './series-data.js';
 import {makerCatalog} from './maker-data.js';
 import {conditionLabels,conditionText,removeCondition,recoveryOptions,carChoices} from './finder-state.js';
+import {mountPhotoStory} from './photo-story.js';
 
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
@@ -301,7 +302,7 @@ async function start(){
   try{
     const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
-    mountControls();$('loading').hidden=true;
+    mountControls();mountPhotoStory(cases,data.featuredIds,openDetail);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
     $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。公開サイトの最新データとの照合は未実施です。`;
     updateResults();
