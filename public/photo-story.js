@@ -18,7 +18,8 @@ export function mountPhotoStory(cases, featuredIds, openVehicleGallery) {
     card.dataset.id = item.id;
     const vehicleFilters = {...emptyFilters(), maker: item.maker, car: item.car};
     card.href = `${location.pathname}?${filtersToParams(vehicleFilters)}#photoResults`;
-    card.setAttribute('aria-label', `${item.car}の装着ギャラリーを見る`);
+    const actionLabel = `${item.car}の装着写真を見る`;
+    card.setAttribute('aria-label', actionLabel);
 
     const photo = document.createElement('img');
     photo.src = item.previewImage || item.thumbnail || item.image;
@@ -36,7 +37,7 @@ export function mountPhotoStory(cases, featuredIds, openVehicleGallery) {
     }
     const action = document.createElement('span');
     action.className = 'inspiration-link';
-    action.textContent = 'この車種の写真を見る →';
+    action.textContent = `${actionLabel} →`;
     caption.append(action);
     card.append(photo, caption);
     card.addEventListener('click', event => {
