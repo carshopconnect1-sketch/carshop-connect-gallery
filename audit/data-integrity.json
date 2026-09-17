@@ -1,0 +1,908 @@
+{
+  "summary": {
+    "cases": 2895,
+    "images": 10096,
+    "manualV2Cases": 10,
+    "highPhotoCountCases": 23,
+    "mixedDomainCases": 0,
+    "reviewedPhotoInfoMismatches": 15,
+    "reviewedMultiVehicleSources": 3
+  },
+  "exactImageCrossAssignments": [],
+  "exactSetCrossAssignments": [],
+  "photoInfoVehicleConflicts": [],
+  "reviewedPhotoInfoMismatches": [
+    {
+      "id": "05d57ff9725b",
+      "maker": "スバル",
+      "car": "XV",
+      "brand": "Refinad",
+      "series": "Alcantara Series",
+      "modelText": "インプレッサスポーツ",
+      "mentionedCars": [
+        "インプレッサスポーツ"
+      ],
+      "sourceFile": "subaru_xv.html",
+      "reviewReason": "Source page, product code, exterior shot, and images confirm XV."
+    },
+    {
+      "id": "1b82cfd5781a",
+      "maker": "スバル",
+      "car": "XV",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "インプレッサスポーツ GT6",
+      "mentionedCars": [
+        "インプレッサスポーツ"
+      ],
+      "sourceFile": "subaru_xv.html",
+      "reviewReason": "Source page, product code, review, and images confirm XV."
+    },
+    {
+      "id": "78f32270a357",
+      "maker": "スバル",
+      "car": "エクシーガ",
+      "brand": "Refinad",
+      "series": "Leather Series",
+      "modelText": "レガシィツーリングワゴン",
+      "mentionedCars": [
+        "レガシィツーリングワゴン"
+      ],
+      "sourceFile": "subaru_exiga.html",
+      "reviewReason": "Source page, product code, and seven-seat images confirm Exiga."
+    },
+    {
+      "id": "ad79f143bea4",
+      "maker": "スバル",
+      "car": "レガシィアウトバック",
+      "brand": "Refinad",
+      "series": "Custom Series",
+      "modelText": "インプレッサスポーツ GT7",
+      "mentionedCars": [
+        "インプレッサスポーツ"
+      ],
+      "sourceFile": "subaru_outback.html",
+      "reviewReason": "Source page and product code confirm Legacy Outback."
+    },
+    {
+      "id": "57fc83f4aa5e",
+      "maker": "スバル",
+      "car": "クロストレック",
+      "brand": "Refinad",
+      "series": "Custom Series",
+      "modelText": "インプレッサスポーツ GT7",
+      "mentionedCars": [
+        "インプレッサスポーツ"
+      ],
+      "sourceFile": "subaru_crosstrek.html",
+      "reviewReason": "Source page, product code, and images confirm Crosstrek."
+    },
+    {
+      "id": "343c9f2db2ea",
+      "maker": "スバル",
+      "car": "クロストレック",
+      "brand": "Refinad",
+      "series": "Custom Series",
+      "modelText": "レガシィアウトバック",
+      "mentionedCars": [
+        "レガシィアウトバック"
+      ],
+      "sourceFile": "subaru_crosstrek.html",
+      "reviewReason": "Source page, product code, review, and images confirm Crosstrek."
+    },
+    {
+      "id": "7b291ef045f9",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "785c0f24f1f2",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "ad661901970f",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "c9c7fd7c4238",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "ff06790c42cc",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "a55382cdbaf9",
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "modelText": "VEZEL RV5",
+      "mentionedCars": [
+        "VEZEL"
+      ],
+      "sourceFile": "honda_vezelhybrid.html",
+      "reviewReason": "VEZEL is the English spelling of the Japanese Vezel label."
+    },
+    {
+      "id": "a1c88c3b65a0",
+      "maker": "ダイハツ",
+      "car": "キャストスポーツ",
+      "brand": "Refinad",
+      "series": "Quilt Series",
+      "modelText": "キャスト スタイル",
+      "mentionedCars": [
+        "キャストスタイル"
+      ],
+      "sourceFile": "daihatsu_castsport.html",
+      "reviewReason": "Exterior badging, source page, product code, and images confirm Cast Sport."
+    },
+    {
+      "id": "fc9f3f9c0905",
+      "maker": "ダイハツ",
+      "car": "ミラココア",
+      "brand": "Refinad",
+      "series": "Leather Series",
+      "modelText": "ミライース",
+      "mentionedCars": [
+        "ミライース"
+      ],
+      "sourceFile": "daihatsu_miracocoa.html",
+      "reviewReason": "Image filenames, source page, and vehicle interior confirm Mira Cocoa."
+    },
+    {
+      "id": "e7c169f5bc39",
+      "maker": "スバル",
+      "car": "レガシィツーリングワゴン",
+      "brand": "Refinad",
+      "series": "Custom Series",
+      "modelText": "レガシィアウトバック",
+      "mentionedCars": [
+        "レガシィアウトバック"
+      ],
+      "sourceFile": "subaru_legacytouringwagon.html",
+      "reviewReason": "Source page and product code confirm Legacy Touring Wagon."
+    }
+  ],
+  "mixedDomainCases": [],
+  "sourceFileMultiVehicle": [],
+  "reviewedSourceFileMultiVehicle": [
+    {
+      "sourceFile": "audi_a3a4.html",
+      "vehicles": [
+        [
+          "アウディ",
+          "A3スポーツバック"
+        ],
+        [
+          "アウディ",
+          "A4アバント"
+        ]
+      ],
+      "reviewReason": "The saved source intentionally combines A3 and A4; cards are assigned from their model metadata."
+    },
+    {
+      "sourceFile": "mini_mini-bmw.html",
+      "vehicles": [
+        [
+          "MINI",
+          "MINI"
+        ],
+        [
+          "MINI",
+          "MINI CROSSOVER"
+        ],
+        [
+          "MINI",
+          "MINI F56"
+        ],
+        [
+          "MINI",
+          "MINI R56"
+        ],
+        [
+          "MINI",
+          "MINI クーパー R56"
+        ],
+        [
+          "MINI",
+          "MINI ビクトリア"
+        ]
+      ],
+      "reviewReason": "The saved MINI source intentionally combines several MINI models; explicit models are retained per card."
+    },
+    {
+      "sourceFile": "old.zip/old/v2/index.html",
+      "vehicles": [
+        [
+          "スズキ",
+          "車種名未掲載"
+        ],
+        [
+          "ダイハツ",
+          "車種名未掲載"
+        ],
+        [
+          "トヨタ",
+          "車種名未掲載"
+        ],
+        [
+          "ホンダ",
+          "車種名未掲載"
+        ],
+        [
+          "マツダ",
+          "車種名未掲載"
+        ],
+        [
+          "メルセデス・ベンツ",
+          "車種名未掲載"
+        ],
+        [
+          "三菱",
+          "車種名未掲載"
+        ],
+        [
+          "日産",
+          "車種名未掲載"
+        ]
+      ],
+      "reviewReason": "The legacy IXUS upload is an aggregate source with manufacturer labels and no verified car names."
+    }
+  ],
+  "manualV2Cases": [
+    {
+      "id": "a0e00774a749",
+      "maker": "ジープ",
+      "car": "Jeepラングラー",
+      "brand": "Refinad",
+      "series": "Heritage Kachina",
+      "photoCount": 7,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/jeep_hk1.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk2.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk3.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk4.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk5.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk6.jpg",
+        "https://seatcover.jp/gallerys/v2/jeep_hk7.jpg"
+      ]
+    },
+    {
+      "id": "33b662261b8e",
+      "maker": "スズキ",
+      "car": "ジムニー",
+      "brand": "Refinad",
+      "series": "Heritage Mesh",
+      "photoCount": 9,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/05.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/03.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_06.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_01.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/06.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/02.jpg"
+      ]
+    },
+    {
+      "id": "d27c440ada46",
+      "maker": "スズキ",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "series": "Heritage",
+      "photoCount": 10,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/01.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/02.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/03.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/05.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/06.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/07.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/08.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/09.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_nomad/10.jpg"
+      ]
+    },
+    {
+      "id": "635f024df355",
+      "maker": "スズキ",
+      "car": "ハスラー",
+      "brand": "Refinad",
+      "series": "Corduroy Denim",
+      "photoCount": 8,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/01.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/02.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/03.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/05.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/06.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/07.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler1/08.jpg"
+      ]
+    },
+    {
+      "id": "5b4fb38c60b3",
+      "maker": "スズキ",
+      "car": "ハスラー",
+      "brand": "Refinad",
+      "series": "Corduroy Denim",
+      "photoCount": 1,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/ig_posts/hustler2/01.jpg"
+      ]
+    },
+    {
+      "id": "87cf15a4b222",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "Heritage Interior Panel",
+      "photoCount": 46,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_01.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_02.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_03.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_04.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_05.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_06.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_07.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_08.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_09.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_10.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_11.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_12.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_13.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_14.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_15.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_16.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_17.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_18.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_19.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_20.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_21.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_22.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_23.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_24.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_25.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_26.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_27.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_28.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_29.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_30.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_31.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_32.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_33.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_34.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_35.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_36.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_37.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_38.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_39.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_40.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_41.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_42.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_43.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_44.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_45.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_hq/h_46.jpg"
+      ]
+    },
+    {
+      "id": "ec1638d5eeec",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "Leather Interior Panel",
+      "photoCount": 66,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_01.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_02.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_03.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_04.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_05.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_06.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_07.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_08.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_09.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_10.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_11.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_12.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_13.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_14.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_15.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_16.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_17.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_18.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_19.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_20.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_21.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_22.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_23.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_24.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_25.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_26.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_27.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_28.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_29.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_30.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_31.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_32.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_33.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_34.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_35.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_36.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_37.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_38.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_39.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_40.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_41.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_42.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_43.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_44.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_45.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_46.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_47.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_48.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_49.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_50.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_51.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_52.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_53.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_54.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_55.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_56.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_57.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_58.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_59.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_60.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_61.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_62.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_63.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_64.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_65.jpg",
+        "https://seatcover.jp/gallerys/v2/leather_hq/l_66.jpg"
+      ]
+    },
+    {
+      "id": "e2afd74d0658",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Sandii",
+      "series": "カヌレ Interior Panel",
+      "photoCount": 55,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_01.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_02.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_03.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_04.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_05.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_06.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_07.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_08.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_09.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_10.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_11.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_12.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_13.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_14.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_15.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_16.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_17.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_18.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_19.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_20.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_21.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_22.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_23.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_24.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_25.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_26.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_27.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_28.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_29.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_30.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_31.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_32.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_33.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_34.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_35.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_36.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_37.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_38.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_39.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_40.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_41.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_42.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_43.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_44.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_45.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_46.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_47.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_48.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_49.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_50.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_51.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_52.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_53.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_54.jpg",
+        "https://seatcover.jp/gallerys/v2/antique_hq/a_55.jpg"
+      ]
+    },
+    {
+      "id": "695fa514218a",
+      "maker": "トヨタ",
+      "car": "プリウス",
+      "brand": "Refinad",
+      "series": "Astraea Leaf",
+      "photoCount": 37,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_01.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_02.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_03.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_04.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_05.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_06.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_07.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_08.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_09.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_10.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_11.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_12.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_13.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_14.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_15.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_16.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_17.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_18.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_19.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_20.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_21.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_22.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_23.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_24.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_25.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_26.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_27.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_28.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_29.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_30.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_31.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_32.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_33.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_34.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_35.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_36.jpg",
+        "https://seatcover.jp/gallerys/v2/astraea_leaf/al_37.jpg"
+      ]
+    },
+    {
+      "id": "04494d145272",
+      "maker": "三菱",
+      "car": "トライトン",
+      "brand": "Refinad",
+      "series": "Astraea Leaf",
+      "photoCount": 15,
+      "images": [
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/01.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/02.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/03.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/05.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/06.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/07.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/08.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/09.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/10.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/11.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/12.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/13.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/14.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/triton/15.jpg"
+      ]
+    }
+  ],
+  "highPhotoCountCases": [
+    {
+      "id": "ec1638d5eeec",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "Leather Interior Panel",
+      "photoCount": 66,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "e2afd74d0658",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Sandii",
+      "series": "カヌレ Interior Panel",
+      "photoCount": 55,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "87cf15a4b222",
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "Heritage Interior Panel",
+      "photoCount": 46,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "695fa514218a",
+      "maker": "トヨタ",
+      "car": "プリウス",
+      "brand": "Refinad",
+      "series": "Astraea Leaf",
+      "photoCount": 37,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "f28fd6eb4006",
+      "maker": "トヨタ",
+      "car": "カムリ・ハイブリッド",
+      "brand": "Dotty",
+      "series": "LUXUR-SPOLT",
+      "photoCount": 18,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "9d19819713ca",
+      "maker": "ジープ",
+      "car": "JEEPチェロキー",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 18,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "c471490deab1",
+      "maker": "アウディ",
+      "car": "Q5",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 17,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "0408b53e8923",
+      "maker": "フォルクスワーゲン",
+      "car": "VWゴルフ5",
+      "brand": "Dotty",
+      "series": "EURO-LUX",
+      "photoCount": 16,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "04494d145272",
+      "maker": "三菱",
+      "car": "トライトン",
+      "brand": "Refinad",
+      "series": "Astraea Leaf",
+      "photoCount": 15,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "cfb219a423d2",
+      "maker": "トヨタ",
+      "car": "アイシス",
+      "brand": "Dotty",
+      "series": "COX-SPORTS",
+      "photoCount": 14,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "6ebfc94fb561",
+      "maker": "ボルボ",
+      "car": "ボルボV40",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "photoCount": 13,
+      "domains": [
+        "refinad.com"
+      ]
+    },
+    {
+      "id": "b82df2d9650c",
+      "maker": "アウディ",
+      "car": "A5スポーツバック",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 13,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "17ba82441e6e",
+      "maker": "BMW",
+      "car": "BMW2シリーズ",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 12,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "d2cc88e77c86",
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフGTI",
+      "brand": "Dotty",
+      "series": "LUXUR-SPOLT",
+      "photoCount": 12,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "01340b1569fa",
+      "maker": "アウディ",
+      "car": "A3スポーツバック",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 12,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "485c2993794e",
+      "maker": "日産",
+      "car": "ジューク",
+      "brand": "Dotty",
+      "series": "DEP-SPYDER",
+      "photoCount": 11,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "0ea1a52ecdf3",
+      "maker": "クライスラー",
+      "car": "CHRYSLERPTクルーザー",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 11,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "05d57ff9725b",
+      "maker": "スバル",
+      "car": "XV",
+      "brand": "Refinad",
+      "series": "Alcantara Series",
+      "photoCount": 10,
+      "domains": [
+        "refinad.com"
+      ]
+    },
+    {
+      "id": "6d597c9fbbd8",
+      "maker": "日産",
+      "car": "ムラーノ",
+      "brand": "Dotty",
+      "series": "LUXUR-SPOLT",
+      "photoCount": 10,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "3addb2aff013",
+      "maker": "マツダ",
+      "car": "アテンザワゴン",
+      "brand": "Dotty",
+      "series": "LUXUR-SPOLT",
+      "photoCount": 10,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "d27c440ada46",
+      "maker": "スズキ",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "series": "Heritage",
+      "photoCount": 10,
+      "domains": [
+        "seatcover.jp"
+      ]
+    },
+    {
+      "id": "dcc0254fad2b",
+      "maker": "アウディ",
+      "car": "A4アバント",
+      "brand": "Dotty",
+      "series": "シリーズ名の記載なし",
+      "photoCount": 10,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    },
+    {
+      "id": "1da42eb9cd68",
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ8ヴァリアント",
+      "brand": "Dotty",
+      "series": "COX-SPORTS",
+      "photoCount": 10,
+      "domains": [
+        "www.dotty.co.jp"
+      ]
+    }
+  ]
+}

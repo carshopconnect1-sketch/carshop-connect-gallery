@@ -845,7 +845,16 @@
     }
   ],
   "curatedMergedRecords": 2,
+  "curatedExcludedImages": 1,
   "curatedDetails": [
+    {
+      "sourceFile": "bmw_3series.html",
+      "index": "0",
+      "reason": "image belongs to a different product series",
+      "removedImages": [
+        "https://refinad.com/wp-content/uploads/2021/11/bmw3.jpg-1.jpeg.webp"
+      ]
+    },
     {
       "kept": "33b662261b8e",
       "merged": [
@@ -900,7 +909,7 @@
   ],
   "caseCount": 2895,
   "makers": 24,
-  "cars": 353,
+  "cars": 355,
   "brands": {
     "Refinad": 1500,
     "Sandii": 1097,
@@ -908,7 +917,7 @@
     "IXUS": 143
   },
   "sourceDate": "2026-06-04",
-  "catalogBytes": 1140894,
+  "catalogBytes": 1140869,
   "featured": [
     {
       "id": "33b662261b8e",

@@ -34,6 +34,56 @@ JIMNY_HERITAGE_MESH_SOURCE_IMAGES = {
     'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/01.jpg',
 }
 
+# Corrections established by comparing the saved page title, photo metadata,
+# product code, review text, and the installation photos themselves. These
+# source pages either use a broad model label or carry a copied page title.
+SOURCE_CARD_CORRECTIONS = {
+    ('audi_a3a4.html', '0'): {
+        'car': 'A3スポーツバック',
+        'reason': '写真の型式表記から、A3/A4共通ページ内の車種をA3スポーツバックに特定。',
+    },
+    ('audi_a3a4.html', '1'): {
+        'car': 'A4アバント',
+        'reason': '写真の型式表記から、A3/A4共通ページ内の車種をA4アバントに特定。',
+    },
+    ('audi_audia3.html', '0'): {
+        'car': 'A3スポーツバック',
+        'reason': '写真の型式表記に合わせて保存ページの省略車名を補正。',
+    },
+    **{
+        ('audi_auditt.html', str(index)): {
+            'car': 'TT',
+            'reason': '写真の型式表記に合わせて保存ページの連結車名「AUDITT」を補正。',
+        }
+        for index in range(6)
+    },
+    ('honda_crvhybrid.html', '0'): {
+        'car': 'CR-V',
+        'productUrl': 'https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00067',
+        'reason': '保存ファイル名・写真型式・品番がCR-Vを示す一方、ページ見出しと商品リンクだけがVEZEL用だったため補正。',
+    },
+    ('mini_mini-bmw.html', '0'): {'car': 'MINI クーパー R56', 'reason': '写真の型式表記からMINI共通ページ内のモデルを補足。'},
+    ('mini_mini-bmw.html', '1'): {'car': 'MINI', 'reason': '保存ページの不自然な連結車名をメーカー共通名に補正。'},
+    ('mini_mini-bmw.html', '2'): {'car': 'MINI F56', 'reason': '写真の型式表記からMINI共通ページ内のモデルを補足。'},
+    ('mini_mini-bmw.html', '3'): {'car': 'MINI', 'reason': '保存ページの不自然な連結車名をメーカー共通名に補正。'},
+    ('mini_mini-bmw.html', '4'): {'car': 'MINI', 'reason': '保存ページの不自然な連結車名をメーカー共通名に補正。'},
+    ('mini_mini-bmw.html', '5'): {'car': 'MINI CROSSOVER', 'reason': '写真の型式表記からMINI共通ページ内のモデルをCROSSOVERに特定。'},
+    ('mini_mini-bmw.html', '6'): {'car': 'MINI ビクトリア', 'reason': '写真の型式表記からMINI共通ページ内のモデルを補足。'},
+    ('mini_mini-bmw.html', '7'): {'car': 'MINI R56', 'reason': '写真の型式表記からMINI共通ページ内のモデルを補足。'},
+    ('mini_mini-exclusive-design.html', '0'): {
+        'car': 'MINI クーパーS',
+        'reason': '写真の型式表記から、専用デザインページ内の車種をクーパーSに特定。',
+    },
+}
+
+# The BMW Leather source contains one Quilt installation image that is also
+# the lead image of the dedicated Quilt case. Keep it only with that product.
+SOURCE_IMAGE_EXCLUSIONS = {
+    ('bmw_3series.html', '0'): {
+        'https://refinad.com/wp-content/uploads/2021/11/bmw3.jpg-1.jpeg.webp',
+    },
+}
+
 def clean_car(value):
     value=re.sub(r'\s+', ' ', value).strip()
     # Product names accidentally appear in some Dotty page titles. Strip only known suffixes.
@@ -55,7 +105,7 @@ def parse_json(value, default):
 
 if __name__=='__main__':
     public=ROOT/'public'; public.mkdir(exist_ok=True)
-    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; curated_merged=0; curated_details=[]; vehicle_product_urls={}
+    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; curated_merged=0; curated_excluded=0; curated_details=[]; vehicle_product_urls={}
     files=sorted(SOURCE.glob('*.html'), key=lambda p: ('combined' in p.stem or p.stem.endswith('_series'), len(p.stem), p.stem))
     for file in files:
         parser=GalleryParser(); parser.feed(file.read_text(encoding='utf-8-sig'))
@@ -70,10 +120,17 @@ if __name__=='__main__':
         if not maker:
             exclusions.append({'file':file.name,'reason':'unknown maker','count':len(parser.cards)}); continue
         for a in parser.cards:
+            card_key=(file.name,a.get('data-idx',''))
+            correction=SOURCE_CARD_CORRECTIONS.get(card_key,{})
             brand=a.get('data-brand','').strip()
             series=a.get('data-series','').strip()
             images=list(dict.fromkeys(safe_url(x, True) for x in parse_json(a.get('data-imgs',''),[]) if isinstance(x,str)))
             images=[x for x in images if x and not re.search(r'(?:_logo|logo180|noimage|placeholder)',x,re.I)]
+            removed_images=[x for x in images if x in SOURCE_IMAGE_EXCLUSIONS.get(card_key,set())]
+            if removed_images:
+                images=[x for x in images if x not in removed_images]
+                curated_excluded+=len(removed_images)
+                curated_details.append({'sourceFile':file.name,'index':a.get('data-idx'),'reason':'image belongs to a different product series','removedImages':removed_images})
             if not images or brand not in ['Refinad','Sandii','Dotty','IXUS']:
                 exclusions.append({'file':file.name,'index':a.get('data-idx'),'reason':'missing images or brand'}); continue
             other=next((b for b in ['Refinad','Sandii','Dotty','IXUS'] if series.lower().startswith(b.lower())),brand)
@@ -85,14 +142,21 @@ if __name__=='__main__':
                 duplicates+=1
                 duplicate_details.append({'kept':records[identity]['detail']['sourceFile'],'omitted':file.name,'image':images[0]})
                 continue
-            name=a.get('data-model') or car
+            name=correction.get('car') or a.get('data-model') or car
             sid=hashlib.sha256(identity.encode()).hexdigest()[:12]
             design=re.sub(r'^(Refinad|Sandii|Dotty|IXUS)\s*','',series,flags=re.I).strip() or 'シリーズ名の記載なし'
             info=parse_json(a.get('data-photo-info',''),[])
             gallery=gallery_page+'#card-'+a.get('data-idx','0')
-            product=safe_url(a.get('data-product-url',''))
+            product=safe_url(correction.get('productUrl') or a.get('data-product-url',''))
+            if correction.get('productUrl') and product:
+                vehicle_product_urls[gallery_page]=product
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
-            records[identity]={'id':sid,'maker':maker,'car':name,'brand':brand,'series':design,'category':category,'image':images[0],'photoCount':len(images),'galleryUrl':gallery,'hasReview':bool(a.get('data-review','').strip()),'detail':{'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}}
+            detail={'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}
+            if correction:
+                detail['sourceCorrection']=correction['reason']
+            if removed_images:
+                detail['curationNote']='別シリーズに属する重複画像を除外。'
+            records[identity]={'id':sid,'maker':maker,'car':name,'brand':brand,'series':design,'category':category,'image':images[0],'photoCount':len(images),'galleryUrl':gallery,'hasReview':bool(a.get('data-review','').strip()),'detail':detail}
     cases=list(records.values())
     heritage_sources=[case for case in cases if case['image'] in JIMNY_HERITAGE_MESH_SOURCE_IMAGES]
     heritage_base=next((case for case in heritage_sources if case['image']==JIMNY_HERITAGE_MESH_IMAGES[0]),None)
@@ -157,7 +221,7 @@ if __name__=='__main__':
             x['previewImage']=f"/assets/gallery/{x['id']}-960.webp"
     data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'vehicleProductUrls':vehicle_product_urls,'cases':cases}
     (public/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
-    report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'curatedMergedRecords':curated_merged,'curatedDetails':curated_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
+    report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'curatedMergedRecords':curated_merged,'curatedExcludedImages':curated_excluded,'curatedDetails':curated_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
     (ROOT/'audit').mkdir(exist_ok=True)
     report.update({'importedRecords':imported,'enrichedSeries':enriched_series,'withColorName':sum(bool(c['colorName']) for c in cases),'withoutColorName':sum(not c['colorName'] for c in cases),'colorNames':sorted({c['colorName'] for c in cases if c['colorName']})})
     (ROOT/'audit/data-extraction.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

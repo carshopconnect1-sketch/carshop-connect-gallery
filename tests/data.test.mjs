@@ -27,6 +27,41 @@ test('Jimny Heritage Mesh contains only the visually verified installation set',
  assert.ok(detail.images.every(src=>!/(?:ig_post2_(?:02|03|05|07|08|09|10|11|12|13)|jimny_mesh_brown\/01)\.jpg$/.test(src)));
  assert.match(detail.curationNote,/別車種・別シリーズ/);
 });
+test('reviewed source corrections keep vehicle, series, and product assignments coherent',async()=>{
+ const expectedCars=new Map([
+  ['345ead70e6af','A4アバント'],
+  ['e6d516dffffa','A3スポーツバック'],
+  ['248e988d1ded','A3スポーツバック'],
+  ['d83e3ce10702','TT'],
+  ['8cb2354f7e2c','CR-V'],
+  ['05922a028139','MINI CROSSOVER'],
+  ['0d5801bb112a','MINI クーパーS'],
+ ]);
+ for(const [id,car] of expectedCars){
+  assert.equal(data.cases.find(item=>item.id===id)?.car,car);
+  const detail=await read(`public/data/details/${id}.json`);
+  assert.ok(detail.sourceCorrection);
+ }
+ const crv=await read('public/data/details/8cb2354f7e2c.json');
+ assert.equal(crv.productUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00067');
+
+ const owners=new Map();
+ for(const item of data.cases){
+  const detail=await read(`public/data/details/${item.id}.json`);
+  for(const image of detail.images){
+   const assignment={maker:item.maker,car:item.car,brand:item.brand,series:item.series};
+   const prior=owners.get(image);
+   if(prior) assert.deepEqual(assignment,prior,`cross-assigned image: ${image}`);
+   else owners.set(image,assignment);
+  }
+ }
+ const leather=data.cases.find(item=>item.id==='ea5470899f1a');
+ const leatherDetail=await read(`public/data/details/${leather.id}.json`);
+ assert.equal(leather.photoCount,6);
+ assert.ok(!leatherDetail.images.includes('https://refinad.com/wp-content/uploads/2021/11/bmw3.jpg-1.jpeg.webp'));
+ const quiltDetail=await read('public/data/details/2b45a610bbee.json');
+ assert.ok(quiltDetail.images.includes('https://refinad.com/wp-content/uploads/2021/11/bmw3.jpg-1.jpeg.webp'));
+});
 test('Canbus copies are not attributed to Mercedes; archive gaps stay explicit',async()=>{
  const canbus=filterCases(data.cases,{...emptyFilters(),maker:'ダイハツ',q:'ムーヴキャンバス'});
  assert.equal(canbus.length,143);assert.equal(data.cases.filter(x=>x.car==='メルセデス・ベンツ Aクラス').length,0);
