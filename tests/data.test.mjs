@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {filterCases,emptyFilters} from '../public/filter.js';
+import {findSeries} from '../public/series-data.js';
 const read=async name=>JSON.parse(await readFile(new URL('../'+name,import.meta.url),'utf8'));
 const data=await read('public/data/catalog.json');
 const audit=await read('audit/data-extraction.json');
@@ -34,4 +35,14 @@ test('color labels are explicitly present in source descriptions; IXUS gaps are 
 test('featured set has distinct cars and retains source product links',async()=>{
  const featured=data.featuredIds.map(id=>data.cases.find(x=>x.id===id));assert.ok(featured.length>=10);assert.equal(new Set(featured.map(x=>x.car)).size,featured.length);
  const detail=await read(`public/data/details/${featured[0].id}.json`);assert.match(detail.productUrl,/^https:\/\/seatcover.jp\/c\//);
+});
+test('every gallery detail resolves to an available product destination',async()=>{
+ for(const item of data.cases){
+  const detail=await read(`public/data/details/${item.id}.json`);
+  const galleryPage=item.galleryUrl.split('#')[0];
+  const destination=detail.productUrl||findSeries(item.brand,item.series)?.productUrl||data.vehicleProductUrls[galleryPage];
+  assert.match(destination,/^https:\/\/seatcover.jp\/(?:c|f)\//,`${item.car} / ${item.brand} ${item.series}`);
+ }
+ const hs=data.cases.find(item=>item.car==='レクサスHS'&&item.brand==='Dotty'&&item.series==='DIA-LUX');
+ assert.equal(findSeries(hs.brand,hs.series).productUrl,'https://seatcover.jp/c/seatcovermaker/dotty/dotty-dialux');
 });

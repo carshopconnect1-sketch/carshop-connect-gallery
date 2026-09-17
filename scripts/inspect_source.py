@@ -12,10 +12,14 @@ class GalleryParser(HTMLParser):
         self.active = None
         self.title = ''
         self.in_title = False
+        self.shop_url = ''
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        classes = a.get('class', '').split()
         if tag == 'title': self.in_title = True
-        if 'g-card' in a.get('class', '').split():
+        if tag == 'a' and 'shop-cta' in classes and not self.shop_url:
+            self.shop_url = a.get('href', '')
+        if 'g-card' in classes:
             self.active = a.copy()
             self.cards.append(self.active)
         if tag == 'img' and self.active is not None and 'thumbnail' not in self.active:

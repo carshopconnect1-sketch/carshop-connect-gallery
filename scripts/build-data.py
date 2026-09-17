@@ -34,11 +34,14 @@ def parse_json(value, default):
 
 if __name__=='__main__':
     public=ROOT/'public'; public.mkdir(exist_ok=True)
-    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]
+    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; vehicle_product_urls={}
     files=sorted(SOURCE.glob('*.html'), key=lambda p: ('combined' in p.stem or p.stem.endswith('_series'), len(p.stem), p.stem))
     for file in files:
         parser=GalleryParser(); parser.feed(file.read_text(encoding='utf-8-sig'))
         raw+=len(parser.cards)
+        gallery_page='https://seatcover.jp/gallerys/gallery/'+file.name
+        page_product=safe_url(parser.shop_url)
+        if page_product: vehicle_product_urls[gallery_page]=page_product
         if file.name in QUARANTINE:
             exclusions.append({'file':file.name,'reason':'vehicle identity conflict; quarantined for source review','count':len(parser.cards)}); continue
         car=clean_car(re.split(r'\s*シートカバー', parser.title)[0].strip())
@@ -65,7 +68,7 @@ if __name__=='__main__':
             sid=hashlib.sha256(identity.encode()).hexdigest()[:12]
             design=re.sub(r'^(Refinad|Sandii|Dotty|IXUS)\s*','',series,flags=re.I).strip() or 'シリーズ名の記載なし'
             info=parse_json(a.get('data-photo-info',''),[])
-            gallery='https://seatcover.jp/gallerys/gallery/'+file.name+'#card-'+a.get('data-idx','0')
+            gallery=gallery_page+'#card-'+a.get('data-idx','0')
             product=safe_url(a.get('data-product-url',''))
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
             records[identity]={'id':sid,'maker':maker,'car':name,'brand':brand,'series':design,'category':category,'image':images[0],'photoCount':len(images),'galleryUrl':gallery,'hasReview':bool(a.get('data-review','').strip()),'detail':{'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}}
@@ -114,7 +117,7 @@ if __name__=='__main__':
         if (public/f"assets/gallery/{x['id']}-480.webp").is_file():
             x['thumbnail']=f"/assets/gallery/{x['id']}-480.webp"
             x['previewImage']=f"/assets/gallery/{x['id']}-960.webp"
-    data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'cases':cases}
+    data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'vehicleProductUrls':vehicle_product_urls,'cases':cases}
     (public/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
     report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
     (ROOT/'audit').mkdir(exist_ok=True)

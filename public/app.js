@@ -7,7 +7,7 @@ import {mountPhotoStory} from './photo-story.js';
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
 const pageSize = 18;
-let cases = [], filtered = [], shown = 0, filters = readFilters(new URLSearchParams(location.search));
+let cases = [], filtered = [], shown = 0, vehicleProductUrls = {}, filters = readFilters(new URLSearchParams(location.search));
 let makerRegion = makerCatalog.find(m=>m.name===filters.maker)?.region || 'domestic';
 let activePanel=filters.brand?'brand':filters.color||filters.colorName?'color':'vehicle';
 let dockFrame=0;
@@ -16,6 +16,13 @@ const detailCache = new Map();
 const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="15" height="15" rx="2"/><path d="M17 3H4a1 1 0 0 0-1 1v13"/></svg>';
 function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;}
 function link(text, url, cls) {const a=el('a',cls,text);a.href=url;a.target='_blank';a.rel='noopener';return a;}
+function productLink(item, directUrl='') {
+  if(directUrl)return {url:directUrl,label:'この商品を見る ↗'};
+  const matched=findSeries(item.brand,item.series);
+  if(matched?.productUrl)return {url:matched.productUrl,label:`${matched.label}の商品を見る ↗`};
+  const galleryPage=item.galleryUrl?.split('#')[0];const vehicleUrl=vehicleProductUrls[galleryPage];
+  return vehicleUrl?{url:vehicleUrl,label:`${item.car}の商品を見る ↗`}:null;
+}
 function image(src, alt, eager=false) {
   const img = el('img');img.src=src;img.alt=alt;img.loading=eager?'eager':'lazy';img.decoding='async';
   img.addEventListener('error',()=>{const fallback=el('span','image-unavailable','写真を読み込めませんでした');fallback.setAttribute('role','img');fallback.setAttribute('aria-label',alt+'（画像を読み込めませんでした）');img.replaceWith(fallback);},{once:true});
@@ -274,7 +281,7 @@ async function openDetail(item){
     let detail=detailCache.get(item.id);
     if(!detail){const response=await fetch(`/data/details/${item.id}.json`,{signal:abort.signal});if(!response.ok)throw new Error('detail');detail=await response.json();if(!Array.isArray(detail.images)||!detail.images.length)throw new Error('images');detailCache.set(item.id,detail);}
     if(abort.signal.aborted)return;activeDetail={item,...detail};renderDetail();
-  }catch(error){if(error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry,link('掲載元の装着ギャラリーを見る ↗',item.galleryUrl,'text-button'));$('detailContent').replaceChildren(state);}
+  }catch(error){if(error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry);const fallback=productLink(item);if(fallback)state.append(link(fallback.label,fallback.url,'text-button'));$('detailContent').replaceChildren(state);}
 }
 function renderDetail(){
   const {item,images,review,productUrl,photoInfo}=activeDetail;
@@ -293,10 +300,9 @@ function renderDetail(){
   if(Array.isArray(photoInfo))for(const key of ['型式','品番']){const values=[...new Set(photoInfo.map(row=>row?.[key]).filter(Boolean))];if(values.length===1)info.append(el('dt','',`掲載${key}`),el('dd','',String(values[0])));}
   meta.append(info);
   if(review)meta.append(el('h3','detail-review-title','掲載コメント'),el('p','detail-review',review));
-  const links=el('div','detail-links');
-  if(productUrl)links.append(link('この商品の詳細を見る ↗',productUrl,'primary'));
-  links.append(link('掲載元の装着ギャラリーを見る ↗',item.galleryUrl,'secondary'));
-  meta.append(links,el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に商品ページでご確認ください。'));
+  const destination=productLink(item,productUrl);const links=el('div','detail-links');
+  if(destination){links.append(link(destination.label,destination.url,'primary'));meta.append(links);}
+  meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に商品ページでご確認ください。'));
   layout.append(visual,meta);$('detailContent').replaceChildren(layout);setPhoto(0);
 }
 function setPhoto(index){
@@ -309,7 +315,7 @@ function setPhoto(index){
 }
 async function start(){
   try{
-    const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;
+    const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;vehicleProductUrls=data.vehicleProductUrls||{};
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
