@@ -41,6 +41,11 @@ for (const file of published.filter(file => /\.(?:html|js|css)$/.test(file))) {
 }
 const catalog = JSON.parse(await readFile(path.join(output, 'data/catalog.json'), 'utf8'));
 const cases = catalog.items ?? catalog.cases ?? catalog;
-if (!Array.isArray(cases) || cases.length !== 2897) throw new Error('Expected 2,897 published cases');
+const audit = JSON.parse(await readFile(path.join(root, 'audit/data-extraction.json'), 'utf8'));
+const excluded = audit.excluded.reduce((total, item) => total + item.count, 0);
+const accounted = cases.length + audit.deduplicated + audit.curatedMergedRecords + excluded;
+if (!Array.isArray(cases) || cases.length !== audit.caseCount || accounted !== audit.rawRecords + audit.importedRecords) {
+  throw new Error('Published cases do not match the extraction audit');
+}
 await Promise.all(cases.map(item => readFile(path.join(output, `data/details/${item.id}.json`))));
 console.log(`Sites static build ready: ${published.length} files, ${cases.length} complete cases.`);

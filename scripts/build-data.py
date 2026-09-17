@@ -13,6 +13,27 @@ MAKERS.update({'mini':'MINI','peugeot':'プジョー','ford':'フォード'})
 # The matching Canbus/Delica source includes data-photo-info identifying the actual car.
 QUARANTINE = {'mercedes_aclass.html','mercedes_bclass.html','mercedes_cclass.html','mercedes_eclass.html','mercedes_vclass.html','welfare_welfare-cx5.html'}
 
+# The saved Jimny page bundled three promotional Heritage Mesh cards. Two of
+# those cards also contained exterior shots and photos of unrelated vehicles or
+# seat-cover series. Keep only the images that were visually verified as Jimny
+# Heritage Mesh installations, and present them as one coherent gallery.
+JIMNY_HERITAGE_MESH_IMAGES = [
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/05.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/03.jpg',
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_06.jpg',
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_01.jpg',
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_04.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/06.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/04.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/02.jpg',
+]
+JIMNY_HERITAGE_MESH_SOURCE_IMAGES = {
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg',
+    'https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_01.jpg',
+    'https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/01.jpg',
+}
+
 def clean_car(value):
     value=re.sub(r'\s+', ' ', value).strip()
     # Product names accidentally appear in some Dotty page titles. Strip only known suffixes.
@@ -34,7 +55,7 @@ def parse_json(value, default):
 
 if __name__=='__main__':
     public=ROOT/'public'; public.mkdir(exist_ok=True)
-    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; vehicle_product_urls={}
+    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; curated_merged=0; curated_details=[]; vehicle_product_urls={}
     files=sorted(SOURCE.glob('*.html'), key=lambda p: ('combined' in p.stem or p.stem.endswith('_series'), len(p.stem), p.stem))
     for file in files:
         parser=GalleryParser(); parser.feed(file.read_text(encoding='utf-8-sig'))
@@ -73,6 +94,22 @@ if __name__=='__main__':
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
             records[identity]={'id':sid,'maker':maker,'car':name,'brand':brand,'series':design,'category':category,'image':images[0],'photoCount':len(images),'galleryUrl':gallery,'hasReview':bool(a.get('data-review','').strip()),'detail':{'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}}
     cases=list(records.values())
+    heritage_sources=[case for case in cases if case['image'] in JIMNY_HERITAGE_MESH_SOURCE_IMAGES]
+    heritage_base=next((case for case in heritage_sources if case['image']==JIMNY_HERITAGE_MESH_IMAGES[0]),None)
+    if heritage_base and len(heritage_sources)==3:
+        heritage_base['detail']['images']=JIMNY_HERITAGE_MESH_IMAGES
+        heritage_base['detail']['curationNote']='保存HTMLで混在していた車外・別車種・別シリーズの写真を除外し、ジムニー Heritage Mesh の装着写真のみ統合。'
+        heritage_base['image']=JIMNY_HERITAGE_MESH_IMAGES[0]
+        heritage_base['photoCount']=len(JIMNY_HERITAGE_MESH_IMAGES)
+        omitted=[case for case in heritage_sources if case is not heritage_base]
+        cases=[case for case in cases if case not in omitted]
+        curated_merged=len(omitted)
+        curated_details.append({
+            'kept':heritage_base['id'],
+            'merged':[case['id'] for case in omitted],
+            'reason':'Jimny Heritage Mesh promotional cards contained unrelated imagery',
+            'keptImages':JIMNY_HERITAGE_MESH_IMAGES,
+        })
     # The original photo description explicitly includes these color labels.
     for case in cases:
         case['colorName'],case['colors']=photo_color(case['detail']['alt'])
@@ -103,7 +140,7 @@ if __name__=='__main__':
                 'detail':{'images':images,'review':review,'productUrl':safe_url(row['u']),'photoInfo':[],'alt':maker+' IXUS '+series+' 装着写真','sourceFile':'old.zip/old/v2/index.html','sourceCarLabel':row['c'],'carNote':'旧資料にはメーカー名のみ記載されています。車種名・色名は未確認です。'}})
             imported+=1
     # Opening selection uses actual data and keeps a mix of vehicles and brands.
-    targets=[('ジムニー','Refinad','Heritage'),('ムーヴキャンバス','Sandii','マカロン'),('ハイエース','Refinad','Leather Deluxe'),('N-BOX','Sandii','オールドカヌレ'),('ハスラー','Sandii','カヌレ'),('アルファード','Refinad','Quilt'),('デリカ','Refinad','Leather'),('シエンタ','Sandii','ビスキュイ'),('カングー','Sandii','カヌレ'),('FIAT','Sandii','マカロン'),('ヤリス','Refinad','Leather'),('ラパン','Sandii','マカロン')]
+    targets=[('ジムニー','Refinad','Heritage Mesh'),('ムーヴキャンバス','Sandii','マカロン'),('ハイエース','Refinad','Leather Deluxe'),('N-BOX','Sandii','オールドカヌレ'),('ハスラー','Sandii','カヌレ'),('アルファード','Refinad','Quilt'),('デリカ','Refinad','Leather'),('シエンタ','Sandii','ビスキュイ'),('カングー','Sandii','カヌレ'),('FIAT','Sandii','マカロン'),('ヤリス','Refinad','Leather'),('ラパン','Sandii','マカロン')]
     featured=[]
     for car,brand,series in targets:
         found=next((x for x in cases if norm(car) in norm(x['car']) and x['brand']==brand and series.lower() in x['series'].lower() and x['category']=='seatcover' and x not in featured),None)
@@ -111,6 +148,7 @@ if __name__=='__main__':
     ids={x['id'] for x in featured}
     cases=featured+[x for x in cases if x['id'] not in ids]
     detail_dir=public/'data/details'; detail_dir.mkdir(parents=True,exist_ok=True)
+    for stale in detail_dir.glob('*.json'): stale.unlink()
     for x in cases:
         details=x.pop('detail')
         (detail_dir/(x['id']+'.json')).write_text(json.dumps(details,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
@@ -119,9 +157,9 @@ if __name__=='__main__':
             x['previewImage']=f"/assets/gallery/{x['id']}-960.webp"
     data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'vehicleProductUrls':vehicle_product_urls,'cases':cases}
     (public/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
-    report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
+    report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'curatedMergedRecords':curated_merged,'curatedDetails':curated_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
     (ROOT/'audit').mkdir(exist_ok=True)
     report.update({'importedRecords':imported,'enrichedSeries':enriched_series,'withColorName':sum(bool(c['colorName']) for c in cases),'withoutColorName':sum(not c['colorName'] for c in cases),'colorNames':sorted({c['colorName'] for c in cases if c['colorName']})})
     (ROOT/'audit/data-extraction.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-    print(json.dumps({k:v for k,v in report.items() if k not in ['excluded','featured','duplicateDetails']},ensure_ascii=False))
+    print(json.dumps({k:v for k,v in report.items() if k not in ['excluded','featured','duplicateDetails','curatedDetails']},ensure_ascii=False))
     print('EXCLUSIONS',len(exclusions))

@@ -844,6 +844,28 @@
       "image": "https://refinad.com/wp-content/uploads/2020/12/0522-ide-1.jpg.webp"
     }
   ],
+  "curatedMergedRecords": 2,
+  "curatedDetails": [
+    {
+      "kept": "33b662261b8e",
+      "merged": [
+        "e62fc6f5a79b",
+        "c889bf5183ee"
+      ],
+      "reason": "Jimny Heritage Mesh promotional cards contained unrelated imagery",
+      "keptImages": [
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/05.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/03.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_06.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_01.jpg",
+        "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/ig_post2_04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/06.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/04.jpg",
+        "https://seatcover.jp/gallerys/v2/ig_posts/jimny_mesh_brown/02.jpg"
+      ]
+    }
+  ],
   "excluded": [
     {
       "file": "mercedes_aclass.html",
@@ -876,17 +898,17 @@
       "count": 1
     }
   ],
-  "caseCount": 2897,
+  "caseCount": 2895,
   "makers": 24,
   "cars": 353,
   "brands": {
-    "Refinad": 1502,
+    "Refinad": 1500,
     "Sandii": 1097,
     "Dotty": 155,
     "IXUS": 143
   },
   "sourceDate": "2026-06-04",
-  "catalogBytes": 1141581,
+  "catalogBytes": 1140894,
   "featured": [
     {
       "id": "33b662261b8e",
@@ -896,7 +918,7 @@
       "series": "Heritage Mesh",
       "category": "seatcover",
       "image": "https://seatcover.jp/gallerys/v2/heritage_mesh_ig/jimny_heritage_mesh_ig.jpg",
-      "photoCount": 1,
+      "photoCount": 9,
       "galleryUrl": "https://seatcover.jp/gallerys/gallery/suzuki_jimny.html#card-0",
       "hasReview": false,
       "colorName": "",
@@ -1106,7 +1128,7 @@
   "importedRecords": 143,
   "enrichedSeries": 0,
   "withColorName": 2706,
-  "withoutColorName": 191,
+  "withoutColorName": 189,
   "colorNames": [
     "アイボリー",
     "アクアマリン",

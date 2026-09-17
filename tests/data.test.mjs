@@ -7,7 +7,7 @@ const read=async name=>JSON.parse(await readFile(new URL('../'+name,import.meta.
 const data=await read('public/data/catalog.json');
 const audit=await read('audit/data-extraction.json');
 test('every retained source record is accounted for; IDs and detail files are consistent',async()=>{
- assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.excluded.reduce((n,x)=>n+x.count,0));
+ assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
  assert.equal(new Set(data.cases.map(x=>x.id)).size,data.cases.length);
  for(const c of data.cases){
   assert.match(c.id,/^[a-f0-9]{12}$/);const detail=await read(`public/data/details/${c.id}.json`);
@@ -15,6 +15,17 @@ test('every retained source record is accounted for; IDs and detail files are co
   assert.equal(c.hasReview,!!detail.review.trim());assert.ok(['seatcover','panel'].includes(c.category));
   for(const s of detail.images){const u=new URL(s);assert.equal(u.protocol,'https:');assert.ok(!u.username&&!u.password);}
  }
+});
+
+test('Jimny Heritage Mesh contains only the visually verified installation set',async()=>{
+ const matches=data.cases.filter(c=>c.maker==='スズキ'&&c.car==='ジムニー'&&c.brand==='Refinad'&&c.series==='Heritage Mesh');
+ assert.equal(matches.length,1);
+ assert.equal(matches[0].photoCount,9);
+ const detail=await read(`public/data/details/${matches[0].id}.json`);
+ assert.equal(detail.images.length,9);
+ assert.ok(detail.images.every(src=>/jimny_heritage_mesh_ig\.jpg|ig_post2_(?:01|04|06)\.jpg|jimny_mesh_brown\/(?:02|03|04|05|06)\.jpg$/.test(src)));
+ assert.ok(detail.images.every(src=>!/(?:ig_post2_(?:02|03|05|07|08|09|10|11|12|13)|jimny_mesh_brown\/01)\.jpg$/.test(src)));
+ assert.match(detail.curationNote,/別車種・別シリーズ/);
 });
 test('Canbus copies are not attributed to Mercedes; archive gaps stay explicit',async()=>{
  const canbus=filterCases(data.cases,{...emptyFilters(),maker:'ダイハツ',q:'ムーヴキャンバス'});
