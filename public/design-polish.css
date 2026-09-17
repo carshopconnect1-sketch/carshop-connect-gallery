@@ -1,0 +1,175 @@
+/* Final visual rhythm: photo-led discovery with quiet, clear controls. */
+:root {
+  --gallery-soft: #f6f5f2;
+  --gallery-stroke: #dedad4;
+}
+
+.section-title-block {min-width:0}
+.section-kicker {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 10px;
+  color:var(--red);
+  font-family:var(--font-latin);
+  font-size:12px;
+  font-weight:600;
+  line-height:1.4;
+  letter-spacing:.15em;
+}
+.section-kicker::before {content:"";width:22px;height:2px;background:currentColor;flex:none}
+
+.inspiration {
+  padding-block:72px 42px;
+  background:var(--gallery-soft);
+  border-top:1px solid #ebe8e3;
+  border-bottom:1px solid #e4e0da;
+}
+.inspiration-heading {align-items:flex-end;margin-bottom:34px}
+.inspiration-heading .section-kicker {font-size:12px;margin-bottom:10px}
+.inspiration-heading h2 {font-size:clamp(29px,2.35vw,39px);letter-spacing:.055em}
+.inspiration-heading .section-description {margin-top:11px;color:#625d57;font-size:15px;line-height:1.7}
+.inspiration-rail {gap:22px;padding-bottom:30px}
+.inspiration-rail li:nth-child(even) {margin-top:30px}
+.inspiration-card {
+  border-radius:14px;
+  outline:1px solid #17161410;
+  box-shadow:0 12px 32px #30282016;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.inspiration-card::after {inset:24% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.18) 25%,rgba(0,0,0,.9))}
+.inspiration-card:focus-visible {outline:3px solid var(--red);outline-offset:4px}
+.inspiration-caption {bottom:22px;left:23px;right:23px;gap:7px}
+.inspiration-brand {font-size:13px;font-weight:600;color:#f2ddd9}
+.inspiration-car {font-size:clamp(20px,1.5vw,24px);line-height:1.42}
+.inspiration-series {font-size:13px;line-height:1.55;color:#e8e4e1}
+.inspiration-link {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  width:100%;
+  min-height:38px;
+  margin-top:5px;
+  padding-top:10px;
+  border-top:1px solid #ffffff5c;
+  border-bottom:0;
+  font-size:13px;
+  font-weight:500;
+  line-height:1.5;
+}
+.inspiration-link>span:first-child {min-width:0;overflow-wrap:anywhere}
+.inspiration-link-arrow {
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  flex:none;
+  border:1px solid #ffffff8c;
+  border-radius:50%;
+  font-family:var(--font-latin);
+  font-size:15px;
+  line-height:1;
+}
+.inspiration-hint {margin-top:16px;font-size:12px;color:#706a64}
+.inspiration-controls button {border-color:#ded9d3;box-shadow:0 8px 24px #251f1a24}
+
+.finder.wrap {padding-top:72px}
+.finder .finder-heading {align-items:flex-end;margin-bottom:28px}
+.finder .finder-heading h2 {font-size:32px;line-height:1.35;letter-spacing:.035em}
+.finder-filter-label {margin-bottom:9px;color:#514c46}
+.finder-tabs {
+  gap:6px;
+  padding:6px;
+  border:1px solid #e1ddd8;
+  border-radius:12px;
+  background:#f3f1ef;
+}
+.finder-tabs button {
+  min-height:54px;
+  margin:0;
+  padding:13px 10px;
+  border:1px solid transparent;
+  border-radius:8px;
+  transition:background .2s,border-color .2s,color .2s,box-shadow .2s;
+}
+.finder-tabs button[aria-selected=true] {
+  border-color:#ddd8d2;
+  background:#fff;
+  box-shadow:0 5px 14px #2c251f0d,inset 0 -3px var(--red);
+}
+.finder-tabs button:hover {background:#fff}
+.filter-overview .selected-filters button {border:1px solid #e5e0da;border-radius:8px;background:#f8f7f5}
+.maker-regions {border:1px solid #e4e0db}
+.finder-panel .maker-choice {border-radius:10px;transition:background .2s,transform .2s}
+.finder-panel .maker-choice:hover:not(:disabled) {background:#f8f6f4}
+.finder-panel .maker-logo-wrap {box-shadow:0 3px 12px #28201a0b}
+
+.finder .result-toolbar {padding-top:4px}
+.finder .photo-grid {row-gap:42px;column-gap:24px}
+.photo-card {border-radius:14px;transition:transform .28s ease}
+.photo-card:focus-visible {outline:0}
+.photo-card:focus-visible .card-image {outline:3px solid var(--red);outline-offset:3px}
+.card-image {border-radius:14px;outline:1px solid #211b1712;box-shadow:0 8px 24px #28211b0b}
+.card-open {
+  opacity:.94;
+  transform:none;
+  color:var(--red);
+  border:1px solid #e4dfda;
+  box-shadow:0 4px 12px #211a1520;
+}
+.card-content {padding-top:16px}
+.card-topline {font-size:11px;line-height:1.5}
+.card-content h3 {font-size:17px;line-height:1.5;margin-top:7px}
+.card-series,.card-color {font-size:13px;line-height:1.65;margin-top:4px}
+.card-extra {font-size:11px;line-height:1.6}
+.photo-count {font-size:11px;padding:6px 8px;border-radius:6px;backdrop-filter:blur(5px)}
+.support-section {border-top:1px solid #e5e1dc}
+
+@media (hover:hover) {
+  .inspiration-card:hover {transform:translateY(-5px);box-shadow:0 18px 38px #30282022}
+  .inspiration-card:hover .inspiration-link-arrow {background:#fff;color:var(--red)}
+  .photo-card:hover {transform:translateY(-3px)}
+}
+
+@media (max-width:760px) {
+  .section-kicker {gap:8px;font-size:10px;margin-bottom:8px;letter-spacing:.12em}
+  .section-kicker::before {width:17px;height:1px}
+  .inspiration {padding-block:43px 29px}
+  .inspiration-heading {margin-bottom:24px}
+  .inspiration-heading .section-kicker {font-size:10px;margin-bottom:8px}
+  .inspiration-heading h2 {font-size:25px}
+  .inspiration-heading .section-description {margin-top:8px;font-size:13px}
+  .inspiration-rail {gap:14px;padding-bottom:22px}
+  .inspiration-rail li:nth-child(even) {margin-top:22px}
+  .inspiration-card {border-radius:12px;box-shadow:0 9px 24px #30282018}
+  .inspiration-caption {left:19px;right:19px;bottom:19px}
+  .inspiration-brand {font-size:11px}
+  .inspiration-car {font-size:18px}
+  .inspiration-series {font-size:12px}
+  .inspiration-link {font-size:12px;gap:8px;padding-top:8px}
+  .inspiration-link-arrow {width:26px;height:26px;font-size:14px}
+  .inspiration-hint {font-size:11px}
+  .inspiration-controls {top:62px}
+
+  .finder.wrap {padding-top:44px}
+  .finder .finder-heading {align-items:flex-end;margin-bottom:17px}
+  .finder .finder-heading h2 {font-size:25px;line-height:1.42}
+  .finder .keyword-toggle span {max-width:none;white-space:nowrap}
+  .finder-filter-label {margin-bottom:7px}
+  .finder-tabs {gap:4px;padding:4px;border-radius:10px}
+  .finder-tabs button {min-height:51px;padding-inline:2px;border-radius:7px;font-size:14px}
+  .finder .photo-grid {gap:30px 12px}
+  .card-image {border-radius:11px;box-shadow:0 5px 16px #28211b0b}
+  .card-open {display:none}
+  .card-content {padding-top:12px}
+  .card-topline {font-size:10px}
+  .card-content h3 {font-size:14px;line-height:1.55;margin-top:5px}
+  .card-series,.card-color {font-size:12px;line-height:1.65}
+  .card-extra {font-size:10px}
+  .photo-count {font-size:10px;padding:5px 6px}
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .inspiration-card,.photo-card {transition:none}
+}

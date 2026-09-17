@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/hero-video.css"><link rel="stylesheet" href="/discovery-filters.css"><link rel="stylesheet" href="/finder-workbench.css"><link rel="stylesheet" href="/typography.css"><link rel="stylesheet" href="/store-chrome.css"><script type="module" src="/store-chrome.js"></script><script type="module" src="/app.js"></script><script type="module" src="/hero-video.js"></script>
   <link rel="stylesheet" href="/photo-story.css">
   <link rel="stylesheet" href="/gallery-about.css">
+  <link rel="stylesheet" href="/design-polish.css">
 </head>
 <body>
   <a class="skip-link" href="#results">装着写真へ進む</a>
@@ -58,7 +59,7 @@
     <div class="gallery-intro wrap"><p>GALLERY <span>/</span> 装着ギャラリー</p><p><strong id="totalCases">—</strong> 件の装着事例 <span class="vehicle-count"><span class="intro-dot">·</span> <span id="totalCars">—</span> 車種・仕様</span></p></div>
     <section class="inspiration" id="inspiration" aria-labelledby="inspiration-title" hidden>
       <div class="inspiration-heading wrap">
-        <div><h2 id="inspiration-title">SEAT COVER GALLERY</h2><p>車種から装着写真を探す</p></div>
+        <div class="section-title-block"><p class="section-kicker">DISCOVER BY CAR</p><h2 id="inspiration-title">SEAT COVER GALLERY</h2><p class="section-description">車種から装着写真を探す</p></div>
       </div>
       <div class="inspiration-stage">
         <div class="inspiration-controls" aria-label="装着写真を横に送る">
@@ -70,7 +71,7 @@
       <p class="inspiration-hint wrap" id="inspirationHint"><span class="inspiration-mouse-hint">写真をドラッグ、または左右の矢印で見比べる</span><span class="inspiration-touch-hint">横にスワイプして見比べる</span> · 写真を選ぶと、その車種の装着ギャラリーへ</p>
     </section>
     <section class="finder wrap" id="finder" aria-labelledby="finder-title">
-      <div class="section-head finder-heading"><h2 id="finder-title"><span>装着写真を</span><wbr><span>絞り込み検索</span></h2><button type="button" class="keyword-toggle" id="keywordToggle" aria-controls="keywordSearch" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>キーワード検索</span></button></div>
+      <div class="section-head finder-heading"><div class="section-title-block"><p class="section-kicker">FIND YOUR INTERIOR</p><h2 id="finder-title"><span>装着写真を</span><wbr><span>絞り込み検索</span></h2></div><button type="button" class="keyword-toggle" id="keywordToggle" aria-controls="keywordSearch" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>キーワード検索</span></button></div>
       <div id="filterWorkbench" class="filter-workbench" tabindex="-1">
         <div class="search-row" id="keywordSearch" hidden><form id="searchForm" role="search"><label class="sr-only" for="keyword">車種名・ブランド・シリーズ・色名を検索</label><input id="keyword" type="search" placeholder="例：ジムニー、マカロン、ベージュ" autocomplete="off"><button type="submit">検索</button></form></div>
         <p class="finder-filter-label" id="finder-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg><span>条件を選ぶ</span></p>

@@ -37,7 +37,13 @@ export function mountPhotoStory(cases, featuredIds, openVehicleGallery) {
     }
     const action = document.createElement('span');
     action.className = 'inspiration-link';
-    action.textContent = `${actionLabel} →`;
+    const actionText = document.createElement('span');
+    actionText.textContent = actionLabel;
+    const actionArrow = document.createElement('span');
+    actionArrow.className = 'inspiration-link-arrow';
+    actionArrow.setAttribute('aria-hidden', 'true');
+    actionArrow.textContent = '↗';
+    action.append(actionText, actionArrow);
     caption.append(action);
     card.append(photo, caption);
     card.addEventListener('click', event => {
