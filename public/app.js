@@ -3,6 +3,7 @@ import {seriesCatalog, findSeries} from './series-data.js';
 import {makerCatalog} from './maker-data.js';
 import {conditionLabels,conditionText,removeCondition,recoveryOptions,carChoices} from './finder-state.js';
 import {mountPhotoStory} from './photo-story.js';
+import {vehicleImageCandidates} from './vehicle-images.js';
 
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
@@ -98,12 +99,24 @@ function renderCars(){
   $('carTitle').textContent=filters.maker?`${filters.maker}の車種を選ぶ`:'車種を選ぶ';
   const focused=document.activeElement?.dataset.car;
   const choices=carChoices(cases,filters,$('carSearch').value);
+  const selectedIndex=choices.findIndex(choice=>choice.name===filters.car);
+  if(selectedIndex>0)choices.unshift(...choices.splice(selectedIndex,1));
   const previousScroll=$('carOptions').scrollTop;
   $('carOptions').replaceChildren(...choices.map(({name,count})=>{
     const b=el('button','car-choice');b.type='button';b.dataset.car=name;
     const active=filters.car===name;b.setAttribute('aria-pressed',String(active));b.disabled=!count&&!active;
     b.setAttribute('aria-label',`${name}を選ぶ ${number(count)}件`);
-    b.append(el('span','car-choice-name',name),el('small','',`${number(count)}件`),el('span','car-choice-check',active?'✓':''));
+    const allVehicleCases=cases.filter(item=>item.carKnown!==false&&item.car===name&&(!filters.maker||item.maker===filters.maker));
+    const matchingVehicleCases=filterCases(allVehicleCases,{...filters,car:name});
+    const visualCases=matchingVehicleCases.length?matchingVehicleCases:allVehicleCases;
+    const fallbackItem=visualCases.find(item=>item.thumbnail||item.image)||allVehicleCases[0];
+    const sources=vehicleImageCandidates(visualCases.length?visualCases:allVehicleCases,vehicleProductUrls);
+    const visual=el('span','car-choice-visual');const carImage=el('img');carImage.alt=`${name}の車種画像`;carImage.loading='lazy';carImage.decoding='async';
+    let sourceIndex=0;let fallback=fallbackItem?.thumbnail||fallbackItem?.image||'';
+    const loadNext=()=>{if(sourceIndex<sources.length){carImage.src=sources[sourceIndex++];return;}if(fallback){carImage.classList.add('is-gallery-image');carImage.src=fallback;fallback='';return;}carImage.remove();visual.append(el('span','car-choice-no-image','IMAGE'))};
+    carImage.addEventListener('error',loadNext);loadNext();visual.append(carImage,el('span','car-choice-check',active?'✓':''));
+    const body=el('span','car-choice-body');body.append(el('span','car-choice-name',name),el('small','car-choice-count',`${number(count)}件`));
+    b.append(visual,body);
     b.addEventListener('click',()=>commit({...filters,car:active?'':name}));return b;
   }));
   $('carOptions').scrollTop=previousScroll;
