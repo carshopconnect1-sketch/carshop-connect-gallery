@@ -99,8 +99,6 @@ function renderCars(){
   $('carTitle').textContent=filters.maker?`${filters.maker}の車種を選ぶ`:'車種を選ぶ';
   const focused=document.activeElement?.dataset.car;
   const choices=carChoices(cases,filters,$('carSearch').value);
-  const selectedIndex=choices.findIndex(choice=>choice.name===filters.car);
-  if(selectedIndex>0)choices.unshift(...choices.splice(selectedIndex,1));
   const previousScroll=$('carOptions').scrollTop;
   $('carOptions').replaceChildren(...choices.map(({name,count})=>{
     const b=el('button','car-choice');b.type='button';b.dataset.car=name;
