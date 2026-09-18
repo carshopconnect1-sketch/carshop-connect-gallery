@@ -1,3 +1,4 @@
+import {mountLifestyle} from './lifestyle.js';
 import {emptyFilters, filterCases, facet, readFilters, filtersToParams, colorOptions} from './filter.js';
 import {seriesCatalog, findSeries} from './series-data.js';
 import {makerCatalog} from './maker-data.js';
@@ -177,9 +178,9 @@ function scheduleFinderAction(){
   if(dockFrame)return;
   dockFrame=requestAnimationFrame(()=>{
     dockFrame=0;
-    const finder=$('finder').getBoundingClientRect();
+    const workbench=$('filterWorkbench').getBoundingClientRect();
     const slot=$('finderSubmit').getBoundingClientRect();
-    const floating=finder.top<innerHeight-100&&slot.top>innerHeight-88;
+    const floating=workbench.top<$('storeHeader').getBoundingClientRect().bottom+20&&slot.top>innerHeight-88;
     $('finderAction').classList.toggle('is-floating',floating);
   });
 }
@@ -253,12 +254,9 @@ function commit(next,history=true) {
 }
 function reset() {$('carSearch').value='';commit(emptyFilters());}
 function mountControls(){
-  document.querySelectorAll('[data-owner-gallery]').forEach(link=>link.addEventListener('click',event=>{
-    if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    event.preventDefault();
-    const target=new URL(link.href);
-    openVehicleGallery(readFilters(target.searchParams),target.pathname+target.search+target.hash);
-  }));
+  mountLifestyle((next,url)=>openVehicleGallery({...emptyFilters(),...next},url),()=>{
+    $('carSearch').value='';commit(emptyFilters());setPanel('vehicle',{focus:true,scroll:true});
+  });
   $('filterForm').addEventListener('submit',e=>e.preventDefault());
   $('filterForm').addEventListener('change',e=>{const k=e.target.name;if(!k)return;const f={...filters,[k]:k==='review'?e.target.checked:e.target.value};if(k==='maker')f.car='';commit(f);});
   document.querySelectorAll('[data-maker-region]').forEach(b=>b.addEventListener('click',()=>{makerRegion=b.dataset.makerRegion;renderMakers();}));

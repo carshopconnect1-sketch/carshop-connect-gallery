@@ -1,0 +1,133 @@
+{
+  "note": "User supplied NAS. Editorial scenes and verified vehicle/series identities; these images are not merged into installation records.",
+  "images": [
+    {
+      "key": "city-scene",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058952-Edit.jpg",
+      "output": "public/assets/lifestyle/city-scene.webp",
+      "sha256": "e4250c734c00c8ff0040f3b198ee48730c1d3e615eb3cc014f838cb9d8dab1da",
+      "outputSha256": "f62af79a111e05b9287ef65ddc6fcf5abb23bc99ddf828b9e15a755db26b4aee",
+      "width": 1400,
+      "height": 933,
+      "bytes": 438626
+    },
+    {
+      "key": "canvas-biscuit",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058980-Edit.jpg",
+      "output": "public/assets/lifestyle/canvas-biscuit.webp",
+      "sha256": "20e9bfa2e1e198026a4db10d72a053bfb9dab9b10069953ec3ffea394571384e",
+      "outputSha256": "0f25480c57ea2017d782309514bd6cc465bc04089ed085b77f1e8bd969333118",
+      "width": 933,
+      "height": 1400,
+      "bytes": 130738
+    },
+    {
+      "key": "canvas-macaron",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059094-Edit.jpg",
+      "output": "public/assets/lifestyle/canvas-macaron.webp",
+      "sha256": "51820a74ba5ec5e4d4b21f142ce53022480b6a9a06b9ad5c4f614b0760492580",
+      "outputSha256": "b57703ede13b65efb3539e638fb099dd0a694a757c5b4dbd4187866fd142e83a",
+      "width": 1400,
+      "height": 933,
+      "bytes": 124950
+    },
+    {
+      "key": "cute-scene",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063198.jpg",
+      "output": "public/assets/lifestyle/cute-scene.webp",
+      "sha256": "25a7a4bd05731e2ce66c06667ef82b93a96221bb5a344d09f91d85b9513df999",
+      "outputSha256": "ad103134ed7eb523543d9ebc2c4b348fbc2854b4de1a2b037573d55d3b4d1cfc",
+      "width": 1400,
+      "height": 933,
+      "bytes": 159574
+    },
+    {
+      "key": "hustler-glace",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013574.jpg",
+      "output": "public/assets/lifestyle/hustler-glace.webp",
+      "sha256": "ba68c9b4cccf514c3254d100c4f65f504eaa9f8a389170bd03cb4ea1dc93d3d7",
+      "outputSha256": "27dbceec3c9e40f635dde8af11a0a3103def51f0015c9ba0e6ae706da4859793",
+      "width": 1400,
+      "height": 933,
+      "bytes": 133710
+    },
+    {
+      "key": "lapin-biscuit",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063280.jpg",
+      "output": "public/assets/lifestyle/lapin-biscuit.webp",
+      "sha256": "2e8a83cd04d7862a5467c1c87726ffbb452a3cb37a059dad0bf65c38ee458110",
+      "outputSha256": "b96afef23616831787011fcddf44b410b29ddd4187b7fcc8e653ec40ec58081f",
+      "width": 1400,
+      "height": 933,
+      "bytes": 188142
+    },
+    {
+      "key": "quality-scene",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001596.jpg",
+      "output": "public/assets/lifestyle/quality-scene.webp",
+      "sha256": "01baedeec32bbb6daa2a801be59afb2fd72bb3780d08b1e1253b51267fbd6144",
+      "outputSha256": "4422ebc3fc4114ee6aebaf00c429867ad9a599dff108417652910e708fae580d",
+      "width": 1400,
+      "height": 933,
+      "bytes": 102266
+    },
+    {
+      "key": "alphard-astraea",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001464-Edit.jpg",
+      "output": "public/assets/lifestyle/alphard-astraea.webp",
+      "sha256": "13e153eaef01fcda31f7fb2154ef2d6f4baebc4895c1a3feec90bc98e51e65bb",
+      "outputSha256": "2dac96f428b26acf4a89571f174f60fcddd6b8c1d825b79042c1f12e73f93475",
+      "width": 1400,
+      "height": 933,
+      "bytes": 167992
+    },
+    {
+      "key": "canvas-drive",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058855-Edit.jpg",
+      "output": "public/assets/lifestyle/canvas-drive.webp",
+      "sha256": "9a7ab69c6101af7ff5686607dbb560f0df9507ca0b8a83562ab9fe991d118c62",
+      "outputSha256": "66df0f3437c14f64ec6720abf4fb10460f611d0ab3359e713bab1a1ce4504038",
+      "width": 1400,
+      "height": 933,
+      "bytes": 105086
+    }
+  ],
+  "videos": [
+    {
+      "key": "city",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\ショート動画　ビスキュ.mp4",
+      "output": "public/assets/lifestyle/city.mp4",
+      "transformation": "Full reviewed clip; 540px wide H.264, no audio or metadata; no cuts or generated content.",
+      "sha256": "1b4a48737c968377fb7b1aaaab1f9d3da2a68221fdcee7d015b06a1b6ed1bd18",
+      "outputSha256": "af8bc886c98046f8fc3a649cbb4087c3d9a95d60a2f6560222cc82fad053e1b8",
+      "bytes": 1180944
+    },
+    {
+      "key": "cute",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\ショート動画.mp4",
+      "output": "public/assets/lifestyle/cute.mp4",
+      "transformation": "Full reviewed clip; 540px wide H.264, no audio or metadata; no cuts or generated content.",
+      "sha256": "b5826247f2f592cd21716250e01616fc1e0453bb667372221f5ca3442b0f5ee4",
+      "outputSha256": "f0f914e2a9a8c9a14771c8b92fc1dccee65088d4c4d65c3e7a32be9e1ee49954",
+      "bytes": 1110081
+    },
+    {
+      "key": "lapin",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\ショート動画　モデル入り.mp4",
+      "output": "public/assets/lifestyle/lapin.mp4",
+      "transformation": "Full reviewed clip; 540px wide H.264, no audio or metadata; no cuts or generated content.",
+      "sha256": "4f80cc2e48fdf7fa610355a776a47bf59e8fbeedba446e850b14a05ee1840bd7",
+      "outputSha256": "7f57c89ebc639f4293c05a0f580566347f9b93079e06ccc534216730d2a8bfcb",
+      "bytes": 1092623
+    },
+    {
+      "key": "quality",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\アストレアリーフ（モデル入り）.mp4",
+      "output": "public/assets/lifestyle/quality.mp4",
+      "transformation": "Full reviewed clip; 540px wide H.264, no audio or metadata; no cuts or generated content.",
+      "sha256": "1985c5efdf42d57b43ee2e17d444ea2f0cd7711adfb44a832d1e9584a6d2b804",
+      "outputSha256": "643c7f3b40648d42e406d146f0091dbfef1ec172f8136e82c0288323c712c891",
+      "bytes": 1063504
+    }
+  ]
+}
