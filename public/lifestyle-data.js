@@ -29,16 +29,16 @@ export const lifestyleThemes = [
     article:{label:'実際のオーナーの休日をC/LOGで読む',url:'https://seatcover.jp/clog/articles/interview-jeep-yohhei.html'},
     picks:[
       {car:'ジムニー',brand:'Sandii',series:'カチナ',image:'/assets/owners/yayoi-interior.jpg',filters:{maker:'スズキ',car:'ジムニー',brand:'Sandii',series:'カチナ'},label:'この組み合わせの装着写真'},
-      {car:'デリカD:5',brand:'Refinad',series:'ヘリテージフィールド',image:'/assets/owners/michan-interior.jpg',filters:{maker:'三菱',q:'デリカD5'},label:'デリカD:5の装着写真',scope:'vehicle'}
+      {car:'デリカD:5',brand:'Refinad',series:'ヘリテージフィールド',image:'/assets/lifestyle/delica-heritage-field.webp',imagePosition:'center 68%',filters:{maker:'三菱',q:'デリカD5'},label:'デリカD:5の装着写真',scope:'vehicle'}
     ]
   },
   {
     id:'quality',label:'くつろぎを、上質に。',english:'A QUIET MOMENT',
     cover:'/assets/lifestyle/quality-scene.webp',coverAlt:'アルファードの後席でゆったり過ごすひととき',
     heading:'大切な人を、心地よく迎える。',description:'落ち着いた色と、端正なステッチ。ドライブの時間まで楽しめる、くつろぎの空間を。',
-    scene:'/assets/lifestyle/quality-scene.webp',sceneAlt:'Refinad アストレアを装着したアルファードの後席でくつろぐ場面',caption:'アルファード × Refinad アストレア',
+    scene:'/assets/lifestyle/quality-scene.webp',sceneAlt:'Refinad アストレアレリーフを装着したアルファードの後席でくつろぐ場面',caption:'アルファード × Refinad アストレアレリーフ',
     picks:[
-      {car:'アルファード',brand:'Refinad',series:'アストレア',image:'/assets/lifestyle/alphard-astraea.webp',video:'quality',seconds:20,filters:{maker:'トヨタ',car:'アルファード'},label:'アルファードの装着写真',scope:'vehicle'},
+      {car:'アルファード',brand:'Refinad',series:'アストレアレリーフ',image:'/assets/lifestyle/alphard-astraea.webp',video:'quality',seconds:20,filters:{maker:'トヨタ',car:'アルファード'},label:'アルファードの装着写真',scope:'vehicle'},
       {car:'ハリアー',brand:'Refinad',series:'レザーデラックス',image:'https://refinad.com/wp-content/uploads/2025/06/IMG_1992.jpeg.webp',sourceCaseId:'e96cbf8bdac1',filters:{maker:'トヨタ',car:'ハリアー',brand:'Refinad',series:'Leather Deluxe Series'},label:'この組み合わせの装着写真'}
     ]
   }

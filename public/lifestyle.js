@@ -24,7 +24,8 @@ export function mountLifestyle(openGallery,startVehicleSearch){
       const article=element('article','lifestyle-pick'),gallery=element('a','lifestyle-pick-link');gallery.href=lifestyleGalleryUrl(pick);gallery.setAttribute('aria-label',`${pick.car} ${pick.series}：${pick.label}`);
       gallery.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openGallery(pick.filters,gallery.getAttribute('href'));});
       const body=element('div','lifestyle-pick-body');body.append(element('p','lifestyle-brand',pick.brand),element('h4','',pick.car),element('p','lifestyle-series',pick.series),element('span','lifestyle-gallery-link',pick.label+' →'));
-      gallery.append(photo(pick.image,`${pick.car}に装着した${pick.brand} ${pick.series}`),body);article.append(gallery);
+      const pickPhoto=photo(pick.image,`${pick.car}に装着した${pick.brand} ${pick.series}`);if(pick.imagePosition)pickPhoto.style.objectPosition=pick.imagePosition;
+      gallery.append(pickPhoto,body);article.append(gallery);
       if(pick.video){const play=element('button','lifestyle-play',`▶ 動画で見る（${pick.seconds}秒）`);play.type='button';play.setAttribute('aria-label',`${pick.car} ${pick.series}の動画を見る`);play.addEventListener('click',()=>openVideo(pick,play));article.append(play);}
       picks.append(article);
     });

@@ -69,7 +69,9 @@
       "outputSha256": "4422ebc3fc4114ee6aebaf00c429867ad9a599dff108417652910e708fae580d",
       "width": 1400,
       "height": 933,
-      "bytes": 102266
+      "bytes": 102266,
+      "series": "アストレアレリーフ",
+      "seriesEvidence": "User correction on 2026-09-18; source folder name アストレアリーフ is not the product display name."
     },
     {
       "key": "alphard-astraea",
@@ -79,7 +81,9 @@
       "outputSha256": "2dac96f428b26acf4a89571f174f60fcddd6b8c1d825b79042c1f12e73f93475",
       "width": 1400,
       "height": 933,
-      "bytes": 167992
+      "bytes": 167992,
+      "series": "アストレアレリーフ",
+      "seriesEvidence": "User correction on 2026-09-18; source folder name アストレアリーフ is not the product display name."
     },
     {
       "key": "canvas-drive",
@@ -90,6 +94,17 @@
       "width": 1400,
       "height": 933,
       "bytes": 105086
+    },
+    {
+      "key": "delica-heritage-field",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002196.jpg",
+      "output": "public/assets/lifestyle/delica-heritage-field.webp",
+      "sha256": "5150c7d884e1e0a80fa321f0e701ae66fccc01ccd7ca924a7fc1737639471811",
+      "outputSha256": "bedec418b27dfb65c220b1921d36f02be01faa61c54031875bc79257c5ba502a",
+      "width": 933,
+      "height": 1400,
+      "bytes": 186584,
+      "selection": "Replaces the third-row photo with a second-row view showing Heritage Field patterned panels. Verified against the shooting set and C/LOG seat specification."
     }
   ],
   "videos": [
@@ -127,7 +142,9 @@
       "transformation": "Full reviewed clip; 540px wide H.264, no audio or metadata; no cuts or generated content.",
       "sha256": "1985c5efdf42d57b43ee2e17d444ea2f0cd7711adfb44a832d1e9584a6d2b804",
       "outputSha256": "643c7f3b40648d42e406d146f0091dbfef1ec172f8136e82c0288323c712c891",
-      "bytes": 1063504
+      "bytes": 1063504,
+      "series": "アストレアレリーフ",
+      "seriesEvidence": "User correction on 2026-09-18; source folder name アストレアリーフ is not the product display name."
     }
   ]
 }
