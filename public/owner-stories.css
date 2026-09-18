@@ -1,0 +1,41 @@
+/* A small editorial bridge after the gallery. Full stories live on C/LOG. */
+.hero-jp>span{display:inline-block}
+.owner-stories{padding-block:48px 60px;border-top:1px solid #e5e1dc;scroll-margin-top:calc(var(--store-header-height,90px) + 18px)}
+.owner-stories-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.owner-stories-heading h2{font-size:clamp(20px,1.75vw,27px);line-height:1.65;letter-spacing:.025em;font-weight:600}
+.owner-stories-heading>p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 5px}
+.owner-story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.owner-story{min-width:0}
+.owner-story-photos{display:grid;grid-template-columns:1.65fr 1fr;gap:3px;aspect-ratio:1.95;overflow:hidden;border-radius:10px;background:#f1f0ed}
+.owner-story-photos img{width:100%;height:100%;min-width:0;min-height:0;object-fit:cover;transition:transform .35s ease}
+.owner-story-photos:focus-visible,.owner-story-links a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.owner-story:nth-child(2) .owner-story-scene{object-position:62% center}
+.owner-story-body{padding-top:17px}
+.owner-story-person{font-size:12px;color:#79736d;line-height:1.6;margin:0 0 7px}
+.owner-story h3{font-size:17px;line-height:1.65;font-weight:600;letter-spacing:.015em;margin:0}
+.owner-story-description{font-size:13px;line-height:1.95;min-height:3.9em;color:#625e58;margin:10px 0 13px}
+.owner-story-links{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 12px;border-top:1px solid #e4e0dc}
+.owner-story-links a{min-height:44px;display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:1.6}
+.owner-story-links a:first-child{font-weight:600;color:var(--red)}
+.owner-story-links a:last-child{color:#68625c}
+@media(hover:hover){.owner-story-photos:hover img{transform:scale(1.025)}.owner-story-links a:hover{text-decoration:underline;text-underline-offset:4px}}
+@media(max-width:1000px){.owner-story-grid{gap:18px}.owner-stories-heading{display:block}.owner-stories-heading>p{margin-top:9px}.owner-story h3{font-size:16px}}
+@media(max-width:760px){
+ .owner-stories{padding-block:32px 38px}
+ .owner-stories-heading{margin-bottom:22px}
+ .owner-stories-heading h2{font-size:19px;line-height:1.65}
+ .owner-stories-heading .section-kicker{font-size:11px}
+ .owner-stories-heading>p{font-size:12px;margin-top:6px}
+ .owner-story-grid{grid-template-columns:1fr;gap:22px}
+ .owner-story{display:grid;grid-template-columns:116px minmax(0,1fr);gap:0 16px;padding-bottom:20px;border-bottom:1px solid #e5e1dc}
+ .owner-story:last-child{padding-bottom:0;border-bottom:0}
+ .owner-story-photos{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:3px;aspect-ratio:auto;height:190px;min-height:0;align-self:start;border-radius:8px}
+ .owner-story-body{padding:0;min-width:0}
+ .owner-story-person{font-size:11px;margin-bottom:5px}
+ .owner-story h3{font-size:15px;line-height:1.65}
+ .owner-story-description{font-size:12px;line-height:1.85;margin:8px 0}
+ .owner-story-links{gap:0 12px;justify-content:flex-start}
+ .owner-story-links a{font-size:12px;min-height:44px}
+}
+@media(max-width:360px){.owner-story{grid-template-columns:96px minmax(0,1fr);gap:12px}.owner-story h3{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.owner-story-photos img{transition:none}}

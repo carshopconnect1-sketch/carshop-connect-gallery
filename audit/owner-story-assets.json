@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-18",
+  "note": "User-supplied NAS, edited images of each named owner. Visually checked scene/interior pairs. No catalog case or product attribution is inferred. C/LOG supplies story text. Display copies only: auto-orient, proportionate resize within 1200px, JPEG88; no content edits. Originals untouched.",
+  "assets": [
+    {
+      "file": "/assets/owners/yayoi-drive.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040495.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-jimny-yayoi.html",
+      "originalSha256": "c0e7b4356e02b9e470378aedc42794612a4006e4f27ebdbce40c7097787f1325",
+      "sha256": "dd2cebcbf8017aa9bd0f63ceca0b260dc1d39af879c56d075a18110808a5b087",
+      "bytes": 173254,
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/assets/owners/yayoi-interior.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040606.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-jimny-yayoi.html",
+      "originalSha256": "818b5eb322fd5c541a4307250c6ba0f561175bb156495fcbe320d6d2fc89098e",
+      "sha256": "331a902a5b453109f27963697ad30e281b5e9ce6ac5b85fbe985389e6e664515",
+      "bytes": 239277,
+      "width": 800,
+      "height": 1200
+    },
+    {
+      "file": "/assets/owners/yohei-camp.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★ヨウヘイさん（ラングラー）\\編集済み\\P1064704.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-jeep-yohhei.html",
+      "originalSha256": "dd4c085e80fe3412831f3e7ace5dba250402323fa65f4af64bcb84f9bb7b9927",
+      "sha256": "23e547b5f1fdaa0d2b443edcfe9676afdaee30adc67b62aef5e6a153949b3a73",
+      "bytes": 290272,
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/assets/owners/yohei-interior.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★ヨウヘイさん（ラングラー）\\編集済み\\P1064762.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-jeep-yohhei.html",
+      "originalSha256": "52c451a779726e83e93d0770ea69b40af97dae90af81de0e1198df86d8848dc3",
+      "sha256": "3c36fbe2b0e31235a69f79f7bb17e1c26b05c79b6974cb287996b56e73a97784",
+      "bytes": 188135,
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/assets/owners/michan-life.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002151.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-michan.html",
+      "originalSha256": "ee0c4e642e1bae1af92366c62d1b866f93e64c3b9766aeea49cec47b55d5609a",
+      "sha256": "e2cc0ff8bbeb6429f197d0767853d50c9917a192de8be82ac0776d0acb523c4e",
+      "bytes": 176762,
+      "width": 799,
+      "height": 1200
+    },
+    {
+      "file": "/assets/owners/michan-interior.jpg",
+      "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002198.jpg",
+      "article": "https://seatcover.jp/clog/articles/interview-michan.html",
+      "originalSha256": "2587e152f34d9b3d7c3bd4ce98767e8808b06b5cc86bb0c7dc9b391fb9118f78",
+      "sha256": "361d420d3d75cbcd0e36748089565ad4c3553b58d7cfbe61cf7d47f30cf8dd7d",
+      "bytes": 166976,
+      "width": 800,
+      "height": 1200
+    }
+  ]
+}

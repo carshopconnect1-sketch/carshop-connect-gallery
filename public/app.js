@@ -253,6 +253,12 @@ function commit(next,history=true) {
 }
 function reset() {$('carSearch').value='';commit(emptyFilters());}
 function mountControls(){
+  document.querySelectorAll('[data-owner-gallery]').forEach(link=>link.addEventListener('click',event=>{
+    if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    const target=new URL(link.href);
+    openVehicleGallery(readFilters(target.searchParams),target.pathname+target.search+target.hash);
+  }));
   $('filterForm').addEventListener('submit',e=>e.preventDefault());
   $('filterForm').addEventListener('change',e=>{const k=e.target.name;if(!k)return;const f={...filters,[k]:k==='review'?e.target.checked:e.target.value};if(k==='maker')f.car='';commit(f);});
   document.querySelectorAll('[data-maker-region]').forEach(b=>b.addEventListener('click',()=>{makerRegion=b.dataset.makerRegion;renderMakers();}));
