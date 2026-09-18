@@ -1,0 +1,418 @@
+{
+  "note": "Photos individually selected by visual review. Do not expand albums by matching vehicle alone. Exclude uninstalled and different-series photos.",
+  "albums": [
+    {
+      "id": "canvas-biscuit",
+      "car": "ムーヴキャンバス",
+      "brand": "Sandii",
+      "series": "ビスキュイ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058980-Edit.jpg",
+          "caption": "窓越しに見える、やさしい色の前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058855-Edit.jpg",
+          "caption": "いつものドライブも、お気に入りの空間で"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1059012-Edit.jpg",
+          "caption": "後席までそろえた車内"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058997-Edit.jpg",
+          "caption": "運転席まわりのコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1059073.jpg",
+          "caption": "光の入る前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\ビスキュイ\\編集済み（ビスキュイ）\\P1058952-Edit.jpg",
+          "caption": "街並みに映えるムーヴキャンバス"
+        }
+      ]
+    },
+    {
+      "id": "lapin-biscuit",
+      "car": "ラパン",
+      "brand": "Sandii",
+      "series": "ビスキュイ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063280.jpg",
+          "caption": "やさしい風合いの前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063198.jpg",
+          "caption": "ラパンで過ごすドライブのひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063290-Edit.jpg",
+          "caption": "後席のコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063305-Edit.jpg",
+          "caption": "アームレストまわりの仕上がり"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063320-Edit.jpg",
+          "caption": "窓から見える車内"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ラパン\\★ビスキュイ\\編集済み\\P1063249.jpg",
+          "caption": "街中にたたずむラパン"
+        }
+      ]
+    },
+    {
+      "id": "canvas-macaron",
+      "car": "ムーヴキャンバス",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059094-Edit.jpg",
+          "caption": "アクアマリンのツートーンの前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059097-Edit.jpg",
+          "caption": "色をそろえた後席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059118-Edit.jpg",
+          "caption": "上から見た前席のコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059120.jpg",
+          "caption": "色の切り替えとステッチ"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059184-Edit.jpg",
+          "caption": "後席から眺める車内"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（アクアマリン）\\P1059107-Edit.jpg",
+          "caption": "青空とムーヴキャンバス"
+        }
+      ]
+    },
+    {
+      "id": "canvas-macaron-beige",
+      "car": "ムーヴキャンバス",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059276-Edit.jpg",
+          "caption": "シルキーベージュのツートーンの前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059245-Edit.jpg",
+          "caption": "明るくまとまる後席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059252.jpg",
+          "caption": "ヘッドレストの仕上がり"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059260-Edit.jpg",
+          "caption": "窓越しの前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059299-Edit.jpg",
+          "caption": "座面の色合いとフィット感"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ムーブキャンバス\\マカロン（アクアマリン、シルキーベージュ）\\編集済み（シルキーベージュ）\\P1059320-Edit.jpg",
+          "caption": "街中のムーヴキャンバス"
+        }
+      ]
+    },
+    {
+      "id": "hustler-glace",
+      "car": "ハスラー",
+      "brand": "Sandii",
+      "series": "カヌレグラッセ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013574.jpg",
+          "caption": "白とブラウンを組み合わせた前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013598.jpg",
+          "caption": "後席までツートーンに"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013581.jpg",
+          "caption": "運転席まわりのコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013625.jpg",
+          "caption": "素材の表情を近くで"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013621.jpg",
+          "caption": "アームレストの仕上がり"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★カヌレグラッセ\\編集済み\\P1013630.jpg",
+          "caption": "ドアを開けたハスラー"
+        }
+      ]
+    },
+    {
+      "id": "alphard-relief",
+      "car": "アルファード",
+      "brand": "Refinad",
+      "series": "アストレアレリーフ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001464-Edit.jpg",
+          "caption": "立体的なステッチが映える前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001596.jpg",
+          "caption": "後席でゆったり過ごすひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001509-Edit.jpg",
+          "caption": "セカンドシートのコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001498-Edit.jpg",
+          "caption": "運転席まわりを上から"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001623.jpg",
+          "caption": "背もたれのステッチとパイピング"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\アルファード\\★アストレアリーフ\\編集済み\\P1001666-Edit.jpg",
+          "caption": "アルファードとのひととき"
+        }
+      ]
+    },
+    {
+      "id": "nbox-macaron",
+      "car": "N-BOX",
+      "brand": "Sandii",
+      "series": "マカロン",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1061859-Edit.jpg",
+          "caption": "シルキーベージュの明るい前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1062026.jpg",
+          "caption": "後席でひと息つく時間"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1061887-Edit.jpg",
+          "caption": "後席までそろえたツートーン"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1061903.jpg",
+          "caption": "色の切り替えとステッチ"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1062002.jpg",
+          "caption": "運転席で過ごすひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★マカロン\\シルキーベージュ\\編集済み\\P1062046.jpg",
+          "caption": "街中のN-BOX"
+        }
+      ]
+    },
+    {
+      "id": "nbox-astraea",
+      "car": "N-BOX",
+      "brand": "Refinad",
+      "series": "アストレア",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027417.jpg",
+          "caption": "鮮やかな色が印象的な前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027426.jpg",
+          "caption": "後席まで色をそろえて"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027434.jpg",
+          "caption": "運転席まわりのコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027463.jpg",
+          "caption": "素材の表情を近くで"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027442.jpg",
+          "caption": "反対のドアから眺めた前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\Nボックス\\★アストレア\\編集済み\\P1027460.jpg",
+          "caption": "シートベルトまわりの仕上がり"
+        }
+      ]
+    },
+    {
+      "id": "sienta-biscuit",
+      "car": "シエンタ",
+      "brand": "Sandii",
+      "series": "ビスキュイ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062333-Edit.jpg",
+          "caption": "やさしい風合いの前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062474.jpg",
+          "caption": "車内で過ごす穏やかなひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062347-Edit.jpg",
+          "caption": "後席のコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062395.jpg",
+          "caption": "生地の織りを近くで"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062379-Edit.jpg",
+          "caption": "運転席まわりを上から"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\シエンタ\\★ビスキュイ\\編集済み\\P1062498-Edit.jpg",
+          "caption": "街並みの中のシエンタ"
+        }
+      ]
+    },
+    {
+      "id": "hustler-corduroy",
+      "car": "ハスラー",
+      "brand": "Refinad",
+      "series": "コーデュロイデニム",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1059907-Edit.jpg",
+          "caption": "ブラウンとデニムを組み合わせた前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1060005-Edit.jpg",
+          "caption": "車内でひと息つく時間"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1059911-Edit.jpg",
+          "caption": "後席まで風合いをそろえて"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1059925.jpg",
+          "caption": "コーデュロイとデニムの質感"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1059932-Edit.jpg",
+          "caption": "運転席まわりのコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハスラー\\★コーデュロイ\\編集済み\\P1059968-Edit.jpg",
+          "caption": "木々に囲まれたハスラー"
+        }
+      ]
+    },
+    {
+      "id": "hiace-field",
+      "car": "ハイエース",
+      "brand": "Refinad",
+      "series": "ヘリテージフィールド",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A5946.jpg",
+          "caption": "柄と木目が映える前席"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A6037.jpg",
+          "caption": "ハイエースで過ごすひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A5955.jpg",
+          "caption": "座面の柄と色の組み合わせ"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A6063.jpg",
+          "caption": "横から眺めるシートと車内"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A6051.jpg",
+          "caption": "海辺で愛車と過ごす時間"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\ハイエース\\★ヘリテージフィールド（ヨウヘイさん）\\編集済み\\5E3A6075-Edit.jpg",
+          "caption": "ハイエースの外観"
+        }
+      ]
+    },
+    {
+      "id": "jimny-kachina",
+      "car": "ジムニー",
+      "brand": "Sandii",
+      "series": "カチナ",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040606.jpg",
+          "caption": "柄を取り入れた運転席まわり"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040495.jpg",
+          "caption": "愛車と自然の中へ"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040557.jpg",
+          "caption": "ドアを開けると広がるコーディネート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040589.jpg",
+          "caption": "カチナの柄を近くで"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040792.jpg",
+          "caption": "お気に入りの道具が並ぶ車内"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★やよいさん（ジムニー）取材\\編集済み\\P1040657.jpg",
+          "caption": "山並みとジムニー"
+        }
+      ]
+    },
+    {
+      "id": "delica-field",
+      "car": "デリカD:5",
+      "brand": "Refinad",
+      "series": "ヘリテージフィールド",
+      "note": "2列目はヘリテージフィールド、1列目はヘリテージを装着したコーディネートです。",
+      "photos": [
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002196.jpg",
+          "caption": "柄をあしらったセカンドシート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002112.jpg",
+          "caption": "後席でくつろぐひととき"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002195.jpg",
+          "caption": "後ろから眺めたセカンドシート"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002127.jpg",
+          "caption": "車内で過ごす時間"
+        },
+        {
+          "source": "\\\\192.168.1.99\\Connect_Photograph\\・イベント・CLOG関係\\★みちゃん\\編集済み\\P1002151.jpg",
+          "caption": "愛車の後席から"
+        }
+      ]
+    }
+  ]
+}

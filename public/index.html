@@ -246,6 +246,13 @@
 </footer>
   <div class="gallery-preview-note wrap"><a href="/compare.html">制作プレビュー・旧版との比較</a><p class="source-note" id="sourceNote">制作プレビュー。掲載内容は保存資料をもとにしています。</p></div>
   <dialog class="lifestyle-video-dialog" id="lifestyleVideoDialog" aria-labelledby="lifestyleVideoTitle"><div class="lifestyle-video-head"><h2 id="lifestyleVideoTitle">車内のイメージ動画</h2><button class="lifestyle-close" type="button" id="lifestyleVideoClose" aria-label="動画を閉じる">×</button></div><video id="lifestyleVideo" controls muted playsinline preload="none"></video></dialog>
+  <dialog id="lifestylePhotoDialog" class="lifestyle-photo-dialog" aria-labelledby="lifestylePhotoTitle">
+    <div class="lifestyle-photo-head"><div><p id="lifestylePhotoBrand" class="lifestyle-brand"></p><h2 id="lifestylePhotoTitle"></h2><p id="lifestylePhotoSeries" class="lifestyle-series"></p></div><button type="button" class="lifestyle-close" id="lifestylePhotoClose" aria-label="コーディネートの写真を閉じる">×</button></div>
+    <div class="lifestyle-photo-stage"><img id="lifestylePhotoImage" alt=""/><button type="button" class="lifestyle-photo-prev" id="lifestylePhotoPrev" aria-label="前の写真">‹</button><button type="button" class="lifestyle-photo-next" id="lifestylePhotoNext" aria-label="次の写真">›</button></div>
+    <div class="lifestyle-photo-meta" aria-live="polite"><p id="lifestylePhotoCaption"></p><span id="lifestylePhotoCount"></span></div>
+    <div class="lifestyle-photo-thumbs" id="lifestylePhotoThumbs" aria-label="写真を選ぶ"></div>
+    <div class="lifestyle-photo-foot"><p id="lifestylePhotoNote" hidden></p><a id="lifestylePhotoGallery" class="lifestyle-gallery-link"></a></div>
+  </dialog>
   <dialog id="photoDialog" class="photo-dialog" aria-labelledby="detailCar"><div class="dialog-head"><span class="eyebrow">INSTALLATION DETAIL</span><button class="icon-button" id="closePhoto" aria-label="装着写真の詳細を閉じる">×</button></div><div id="detailContent"></div></dialog>
   <noscript><p class="wrap">検索と写真表示にはJavaScriptが必要です。<a href="https://seatcover.jp/gallerys/">公開中の装着ギャラリーを見る</a></p></noscript>
 </body>
