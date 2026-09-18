@@ -124,7 +124,12 @@
 .card-series,.card-color {font-size:13px;line-height:1.65;margin-top:4px}
 .card-extra {font-size:11px;line-height:1.6}
 .photo-count {font-size:11px;padding:6px 8px;border-radius:6px;backdrop-filter:blur(5px)}
-.support-section {border-top:1px solid #e5e1dc}
+.support-section {background:#171717;color:#f7f5f2;border-top:1px solid #171717}
+.support-section .eyebrow {color:#e5a9b0}
+.support-links a {border-bottom-color:#454340}
+.support-links small {color:#c5c0ba}
+.support-links b {color:#e5a9b0}
+.support-links a:focus-visible {outline:2px solid #e5a9b0;outline-offset:6px}
 
 @media (hover:hover) {
   .inspiration-card:hover {transform:translateY(-5px);box-shadow:0 18px 38px #30282022}
