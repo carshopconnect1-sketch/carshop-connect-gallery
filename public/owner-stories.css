@@ -1,11 +1,11 @@
 /* Compact mood discovery; only the selected collection opens. */
 .hero-jp>span{display:inline-block}
-.lifestyle{padding-block:56px 64px;background:#282725;scroll-margin-top:calc(var(--store-header-height,90px) + 18px)}
-.lifestyle-heading{color:#faf8f5}
-.lifestyle-heading .section-kicker{color:#e5a9b0}
+.lifestyle{padding-block:56px 64px;background:#faf5f0;border-block:1px solid #eee4dc;scroll-margin-top:calc(var(--store-header-height,90px) + 18px)}
+.lifestyle-heading{color:#20201e}
+.lifestyle-heading .section-kicker{color:var(--red)}
 .lifestyle-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:22px}
 .lifestyle-heading h2{font-size:clamp(20px,1.8vw,27px);font-weight:600;line-height:1.65;letter-spacing:.03em}
-.lifestyle-heading>p{font-size:13px;color:#c9c4be;margin-bottom:4px}
+.lifestyle-heading>p{font-size:13px;color:#625e58;margin-bottom:4px}
 .lifestyle-choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .lifestyle-choice{position:relative;padding:0;border:0;border-radius:8px;overflow:hidden;aspect-ratio:1.42;background:#242421;text-align:left;color:white;cursor:pointer;isolation:isolate}
 .lifestyle-choice>img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
@@ -16,7 +16,7 @@
 .lifestyle-choice-open{position:absolute;right:0;bottom:3px;font-size:22px;line-height:1}
 .lifestyle-choice[aria-expanded="true"]{outline:3px solid #e5a9b0;outline-offset:4px}
 .lifestyle-choice[aria-expanded="true"] .lifestyle-choice-open{transform:rotate(45deg)}
-.lifestyle-panel{margin-top:30px;padding:28px;background:#f2eee8;color:var(--ink);border-radius:10px;scroll-margin-top:calc(var(--store-header-height,90px) + 12px)}
+.lifestyle-panel{margin-top:30px;padding:28px;background:#fff;color:var(--ink);border:1px solid #e6dfd6;border-radius:10px;scroll-margin-top:calc(var(--store-header-height,90px) + 12px)}
 .lifestyle-panel[hidden]{display:none}
 .lifestyle-panel-heading{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;margin-bottom:26px;padding-right:56px}
 .lifestyle-panel-heading>.lifestyle-close{position:absolute;right:0;top:0}
