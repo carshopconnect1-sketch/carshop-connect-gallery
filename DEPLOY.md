@@ -2,11 +2,13 @@
 
 このディレクトリは装着ギャラリー専用のGitリポジトリ。SitesのプロジェクトIDは `.openai/hosting.json` を使う。
 
-- URL: https://carshop-connect-gallery.connect369.chatgpt.site/
-- SP・PC比較: https://carshop-connect-gallery.connect369.chatgpt.site/preview.html
+- URL: https://carshop-connect-gallery-renewal.masaruharuyama.chatgpt.site/
+- SP・PC比較: https://carshop-connect-gallery-renewal.masaruharuyama.chatgpt.site/preview.html
 - ローカル: http://127.0.0.1:4180/preview.html
 - Gitの送信先ブランチ: `main`
 - 閲覧範囲: 公開（ログイン不要）。2026-09-15の「URL知っている人全員が見れるように」の明示依頼による。検索エンジン向けnoindexは維持する。
+
+2026-09-24の「新規でPUSH」により、新しいSitesプロジェクトへ移行。現在のIDは `.openai/hosting.json`、Push先は `origin` を正とする。旧プロジェクト `appgprj_6aa8facb7dec8191917e02752c5d2d51` と旧URL https://carshop-connect-gallery.connect369.chatgpt.site/ は履歴として残し、以後の公開先には使わない。旧リモートは `sites-previous` として保持する。新規登録時の作業コピーは `gallery-publish`、通常の編集・4180プレビューは `gallery-next` を使用する。
 
 ## 手順
 
@@ -20,4 +22,4 @@
 
 `dist/client` は公開用静的ファイル。配信設定の `.openai/hosting.json` と一緒に梱包する。ローカルの旧版比較ページは配信対象外。ヘッダー・フッターのリンクは現行seatcover.jpへ統一。最下部の制作比較リンクだけSP・PC比較へビルド時に置換する。ローカル画面には旧版比較リンクを残す。
 
-2,897件は保存資料に由来するデータで、本番の最新データ全件との同期ではない。本番 `seatcover.jp` への手動アップロードとは別の確認サイト。ローカルの4180サーバーは終了しない。
+2,895件は保存資料に由来するデータで、本番の最新データ全件との同期ではない。本番 `seatcover.jp` への手動アップロードとは別の確認サイト。ローカルの4180サーバーは終了しない。
