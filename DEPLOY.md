@@ -10,6 +10,15 @@
 
 2026-09-24の「新規でPUSH」により、新しいSitesプロジェクトへ移行。現在のIDは `.openai/hosting.json`、Push先は `origin` を正とする。旧プロジェクト `appgprj_6aa8facb7dec8191917e02752c5d2d51` と旧URL https://carshop-connect-gallery.connect369.chatgpt.site/ は履歴として残し、以後の公開先には使わない。旧リモートは `sites-previous` として保持する。新規登録時の作業コピーは `gallery-publish`、通常の編集・4180プレビューは `gallery-next` を使用する。
 
+## GitHubへの保存
+
+2026-09-24の「そうしてよ」「公開していいよ」により、GitHubにも履歴ごと保存する公開リポジトリを追加。
+
+- リポジトリ: https://github.com/carshopconnect1-sketch/carshop-connect-gallery
+- Gitリモート: `github`（`https://github.com/carshopconnect1-sketch/carshop-connect-gallery.git`）
+- 送信先: `main`。コマンドは `git push github HEAD:main`。
+- Sitesの公開用リモートは `origin`。GitHubへのPushだけでSitesやseatcover.jpへ自動デプロイする設定はない。
+
 ## 手順
 
 1. `npm run check` と `npm test` を通す。

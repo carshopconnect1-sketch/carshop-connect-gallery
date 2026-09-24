@@ -1,5 +1,9 @@
 # CONNECT 装着ギャラリー 新案
 
+- 公開サイト: https://carshop-connect-gallery-renewal.masaruharuyama.chatgpt.site/
+- GitHub: https://github.com/carshopconnect1-sketch/carshop-connect-gallery （公開・`main`）
+- GitHubへ保存: `git push github HEAD:main`。サイトの公開手順は [DEPLOY.md](DEPLOY.md) を参照。
+
 2026-09-14。ユーザーの「一個まえがよかった」に合わせ、新TOP（4177の確認画面／実体4173）の書体・白背景を使う案へ戻し、動画は現行ギャラリーのものに差し替えた、検索・詳細閲覧ができるローカル制作プレビュー。
 
 - 新案: http://127.0.0.1:4180/
