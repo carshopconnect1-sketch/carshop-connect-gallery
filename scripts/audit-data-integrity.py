@@ -35,6 +35,11 @@ REVIEWED_MULTI_VEHICLE_SOURCES = {
     'old.zip/old/v2/index.html': 'The legacy IXUS upload is an aggregate source with manufacturer labels and no verified car names.',
 }
 
+# A model can be named in photo metadata even when the gallery has no case
+# categorized under that model. Keep known sibling models in the vocabulary so
+# a D:2 label on a D:5 gallery case is not silently ignored.
+ADDITIONAL_MODEL_LABELS = {'デリカD:2'}
+
 
 def norm(value):
     return re.sub(r'[^a-z0-9ぁ-んァ-ヶ一-龠]', '', unicodedata.normalize('NFKC', value).lower())
@@ -56,7 +61,11 @@ def main():
     manual_v2 = []
     high_photo_count = []
 
-    known_cars = sorted({case['car'] for case in cases if case.get('carKnown') is not False and case['car'] != '車種名未掲載'}, key=lambda value: len(norm(value)), reverse=True)
+    known_cars = sorted(
+        {case['car'] for case in cases if case.get('carKnown') is not False and case['car'] != '車種名未掲載'}
+        | ADDITIONAL_MODEL_LABELS,
+        key=lambda value: len(norm(value)), reverse=True,
+    )
     car_norms = [(car, norm(car)) for car in known_cars if len(norm(car)) >= 3]
     photo_info_conflicts = []
     photo_info_conflict_keys = set()

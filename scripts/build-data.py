@@ -74,6 +74,27 @@ SOURCE_CARD_CORRECTIONS = {
         'car': 'MINI クーパーS',
         'reason': '写真の型式表記から、専用デザインページ内の車種をクーパーSに特定。',
     },
+    ('mitsubishi_delicad2.html', '0'): {
+        'photoInfo': [],
+        'reason': 'カード見出し・写真説明・商品リンクはデリカD:5だが、写真情報だけがD:2/S0116-11。D:5の正確な品番を画像から特定できないため、誤った型式・品番を非表示にする。',
+    },
+    ('mitsubishi_delicad5.html', '6'): {
+        'car': 'デリカD:5',
+        'photoInfo': [],
+        'reason': 'カード見出し・写真説明・商品リンクはデリカD:5だが、写真情報だけがD:2/S0116-11。D:5の正確な品番を画像から特定できないため、誤った型式・品番を非表示にする。',
+    },
+    ('mitsubishi_delicad5.html', '10'): {
+        'car': 'デリカD:5',
+        'photoInfo': [],
+        'reason': 'カード見出し・写真説明・商品リンク・レビューはデリカD:5だが、写真情報だけがD:2/S0116-11。D:5の正確な品番を画像から特定できないため、誤った型式・品番を非表示にする。',
+    },
+    ('mitsubishi_delicad5.html', '15'): {
+        'car': 'デリカD:5',
+        'photoInfo': [],
+        'productUrl': 'https://seatcover.jp/c/mitsubishi/delicad5/sandii-wf00164',
+        'updateVehicleProductUrl': False,
+        'reason': 'カード見出し・写真説明はデリカD:5だが、写真情報だけがD:2/S0116-11。現行の公式商品ページURLへ更新し、D:5の正確な品番は画像から特定できないため非表示にする。',
+    },
 }
 
 # The BMW Leather source contains one Quilt installation image that is also
@@ -145,10 +166,10 @@ if __name__=='__main__':
             name=correction.get('car') or a.get('data-model') or car
             sid=hashlib.sha256(identity.encode()).hexdigest()[:12]
             design=re.sub(r'^(Refinad|Sandii|Dotty|IXUS)\s*','',series,flags=re.I).strip() or 'シリーズ名の記載なし'
-            info=parse_json(a.get('data-photo-info',''),[])
+            info=correction.get('photoInfo',parse_json(a.get('data-photo-info',''),[]))
             gallery=gallery_page+'#card-'+a.get('data-idx','0')
             product=safe_url(correction.get('productUrl') or a.get('data-product-url',''))
-            if correction.get('productUrl') and product:
+            if correction.get('productUrl') and product and correction.get('updateVehicleProductUrl', True):
                 vehicle_product_urls[gallery_page]=product
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
             detail={'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}
