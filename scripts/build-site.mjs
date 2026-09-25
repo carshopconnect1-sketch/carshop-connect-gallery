@@ -48,4 +48,13 @@ if (!Array.isArray(cases) || cases.length !== audit.caseCount || accounted !== a
   throw new Error('Published cases do not match the extraction audit');
 }
 await Promise.all(cases.map(item => readFile(path.join(output, `data/details/${item.id}.json`))));
+const fitment = JSON.parse(await readFile(path.join(output, 'data/fitment.json'), 'utf8'));
+const safeCaseFields = new Set(['brand', 'car', 'code', 'rows']);
+const safeRowFields = new Set(['year', 'yearStart', 'yearEnd', 'model', 'grade', 'seats']);
+const caseIds = new Set(cases.map(item => item.id));
+if (fitment.version !== 1 || Object.keys(fitment.cases || {}).length < 100) throw new Error('Fitment snapshot is missing or incomplete');
+for (const [id, match] of Object.entries(fitment.cases)) {
+  if (!caseIds.has(id) || Object.keys(match).some(key => !safeCaseFields.has(key)) || !Array.isArray(match.rows) || !match.rows.length) throw new Error(`Unsafe fitment case: ${id}`);
+  for (const row of match.rows) if (Object.keys(row).some(key => !safeRowFields.has(key))) throw new Error(`Unsafe fitment field: ${id}`);
+}
 console.log(`Sites static build ready: ${published.length} files, ${cases.length} complete cases.`);

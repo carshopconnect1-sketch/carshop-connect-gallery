@@ -16,6 +16,7 @@ let activePanel=filters.brand?'brand':filters.color||filters.colorName?'color':'
 let dockFrame=0;
 let detailAbort, activeDetail = null, photoIndex = 0;
 const detailCache = new Map();
+let fitmentSnapshotPromise;
 const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="15" height="15" rx="2"/><path d="M17 3H4a1 1 0 0 0-1 1v13"/></svg>';
 function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;}
 function link(text, url, cls) {const a=el('a',cls,text);a.href=url;a.target='_blank';a.rel='noopener';return a;}
@@ -292,7 +293,7 @@ async function openDetail(item){
   try{
     let detail=detailCache.get(item.id);
     if(!detail){const response=await fetch(`/data/details/${item.id}.json`,{signal:abort.signal});if(!response.ok)throw new Error('detail');detail=await response.json();if(!Array.isArray(detail.images)||!detail.images.length)throw new Error('images');detailCache.set(item.id,detail);}
-    if(abort.signal.aborted)return;activeDetail={item,...detail};renderDetail();
+    if(abort.signal.aborted)return;activeDetail={item,...detail};renderDetail();mountFitment(item,detail,abort.signal);
   }catch(error){if(error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry);const fallback=productLink(item);if(fallback)state.append(link(fallback.label,fallback.url,'text-button'));$('detailContent').replaceChildren(state);}
 }
 function renderDetail(){
@@ -311,12 +312,51 @@ function renderDetail(){
   // Only source-provided fitment values. Never derive year/grade/colour from photos.
   if(Array.isArray(photoInfo))for(const key of ['型式','品番']){const values=[...new Set(photoInfo.map(row=>row?.[key]).filter(Boolean))];if(values.length===1)info.append(el('dt','',`掲載${key}`),el('dd','',String(values[0])));}
   meta.append(info);
+  const fitmentMount=el('div');fitmentMount.id='fitmentMount';meta.append(fitmentMount);
   if(review)meta.append(el('h3','detail-review-title','掲載コメント'),el('p','detail-review',review));
   const destination=productLink(item,productUrl);const links=el('div','detail-links');
   if(destination){links.append(link(destination.label,destination.url,'primary'));meta.append(links);}
   meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に必ず適合を確認してください。'));
   if(item.category==='seatcover')meta.append(link('車種・年式から適合を確認 ↗','https://seatcover.jp/f/match_renewal','text-button'));
   layout.append(visual,meta);$('detailContent').replaceChildren(layout);setPhoto(0);
+}
+async function loadFitmentSnapshot(){
+  if(!fitmentSnapshotPromise)fitmentSnapshotPromise=fetch('/data/fitment.json').then(response=>{
+    if(!response.ok)throw new Error('fitment');return response.json();
+  }).catch(error=>{fitmentSnapshotPromise=null;throw error;});
+  return fitmentSnapshotPromise;
+}
+function fitmentField(list,label,value){
+  if(value)list.append(el('dt','',label),el('dd','',value));
+}
+async function mountFitment(item,detail,signal){
+  if(item.category!=='seatcover')return;
+  try{
+    const snapshot=await loadFitmentSnapshot();
+    if(signal.aborted||!activeDetail||activeDetail.item.id!==item.id||!$('photoDialog').open)return;
+    const match=snapshot?.version===1?snapshot.cases?.[item.id]:null;
+    const codes=[...new Set((detail.photoInfo||[]).map(row=>String(row?.['品番']||'').normalize('NFKC').trim().toUpperCase()).filter(Boolean))];
+    if(!match||match.brand!==item.brand||match.car!==item.car||codes.length!==1||codes[0]!==match.code||!Array.isArray(match.rows)||!match.rows.length)return;
+    const panel=el('details','detail-fitment');
+    const summary=el('summary','','この写真の品番の適合条件');
+    summary.append(el('span','detail-fitment-count',`${match.rows.length}件`));panel.append(summary);
+    const body=el('div','detail-fitment-body');
+    for(const [index,row] of match.rows.entries()){
+      const block=el('div','detail-fitment-row');
+      if(match.rows.length>1)block.append(el('p','detail-fitment-number',`条件 ${index+1}`));
+      const list=el('dl','detail-fitment-info');
+      fitmentField(list,'掲載年式',row.year);
+      const period=[row.yearStart,row.yearEnd].map(value=>String(value||'').slice(0,7).replace('-','/')).filter(Boolean).join(' ～ ');
+      fitmentField(list,'年式範囲',period);
+      fitmentField(list,'型式',row.model);
+      fitmentField(list,'グレード',row.grade);
+      fitmentField(list,'定員',row.seats?`${row.seats}人`:'');
+      block.append(list);body.append(block);
+    }
+    const date=String(snapshot.syncedAt||'').slice(0,10).replaceAll('-','/');
+    body.append(el('p','detail-fitment-source',`適合マスターの掲載情報（${date}取得）。掲載年式と年式範囲に差がある場合があります。購入前に公式適合表で年式・型式・グレードを再確認してください。販売状態や在庫を示すものではありません。`));
+    panel.append(body);$('fitmentMount').replaceChildren(panel);
+  }catch{ /* An unavailable snapshot must not be mistaken for confirmed fitment. */ }
 }
 function setPhoto(index){
   if(!activeDetail)return;const {images,item}=activeDetail;photoIndex=(index+images.length)%images.length;
@@ -333,7 +373,7 @@ async function start(){
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
     $('aboutCaseCount').textContent=number(cases.length)+'件の';
-    $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。公開サイトの最新データとの照合は未実施です。`;
+    $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。適合条件は品番・車種を照合できた事例のみ表示。装着写真の最新全件とは同期していません。`;
     updateResults();
     if(location.hash==='#photoResults')requestAnimationFrame(showPhotos);
   }catch(error){$('loading').textContent='装着事例を読み込めませんでした。接続を確認して、再読み込みしてください。';const b=el('button','secondary','再読み込み');b.addEventListener('click',()=>location.reload());$('loading').append(b);}
