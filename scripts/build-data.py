@@ -105,6 +105,17 @@ SOURCE_CARD_CORRECTIONS = {
     },
 }
 
+# The Nomad gallery's card titles, alt text and source photos identify the
+# five-door Nomad, but its legacy photo-info field was copied from JB64 Jimny
+# (S0113). Do not present that old fitment as the photographed vehicle's spec.
+SOURCE_CARD_CORRECTIONS.update({
+    ('suzuki_jimnynomade.html', str(index)): {
+        'photoInfo': [],
+        'reason': 'ジムニーノマドの写真情報だけが旧ジムニーJB64／S0113を流用。ノマドの型式・品番を推測せず非表示にする。',
+    }
+    for index in range(15)
+})
+
 # The BMW Leather source contains one Quilt installation image that is also
 # the lead image of the dedicated Quilt case. Keep it only with that product.
 SOURCE_IMAGE_EXCLUSIONS = {

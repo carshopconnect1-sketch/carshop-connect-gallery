@@ -106,3 +106,15 @@ test('mismatched product URLs are withheld and lead to the matching vehicle cate
  assert.equal(data.vehicleProductLinks['ダイハツ|キャストスタイル'],'https://seatcover.jp/c/daihatsu/caststyle');
  assert.equal(data.vehicleProductLinks['アウディ|A4アバント'],'https://seatcover.jp/c/audi/audia4');
 });
+
+test('Nomad installations do not display copied JB64 Jimny fitment',async()=>{
+ const nomads=data.cases.filter(item=>item.maker==='スズキ'&&item.car==='ジムニーノマド');
+ assert.equal(nomads.length,15);
+ for(const item of nomads){
+  const detail=await read(`public/data/details/${item.id}.json`);
+  assert.deepEqual(detail.photoInfo,[],item.id);
+  assert.match(detail.sourceCorrection,/旧ジムニーJB64/);
+ }
+ const heritage=await read('public/data/details/7fce0f7893a6.json');
+ assert.equal(heritage.productUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritage/refinad-ht00646');
+});
