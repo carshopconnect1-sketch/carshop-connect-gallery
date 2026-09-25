@@ -13,6 +13,10 @@ VEHICLE_PRODUCT_LINKS = {
 }
 REJECTED_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/rejected-product-links-2026-09-25.json').read_text(encoding='utf-8'))
 REJECTED_PRODUCT_LINKS = {entry['caseId']: entry for entry in REJECTED_PRODUCT_LINK_AUDIT['entries']}
+DIRECT_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/direct-product-links-2026-09-25.json').read_text(encoding='utf-8'))
+DIRECT_PRODUCT_LINKS = {entry['caseId']: entry for entry in DIRECT_PRODUCT_LINK_AUDIT['entries']}
+if len(DIRECT_PRODUCT_LINKS) != len(DIRECT_PRODUCT_LINK_AUDIT['entries']):
+    raise ValueError('Duplicate direct-product case IDs in audit')
 
 MAKERS = {'toyota':'トヨタ','suzuki':'スズキ','honda':'ホンダ','daihatsu':'ダイハツ','nissan':'日産','mitsubishi':'三菱','mazda':'マツダ','subaru':'スバル','lexus':'レクサス','volkswagen':'フォルクスワーゲン','vw':'フォルクスワーゲン','audi':'アウディ','bmw':'BMW','mercedes':'メルセデス・ベンツ','benz':'メルセデス・ベンツ','fiat':'フィアット','jeep':'ジープ','renault':'ルノー','citroen':'シトロエン','volvo':'ボルボ','porsche':'ポルシェ','chrysler':'クライスラー','isuzu':'いすゞ','rover':'ローバー','smart':'スマート','chevrolet':'シボレー','chevy':'シボレー'}
 TRUSTED_IMAGES = {'seatcover.jp','refinad.com','sandii.net','www.dotty.co.jp','dotty.co.jp','ixus.life','carshopconnect.itembox.cloud','carshopconnect.itembox.design'}
@@ -251,6 +255,26 @@ if __name__=='__main__':
             cases.append({'id':sid,'maker':maker,'car':car,'carKnown':known,'brand':'IXUS','series':series,'category':'seatcover','image':images[0],'photoCount':len(images),'galleryUrl':'https://seatcover.jp/gallerys/','hasReview':bool(review),'colorName':'','colors':[],
                 'detail':{'images':images,'review':review,'productUrl':safe_url(row['u']),'photoInfo':[],'alt':maker+' IXUS '+series+' 装着写真','sourceFile':'old.zip/old/v2/index.html','sourceCarLabel':row['c'],'carNote':'旧資料にはメーカー名のみ記載されています。車種名・色名は未確認です。'}})
             imported+=1
+    audited_product_links_seen=set()
+    for case in cases:
+        detail=case['detail']
+        product=detail.get('productUrl')
+        if not product: continue
+        entry=DIRECT_PRODUCT_LINKS.get(case['id'])
+        if not entry or entry['originalUrl'] != product or any(entry[key] != case[key] for key in ('maker','car','brand','series')):
+            raise ValueError(f'Direct product link changed; review audit for {case["id"]}: {product}')
+        audited_product_links_seen.add(case['id'])
+        detail['productLinkStatus']=entry['status']
+        approved=entry.get('approvedUrl')
+        if entry['status']=='verified_product_page':
+            if not approved or not approved.startswith('https://seatcover.jp/c/') or approved.rstrip('/').split('/')[-1] != product.rstrip('/').split('/')[-1]:
+                raise ValueError(f'Invalid approved product URL for {case["id"]}: {approved}')
+            detail['productUrl']=approved
+        else:
+            if approved: raise ValueError(f'Unverified product has approved URL for {case["id"]}')
+            detail['productUrl']=''
+    if audited_product_links_seen != set(DIRECT_PRODUCT_LINKS):
+        raise ValueError(f'Direct-product audit contains missing cases: {sorted(set(DIRECT_PRODUCT_LINKS)-audited_product_links_seen)}')
     # Opening selection uses actual data and keeps a mix of vehicles and brands.
     targets=[('ジムニー','Refinad','Heritage Mesh'),('ムーヴキャンバス','Sandii','マカロン'),('ハイエース','Refinad','Leather Deluxe'),('N-BOX','Sandii','オールドカヌレ'),('ハスラー','Sandii','カヌレ'),('アルファード','Refinad','Quilt'),('デリカ','Refinad','Leather'),('シエンタ','Sandii','ビスキュイ'),('カングー','Sandii','カヌレ'),('FIAT','Sandii','マカロン'),('ヤリス','Refinad','Leather'),('ラパン','Sandii','マカロン')]
     featured=[]

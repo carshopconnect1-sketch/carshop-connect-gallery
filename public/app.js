@@ -5,6 +5,7 @@ import {makerCatalog} from './maker-data.js';
 import {conditionLabels,conditionText,removeCondition,recoveryOptions,carChoices} from './finder-state.js';
 import {mountPhotoStory} from './photo-story.js';
 import {vehicleImageCandidates} from './vehicle-images.js';
+import {productLink as resolveProductLink} from './product-link.js';
 
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
@@ -19,12 +20,7 @@ const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6"
 function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;}
 function link(text, url, cls) {const a=el('a',cls,text);a.href=url;a.target='_blank';a.rel='noopener';return a;}
 function productLink(item, directUrl='') {
-  if(directUrl)return {url:directUrl,label:'この商品を見る ↗'};
-  const vehicleUrl=vehicleProductLinks[`${item.maker}|${item.car}`];
-  if(vehicleUrl)return {url:vehicleUrl,label:`${item.car}の商品を探す ↗`};
-  const matched=findSeries(item.brand,item.series);
-  if(matched?.productUrl)return {url:matched.productUrl,label:`${matched.label}の商品を見る ↗`};
-  return {url:'https://seatcover.jp/f/carlist_renewal.html',label:'車種から商品を探す ↗'};
+  return resolveProductLink(item,directUrl,vehicleProductLinks);
 }
 function image(src, alt, eager=false) {
   const img = el('img');img.src=src;img.alt=alt;img.loading=eager?'eager':'lazy';img.decoding='async';
@@ -318,7 +314,8 @@ function renderDetail(){
   if(review)meta.append(el('h3','detail-review-title','掲載コメント'),el('p','detail-review',review));
   const destination=productLink(item,productUrl);const links=el('div','detail-links');
   if(destination){links.append(link(destination.label,destination.url,'primary'));meta.append(links);}
-  meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に商品ページでご確認ください。'));
+  meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に必ず適合を確認してください。'));
+  if(item.category==='seatcover')meta.append(link('車種・年式から適合を確認 ↗','https://seatcover.jp/f/match_renewal','text-button'));
   layout.append(visual,meta);$('detailContent').replaceChildren(layout);setPhoto(0);
 }
 function setPhoto(index){

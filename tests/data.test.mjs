@@ -3,9 +3,12 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {filterCases,emptyFilters} from '../public/filter.js';
 import {findSeries} from '../public/series-data.js';
+import {productLink} from '../public/product-link.js';
 const read=async name=>JSON.parse(await readFile(new URL('../'+name,import.meta.url),'utf8'));
 const data=await read('public/data/catalog.json');
 const audit=await read('audit/data-extraction.json');
+const linkAudit=await read('audit/direct-product-links-2026-09-25.json');
+const auditedLinks=new Map(linkAudit.entries.map(row=>[row.caseId,row]));
 test('every retained source record is accounted for; IDs and detail files are consistent',async()=>{
  assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
  assert.equal(new Set(data.cases.map(x=>x.id)).size,data.cases.length);
@@ -43,7 +46,8 @@ test('reviewed source corrections keep vehicle, series, and product assignments 
   assert.ok(detail.sourceCorrection);
  }
  const crv=await read('public/data/details/8cb2354f7e2c.json');
- assert.equal(crv.productUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00067');
+ assert.equal(auditedLinks.get('8cb2354f7e2c').originalUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00067');
+ assert.equal(crv.productUrl,'');
 
  const owners=new Map();
  for(const item of data.cases){
@@ -116,5 +120,44 @@ test('Nomad installations do not display copied JB64 Jimny fitment',async()=>{
   assert.match(detail.sourceCorrection,/旧ジムニーJB64/);
  }
  const heritage=await read('public/data/details/7fce0f7893a6.json');
- assert.equal(heritage.productUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritage/refinad-ht00646');
+ assert.equal(auditedLinks.get('7fce0f7893a6').originalUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritage/refinad-ht00646');
+ assert.equal(heritage.productUrl,'');
+});
+
+test('only audited product pages get a direct CTA; unresolved links use safe destinations',async()=>{
+ assert.equal(linkAudit.entries.length,2632);
+ assert.equal(linkAudit.counts.verified_product_page+linkAudit.counts.unverified,linkAudit.entries.length);
+ assert.equal(auditedLinks.size,linkAudit.entries.length);
+ for(const item of data.cases){
+  const detail=await read(`public/data/details/${item.id}.json`);
+  const review=auditedLinks.get(item.id);
+  if(!review)continue;
+  assert.equal(detail.productLinkStatus,review.status,item.id);
+  const destination=productLink(item,detail.productUrl,data.vehicleProductLinks);
+  if(review.status==='verified_product_page'){
+   assert.equal(detail.productUrl,review.approvedUrl,item.id);
+   assert.equal(destination.label,'この商品を見る ↗',item.id);
+   assert.ok(review.evidence.some(source=>['shop_product_manager_published','official_vehicle_product_catalog','http_200_car_brand_title'].includes(source)));
+   if(review.shopListing?.status==='公開中') assert.equal(review.salesState,'本店公開中（確認日時点）');
+   else assert.equal(review.salesState,'未確認');
+  }else{
+   assert.equal(detail.productUrl,'',item.id);
+   assert.equal(review.approvedUrl,null);
+   assert.notEqual(destination.label,'この商品を見る ↗',item.id);
+   if(review.originalUrl.includes('/seatcovermaker/'))assert.notEqual(destination.url,review.originalUrl,item.id);
+   if(review.shopListing?.status==='未掲載')assert.equal(review.salesState,'本店未掲載（確認日時点）');
+  }
+  assert.equal(review.fitmentScope,'年式・型式・グレード未確認');
+ }
+});
+
+test('shop manager unlisted pages are withheld; published vehicle pages replace archive URLs',async()=>{
+ const unlisted=linkAudit.entries.find(row=>row.car==='ジムニー'&&row.originalUrl.endsWith('/refinad-ex00113'));
+ assert.equal(unlisted.shopListing.status,'未掲載');
+ assert.equal(unlisted.status,'unverified');
+ assert.equal((await read(`public/data/details/${unlisted.caseId}.json`)).productUrl,'');
+ const hiace=linkAudit.entries.find(row=>row.car==='ハイエース'&&row.originalUrl.endsWith('/refinad-00026'));
+ assert.equal(hiace.shopListing.status,'公開中');
+ assert.equal(hiace.approvedUrl,'https://seatcover.jp/c/toyota/hiace2/refinad-00026');
+ assert.equal((await read(`public/data/details/${hiace.caseId}.json`)).productUrl,hiace.approvedUrl);
 });
