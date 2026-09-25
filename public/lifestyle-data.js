@@ -266,4 +266,4 @@ export const lifestyleThemes = [
     ]
   }
 ];
-export function lifestyleGalleryUrl(pick){return '/?'+new URLSearchParams(pick.filters).toString()+'#photoResults';}
+export function lifestyleGalleryUrl(pick,pathname='/'){return pathname+'?'+new URLSearchParams(pick.filters).toString()+'#photoResults';}

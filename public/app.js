@@ -9,7 +9,7 @@ import {vehicleImageCandidates} from './vehicle-images.js';
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
 const pageSize = 18;
-let cases = [], filtered = [], shown = 0, vehicleProductUrls = {}, filters = readFilters(new URLSearchParams(location.search));
+let cases = [], filtered = [], shown = 0, vehicleProductUrls = {}, vehicleProductLinks = {}, filters = readFilters(new URLSearchParams(location.search));
 let makerRegion = makerCatalog.find(m=>m.name===filters.maker)?.region || 'domestic';
 let activePanel=filters.brand?'brand':filters.color||filters.colorName?'color':'vehicle';
 let dockFrame=0;
@@ -20,10 +20,11 @@ function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.cla
 function link(text, url, cls) {const a=el('a',cls,text);a.href=url;a.target='_blank';a.rel='noopener';return a;}
 function productLink(item, directUrl='') {
   if(directUrl)return {url:directUrl,label:'この商品を見る ↗'};
+  const vehicleUrl=vehicleProductLinks[`${item.maker}|${item.car}`];
+  if(vehicleUrl)return {url:vehicleUrl,label:`${item.car}の商品を探す ↗`};
   const matched=findSeries(item.brand,item.series);
   if(matched?.productUrl)return {url:matched.productUrl,label:`${matched.label}の商品を見る ↗`};
-  const galleryPage=item.galleryUrl?.split('#')[0];const vehicleUrl=vehicleProductUrls[galleryPage];
-  return vehicleUrl?{url:vehicleUrl,label:`${item.car}の商品を見る ↗`}:null;
+  return {url:'https://seatcover.jp/f/carlist_renewal.html',label:'車種から商品を探す ↗'};
 }
 function image(src, alt, eager=false) {
   const img = el('img');img.src=src;img.alt=alt;img.loading=eager?'eager':'lazy';img.decoding='async';
@@ -330,7 +331,7 @@ function setPhoto(index){
 }
 async function start(){
   try{
-    const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;vehicleProductUrls=data.vehicleProductUrls||{};
+    const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;vehicleProductUrls=data.vehicleProductUrls||{};vehicleProductLinks=data.vehicleProductLinks||{};
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);

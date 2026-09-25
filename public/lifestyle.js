@@ -29,7 +29,7 @@ export function mountLifestyle(openGallery,startVehicleSearch){
     document.getElementById('lifestylePhotoTitle').textContent=nameOf(pick);
     document.getElementById('lifestylePhotoSeries').textContent=pick.series+(pick.variant?` / ${pick.variant}`:'');
     const note=document.getElementById('lifestylePhotoNote');note.textContent=selectedAlbum.note||'';note.hidden=!selectedAlbum.note;
-    const gallery=document.getElementById('lifestylePhotoGallery');gallery.href=lifestyleGalleryUrl(pick);gallery.textContent=pick.label+' →';
+    const gallery=document.getElementById('lifestylePhotoGallery');gallery.href=lifestyleGalleryUrl(pick,location.pathname);gallery.textContent=pick.label+' →';
     gallery.onclick=event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();albumDialog.close();openGallery(pick.filters,gallery.getAttribute('href'));};
     albumThumbs.replaceChildren(...selectedAlbum.photos.map((shot,i)=>{const b=element('button');b.type='button';b.setAttribute('aria-label',`${i+1}枚目：${shot.caption}`);b.append(photo(shot.thumbnail,''));b.addEventListener('click',()=>showPhoto(i));return b;}));
     showPhoto(index);albumDialog.showModal();
@@ -53,7 +53,7 @@ export function mountLifestyle(openGallery,startVehicleSearch){
     picks.dataset.columns=String(theme.picks.length);
     theme.picks.forEach(pick=>{
       const shots=lifestyleAlbums[pick.album].photos;
-      const article=element('article','lifestyle-pick'),gallery=element('a','lifestyle-gallery-link',pick.label+' →');gallery.href=lifestyleGalleryUrl(pick);
+      const article=element('article','lifestyle-pick'),gallery=element('a','lifestyle-gallery-link',pick.label+' →');gallery.href=lifestyleGalleryUrl(pick,location.pathname);
       gallery.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openGallery(pick.filters,gallery.getAttribute('href'));});
       const cover=element('button','lifestyle-pick-link');cover.type='button';cover.setAttribute('aria-label',`${nameOf(pick)} ${pick.series}${pick.variant?' '+pick.variant:''}の写真${shots.length}枚を見る`);
       const pickPhoto=photo(pick.image,`${nameOf(pick)}に装着した${pick.brand} ${pick.series}`);if(pick.imagePosition)pickPhoto.style.objectPosition=pick.imagePosition;

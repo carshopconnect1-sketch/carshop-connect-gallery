@@ -1,0 +1,2107 @@
+{
+  "checkedAt": "2026-09-25",
+  "source": "https://carshopconnect.itembox.cloud/item/css/images/item_renewal/car-model-link/car-model-link.js?2026-09-18-1610",
+  "note": "Vehicle-category destinations from the shop’s published car-model menu; curated names are recorded explicitly. Inclusion here does not establish stock or trim-level fitment.",
+  "entries": [
+    {
+      "maker": "BMW",
+      "car": "BMW 3シリーズ",
+      "name": "BMW 3シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw3series",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW2シリーズ",
+      "name": "BMW 2シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw2series",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW2シリーズ2列",
+      "name": "BMW 2シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw2series",
+      "match": "curated"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW3Series",
+      "name": "BMW 3シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw3series",
+      "match": "curated"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW3シリーズ",
+      "name": "BMW 3シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw3series",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW4-series",
+      "name": "BMW 4シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw4series",
+      "match": "curated"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW5-Series",
+      "name": "BMW 5シリーズ",
+      "url": "https://seatcover.jp/c/bmw/bmw5series",
+      "match": "curated"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX1",
+      "name": "BMW X1",
+      "url": "https://seatcover.jp/c/bmw/bmwx1",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX2",
+      "name": "BMW X2",
+      "url": "https://seatcover.jp/c/bmw/bmwx2",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX3",
+      "name": "BMW X3",
+      "url": "https://seatcover.jp/c/bmw/bmwx3",
+      "match": "exact"
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWZ4",
+      "name": "BMW Z4",
+      "url": "https://seatcover.jp/c/bmw/bmwz4",
+      "match": "exact"
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI CROSSOVER",
+      "name": "MINI CROSSOVER",
+      "url": "https://seatcover.jp/c/mini/minicrossover",
+      "match": "exact"
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI3door",
+      "name": "MINI 3ドア",
+      "url": "https://seatcover.jp/c/mini/mini3door",
+      "match": "curated"
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI5door",
+      "name": "MINI 5ドア",
+      "url": "https://seatcover.jp/c/mini/mini5door",
+      "match": "curated"
+    },
+    {
+      "maker": "MINI",
+      "car": "MINICROSSOVER",
+      "name": "MINI CROSSOVER",
+      "url": "https://seatcover.jp/c/mini/minicrossover",
+      "match": "exact"
+    },
+    {
+      "maker": "いすゞ",
+      "car": "いすゞ ビッグホーンロング",
+      "name": "ビッグホーンロング",
+      "url": "https://seatcover.jp/c/isuzu/bighornlong",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "A1",
+      "name": "AUDI A1",
+      "url": "https://seatcover.jp/c/audi/audia1",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "A3スポーツバック",
+      "name": "AUDI A3",
+      "url": "https://seatcover.jp/c/audi/audia3",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "A4アバント",
+      "name": "AUDI A4",
+      "url": "https://seatcover.jp/c/audi/audia4",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "A5スポーツバック",
+      "name": "AUDI A5",
+      "url": "https://seatcover.jp/c/audi/audia5",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "AUDIA1",
+      "name": "AUDI A1",
+      "url": "https://seatcover.jp/c/audi/audia1",
+      "match": "exact"
+    },
+    {
+      "maker": "アウディ",
+      "car": "Q3",
+      "name": "AUDI Q3",
+      "url": "https://seatcover.jp/c/audi/audiq3",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "Q5",
+      "name": "AUDI Q5",
+      "url": "https://seatcover.jp/c/audi/audiq5",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "TTクーペ",
+      "name": "AUDI TT",
+      "url": "https://seatcover.jp/c/audi/auditt",
+      "match": "curated"
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディ Q3",
+      "name": "AUDI Q3",
+      "url": "https://seatcover.jp/c/audi/audiq3",
+      "match": "curated"
+    },
+    {
+      "maker": "シトロエン",
+      "car": "C3エアクロス",
+      "name": "C3エアクロス",
+      "url": "https://seatcover.jp/c/citroen/c3aircross",
+      "match": "exact"
+    },
+    {
+      "maker": "ジープ",
+      "car": "JEEPグランドチェロキー",
+      "name": "グランドチェロキー",
+      "url": "https://seatcover.jp/c/jeep/grandcherokee",
+      "match": "curated"
+    },
+    {
+      "maker": "ジープ",
+      "car": "JEEPラングラー",
+      "name": "ジープラングラー",
+      "url": "https://seatcover.jp/c/jeep/jeepwrangler",
+      "match": "curated"
+    },
+    {
+      "maker": "ジープ",
+      "car": "Jeepラングラー",
+      "name": "ジープラングラー",
+      "url": "https://seatcover.jp/c/jeep/jeepwrangler",
+      "match": "curated"
+    },
+    {
+      "maker": "ジープ",
+      "car": "ジープラングラー",
+      "name": "ジープラングラー",
+      "url": "https://seatcover.jp/c/jeep/jeepwrangler",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "MRワゴン",
+      "name": "MRワゴン",
+      "url": "https://seatcover.jp/c/suzuki/mrwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "アルト",
+      "name": "アルト",
+      "url": "https://seatcover.jp/c/suzuki/alto",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "イグニス",
+      "name": "イグニス",
+      "url": "https://seatcover.jp/c/suzuki/ignis",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "エブリィワゴン",
+      "name": "エブリィワゴン",
+      "url": "https://seatcover.jp/c/suzuki/everywagon",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "クロスビー",
+      "name": "クロスビー",
+      "url": "https://seatcover.jp/c/suzuki/xbee",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ジムニー",
+      "name": "ジムニー",
+      "url": "https://seatcover.jp/c/suzuki/jimny",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ジムニーシエラ",
+      "name": "ジムニー シエラ",
+      "url": "https://seatcover.jp/c/suzuki/jimnysierra",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ジムニーノマド",
+      "name": "ジムニー ノマド",
+      "url": "https://seatcover.jp/c/suzuki/jimnynomade",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "スイフト",
+      "name": "スイフト",
+      "url": "https://seatcover.jp/c/suzuki/swift",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "スイフトスポーツ",
+      "name": "スイフトスポーツ",
+      "url": "https://seatcover.jp/c/suzuki/swiftsports",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "スペーシア",
+      "name": "スペーシア",
+      "url": "https://seatcover.jp/c/suzuki/spacia",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ソリオバンディット",
+      "name": "ソリオ バンディット",
+      "url": "https://seatcover.jp/c/suzuki/soliobandit",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ハスラー",
+      "name": "ハスラー",
+      "url": "https://seatcover.jp/c/suzuki/hustler",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "フロンクス",
+      "name": "フロンクス",
+      "url": "https://seatcover.jp/c/suzuki/fronx",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ラパン",
+      "name": "ラパン",
+      "url": "https://seatcover.jp/c/suzuki/lapin",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ラパンLC",
+      "name": "ラパン LC",
+      "url": "https://seatcover.jp/c/suzuki/lapinlc",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ランディ",
+      "name": "ランディ",
+      "url": "https://seatcover.jp/c/suzuki/landy",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ワゴンR",
+      "name": "ワゴンR",
+      "url": "https://seatcover.jp/c/suzuki/wagonr",
+      "match": "exact"
+    },
+    {
+      "maker": "スズキ",
+      "car": "ワゴンＲスマイル",
+      "name": "ワゴンR スマイル",
+      "url": "https://seatcover.jp/c/suzuki/wagonrsmile",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "BRZ",
+      "name": "BRZ",
+      "url": "https://seatcover.jp/c/subaru/brz",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "XV",
+      "name": "XV",
+      "url": "https://seatcover.jp/c/subaru/xv",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "XVハイブリッド",
+      "name": "XV ハイブリッド",
+      "url": "https://seatcover.jp/c/subaru/xvhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "インプレッサG4",
+      "name": "インプレッサG4",
+      "url": "https://seatcover.jp/c/subaru/imprezag4",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "インプレッサスポーツ",
+      "name": "インプレッサスポーツ",
+      "url": "https://seatcover.jp/c/subaru/imprezasport",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "エクシーガ",
+      "name": "エクシーガ",
+      "url": "https://seatcover.jp/c/subaru/exiga",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "クロストレック",
+      "name": "クロストレック",
+      "url": "https://seatcover.jp/c/subaru/crosstrek",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "ジャスティ",
+      "name": "ジャスティ",
+      "url": "https://seatcover.jp/c/subaru/justy",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "ステラ",
+      "name": "ステラ",
+      "url": "https://seatcover.jp/c/subaru/stella",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "フォレスター",
+      "name": "フォレスター",
+      "url": "https://seatcover.jp/c/subaru/forester",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "レガシィアウトバック",
+      "name": "レガシィ アウトバック",
+      "url": "https://seatcover.jp/c/subaru/outback",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "レガシィツーリングワゴン",
+      "name": "レガシィ ツーリングワゴン",
+      "url": "https://seatcover.jp/c/subaru/legacytouringwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "レヴォーグ",
+      "name": "レヴォーグ",
+      "url": "https://seatcover.jp/c/subaru/levorg",
+      "match": "exact"
+    },
+    {
+      "maker": "スバル",
+      "car": "レヴォーグレイバック",
+      "name": "レヴォーグ レイバック",
+      "url": "https://seatcover.jp/c/subaru/layback",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "アトレー",
+      "name": "アトレー",
+      "url": "https://seatcover.jp/c/daihatsu/atrai",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "アトレーワゴン",
+      "name": "アトレーワゴン",
+      "url": "https://seatcover.jp/c/daihatsu/atraiwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ウェイク",
+      "name": "ウェイク",
+      "url": "https://seatcover.jp/c/daihatsu/wake",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストアクティバ",
+      "name": "キャスト アクティバ",
+      "url": "https://seatcover.jp/c/daihatsu/castactiva",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストスタイル",
+      "name": "キャスト スタイル",
+      "url": "https://seatcover.jp/c/daihatsu/caststyle",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストスポーツ",
+      "name": "キャスト スポーツ",
+      "url": "https://seatcover.jp/c/daihatsu/castsport",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "コペン",
+      "name": "コペン",
+      "url": "https://seatcover.jp/c/daihatsu/copen",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ソニカ",
+      "name": "ソニカ",
+      "url": "https://seatcover.jp/c/daihatsu/sonica",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "タフト",
+      "name": "タフト",
+      "url": "https://seatcover.jp/c/daihatsu/taft",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "タント",
+      "name": "タント",
+      "url": "https://seatcover.jp/c/daihatsu/tanto",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "トール",
+      "name": "トール",
+      "url": "https://seatcover.jp/c/daihatsu/thor",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ネイキッド",
+      "name": "ネイキッド",
+      "url": "https://seatcover.jp/c/daihatsu/naked",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ハイゼットカーゴ",
+      "name": "ハイゼット カーゴ",
+      "url": "https://seatcover.jp/c/daihatsu/hijetcargo",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミライース",
+      "name": "ミラ イース",
+      "url": "https://seatcover.jp/c/daihatsu/miraes",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミラココア",
+      "name": "ミラココア",
+      "url": "https://seatcover.jp/c/daihatsu/miracocoa",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミラココアプラス",
+      "name": "ミラココアプラス",
+      "url": "https://seatcover.jp/c/daihatsu/miracocoaplus",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴ",
+      "name": "ムーヴ",
+      "url": "https://seatcover.jp/c/daihatsu/move",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴキャンバス",
+      "name": "ムーヴ キャンバス",
+      "url": "https://seatcover.jp/c/daihatsu/movecanbus",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴコンテ",
+      "name": "ムーヴコンテ",
+      "url": "https://seatcover.jp/c/daihatsu/moveconte",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴ・カスタム",
+      "name": "ムーヴカスタム",
+      "url": "https://seatcover.jp/c/daihatsu/movecustom",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ロッキー",
+      "name": "ロッキー",
+      "url": "https://seatcover.jp/c/daihatsu/rocky",
+      "match": "exact"
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ロッキーハイブリッド",
+      "name": "ロッキー ハイブリッド",
+      "url": "https://seatcover.jp/c/daihatsu/rockyhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "86",
+      "name": "86",
+      "url": "https://seatcover.jp/c/toyota/86",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "C-HR",
+      "name": "C-HR",
+      "url": "https://seatcover.jp/c/toyota/chr",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "FJCRUISER",
+      "name": "FJクルーザー",
+      "url": "https://seatcover.jp/c/toyota/fjcruiser",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "RAV4",
+      "name": "RAV4",
+      "url": "https://seatcover.jp/c/toyota/rav4",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "SAI",
+      "name": "SAI",
+      "url": "https://seatcover.jp/c/toyota/sai",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "bB",
+      "name": "bB",
+      "url": "https://seatcover.jp/c/toyota/bb",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "iQ",
+      "name": "iQ",
+      "url": "https://seatcover.jp/c/toyota/iq",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アイシス",
+      "name": "アイシス",
+      "url": "https://seatcover.jp/c/toyota/isis",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アクア",
+      "name": "アクア",
+      "url": "https://seatcover.jp/c/toyota/aqua",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アベンシスワゴン",
+      "name": "アベンシスワゴン",
+      "url": "https://seatcover.jp/c/toyota/avensiswagon",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アルファード",
+      "name": "アルファード",
+      "url": "https://seatcover.jp/c/toyota/alphard",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "イプサム",
+      "name": "イプサム",
+      "url": "https://seatcover.jp/c/toyota/ipsum",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ウィッシュ",
+      "name": "ウィッシュ",
+      "url": "https://seatcover.jp/c/toyota/wish",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスクァイア",
+      "name": "エスクァイア",
+      "url": "https://seatcover.jp/c/toyota/esquire",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスティマ",
+      "name": "エスティマ",
+      "url": "https://seatcover.jp/c/toyota/estima",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスティマハイブリッド-",
+      "name": "エスティマ ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/estimahybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カムリ",
+      "name": "カムリ",
+      "url": "https://seatcover.jp/c/toyota/camry",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カムロード",
+      "name": "カムロード",
+      "url": "https://seatcover.jp/c/toyota/camroad",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラアクシオ",
+      "name": "カローラ アクシオ",
+      "url": "https://seatcover.jp/c/toyota/carollaaxio",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラクロス",
+      "name": "カローラ クロス",
+      "url": "https://seatcover.jp/c/toyota/corollacross",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラクロスハイブリッド",
+      "name": "カローラ クロス ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/corollacrosshybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラルミオン",
+      "name": "カローラルミオン",
+      "url": "https://seatcover.jp/c/toyota/corollarumion",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラレビン",
+      "name": "カローラレビン",
+      "url": "https://seatcover.jp/c/toyota/carollalevin",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンクロスオーバー",
+      "name": "クラウン クロスオーバー",
+      "url": "https://seatcover.jp/c/toyota/crowncrossover",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンハイブリッド",
+      "name": "クラウン ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/crownhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンマジェスタ",
+      "name": "マジェスタ",
+      "url": "https://seatcover.jp/c/toyota/crownmajesta",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンロイヤル",
+      "name": "クラウン ロイヤル",
+      "url": "https://seatcover.jp/c/toyota/crownroyal",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "グランドハイエース",
+      "name": "グランドハイエース",
+      "url": "https://seatcover.jp/c/toyota/grandhiace",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "サクシード",
+      "name": "サクシード",
+      "url": "https://seatcover.jp/c/toyota/succeed",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "シエンタ",
+      "name": "シエンタ",
+      "url": "https://seatcover.jp/c/toyota/sienta",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スペイド",
+      "name": "スペイド",
+      "url": "https://seatcover.jp/c/toyota/spade",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スペイドDBA-NSP141",
+      "name": "スペイド",
+      "url": "https://seatcover.jp/c/toyota/spade",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スープラ",
+      "name": "スープラ",
+      "url": "https://seatcover.jp/c/toyota/supra",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "セリカ",
+      "name": "セリカ",
+      "url": "https://seatcover.jp/c/toyota/celica",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ソアラ",
+      "name": "ソアラ",
+      "url": "https://seatcover.jp/c/toyota/soarer",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "タウンエースバン",
+      "name": "タウンエース バン",
+      "url": "https://seatcover.jp/c/toyota/townacevan",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "タンク",
+      "name": "タンク",
+      "url": "https://seatcover.jp/c/toyota/tank",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ノア",
+      "name": "ノア",
+      "url": "https://seatcover.jp/c/toyota/noah",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ノアハイブリッド",
+      "name": "ノア ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/noahhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイエース1列",
+      "name": "ハイエース 1列",
+      "url": "https://seatcover.jp/c/toyota/hiace1",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイエースコミューター",
+      "name": "ハイエース コミューター",
+      "url": "https://seatcover.jp/c/toyota/hiacecommuter",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイラックス",
+      "name": "ハイラックス",
+      "url": "https://seatcover.jp/c/toyota/hilux",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイラックスサーフ",
+      "name": "ハイラックス　サーフ",
+      "url": "https://seatcover.jp/c/toyota/hiluxsurf",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハリアー",
+      "name": "ハリアー",
+      "url": "https://seatcover.jp/c/toyota/harrier",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハリアーハイブリッド",
+      "name": "ハリアー ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/harrierhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "パッソ",
+      "name": "パッソ",
+      "url": "https://seatcover.jp/c/toyota/passo",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ピクシスジョイ",
+      "name": "ピクシス ジョイ",
+      "url": "https://seatcover.jp/c/toyota/pixisjoy",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ピクシスメガ",
+      "name": "ピクシス メガ",
+      "url": "https://seatcover.jp/c/toyota/pixismega",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プラド",
+      "name": "ランクル プラド",
+      "url": "https://seatcover.jp/c/toyota/landcruiserprado",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウス",
+      "name": "プリウス",
+      "url": "https://seatcover.jp/c/toyota/prius",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウスPHV",
+      "name": "プリウス PHV",
+      "url": "https://seatcover.jp/c/toyota/priusphv",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウスα",
+      "name": "プリウスα",
+      "url": "https://seatcover.jp/c/toyota/priusalpha",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プレミオ",
+      "name": "プレミオ",
+      "url": "https://seatcover.jp/c/toyota/premio",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プロボックス",
+      "name": "プロボックス",
+      "url": "https://seatcover.jp/c/toyota/probox",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ベルタ",
+      "name": "ベルタ",
+      "url": "https://seatcover.jp/c/toyota/belta",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリス",
+      "name": "ヤリス",
+      "url": "https://seatcover.jp/c/toyota/yaris",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリスクロス",
+      "name": "ヤリス クロス",
+      "url": "https://seatcover.jp/c/toyota/yariscross",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリスハイブリッド",
+      "name": "ヤリス ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/yarishybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ライズ",
+      "name": "ライズ",
+      "url": "https://seatcover.jp/c/toyota/raize",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ライズハイブリッド",
+      "name": "ライズ ハイブリッド",
+      "url": "https://seatcover.jp/c/toyota/raizehybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ラウム",
+      "name": "ラウム",
+      "url": "https://seatcover.jp/c/toyota/raum",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ラクティス",
+      "name": "ラクティス",
+      "url": "https://seatcover.jp/c/toyota/ractis",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランクルプラド",
+      "name": "ランクル プラド",
+      "url": "https://seatcover.jp/c/toyota/landcruiserprado",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー250",
+      "name": "ランド クルーザー 250",
+      "url": "https://seatcover.jp/c/toyota/landcruiser250",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー5人",
+      "name": "ランド クルーザー 300",
+      "url": "https://seatcover.jp/c/toyota/landcruiser300",
+      "match": "curated"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー70",
+      "name": "ランド クルーザー 70",
+      "url": "https://seatcover.jp/c/toyota/landcruiser70",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ルーミー",
+      "name": "ルーミー",
+      "url": "https://seatcover.jp/c/toyota/roomy",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "レジアスエースバン",
+      "name": "レジアスエース バン",
+      "url": "https://seatcover.jp/c/toyota/regiusace",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴィッツ",
+      "name": "ヴィッツ",
+      "url": "https://seatcover.jp/c/toyota/vitz",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴェルファイア",
+      "name": "ヴェルファイア",
+      "url": "https://seatcover.jp/c/toyota/vellfire",
+      "match": "exact"
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴォクシー",
+      "name": "ヴォクシー",
+      "url": "https://seatcover.jp/c/toyota/voxy",
+      "match": "exact"
+    },
+    {
+      "maker": "フィアット",
+      "car": "FIAT/フィアット",
+      "name": "FIAT500 500C",
+      "url": "https://seatcover.jp/c/fiat/fiat500",
+      "match": "curated"
+    },
+    {
+      "maker": "フィアット",
+      "car": "FIAT/フィアット500/500Cチンクエチェント",
+      "name": "FIAT500 500C",
+      "url": "https://seatcover.jp/c/fiat/fiat500",
+      "match": "curated"
+    },
+    {
+      "maker": "フィアット",
+      "car": "デュカト",
+      "name": "デュカト",
+      "url": "https://seatcover.jp/c/fiat/ducato",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "T-Cross",
+      "name": "T-Cross",
+      "url": "https://seatcover.jp/c/volkswagen/tcross",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "T-Roc",
+      "name": "T-Roc",
+      "url": "https://seatcover.jp/c/volkswagen/troc",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "UP!",
+      "name": "UP！",
+      "url": "https://seatcover.jp/c/volkswagen/up",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "VWゴルフ5",
+      "name": "ゴルフ5",
+      "url": "https://seatcover.jp/c/volkswagen/golf5",
+      "match": "curated"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ5",
+      "name": "ゴルフ5",
+      "url": "https://seatcover.jp/c/volkswagen/golf5",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ6",
+      "name": "ゴルフ6",
+      "url": "https://seatcover.jp/c/volkswagen/golf6",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ7",
+      "name": "ゴルフ7",
+      "url": "https://seatcover.jp/c/volkswagen/golf7",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフGTI",
+      "name": "ゴルフGTI",
+      "url": "https://seatcover.jp/c/volkswagen/golfgti",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフトゥーラン",
+      "name": "ゴルフトゥーラン",
+      "url": "https://seatcover.jp/c/volkswagen/golftouran",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ザ・ビートル",
+      "name": "ザビートル",
+      "url": "https://seatcover.jp/c/volkswagen/thebeetle",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "シャラン",
+      "name": "シャラン",
+      "url": "https://seatcover.jp/c/volkswagen/sharan",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ティグアン",
+      "name": "ティグアン",
+      "url": "https://seatcover.jp/c/volkswagen/tiguan",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ニュービートル",
+      "name": "ニュービートル",
+      "url": "https://seatcover.jp/c/volkswagen/newbeetle",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "パサートヴァリアント",
+      "name": "パサートヴァリアント",
+      "url": "https://seatcover.jp/c/volkswagen/passatvariant",
+      "match": "exact"
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "フォルクスワーゲンポロ",
+      "name": "ポロ",
+      "url": "https://seatcover.jp/c/volkswagen/polo",
+      "match": "exact"
+    },
+    {
+      "maker": "プジョー",
+      "car": "リフター",
+      "name": "リフター",
+      "url": "https://seatcover.jp/c/peugeot/rifter",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "CR-V",
+      "name": "CR-V",
+      "url": "https://seatcover.jp/c/honda/crv",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "CR-Z",
+      "name": "CR-Z",
+      "url": "https://seatcover.jp/c/honda/crz",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOXジョイ",
+      "name": "N-BOX ジョイ",
+      "url": "https://seatcover.jp/c/honda/nboxjoy",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOXスラッシュ",
+      "name": "N-BOX スラッシュ",
+      "url": "https://seatcover.jp/c/honda/nboxslash",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOX・N-BOXカスタム",
+      "name": "N-BOX",
+      "url": "https://seatcover.jp/c/honda/nbox",
+      "match": "curated"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-ONE",
+      "name": "N-ONE",
+      "url": "https://seatcover.jp/c/honda/none",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-VAN",
+      "name": "N-VAN",
+      "url": "https://seatcover.jp/c/honda/nvan",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-WGN",
+      "name": "N-WGN",
+      "url": "https://seatcover.jp/c/honda/nwgn",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-WGNカスタム",
+      "name": "N-WGN カスタム",
+      "url": "https://seatcover.jp/c/honda/nwgncustom",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "NｰONE",
+      "name": "N-ONE",
+      "url": "https://seatcover.jp/c/honda/none",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "S-MX",
+      "name": "S-MX",
+      "url": "https://seatcover.jp/c/honda/smx",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "S660",
+      "name": "S660",
+      "url": "https://seatcover.jp/c/honda/s660",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "WR-V",
+      "name": "WR-V",
+      "url": "https://seatcover.jp/c/honda/wrv",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ZR-V",
+      "name": "ZR-V",
+      "url": "https://seatcover.jp/c/honda/zrv",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "インサイト",
+      "name": "インサイト",
+      "url": "https://seatcover.jp/c/honda/insight",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "エリシオン",
+      "name": "エリシオン",
+      "url": "https://seatcover.jp/c/honda/elysion",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "オデッセイ",
+      "name": "オデッセイ",
+      "url": "https://seatcover.jp/c/honda/odyssey",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "オデッセイハイブリッド",
+      "name": "オデッセイ ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/odysseyhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "クロスロード",
+      "name": "クロスロード",
+      "url": "https://seatcover.jp/c/honda/crossroad",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "シビックハイブリッド",
+      "name": "シビック ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/civichybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "シャトル",
+      "name": "シャトル",
+      "url": "https://seatcover.jp/c/honda/shuttle",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ジェイド",
+      "name": "ジェイド",
+      "url": "https://seatcover.jp/c/honda/jade",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ステップワゴン",
+      "name": "ステップワゴン",
+      "url": "https://seatcover.jp/c/honda/stepwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ステップワゴンハイブリッド",
+      "name": "ステップワゴン ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/stepwagonhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "バモス",
+      "name": "バモス",
+      "url": "https://seatcover.jp/c/honda/vamos",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ビート",
+      "name": "ビート",
+      "url": "https://seatcover.jp/c/honda/beat",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィット",
+      "name": "フィット",
+      "url": "https://seatcover.jp/c/honda/fit",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットシャトル",
+      "name": "フィット シャトル",
+      "url": "https://seatcover.jp/c/honda/fitshuttle",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットシャトルハイブリッド",
+      "name": "フィット シャトル ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/fitshuttlehybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットハイブリッド",
+      "name": "フィット ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/fithybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フリード",
+      "name": "フリード",
+      "url": "https://seatcover.jp/c/honda/freed",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ライフ",
+      "name": "ライフ",
+      "url": "https://seatcover.jp/c/honda/life",
+      "match": "exact"
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "name": "ヴェゼル ハイブリッド",
+      "url": "https://seatcover.jp/c/honda/vezelhybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "ボルボ",
+      "car": "ボルボV40",
+      "name": "ボルボV40",
+      "url": "https://seatcover.jp/c/volvo/volvov40",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "AZワゴン",
+      "name": "AZワゴン",
+      "url": "https://seatcover.jp/c/mazda/azwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-3",
+      "name": "CX-3",
+      "url": "https://seatcover.jp/c/mazda/cx3",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-30",
+      "name": "CX-30",
+      "url": "https://seatcover.jp/c/mazda/cx30",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-5",
+      "name": "CX-5",
+      "url": "https://seatcover.jp/c/mazda/cx5",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-60",
+      "name": "CX-60",
+      "url": "https://seatcover.jp/c/mazda/cx60",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-8",
+      "name": "CX-8",
+      "url": "https://seatcover.jp/c/mazda/cx8",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "MAZDA2",
+      "name": "MAZDA 2",
+      "url": "https://seatcover.jp/c/mazda/mazda2",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "MPV",
+      "name": "MPV",
+      "url": "https://seatcover.jp/c/mazda/mpv",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "RX-8",
+      "name": "RX-8",
+      "url": "https://seatcover.jp/c/mazda/rx8",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラ",
+      "name": "アクセラ",
+      "url": "https://seatcover.jp/c/mazda/axela",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラスポーツ",
+      "name": "アクセラ スポーツ",
+      "url": "https://seatcover.jp/c/mazda/axelasports",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラハイブリッド",
+      "name": "アクセラ ハイブリッド",
+      "url": "https://seatcover.jp/c/mazda/axelahybrid",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザスポーツ",
+      "name": "アテンザ スポーツ",
+      "url": "https://seatcover.jp/c/mazda/atenzasports",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザセダン",
+      "name": "アテンザ セダン",
+      "url": "https://seatcover.jp/c/mazda/atenzasedan",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザワゴン",
+      "name": "アテンザ ワゴン",
+      "url": "https://seatcover.jp/c/mazda/atenzawagon",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "スクラム",
+      "name": "スクラム",
+      "url": "https://seatcover.jp/c/mazda/scrumvan",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "スクラムワゴン",
+      "name": "スクラム ワゴン",
+      "url": "https://seatcover.jp/c/mazda/scrumwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "デミオ",
+      "name": "デミオ",
+      "url": "https://seatcover.jp/c/mazda/demio",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "ビアンテ",
+      "name": "ビアンテ",
+      "url": "https://seatcover.jp/c/mazda/biante",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレア",
+      "name": "フレア",
+      "url": "https://seatcover.jp/c/mazda/flair",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアクロスオーバー",
+      "name": "フレア クロスオーバー",
+      "url": "https://seatcover.jp/c/mazda/flaircrossover",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴン",
+      "name": "フレアワゴン",
+      "url": "https://seatcover.jp/c/mazda/flairwagon",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴンカスタムスタイル",
+      "name": "フレアワゴン カスタムスタイル",
+      "url": "https://seatcover.jp/c/mazda/flairwagoncustomstyle",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴンタフスタイル",
+      "name": "フレアワゴン タフスタイル",
+      "url": "https://seatcover.jp/c/mazda/flairwagontoughstyle",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "プレマシー",
+      "name": "プレマシー",
+      "url": "https://seatcover.jp/c/mazda/premacy",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "ベリーサ",
+      "name": "ベリーサ",
+      "url": "https://seatcover.jp/c/mazda/verisa",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "ボンゴバン",
+      "name": "ボンゴ バン",
+      "url": "https://seatcover.jp/c/mazda/bongovan",
+      "match": "exact"
+    },
+    {
+      "maker": "マツダ",
+      "car": "ミレーニア",
+      "name": "ミレーニア",
+      "url": "https://seatcover.jp/c/mazda/millenia",
+      "match": "exact"
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ CLAクラス",
+      "name": "ベンツ CLAクラス",
+      "url": "https://seatcover.jp/c/benz/benzclaclass",
+      "match": "curated"
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ GLAクラス",
+      "name": "ベンツ GLAクラス",
+      "url": "https://seatcover.jp/c/benz/benzglaclass",
+      "match": "curated"
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ SLクラス",
+      "name": "ベンツ SLクラス",
+      "url": "https://seatcover.jp/c/benz/benzslclass",
+      "match": "curated"
+    },
+    {
+      "maker": "ルノー",
+      "car": "ルノー カングー",
+      "name": "カングー",
+      "url": "https://seatcover.jp/c/renault/kangoo",
+      "match": "exact"
+    },
+    {
+      "maker": "ルノー",
+      "car": "ルノー トゥインゴ",
+      "name": "トゥインゴ",
+      "url": "https://seatcover.jp/c/renault/twingo",
+      "match": "exact"
+    },
+    {
+      "maker": "レクサス",
+      "car": "LEXUSCT",
+      "name": "レクサス CT200h",
+      "url": "https://seatcover.jp/c/lexus/lexusct",
+      "match": "curated"
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスGS",
+      "name": "レクサス GS",
+      "url": "https://seatcover.jp/c/lexus/lexusgs",
+      "match": "exact"
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスHS",
+      "name": "レクサス HS250h",
+      "url": "https://seatcover.jp/c/lexus/lexushs",
+      "match": "curated"
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスLS",
+      "name": "レクサス LS",
+      "url": "https://seatcover.jp/c/lexus/lexusls",
+      "match": "exact"
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスRX",
+      "name": "レクサス RX",
+      "url": "https://seatcover.jp/c/lexus/lexusrx",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロス",
+      "name": "ekクロス",
+      "url": "https://seatcover.jp/c/mitsubishi/ekx",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロスEV",
+      "name": "ekクロスEV",
+      "url": "https://seatcover.jp/c/mitsubishi/ekxev",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロススペース",
+      "name": "ekクロススペース",
+      "url": "https://seatcover.jp/c/mitsubishi/ekxspace",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ekスペース",
+      "name": "ekスペース",
+      "url": "https://seatcover.jp/c/mitsubishi/ekspace",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ekスペースカスタム",
+      "name": "ekスペースカスタム",
+      "url": "https://seatcover.jp/c/mitsubishi/ekspacecustom",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "i-MiEV",
+      "name": "i-MiEV",
+      "url": "https://seatcover.jp/c/mitsubishi/imiev",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "アウトランダー",
+      "name": "アウトランダー",
+      "url": "https://seatcover.jp/c/mitsubishi/outlander",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "アウトランダーPHEV",
+      "name": "アウトランダー PHEV",
+      "url": "https://seatcover.jp/c/mitsubishi/outlanderphev",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ギャランフォルティス",
+      "name": "ギャランフォルティス",
+      "url": "https://seatcover.jp/c/mitsubishi/galantfortis",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "グランディス",
+      "name": "グランディス",
+      "url": "https://seatcover.jp/c/mitsubishi/grandis",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "タウンボックス",
+      "name": "タウンボックス",
+      "url": "https://seatcover.jp/c/mitsubishi/townbox",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカ:D5",
+      "name": "デリカ D：５",
+      "url": "https://seatcover.jp/c/mitsubishi/delicad5",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカD:5",
+      "name": "デリカ D：５",
+      "url": "https://seatcover.jp/c/mitsubishi/delicad5",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカⅮ：5",
+      "name": "デリカ D：５",
+      "url": "https://seatcover.jp/c/mitsubishi/delicad5",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカミニ",
+      "name": "デリカ ミニ",
+      "url": "https://seatcover.jp/c/mitsubishi/delicamini",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "トライトン",
+      "name": "トライトン",
+      "url": "https://seatcover.jp/c/mitsubishi/triton",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロイオ",
+      "name": "パジェロイオ",
+      "url": "https://seatcover.jp/c/mitsubishi/pajeroio",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロミニ",
+      "name": "パジェロミニ",
+      "url": "https://seatcover.jp/c/mitsubishi/pajeromini",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロロング",
+      "name": "パジェロロング",
+      "url": "https://seatcover.jp/c/mitsubishi/pajerolong",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ミニキャブバン",
+      "name": "ミニキャブ バン",
+      "url": "https://seatcover.jp/c/mitsubishi/minicab",
+      "match": "exact"
+    },
+    {
+      "maker": "三菱",
+      "car": "ランサーエボリューション",
+      "name": "ランサーエボリューション",
+      "url": "https://seatcover.jp/c/mitsubishi/lancerevolution",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "NV100クリッパー",
+      "name": "NV100 クリッパー",
+      "url": "https://seatcover.jp/c/nissan/nv100clipper",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "NV100クリッパーリオ",
+      "name": "NV100 クリッパー リオ",
+      "url": "https://seatcover.jp/c/nissan/nv100clipperrio",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "NV200バネットバン",
+      "name": "NV200 バネットバン",
+      "url": "https://seatcover.jp/c/nissan/nv200van",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "NV200バネットワゴン",
+      "name": "NV200 バネットワゴン",
+      "url": "https://seatcover.jp/c/nissan/nv200wagon",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "エクストレイル",
+      "name": "エクストレイル",
+      "url": "https://seatcover.jp/c/nissan/xtrail",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "エルグランド",
+      "name": "エルグランド",
+      "url": "https://seatcover.jp/c/nissan/elgrand",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "キックス",
+      "name": "キックス",
+      "url": "https://seatcover.jp/c/nissan/kicks",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "キャラバン",
+      "name": "キャラバン",
+      "url": "https://seatcover.jp/c/nissan/caravan",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "キューブ",
+      "name": "キューブ",
+      "url": "https://seatcover.jp/c/nissan/cube",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "クリッパーバン",
+      "name": "クリッパー バン",
+      "url": "https://seatcover.jp/c/nissan/clippervan",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "クリッパーリオ",
+      "name": "クリッパー リオ",
+      "url": "https://seatcover.jp/c/nissan/clipperrio",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "サクラ",
+      "name": "サクラ",
+      "url": "https://seatcover.jp/c/nissan/sakura",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "サファリ",
+      "name": "サファリ",
+      "url": "https://seatcover.jp/c/nissan/safari",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ジューク",
+      "name": "ジューク",
+      "url": "https://seatcover.jp/c/nissan/juke",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "スカイライン",
+      "name": "スカイライン",
+      "url": "https://seatcover.jp/c/nissan/skyline",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "セレナ",
+      "name": "セレナ",
+      "url": "https://seatcover.jp/c/nissan/serena",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ティアナ",
+      "name": "ティアナ",
+      "url": "https://seatcover.jp/c/nissan/teana",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ティーダラティオ",
+      "name": "ティーダラティオ",
+      "url": "https://seatcover.jp/c/nissan/tiidalatio",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "デイズ",
+      "name": "デイズ",
+      "url": "https://seatcover.jp/c/nissan/dayz",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "デイズルークス",
+      "name": "デイズ ルークス",
+      "url": "https://seatcover.jp/c/nissan/dayzroox",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "デュアリス",
+      "name": "デュアリス",
+      "url": "https://seatcover.jp/c/nissan/dualis",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ノート",
+      "name": "ノート",
+      "url": "https://seatcover.jp/c/nissan/note",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ノートオーラ",
+      "name": "ノート オーラ",
+      "url": "https://seatcover.jp/c/nissan/aura",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "フェアレディZ",
+      "name": "フェアレディＺ",
+      "url": "https://seatcover.jp/c/nissan/fairladyz",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "フーガ",
+      "name": "フーガ",
+      "url": "https://seatcover.jp/c/nissan/fuga",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "プレサージュ",
+      "name": "プレサージュ",
+      "url": "https://seatcover.jp/c/nissan/presage",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "マーチ",
+      "name": "マーチ",
+      "url": "https://seatcover.jp/c/nissan/march",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ムラーノ",
+      "name": "ムラーノ",
+      "url": "https://seatcover.jp/c/nissan/murano",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "モコ",
+      "name": "モコ",
+      "url": "https://seatcover.jp/c/nissan/moco",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ラフェスタ",
+      "name": "ラフェスタ",
+      "url": "https://seatcover.jp/c/nissan/lafesta",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "リーフ",
+      "name": "リーフ",
+      "url": "https://seatcover.jp/c/nissan/leaf",
+      "match": "exact"
+    },
+    {
+      "maker": "日産",
+      "car": "ルークス",
+      "name": "ルークス",
+      "url": "https://seatcover.jp/c/nissan/roox",
+      "match": "exact"
+    }
+  ]
+}

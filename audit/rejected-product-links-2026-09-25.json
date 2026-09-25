@@ -1,0 +1,272 @@
+{
+  "checkedAt": "2026-09-25",
+  "note": "Clear car or brand conflicts. Do not infer a replacement product SKU; use a verified vehicle category or series link instead.",
+  "entries": [
+    {
+      "caseId": "001a5a7862ff",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-harmonious/refinad-hs00377",
+      "car": "デイズルークス",
+      "brand": "Refinad",
+      "reason": "デイズルークス事例がデイズ商品を案内する。"
+    },
+    {
+      "caseId": "0045c9925b2a",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-harmonious/refinad-hs00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "01ddbed7a320",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00106",
+      "car": "N-VAN",
+      "brand": "Refinad",
+      "reason": "N-VAN事例がリーフ用商品番号を案内する。"
+    },
+    {
+      "caseId": "03b6f6bff87a",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-exclusive/refinad-ex00387",
+      "car": "FIAT/フィアット",
+      "brand": "Sandii",
+      "reason": "Sandii事例がRefinad Exclusive Design商品を案内する。"
+    },
+    {
+      "caseId": "05922a028139",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00205",
+      "car": "MINI CROSSOVER",
+      "brand": "Refinad",
+      "reason": "MINI CROSSOVER事例がMINI 3ドア用商品番号を案内する。"
+    },
+    {
+      "caseId": "08ecf6e6647d",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-oldcanele/sandii-oc00113",
+      "car": "ジムニーノマド",
+      "brand": "Sandii",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "1ca2bcd8e773",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/biscuit/sandii-bc00190",
+      "car": "BMW2シリーズ2列",
+      "brand": "Sandii",
+      "reason": "BMW2シリーズ事例がX1商品を案内する。"
+    },
+    {
+      "caseId": "1d1011ab1557",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/denimsand/sandii-ds00113",
+      "car": "ジムニーノマド",
+      "brand": "Sandii",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "21aba92b7479",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-exclusive/refinad-ex00387",
+      "car": "FIAT/フィアット",
+      "brand": "Sandii",
+      "reason": "Sandii事例がRefinad Exclusive Design商品を案内する。"
+    },
+    {
+      "caseId": "345ead70e6af",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather/refinad-00193",
+      "car": "A4アバント",
+      "brand": "Refinad",
+      "reason": "A4アバント事例がA3商品を案内する。"
+    },
+    {
+      "caseId": "35cdf357997f",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-alcantara/refinad-al00385",
+      "car": "アクセラスポーツ",
+      "brand": "Refinad",
+      "reason": "アクセラスポーツ事例がアクセラセダン商品を案内する。"
+    },
+    {
+      "caseId": "375ac5d43021",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/denimsand/sandii-ds00527",
+      "car": "ピクシスバン",
+      "brand": "Sandii",
+      "reason": "ピクシスバン事例がピクシスメガ商品を案内する。"
+    },
+    {
+      "caseId": "42621c416dce",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00388",
+      "car": "ニュービートル",
+      "brand": "Refinad",
+      "reason": "ニュービートル事例がザ・ビートル商品を案内する。"
+    },
+    {
+      "caseId": "49f6a39cd9db",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-heritagemesh/refinad-hm00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "5c99f617d8f6",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "6a103e06a428",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/denimroll/sandii-dr00113",
+      "car": "ジムニーノマド",
+      "brand": "Sandii",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "7810425cb479",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canele/sandii-cn00113",
+      "car": "ジムニーノマド",
+      "brand": "Sandii",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "7f47ee152d6a",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canele/sandii-cn00365",
+      "car": "キャストスタイル",
+      "brand": "Sandii",
+      "reason": "キャストスタイル事例がキャストアクティバ商品を案内する。"
+    },
+    {
+      "caseId": "82d4bdb59910",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather/refinad-00388",
+      "car": "ニュービートル",
+      "brand": "Refinad",
+      "reason": "ニュービートル事例がザ・ビートル商品を案内する。"
+    },
+    {
+      "caseId": "8b11e868649f",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather/refinad-00001",
+      "car": "いすゞ ビッグホーンロング",
+      "brand": "Refinad",
+      "reason": "RX-8／ビッグホーン事例がトヨタiQの商品を案内する。"
+    },
+    {
+      "caseId": "95cb2e0effda",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-custom/refinad-cs00465",
+      "car": "アルテッツァジータ",
+      "brand": "Refinad",
+      "reason": "アルテッツァジータ事例がアルテッツァ商品を案内する。"
+    },
+    {
+      "caseId": "a65374449566",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-oldleather/refinad-ol00209",
+      "car": "ランドクルーザー5人",
+      "brand": "Refinad",
+      "reason": "5人乗り事例が3列仕様の商品を案内する。"
+    },
+    {
+      "caseId": "a6f1518700bd",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather/refinad-00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "a8912ed4127f",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-alcantara/refinad-al00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "a94f3a326979",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-avantgarde/refinad-ag00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "ab921102042a",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canelegrace/sandii-cg00365",
+      "car": "キャストスタイル",
+      "brand": "Sandii",
+      "reason": "キャストスタイル事例がキャストアクティバ商品を案内する。"
+    },
+    {
+      "caseId": "ac076ce6a7bb",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canele/sandii-cn00365",
+      "car": "キャストスタイル",
+      "brand": "Sandii",
+      "reason": "キャストスタイル事例がキャストアクティバ商品を案内する。"
+    },
+    {
+      "caseId": "b153cdb34bfa",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canele/sandii-cn00365",
+      "car": "キャストスタイル",
+      "brand": "Sandii",
+      "reason": "キャストスタイル事例がキャストアクティバ商品を案内する。"
+    },
+    {
+      "caseId": "b3d29d7218fa",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-custom/refinad-cs00656",
+      "car": "CX-60",
+      "brand": "Refinad",
+      "reason": "CX-60事例がラパンLC商品を案内する。"
+    },
+    {
+      "caseId": "c1f883fd568b",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-exclusive/refinad-ex00387",
+      "car": "FIAT/フィアット",
+      "brand": "Sandii",
+      "reason": "Sandii事例がRefinad Exclusive Design商品を案内する。"
+    },
+    {
+      "caseId": "d58636fd7127",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leather/refinad-00001",
+      "car": "RX-8",
+      "brand": "Refinad",
+      "reason": "RX-8／ビッグホーン事例がトヨタiQの商品を案内する。"
+    },
+    {
+      "caseId": "d71512536c83",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "da0052b7a931",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-color/sandii-00026",
+      "car": "C-HR",
+      "brand": "Sandii",
+      "reason": "C-HR事例がハイエース商品を案内する。"
+    },
+    {
+      "caseId": "dafad6c46045",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-exclusive/refinad-ex00387",
+      "car": "FIAT/フィアット",
+      "brand": "Sandii",
+      "reason": "Sandii事例がRefinad Exclusive Design商品を案内する。"
+    },
+    {
+      "caseId": "dcffedd2ad6a",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-canelegrace/sandii-cg00365",
+      "car": "キャストスタイル",
+      "brand": "Sandii",
+      "reason": "キャストスタイル事例がキャストアクティバ商品を案内する。"
+    },
+    {
+      "caseId": "debc73ffd424",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/denimsand/sandii-ds00039",
+      "car": "スペイドDBA-NSP141",
+      "brand": "Sandii",
+      "reason": "スペイド事例がポルテ商品を案内する。"
+    },
+    {
+      "caseId": "f9e473af4093",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-kachina/sandii-kp00113",
+      "car": "ジムニーノマド",
+      "brand": "Sandii",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    },
+    {
+      "caseId": "fe61c19d9248",
+      "originalUrl": "https://seatcover.jp/c/seatcovermaker/refinad/refinad-oldleather/refinad-ol00113",
+      "car": "ジムニーノマド",
+      "brand": "Refinad",
+      "reason": "ジムニーノマド事例がジムニー用商品番号00113を案内する。"
+    }
+  ]
+}

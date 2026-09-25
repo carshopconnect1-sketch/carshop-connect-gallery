@@ -85,10 +85,24 @@ test('featured set has distinct cars and retains source product links',async()=>
 test('every gallery detail resolves to an available product destination',async()=>{
  for(const item of data.cases){
   const detail=await read(`public/data/details/${item.id}.json`);
-  const galleryPage=item.galleryUrl.split('#')[0];
-  const destination=detail.productUrl||findSeries(item.brand,item.series)?.productUrl||data.vehicleProductUrls[galleryPage];
+  const destination=detail.productUrl||data.vehicleProductLinks[`${item.maker}|${item.car}`]||findSeries(item.brand,item.series)?.productUrl||'https://seatcover.jp/f/carlist_renewal.html';
   assert.match(destination,/^https:\/\/seatcover.jp\/(?:c|f)\//,`${item.car} / ${item.brand} ${item.series}`);
  }
  const hs=data.cases.find(item=>item.car==='レクサスHS'&&item.brand==='Dotty'&&item.series==='DIA-LUX');
  assert.equal(findSeries(hs.brand,hs.series).productUrl,'https://seatcover.jp/c/seatcovermaker/dotty/dotty-dialux');
+});
+
+test('mismatched product URLs are withheld and lead to the matching vehicle category',async()=>{
+ const rejected=await read('audit/rejected-product-links-2026-09-25.json');
+ for(const entry of rejected.entries){
+  const item=data.cases.find(x=>x.id===entry.caseId);
+  const detail=await read(`public/data/details/${entry.caseId}.json`);
+  assert.equal(detail.productUrl,'',entry.caseId);
+  assert.ok(detail.productLinkAudit);
+  assert.ok(item);
+ }
+ assert.equal(data.vehicleProductLinks['スズキ|ジムニーノマド'],'https://seatcover.jp/c/suzuki/jimnynomade');
+ assert.equal(data.vehicleProductLinks['ダイハツ|ムーヴキャンバス'],'https://seatcover.jp/c/daihatsu/movecanbus');
+ assert.equal(data.vehicleProductLinks['ダイハツ|キャストスタイル'],'https://seatcover.jp/c/daihatsu/caststyle');
+ assert.equal(data.vehicleProductLinks['アウディ|A4アバント'],'https://seatcover.jp/c/audi/audia4');
 });

@@ -6,6 +6,14 @@ import hashlib, json, re, unicodedata
 from inspect_source import GalleryParser, ROOT, SOURCE
 from gallery_metadata import photo_color, image_key
 
+VEHICLE_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/vehicle-product-links-2026-09-25.json').read_text(encoding='utf-8'))
+VEHICLE_PRODUCT_LINKS = {
+    entry['maker']+'|'+entry['car']: entry['url']
+    for entry in VEHICLE_PRODUCT_LINK_AUDIT['entries']
+}
+REJECTED_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/rejected-product-links-2026-09-25.json').read_text(encoding='utf-8'))
+REJECTED_PRODUCT_LINKS = {entry['caseId']: entry for entry in REJECTED_PRODUCT_LINK_AUDIT['entries']}
+
 MAKERS = {'toyota':'トヨタ','suzuki':'スズキ','honda':'ホンダ','daihatsu':'ダイハツ','nissan':'日産','mitsubishi':'三菱','mazda':'マツダ','subaru':'スバル','lexus':'レクサス','volkswagen':'フォルクスワーゲン','vw':'フォルクスワーゲン','audi':'アウディ','bmw':'BMW','mercedes':'メルセデス・ベンツ','benz':'メルセデス・ベンツ','fiat':'フィアット','jeep':'ジープ','renault':'ルノー','citroen':'シトロエン','volvo':'ボルボ','porsche':'ポルシェ','chrysler':'クライスラー','isuzu':'いすゞ','rover':'ローバー','smart':'スマート','chevrolet':'シボレー','chevy':'シボレー'}
 TRUSTED_IMAGES = {'seatcover.jp','refinad.com','sandii.net','www.dotty.co.jp','dotty.co.jp','ixus.life','carshopconnect.itembox.cloud','carshopconnect.itembox.design'}
 MAKERS.update({'mini':'MINI','peugeot':'プジョー','ford':'フォード'})
@@ -126,7 +134,7 @@ def parse_json(value, default):
 
 if __name__=='__main__':
     public=ROOT/'public'; public.mkdir(exist_ok=True)
-    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; curated_merged=0; curated_excluded=0; curated_details=[]; vehicle_product_urls={}
+    records={}; exclusions=[]; raw=0; duplicates=0; duplicate_details=[]; curated_merged=0; curated_excluded=0; curated_details=[]; vehicle_product_urls={}; rejected_links_seen=set()
     files=sorted(SOURCE.glob('*.html'), key=lambda p: ('combined' in p.stem or p.stem.endswith('_series'), len(p.stem), p.stem))
     for file in files:
         parser=GalleryParser(); parser.feed(file.read_text(encoding='utf-8-sig'))
@@ -169,10 +177,18 @@ if __name__=='__main__':
             info=correction.get('photoInfo',parse_json(a.get('data-photo-info',''),[]))
             gallery=gallery_page+'#card-'+a.get('data-idx','0')
             product=safe_url(correction.get('productUrl') or a.get('data-product-url',''))
+            rejected=REJECTED_PRODUCT_LINKS.get(sid)
+            if rejected:
+                if product != rejected['originalUrl']:
+                    raise ValueError(f'Product link changed; review audit for {sid}: {product}')
+                rejected_links_seen.add(sid)
+                product=''
             if correction.get('productUrl') and product and correction.get('updateVehicleProductUrl', True):
                 vehicle_product_urls[gallery_page]=product
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
             detail={'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}
+            if rejected:
+                detail['productLinkAudit']=rejected['reason']
             if correction:
                 detail['sourceCorrection']=correction['reason']
             if removed_images:
@@ -240,7 +256,9 @@ if __name__=='__main__':
         if (public/f"assets/gallery/{x['id']}-480.webp").is_file():
             x['thumbnail']=f"/assets/gallery/{x['id']}-480.webp"
             x['previewImage']=f"/assets/gallery/{x['id']}-960.webp"
-    data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'vehicleProductUrls':vehicle_product_urls,'cases':cases}
+    if rejected_links_seen != set(REJECTED_PRODUCT_LINKS):
+        raise ValueError(f'Rejected-product audit does not match rebuilt cases: {sorted(set(REJECTED_PRODUCT_LINKS)-rejected_links_seen)}')
+    data={'version':2,'sourceDate':'2026-06-04','additionalSource':'old.zip（2026-09-14受領）' if imported else '', 'sourceRepository':'https://github.com/carshopconnect1-sketch/csc-gallery-handoff','sourceCommit':'290401cb164b6fdf6d1dccaff4da8252e7b45269','note':'保存資料と提供ZIPから再構成。色名は写真説明の明示値。公開サイトとの最新同期は未実施。','featuredIds':[x['id'] for x in featured],'vehicleProductUrls':vehicle_product_urls,'vehicleProductLinks':VEHICLE_PRODUCT_LINKS,'cases':cases}
     (public/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
     report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'curatedMergedRecords':curated_merged,'curatedExcludedImages':curated_excluded,'curatedDetails':curated_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
     (ROOT/'audit').mkdir(exist_ok=True)

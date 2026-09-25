@@ -26,6 +26,12 @@ test('editorial gallery links have real results and preserve the promised vehicl
   }
 });
 
+test('editorial links retain the gallery path when embedded in a store free page',()=>{
+  const url=new URL(lifestyleGalleryUrl(lifestyleThemes[0].picks[0],'/f/gallery_renewal'),'https://seatcover.jp');
+  assert.equal(url.pathname,'/f/gallery_renewal');
+  assert.equal(url.hash,'#photoResults');
+});
+
 test('all local collection pictures and requested videos exist',async()=>{
   const assets=new Set();for(const theme of lifestyleThemes){assets.add(theme.cover);assets.add(theme.scene);for(const pick of theme.picks){assets.add(pick.image);if(pick.video)assets.add(`/assets/lifestyle/${pick.video}.mp4`);}}
   for(const album of Object.values(lifestyleAlbums))for(const photo of album.photos){assets.add(photo.src);assets.add(photo.thumbnail);}
