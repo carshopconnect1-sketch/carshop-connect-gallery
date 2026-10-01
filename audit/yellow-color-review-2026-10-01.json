@@ -1,0 +1,1320 @@
+{
+  "checkedAt": "2026-10-01",
+  "scope": "All 32 cases classified yellow before correction; official color fields matched by exact installation image URLs. Source tags are not color evidence.",
+  "archivePages": 11,
+  "sourcePages": 48,
+  "entries": [
+    {
+      "caseId": "81a9c0f96626",
+      "car": "ルノー カングー",
+      "series": "CANELE GLACE カヌレグラッセ シリーズ",
+      "image": "https://sandii.net/wp-content/uploads/2021/02/1030-ide-1.jpg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "カングー",
+          "品番": "R0416-06"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-06"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/kangoo-sandii-canele-glase-series-2/",
+      "officialColor": "マスタードA654 / S17スノーホワイト",
+      "colorNames": [
+        "マスタード",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "R0416-06",
+      "officialCar": "カングー KWH5F1",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2021/02/1030-ide-1.jpg",
+        "https://sandii.net/wp-content/uploads/2021/02/1030-ide-2.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "2bcb6df692ca",
+      "car": "N-BOX・N-BOXカスタム",
+      "series": "カヌレグラッセ",
+      "image": "https://sandii.net/wp-content/uploads/2024/06/PXL_20240407_072404742.jpg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-14"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii60061/",
+      "officialColor": "マスタードA654 / S17スノーホワイト",
+      "colorNames": [
+        "マスタード",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "H0056-14",
+      "officialCar": "N-BOX 6BA-JF5",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/06/PXL_20240407_072404742.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/PXL_20240407_072515308.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/PXL_20240407_072526827.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/PXL_20240407_072607732.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "ad8beaa550ca",
+      "car": "N-BOX・N-BOXカスタム",
+      "series": "コロール",
+      "image": "https://sandii.net/wp-content/uploads/2020/09/0514-ide-4.jpg",
+      "savedColor": "レモンイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-13"
+        },
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-13"
+        },
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-13"
+        },
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-13"
+        },
+        {
+          "型式": "N-BOX ファションスタイル　20749",
+          "品番": "H0056-13"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/n-box-sandii-color-series/",
+      "officialColor": "（特注）カラー変更 前列シート S08レモンイエロー 後列シート S07ミッドオレンジ",
+      "colorNames": [
+        "レモンイエロー",
+        "ミッドオレンジ"
+      ],
+      "colors": [
+        "yellow",
+        "orange"
+      ],
+      "officialCode": "H0056-10",
+      "officialCar": "N-BOX JF3",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2020/09/0514-ide-4.jpg",
+        "https://sandii.net/wp-content/uploads/2020/09/0514-ide-3.jpg",
+        "https://sandii.net/wp-content/uploads/2020/09/0514-ide-1.jpg",
+        "https://sandii.net/wp-content/uploads/2020/09/0514-ide-5.jpg",
+        "https://sandii.net/wp-content/uploads/2020/09/0514-ide-2-1.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "N-BOX JF3",
+            "品番": "H0056-10"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "7a36cc18f8a6",
+      "car": "クロスビー",
+      "series": "エクレア",
+      "image": "https://sandii.net/wp-content/uploads/2025/01/20250115_161947.jpg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0493-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii72519/",
+      "officialColor": "ファブリックカラー: F03レトロオレンジ / アンティークカラー: マスタードA654",
+      "colorNames": [
+        "レトロオレンジ",
+        "マスタード"
+      ],
+      "colors": [
+        "orange",
+        "yellow"
+      ],
+      "officialCode": "S0493-01",
+      "officialCar": "クロスビー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/01/20250115_161947.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/20250115_162003.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/20250115_162025.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/20250115_162105.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "98e2c1ae8541",
+      "car": "ジムニー",
+      "series": "オールドカヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2025/11/IMG_2700.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0113-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii84247/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0113-02",
+      "officialCar": "ジムニー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/11/IMG_2700.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/11/IMG_2693.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/11/IMG_2702.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/11/IMG_2706.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/11/IMG_2697.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0113-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "561faf2966af",
+      "car": "ジムニー",
+      "series": "オールドカヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2024/11/IMG_8393.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0113-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii69197/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0113-02",
+      "officialCar": "ジムニー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_8393.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_8400.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_8395.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_8446.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0113-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "99b9cc2df9ca",
+      "car": "ジムニー",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2023/05/IMG_5401-2.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "JB64W",
+          "品番": "S0113-02"
+        },
+        {
+          "型式": "JB64W",
+          "品番": "S0113-02"
+        },
+        {
+          "型式": "JB64W",
+          "品番": "S0113-02"
+        },
+        {
+          "型式": "JB64W",
+          "品番": "S0113-02"
+        },
+        {
+          "型式": "JB64W",
+          "品番": "S0113-02"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii47989/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0113-02",
+      "officialCar": "ジムニー JB64",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2023/05/IMG_5401-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/05/IMG_5402-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/05/IMG_5403-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/05/IMG_5404-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/05/IMG_5405-1.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "81eb0d5ba137",
+      "car": "サクラ",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2024/06/IMG_3395.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "サクラ AZZ-B6AW",
+          "品番": "N0606-01"
+        },
+        {
+          "型式": "サクラ AZZ-B6AW",
+          "品番": "N0606-01"
+        },
+        {
+          "型式": "サクラ AZZ-B6AW",
+          "品番": "N0606-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii63257/",
+      "officialColor": "B04クリームイエロー / S17スノーホワイト",
+      "colorNames": [
+        "クリームイエロー",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "N0606-01",
+      "officialCar": "サクラ AZZ-B6AW",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/06/IMG_3395.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/06/IMG_3406-2.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/IMG_3398.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "8b3bf5f70bfe",
+      "car": "エクストレイル",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2024/07/1a0d88a7748883990478adb30c0a56c83e5837de.52.9.8.3.jpg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "エクストレイル",
+          "品番": "N0487-15"
+        },
+        {
+          "型式": "エクストレイル",
+          "品番": "N0487-15"
+        },
+        {
+          "型式": "エクストレイル",
+          "品番": "N0487-15"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii65670/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "N0487-15",
+      "officialCar": "エクストレイル",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/07/1a0d88a7748883990478adb30c0a56c83e5837de.52.9.8.3.jpg",
+        "https://sandii.net/wp-content/uploads/2024/07/f76661cf0c1b30e86bce0b1286bfb2f171b0217e.52.9.8.3.jpg",
+        "https://sandii.net/wp-content/uploads/2024/07/23a296a78fff21c8e3eb56ad2751fdf0d74f6512.52.9.8.3.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "9d5dc4cb55ff",
+      "car": "スペーシア",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2025/10/IMG_3893.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0361-09"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii81972/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "S0361-09",
+      "officialCar": "スペーシア",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/10/IMG_3893.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/10/IMG_3895.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/10/IMG_3892.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/10/IMG_3896.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "0a14dc424227",
+      "car": "スペーシア",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2025/08/IMG_6495.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0361-09"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii80321/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "S0361-09",
+      "officialCar": "スペーシア",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/08/IMG_6495.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/08/IMG_6494.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/08/IMG_6548.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/08/IMG_6500.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "e2d0548abb55",
+      "car": "スペーシア",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2025/02/IMG_2881.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0361-07"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii73021/",
+      "officialColor": "ベージュA701",
+      "colorNames": [
+        "ベージュ"
+      ],
+      "colors": [
+        "beige"
+      ],
+      "officialCode": "S0361-09",
+      "officialCar": "スペーシア",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_2881.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_2883.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_2882.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_2884.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": true,
+      "codeMismatch": true,
+      "correction": {
+        "colorName": "ベージュ",
+        "colors": [
+          "beige"
+        ],
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0361-09"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "e777da7a38eb",
+      "car": "スペーシア",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2022/09/DSC_0059.jpg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0361-09"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii34512-copy/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "S0361-05",
+      "officialCar": "スペーシア カスタム 4AA-MK53S",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/09/DSC_0059.jpg",
+        "https://sandii.net/wp-content/uploads/2022/09/DSC_0061.jpg",
+        "https://sandii.net/wp-content/uploads/2022/09/DSC_0062.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "スペーシア カスタム 4AA-MK53S",
+            "品番": "S0361-05"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "eb70dd87dd6e",
+      "car": "ワゴンR",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2024/12/IMG_0856.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0122-12"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii70433/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "S0561-01",
+      "officialCar": "ワゴンRスマイル",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/12/IMG_0856.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/12/IMG_0858.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/12/IMG_0857.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/12/IMG_0860.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/12/IMG_0859.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0561-01"
+          }
+        ],
+        "car": "ワゴンＲスマイル",
+        "productUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-bc00561"
+      }
+    },
+    {
+      "caseId": "81281dda19a3",
+      "car": "ワゴンR",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2022/07/362A4F4A-7333-4FA4-8D64-F4738EB3BBD7-1-2.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0561-01"
+        },
+        {
+          "型式": "",
+          "品番": "S0561-01"
+        },
+        {
+          "型式": "",
+          "品番": "S0561-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii34711/",
+      "officialColor": "B04クリームイエロー",
+      "colorNames": [
+        "クリームイエロー"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0561-01",
+      "officialCar": "ワゴンRスマイル 5AA-MX91S",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/07/362A4F4A-7333-4FA4-8D64-F4738EB3BBD7-1-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/07/2ACB5E42-EBB1-4679-B20D-64A8E674219E-1-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/07/D49C7F66-ED7C-4F5B-845E-9DD8F8C39E9F-1-1.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "a79a555fad60",
+      "car": "ハイエース",
+      "series": "オールドカヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2023/03/31dd24bc07bf91aee391d034f7b93ec596c8c3b6.81.9.8.3.jpg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "T0026-06"
+        },
+        {
+          "型式": "",
+          "品番": "T0026-06"
+        },
+        {
+          "型式": "",
+          "品番": "T0026-06"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii45949/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "T0026-08",
+      "officialCar": "ハイエース2列",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2023/03/31dd24bc07bf91aee391d034f7b93ec596c8c3b6.81.9.8.3.jpg",
+        "https://sandii.net/wp-content/uploads/2023/03/2e2551ef6463a4eb6f4e7c574912151e937f2c83.81.9.8.3.jpg",
+        "https://sandii.net/wp-content/uploads/2023/03/725810ff8d334c186231cdf2d2dee791b78d8eca.81.9.8.3.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "T0026-08"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "cc131122725c",
+      "car": "ハイエース",
+      "series": "シリーズ名の記載なし",
+      "image": "https://sandii.net/wp-content/uploads/2022/06/72F3300D-589C-4FFB-8B9A-278F845909FD-2.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "T0026-09"
+        },
+        {
+          "型式": "",
+          "品番": "T0026-09"
+        },
+        {
+          "型式": "",
+          "品番": "T0026-09"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii34640/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "T0026-08",
+      "officialCar": "ハイエース 2列 3DFGDH201V",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/06/72F3300D-589C-4FFB-8B9A-278F845909FD-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/06/B7B51581-35FB-49E7-A224-D85EF27F38B2.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/06/6553832A-0117-460F-8E8D-C26F617E02FE.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "T0026-08"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "fc1231da2955",
+      "car": "タント",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2024/10/IMG_2079.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "タント　LA610S",
+          "品番": "D0126-16"
+        },
+        {
+          "型式": "タント　LA610S",
+          "品番": "D0126-16"
+        },
+        {
+          "型式": "タント　LA610S",
+          "品番": "D0126-16"
+        },
+        {
+          "型式": "タント　LA610S",
+          "品番": "D0126-16"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii68982/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "D0126-16",
+      "officialCar": "タントファンクロス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/10/IMG_2079.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/10/IMG_2077.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/10/IMG_2076.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/10/IMG_2078.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "a644bb46e16a",
+      "car": "スクラム",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2022/06/751DEB10-B720-4BFF-A9C7-9BC32CB6454A.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "スクラムDG17V",
+          "品番": "S0111-06"
+        },
+        {
+          "型式": "スクラムDG17V",
+          "品番": "S0111-06"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii34578/",
+      "officialColor": "A654マスタード",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0111-06",
+      "officialCar": "スクラムDG17V",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/06/751DEB10-B720-4BFF-A9C7-9BC32CB6454A.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/06/886CCD66-81DA-4DFF-AEF5-3863AEB0F17F.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "5d86df394661",
+      "car": "ルノー カングー",
+      "series": "color コロール シリーズ",
+      "image": "https://sandii.net/wp-content/uploads/2021/05/0971-ide-2-2.jpg",
+      "savedColor": "レモンイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii20916/",
+      "officialColor": "S08レモンイエロー",
+      "colorNames": [
+        "レモンイエロー"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "R0416-02",
+      "officialCar": "カングー KCK4M",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2021/05/0971-ide-2-2.jpg",
+        "https://sandii.net/wp-content/uploads/2021/05/0971-ide-3-1.jpg",
+        "https://sandii.net/wp-content/uploads/2021/05/0971-ide-1-2.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "eb9dfc882c9c",
+      "car": "ルノー カングー",
+      "series": "マカロン",
+      "image": "https://sandii.net/wp-content/uploads/2022/12/3045.jpg",
+      "savedColor": "レモンイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "カングー",
+          "品番": "R0416-06"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-06"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-06"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii40386/",
+      "officialColor": "S08レモンイエロー / S17スノーホワイト",
+      "colorNames": [
+        "レモンイエロー",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "R0416-06",
+      "officialCar": "ルノーカングー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/12/3045.jpg",
+        "https://sandii.net/wp-content/uploads/2022/12/1704a62387824ba5e1808cd167315244c39b10a3.35.9.8.3.jpg",
+        "https://sandii.net/wp-content/uploads/2022/12/3c107bd5b641fd5e2f95f32aa18c33087d852adb.35.9.8.3.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "d0945fa45813",
+      "car": "ハスラー",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2022/12/2006-1.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0360-02"
+        },
+        {
+          "型式": "",
+          "品番": "S0360-02"
+        },
+        {
+          "型式": "",
+          "品番": "S0360-02"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii36750/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0360-04",
+      "officialCar": "ハスラー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/12/2006-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/12/3fb5f80afcf63c9965f0295c256b6851d637c2e1.08.9.8.3.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/12/50dd78feaf604c00f6b1296c3438f6908b9c2add.08.9.8.3.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0360-04"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "66c6e1a1c6e7",
+      "car": "ハスラー",
+      "series": "オールドカヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2022/09/3CBB3CAB-2818-4D02-B891-AAE588BA7F93-3.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0360-04"
+        },
+        {
+          "型式": "",
+          "品番": "S0360-04"
+        },
+        {
+          "型式": "",
+          "品番": "S0360-04"
+        },
+        {
+          "型式": "",
+          "品番": "S0360-04"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii38529/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0360-05",
+      "officialCar": "ハスラー",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/09/3CBB3CAB-2818-4D02-B891-AAE588BA7F93-3.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/09/4A21B771-EB06-4371-9109-077A97FB884C-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/09/E90B2FEB-1943-4CF4-85B1-995E543B36B5-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/09/795F4464-CA32-491C-9BB9-31F5DE2EEC3F-2.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0360-05"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "6d5498104222",
+      "car": "ハスラー",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2021/05/0864-ide-4-1.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0360-06"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii19339/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0360-04",
+      "officialCar": "ハスラー MR52S",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2021/05/0864-ide-4-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/05/0864-ide-3.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/05/0864-ide-2.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/05/0864-ide-1.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "ハスラー MR52S",
+            "品番": "S0360-04"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "0d91fde9aede",
+      "car": "ジムニーシエラ",
+      "series": "カチナ",
+      "image": "https://sandii.net/wp-content/uploads/2024/06/IMG_0436.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0113-02"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii63827/",
+      "officialColor": "ファブリック生地:K8 / PU生地:マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "S0113-02",
+      "officialCar": "ジムニーシエラjb74",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/06/IMG_0436.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/06/IMG_0448.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "e22226ab29db",
+      "car": "ワゴンＲスマイル",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2026/01/PXL_20260110_041508944_copy_3000x2250.jpg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0561-02"
+        },
+        {
+          "型式": "",
+          "品番": "S0561-02"
+        },
+        {
+          "型式": "",
+          "品番": "S0561-02"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii87140/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "S0561-02",
+      "officialCar": "ワゴンＲスマイル",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2026/01/PXL_20260110_041508944_copy_3000x2250.jpg",
+        "https://sandii.net/wp-content/uploads/2026/01/PXL_20260110_0417339582.jpg",
+        "https://sandii.net/wp-content/uploads/2026/01/PXL_20260110_041627936.MP2_.jpg",
+        "https://sandii.net/wp-content/uploads/2026/01/PXL_20260110_041845385_copy_3000x2250.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "0421dc21b12a",
+      "car": "ムーヴキャンバス",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2025/05/IMG_2283.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii74730/",
+      "officialColor": "B04クリームイエロー / S18アイボリー",
+      "colorNames": [
+        "クリームイエロー",
+        "アイボリー"
+      ],
+      "colors": [
+        "yellow",
+        "beige"
+      ],
+      "officialCode": "D0488-01",
+      "officialCar": "ムーブキャンバス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/05/IMG_2283.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/05/IMG_2281.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/05/IMG_2280.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/05/IMG_2279.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    },
+    {
+      "caseId": "909892798a0f",
+      "car": "ムーヴキャンバス",
+      "series": "キャンバス",
+      "image": "https://sandii.net/wp-content/uploads/2025/04/IMG_6492.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii75485/",
+      "officialColor": "マスタードイエロー(V08) / S17スノーホワイト",
+      "colorNames": [
+        "マスタード",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "D0488-02",
+      "officialCar": "ムーヴキャンバス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/04/IMG_6492.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/04/IMG_6495.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/04/IMG_6493.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "D0488-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "d471ec554457",
+      "car": "ムーヴキャンバス",
+      "series": "カヌレ",
+      "image": "https://sandii.net/wp-content/uploads/2025/01/IMG_20250111_103959.jpg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii71864/",
+      "officialColor": "マスタードA654",
+      "colorNames": [
+        "マスタード"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "D0488-02",
+      "officialCar": "ムーブキャンバス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_20250111_103959.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_20250111_104746.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_20250111_104835.jpg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_20250111_104503.jpg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "D0488-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "b6c5b01e4f41",
+      "car": "ムーヴキャンバス",
+      "series": "カヌレグラッセ",
+      "image": "https://sandii.net/wp-content/uploads/2024/11/20241110_120551-1.jpeg",
+      "savedColor": "マスタード",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii67812/",
+      "officialColor": "マスタードA654 / S17スノーホワイト",
+      "colorNames": [
+        "マスタード",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "D0488-02",
+      "officialCar": "ムーヴキャンバス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/11/20241110_120551-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/20241110_120319.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/20241111_120137.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/20241110_115526.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/20241110_115428.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "D0488-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "4b89fb97cf9e",
+      "car": "ムーヴキャンバス",
+      "series": "マカロン",
+      "image": "https://sandii.net/wp-content/uploads/2023/03/c2e2a848edaa326e73256b262c85d0f4a1abd86d.17.9.8.3-1.jpeg",
+      "savedColor": "レモンイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii44475/",
+      "officialColor": "S08レモンイエロー / S17スノーホワイト",
+      "colorNames": [
+        "レモンイエロー",
+        "スノーホワイト"
+      ],
+      "colors": [
+        "yellow",
+        "white"
+      ],
+      "officialCode": "D0488-02",
+      "officialCar": "ムーブキャンバス",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2023/03/c2e2a848edaa326e73256b262c85d0f4a1abd86d.17.9.8.3-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/03/ae4486f7d77db4a0e66b73c19a62c84fa33541ff.17.9.8.3.jpeg",
+        "https://sandii.net/wp-content/uploads/2023/03/532b3cb46d208f0f5ada3d0ce9d31605f417700d.17.9.8.3.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": true,
+      "correction": {
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "D0488-02"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "d4dd1aee7c94",
+      "car": "ムーヴキャンバス",
+      "series": "ビスキュイ",
+      "image": "https://sandii.net/wp-content/uploads/2022/05/DSC_0082-1-1.jpeg",
+      "savedColor": "クリームイエロー",
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii27394-2/",
+      "officialColor": "B04クリームイエロー",
+      "colorNames": [
+        "クリームイエロー"
+      ],
+      "colors": [
+        "yellow"
+      ],
+      "officialCode": "D0488-01",
+      "officialCar": "ムーブキャンバス DBA-LA810S",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/05/DSC_0082-1-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/05/DSC_0084.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/05/DSC_0083.jpeg"
+      ],
+      "status": "matched",
+      "colorMismatch": false,
+      "codeMismatch": false
+    }
+  ],
+  "counts": {
+    "reviewedCases": 32,
+    "colorCorrections": 1,
+    "photoCodeCorrections": 15,
+    "vehicleCorrections": 1
+  },
+  "notes": "公式本文のカラー・品番欄を採用。色タグは根拠にしない。ツートーンの副色・パイピング色は今回の主色分類を上書きしない。写真は変更しない。"
+}

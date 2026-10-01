@@ -3,8 +3,8 @@
   "method": "All 2,632 archived product candidates reconciled with current product-manager listings and 994 live product-page URLs; direct CTA requires the photo code in that page’s selectable product options.",
   "caveat": "写真品番を注文画面で選べることを確認した。年式・型式・グレード別の個別適合、選択色の在庫、注文の成立は保証しない。",
   "counts": {
-    "verified_product_page": 2080,
-    "unverified": 552
+    "verified_product_page": 2079,
+    "unverified": 553
   },
   "entries": [
     {
@@ -19541,7 +19541,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii44475/",
+      "verifiedPhotoCode": "D0488-02"
     },
     {
       "caseId": "4b9bed1b28d2",
@@ -22342,7 +22344,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii69197/",
+      "verifiedPhotoCode": "S0113-02"
     },
     {
       "caseId": "5633d60e5760",
@@ -26918,7 +26922,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii38529/",
+      "verifiedPhotoCode": "S0360-05"
     },
     {
       "caseId": "66e09598b8c7",
@@ -28986,7 +28992,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii19339/",
+      "verifiedPhotoCode": "S0360-04"
     },
     {
       "caseId": "6d615da3d574",
@@ -37886,7 +37894,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii75485/",
+      "verifiedPhotoCode": "D0488-02"
     },
     {
       "caseId": "90aa2b52b947",
@@ -39523,7 +39533,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii84247/",
+      "verifiedPhotoCode": "S0113-02"
     },
     {
       "caseId": "994ac486d704",
@@ -43528,7 +43540,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii45949/",
+      "verifiedPhotoCode": "T0026-08"
     },
     {
       "caseId": "a79de10fd850",
@@ -44686,7 +44700,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/n-box-sandii-color-series/",
+      "verifiedPhotoCode": "H0056-10"
     },
     {
       "caseId": "adab393c2bc5",
@@ -47119,7 +47135,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii67812/",
+      "verifiedPhotoCode": "D0488-02"
     },
     {
       "caseId": "b6dfa6adec42",
@@ -53609,7 +53627,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii36750/",
+      "verifiedPhotoCode": "S0360-04"
     },
     {
       "caseId": "d0b4ee30d829",
@@ -54561,7 +54581,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii71864/",
+      "verifiedPhotoCode": "D0488-02"
     },
     {
       "caseId": "d4a8d33cfd1d",
@@ -57903,7 +57925,9 @@
         "checkedAt": "2026-09-25"
       },
       "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii73021/",
+      "verifiedPhotoCode": "S0361-09"
     },
     {
       "caseId": "e2d09ca74c70",
@@ -58918,8 +58942,8 @@
     {
       "caseId": "e777da7a38eb",
       "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/biscuit/sandii-bc00361",
-      "status": "verified_product_page",
-      "approvedUrl": "https://seatcover.jp/c/suzuki/spacia/sandii-bc00361",
+      "status": "unverified",
+      "approvedUrl": null,
       "maker": "スズキ",
       "car": "スペーシア",
       "brand": "Sandii",
@@ -58928,8 +58952,7 @@
         "shop_product_manager_published",
         "http_200_car_brand_title",
         "official_series_category",
-        "live_product_page_photo_code_selectable_2026-10-01",
-        "official_product_page_photo_code_option"
+        "official_photo_code_S0361-05_absent_from_product_options_2026-10-01"
       ],
       "httpStatus": 200,
       "productTitle": "【決算セール】スペーシア かわいいシートカバー 全席セット [Sandii サンディ] ビスキュイ | 車のシートカバーの専門店 カーショップコネクト本店",
@@ -58940,8 +58963,11 @@
         "url": "https://seatcover.jp/c/suzuki/spacia/sandii-bc00361",
         "checkedAt": "2026-09-25"
       },
-      "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "salesState": "写真品番と商品ページの対応は未確認",
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii34512-copy/",
+      "verifiedPhotoCode": "S0361-05",
+      "productLinkReason": "photo_code_not_selectable"
     },
     {
       "caseId": "e77c21564a8f",
@@ -59826,30 +59852,33 @@
     },
     {
       "caseId": "eb70dd87dd6e",
-      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/biscuit/sandii-bc00122",
+      "originalUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-bc00561",
       "status": "verified_product_page",
-      "approvedUrl": "https://seatcover.jp/c/suzuki/wagonr/sandii-bc00122",
+      "approvedUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-bc00561",
       "maker": "スズキ",
-      "car": "ワゴンR",
+      "car": "ワゴンＲスマイル",
       "brand": "Sandii",
       "series": "ビスキュイ",
       "evidence": [
-        "shop_product_manager_published",
         "official_series_category",
         "live_product_page_photo_code_selectable_2026-10-01",
-        "official_product_page_photo_code_option"
+        "official_product_page_photo_code_option",
+        "official_same_photo_vehicle_and_product_link_2026-10-01"
       ],
       "httpStatus": 429,
       "productTitle": null,
       "catalogFetchedAt": null,
       "photoCodeInProductFitTable": false,
-      "shopListing": {
+      "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
+      "fitmentScope": "年式・型式・グレード未確認",
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii70433/",
+      "verifiedPhotoCode": "S0561-01",
+      "originalArchiveUrl": "https://seatcover.jp/c/seatcovermaker/sandii/biscuit/sandii-bc00122",
+      "originalShopListing": {
         "status": "公開中",
         "url": "https://seatcover.jp/c/suzuki/wagonr/sandii-bc00122",
         "checkedAt": "2026-09-25"
-      },
-      "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      }
     },
     {
       "caseId": "eb98968741b3",

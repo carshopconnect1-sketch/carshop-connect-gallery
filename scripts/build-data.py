@@ -5,6 +5,7 @@ from urllib.parse import urlparse, unquote
 import hashlib, json, re, unicodedata
 from inspect_source import GalleryParser, ROOT, SOURCE
 from gallery_metadata import photo_color, image_key
+from gallery_source_corrections import apply_source_corrections
 
 VEHICLE_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/vehicle-product-links-2026-09-25.json').read_text(encoding='utf-8'))
 VEHICLE_PRODUCT_LINKS = {
@@ -255,6 +256,9 @@ if __name__=='__main__':
             cases.append({'id':sid,'maker':maker,'car':car,'carKnown':known,'brand':'IXUS','series':series,'category':'seatcover','image':images[0],'photoCount':len(images),'galleryUrl':'https://seatcover.jp/gallerys/','hasReview':bool(review),'colorName':'','colors':[],
                 'detail':{'images':images,'review':review,'productUrl':safe_url(row['u']),'photoInfo':[],'alt':maker+' IXUS '+series+' 装着写真','sourceFile':'old.zip/old/v2/index.html','sourceCarLabel':row['c'],'carNote':'旧資料にはメーカー名のみ記載されています。車種名・色名は未確認です。'}})
             imported+=1
+    # Official body fields override copied archive metadata only after exact
+    # installation-image matching. Taxonomy color tags are not evidence.
+    apply_source_corrections(cases)
     audited_product_links_seen=set()
     for case in cases:
         detail=case['detail']
@@ -265,6 +269,8 @@ if __name__=='__main__':
             raise ValueError(f'Direct product link changed; review audit for {case["id"]}: {product}')
         audited_product_links_seen.add(case['id'])
         detail['productLinkStatus']=entry['status']
+        if entry.get('productLinkReason'):
+            detail['productLinkReason']=entry['productLinkReason']
         approved=entry.get('approvedUrl')
         if entry['status']=='verified_product_page':
             if not approved or not approved.startswith('https://seatcover.jp/c/') or approved.rstrip('/').split('/')[-1] != product.rstrip('/').split('/')[-1]:

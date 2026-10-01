@@ -9,6 +9,8 @@ const data=await read('public/data/catalog.json');
 const audit=await read('audit/data-extraction.json');
 const linkAudit=await read('audit/direct-product-links-2026-09-25.json');
 const auditedLinks=new Map(linkAudit.entries.map(row=>[row.caseId,row]));
+const sourceReview=await read('audit/yellow-color-review-2026-10-01.json');
+const correctedColors=new Map(sourceReview.entries.filter(row=>row.correction?.colorName).map(row=>[row.caseId,row]));
 test('every retained source record is accounted for; IDs and detail files are consistent',async()=>{
  assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
  assert.equal(new Set(data.cases.map(x=>x.id)).size,data.cases.length);
@@ -77,7 +79,16 @@ test('color labels are explicitly present in source descriptions; IXUS gaps are 
  assert.equal(data.cases.filter(c=>c.colorName).length,audit.withColorName);
  for(const c of data.cases){
   const detail=await read(`public/data/details/${c.id}.json`);
-  if(c.colorName){assert.ok(detail.alt.includes(' '+c.colorName+' シートカバー装着写真'));assert.ok(c.colors.length);assert.equal(detail.colorSource,'保存HTMLの写真説明（alt）');}
+  if(c.colorName){
+   assert.ok(detail.alt.includes(' '+c.colorName+' シートカバー装着写真'));assert.ok(c.colors.length);
+   const corrected=correctedColors.get(c.id);
+   if(corrected){
+    assert.equal(detail.colorSource,'Sandii公式装着ページのカラー欄（同一写真URLを照合）');
+    assert.equal(detail.sourceMetadata.url,corrected.sourceUrl);
+    assert.deepEqual(detail.images,corrected.verifiedImages);
+    assert.deepEqual(c.colors,corrected.correction.colors);
+   }else assert.equal(detail.colorSource,'保存HTMLの写真説明（alt）');
+  }
   else assert.deepEqual(c.colors,[]);
   if(c.brand==='IXUS'){assert.equal(c.carKnown,false);assert.equal(c.colorName,'');assert.equal(detail.sourceFile,'old.zip/old/v2/index.html');}
  }
