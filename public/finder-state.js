@@ -1,7 +1,7 @@
 import {emptyFilters, facet, filterCases, normalize, colorOptions} from './filter.js';
 import {findSeries} from './series-data.js';
 
-export const conditionLabels={q:'キーワード',maker:'メーカー',car:'車種',brand:'ブランド',category:'カテゴリ',series:'シリーズ',color:'色',colorName:'色名',review:'コメント'};
+export const conditionLabels={q:'キーワード',maker:'メーカー',car:'車種',brand:'ブランド',category:'カテゴリ',series:'シリーズ',color:'色の系統',colorName:'掲載カラー名',review:'コメント'};
 export function conditionText(filters,key){
   const value=filters[key];
   if(key==='review')return 'コメントあり';

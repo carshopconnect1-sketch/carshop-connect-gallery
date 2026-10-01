@@ -41,15 +41,7 @@ function card(item) {
   else if(item.category==='panel')body.append(el('p','card-extra','インテリアパネル'));
   b.append(picture,body);b.addEventListener('click',()=>openDetail(item));return b;
 }
-function updateOptions(key, allLabel) {
-  const input=$(key);const entries=facet(cases,filters,key);const current=filters[key];
-  input.replaceChildren(new Option(allLabel,''));
-  for(const [value,n]of entries){if(value)input.add(new Option(`${value} (${number(n)})`,value));}
-  if(current&&!entries.some(([v])=>v===current))input.add(new Option(`${current} (0)`,current));
-  input.value=current;
-}
 function renderFilters() {
-  updateOptions('colorName','色名は指定しない');
   $('category').value=filters.category;$('reviewOnly').checked=filters.review;$('keyword').value=filters.q;
   const currentFocus=document.activeElement?.dataset.brand;
   const brandFilters={...filters,series:'',colorName:''};
@@ -168,7 +160,6 @@ function openVehicleGallery(next, url){
   commit(next,false);
   setPanel('vehicle');
   $('keywordSearch').hidden=true;$('keywordToggle').setAttribute('aria-expanded','false');
-  $('exactColorDetails').open=false;
   if(url!==location.pathname+location.search+location.hash)window.history.pushState(null,'',url);
   showPhotos();
 }
@@ -186,7 +177,7 @@ function renderColors(){
   const focus=document.activeElement?.dataset.color;
   const context={...filters,color:'',colorName:''};
   const counts=new Map(facet(cases,context,'color'));
-  const scope=filterCases(cases,context);const known=scope.filter(c=>c.colorName).length;
+  const scope=filterCases(cases,context);
   const all=el('button','color-swatch color-swatch-all');all.type='button';all.dataset.color='';
   all.setAttribute('aria-label','すべての色');all.setAttribute('aria-pressed',String(!filters.color&&!filters.colorName));
   all.append(el('span','swatch-disc'),el('span','color-label','すべて'),el('small','',number(scope.length)+'件'));
@@ -194,15 +185,14 @@ function renderColors(){
   const buttons=colorOptions.map(([key,label,hex])=>{
     const b=el('button','color-swatch');b.type='button';b.dataset.color=key;
     const n=counts.get(key)||0;b.disabled=!n&&filters.color!==key;
-    b.setAttribute('aria-label',`${label}系で探す ${number(n)}件`);b.setAttribute('aria-pressed',String(filters.color===key));
+    b.setAttribute('aria-label',`${label}で探す ${number(n)}件`);b.setAttribute('aria-pressed',String(filters.color===key));
     const swatch=el('span','swatch-disc');swatch.style.setProperty('--swatch',hex);
     b.append(swatch,el('span','color-label',label),el('small','',number(n)+'件'));
     b.addEventListener('click',()=>commit({...filters,color:filters.color===key?'':key,colorName:''}));return b;
   });
   $('colorOptions').replaceChildren(all,...buttons);
   if(focus!==undefined)[...$('colorOptions').children].find(b=>b.dataset.color===focus)?.focus({preventScroll:true});
-  $('colorStatus').textContent=known?`色名のある事例 ${number(known)}件`:'この条件の事例には色名の記載がありません';
-  $('colorName').disabled=!known&&!filters.colorName;
+  $('colorStatus').textContent=filters.color?`${conditionText(filters,'color')}の装着写真 ${number(filtered.length)}件`:'すべての色系統を表示しています';
 }
 function renderSeries(){
   $('seriesPicker').hidden=!filters.brand;
@@ -259,7 +249,6 @@ function mountControls(){
   $('filterForm').addEventListener('change',e=>{const k=e.target.name;if(!k)return;const f={...filters,[k]:k==='review'?e.target.checked:e.target.value};if(k==='maker')f.car='';commit(f);});
   document.querySelectorAll('[data-maker-region]').forEach(b=>b.addEventListener('click',()=>{makerRegion=b.dataset.makerRegion;renderMakers();}));
   $('carSearch').addEventListener('input',()=>{$('carOptions').scrollTop=0;renderCars();});
-  $('colorName').addEventListener('change',e=>commit({...filters,colorName:e.target.value}));
   $('searchForm').addEventListener('submit',e=>{e.preventDefault();commit({...filters,q:$('keyword').value.trim()});showPhotos();});
   $('keyword').addEventListener('search',()=>{if(!$('keyword').value)commit({...filters,q:''});});
   $('resetAll').addEventListener('click',()=>{reset();focusSelection();});
@@ -268,7 +257,6 @@ function mountControls(){
   document.querySelectorAll('[data-edit-filters]').forEach(b=>b.addEventListener('click',editFilters));
   $('showPhotos').addEventListener('click',showPhotos);
   $('keywordSearch').hidden=!filters.q;$('keywordToggle').setAttribute('aria-expanded',String(!!filters.q));
-  $('exactColorDetails').open=!!filters.colorName;
   $('keywordToggle').addEventListener('click',()=>{const open=$('keywordSearch').hidden;$('keywordSearch').hidden=!open;$('keywordToggle').setAttribute('aria-expanded',String(open));if(open)$('keyword').focus();});
   document.querySelector('.finder-tabs').addEventListener('keydown',e=>{
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;

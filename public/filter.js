@@ -1,13 +1,13 @@
 import {canonicalSeries} from './series-data.js';
 export const emptyFilters = () => ({ q: '', maker: '', car: '', brand: '', category: '', series: '', color: '', colorName: '', review: false });
 export const colorOptions = [
-  ['black','ブラック','#252424','黒'],['brown','ブラウン','#825739','茶 キャメル'],
-  ['beige','ベージュ','#d6c5aa','アイボリー'],['white','ホワイト','#faf8f1','白'],
-  ['gray','グレー','#999995','灰 シルバー'],['red','レッド','#8e3540','赤 ワイン'],
-  ['blue','ブルー','#486b88','青 ネイビー'],['green','グリーン','#667963','緑'],
-  ['yellow','イエロー','#d4b15a','黄'],['orange','オレンジ','#bd7c49','橙'],
-  ['pink','ピンク','#d49b9f','桃'],['purple','パープル','#977296','紫'],
-  ['other','その他','#b4a28d','ビンテージ']
+  ['black','ブラック系','#252424','黒'],['brown','ブラウン系','#825739','茶 キャメル'],
+  ['beige','ベージュ系','#d6c5aa','アイボリー'],['white','ホワイト系','#faf8f1','白'],
+  ['gray','グレー系','#999995','灰 シルバー'],['red','レッド系','#8e3540','赤 ワイン'],
+  ['blue','ブルー系','#486b88','青 ネイビー'],['green','グリーン系','#667963','緑'],
+  ['yellow','イエロー系','#d4b15a','黄'],['orange','オレンジ系','#bd7c49','橙'],
+  ['pink','ピンク系','#d49b9f','桃'],['purple','パープル系','#977296','紫'],
+  ['other','その他の色','#b4a28d','ビンテージ']
 ];
 
 export function normalize(text = '') {
