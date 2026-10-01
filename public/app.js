@@ -20,8 +20,8 @@ let fitmentSnapshotPromise;
 const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="15" height="15" rx="2"/><path d="M17 3H4a1 1 0 0 0-1 1v13"/></svg>';
 function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;}
 function link(text, url, cls) {const a=el('a',cls,text);a.href=url;a.target='_blank';a.rel='noopener';return a;}
-function productLink(item, directUrl='') {
-  return resolveProductLink(item,directUrl,vehicleProductLinks);
+function productLink(item, directUrl='', linkReason='') {
+  return resolveProductLink(item,directUrl,vehicleProductLinks,linkReason);
 }
 function image(src, alt, eager=false) {
   const img = el('img');img.src=src;img.alt=alt;img.loading=eager?'eager':'lazy';img.decoding='async';
@@ -314,7 +314,7 @@ function renderDetail(){
   meta.append(info);
   const fitmentMount=el('div');fitmentMount.id='fitmentMount';meta.append(fitmentMount);
   if(review)meta.append(el('h3','detail-review-title','掲載コメント'),el('p','detail-review',review));
-  const destination=productLink(item,productUrl);const links=el('div','detail-links');
+  const destination=productLink(item,productUrl,activeDetail.productLinkReason);const links=el('div','detail-links');
   if(destination){links.append(link(destination.label,destination.url,'primary'));meta.append(links);}
   meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に必ず適合を確認してください。'));
   if(item.category==='seatcover')meta.append(link('車種・年式から適合を確認 ↗','https://seatcover.jp/f/match_renewal','text-button'));

@@ -47,7 +47,7 @@ test('reviewed source corrections keep vehicle, series, and product assignments 
  }
  const crv=await read('public/data/details/8cb2354f7e2c.json');
  assert.equal(auditedLinks.get('8cb2354f7e2c').originalUrl,'https://seatcover.jp/c/seatcovermaker/refinad/refinad-leatherdx/refinad-dx00067');
- assert.equal(crv.productUrl,'');
+ assert.equal(crv.productUrl,'https://seatcover.jp/c/honda/crv/refinad-dx00067');
 
  const owners=new Map();
  for(const item of data.cases){
@@ -68,9 +68,9 @@ test('reviewed source corrections keep vehicle, series, and product assignments 
 });
 test('Canbus copies are not attributed to Mercedes; archive gaps stay explicit',async()=>{
  const canbus=filterCases(data.cases,{...emptyFilters(),maker:'ダイハツ',q:'ムーヴキャンバス'});
- assert.equal(canbus.length,143);assert.equal(data.cases.filter(x=>x.car==='メルセデス・ベンツ Aクラス').length,0);
+ assert.equal(canbus.length,144);assert.equal(data.cases.filter(x=>x.car==='メルセデス・ベンツ Aクラス').length,0);
  assert.equal(audit.brands.IXUS,143);assert.ok(data.featuredIds.every(id=>data.cases.some(x=>x.id===id)));
- for(const item of canbus){const detail=await read(`public/data/details/${item.id}.json`);assert.equal(detail.sourceFile,'daihatsu_movecanbus.html');}
+ for(const item of canbus){const detail=await read(`public/data/details/${item.id}.json`);assert.ok(['daihatsu_movecanbus.html','daihatsu_move.html'].includes(detail.sourceFile));}
 });
 
 test('color labels are explicitly present in source descriptions; IXUS gaps are preserved',async()=>{
@@ -133,29 +133,53 @@ test('only audited product pages get a direct CTA; unresolved links use safe des
   const review=auditedLinks.get(item.id);
   if(!review)continue;
   assert.equal(detail.productLinkStatus,review.status,item.id);
-  const destination=productLink(item,detail.productUrl,data.vehicleProductLinks);
+  const destination=productLink(item,detail.productUrl,data.vehicleProductLinks,detail.productLinkReason);
   if(review.status==='verified_product_page'){
    assert.equal(detail.productUrl,review.approvedUrl,item.id);
    assert.equal(destination.label,'この商品を見る ↗',item.id);
-   assert.ok(review.evidence.some(source=>['shop_product_manager_published','official_vehicle_product_catalog','http_200_car_brand_title'].includes(source)));
-   if(review.shopListing?.status==='公開中') assert.equal(review.salesState,'本店公開中（確認日時点）');
-   else assert.equal(review.salesState,'未確認');
+   assert.ok(review.evidence.includes('live_product_page_photo_code_selectable_2026-10-01'));
+   assert.equal(review.salesState,'公開商品ページの品番選択肢を確認（2026-10-01）');
   }else{
    assert.equal(detail.productUrl,'',item.id);
    assert.equal(review.approvedUrl,null);
    assert.notEqual(destination.label,'この商品を見る ↗',item.id);
    if(review.originalUrl.includes('/seatcovermaker/'))assert.notEqual(destination.url,review.originalUrl,item.id);
-   if(review.shopListing?.status==='未掲載')assert.equal(review.salesState,'本店未掲載（確認日時点）');
+   assert.equal(review.salesState,'写真品番と商品ページの対応は未確認');
   }
   assert.equal(review.fitmentScope,'年式・型式・グレード未確認');
  }
 });
 
-test('shop manager unlisted pages are withheld; published vehicle pages replace archive URLs',async()=>{
+test('a photo code absent from the linked product cannot keep a direct product CTA',async()=>{
+ const item=data.cases.find(row=>row.id==='4247722a9cd4');
+ const detail=await read('public/data/details/4247722a9cd4.json');
+ assert.equal(detail.photoInfo[0]['品番'],'T0043-06');
+ assert.equal(detail.productUrl,'');
+ const destination=productLink(item,detail.productUrl,data.vehicleProductLinks,detail.productLinkReason);
+ assert.equal(destination.url,'https://seatcover.jp/f/match_renewal');
+ assert.notEqual(destination.label,'この商品を見る ↗');
+});
+
+test('a live product with the photo code available may be linked despite an old unlisted flag',async()=>{
+ const detail=await read('public/data/details/0808fe604942.json');
+ assert.equal(detail.photoInfo[0]['品番'],'S0113-02');
+ assert.equal(detail.productUrl,'https://seatcover.jp/c/suzuki/jimny/refinad-ex00113');
+ assert.equal(detail.productLinkStatus,'verified_product_page');
+});
+
+test('the Move Canvas photo is searchable under its verified vehicle',async()=>{
+ const item=data.cases.find(row=>row.id==='8be9c8b0594c');
+ assert.equal(item.car,'ムーヴキャンバス');
+ const detail=await read('public/data/details/8be9c8b0594c.json');
+ assert.equal(detail.photoInfo[0]['品番'],'D0488-01');
+ assert.equal(detail.productUrl,'https://seatcover.jp/c/seatcovermaker/sandii/sandii-waffle/sandii-wf00488');
+});
+
+test('live selectable product codes override an old manager flag; published vehicle pages replace archive URLs',async()=>{
  const unlisted=linkAudit.entries.find(row=>row.car==='ジムニー'&&row.originalUrl.endsWith('/refinad-ex00113'));
  assert.equal(unlisted.shopListing.status,'未掲載');
- assert.equal(unlisted.status,'unverified');
- assert.equal((await read(`public/data/details/${unlisted.caseId}.json`)).productUrl,'');
+ assert.equal(unlisted.status,'verified_product_page');
+ assert.equal((await read(`public/data/details/${unlisted.caseId}.json`)).productUrl,'https://seatcover.jp/c/suzuki/jimny/refinad-ex00113');
  const hiace=linkAudit.entries.find(row=>row.car==='ハイエース'&&row.originalUrl.endsWith('/refinad-00026'));
  assert.equal(hiace.shopListing.status,'公開中');
  assert.equal(hiace.approvedUrl,'https://seatcover.jp/c/toyota/hiace2/refinad-00026');
