@@ -73,10 +73,13 @@ export function mountLifestyle(openGallery,startVehicleSearch){
     if(matchMedia('(max-width: 760px)').matches)panel.scrollIntoView({block:'start',behavior:'instant'});
   }
   lifestyleThemes.forEach(theme=>{
-    const button=element('button','lifestyle-choice');button.type='button';button.dataset.theme=theme.id;button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','lifestylePanel');
+    const button=element('button','lifestyle-choice');button.type='button';button.dataset.theme=theme.id;button.setAttribute('aria-label',`${theme.label}：車内の実例を見る`);button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','lifestylePanel');
     const caption=element('span','lifestyle-choice-caption'),label=element('strong');
-    const split=theme.label.indexOf('、');label.append(element('span','',theme.label.slice(0,split+1)),element('span','',theme.label.slice(split+1)));
-    caption.append(element('small','',theme.english),label,element('span','lifestyle-choice-open','＋'));
+    const split=theme.label.indexOf('、');
+    if(split>=0)label.append(element('span','',theme.label.slice(0,split+1)),element('span','',theme.label.slice(split+1)));
+    else label.textContent=theme.label;
+    const open=element('span','lifestyle-choice-open','＋');open.setAttribute('aria-hidden','true');
+    caption.append(element('small','',theme.english),label,element('span','lifestyle-choice-action','車内の実例を見る'),open);
     button.append(photo(theme.cover,theme.coverAlt),caption);button.addEventListener('click',()=>choose(theme,button));choices.append(button);
   });
   root.hidden=false;
