@@ -3,12 +3,19 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
+import {createGallery} from '../worker/gallery.mjs';
+import {loadGalleryBase} from './gallery-base.mjs';
+import {localStore} from './local-gallery-store.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const publicRoot=path.join(root,'public');
 const sourceRoot=path.join(root,'.source/archive/ビュー/_gallery_handoff_view');
 const port=4180, host='127.0.0.1', project='connect-installation-gallery';
-const metadata={project,root,pid:process.pid,startedAt:new Date().toISOString(),url:`http://${host}:${port}/`,command:[process.execPath,...process.argv.slice(1)],logs:path.join(root,'.preview')};
+const metadata={project,root,pid:process.pid,startedAt:new Date().toISOString(),url:`http://${host}:${port}/`,command:[process.execPath,...process.argv.slice(1)],logs:path.join(root,'.preview'),features:['gallery-admin-v1']};
+const local=await localStore(path.join(root,'.preview/gallery-data'),path.join(root,'drizzle'));
+const gallery=createGallery(await loadGalleryBase(publicRoot));
+const localSessions=new Map();
+const localEnv={...local,GALLERY_OWNER_EMAIL:'owner@local.invalid',LOCAL_PREVIEW:true};
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.ico':'image/x-icon'};
 async function route(url){
   let pathname;try{pathname=decodeURIComponent(new URL(url,metadata.url).pathname);}catch{return null;}
@@ -23,6 +30,25 @@ async function route(url){
 }
 const server=http.createServer(async(req,res)=>{
   try{
+    const requestPath=new URL(req.url,metadata.url).pathname;
+    if(requestPath==='/signin-with-chatgpt'){
+      const token=crypto.randomUUID();localSessions.set(token,true);
+      res.writeHead(303,{'Location':'/admin/','Set-Cookie':`gallery_local_session=${token}; HttpOnly; SameSite=Strict; Path=/`,'Cache-Control':'no-store'});return res.end();
+    }
+    if(requestPath==='/signout-with-chatgpt'){
+      const token=req.headers.cookie?.match(/gallery_local_session=([^;]+)/)?.[1];localSessions.delete(token);
+      res.writeHead(303,{'Location':'/admin/','Set-Cookie':'gallery_local_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0'});return res.end();
+    }
+    if(requestPath.startsWith('/api/gallery') || requestPath.startsWith('/media/gallery/') || /^\/admin(?:\/|$)/.test(requestPath)){
+      const headers=new Headers(req.headers);
+      // Never trust client-supplied platform identity headers in the local preview.
+      for(const key of [...headers.keys()])if(key.startsWith('oai-authenticated-'))headers.delete(key);
+      const token=req.headers.cookie?.match(/gallery_local_session=([^;]+)/)?.[1];
+      if(localSessions.has(token)){headers.set('oai-authenticated-user-id','local-preview-owner');headers.set('oai-authenticated-user-email','owner@local.invalid');}
+      const request=new Request(new URL(req.url,metadata.url),{method:req.method,headers,...(!['GET','HEAD'].includes(req.method)?{body:req,duplex:'half'}:{})});
+      const response=await gallery.fetch(request,localEnv,{});
+      res.writeHead(response.status,Object.fromEntries(response.headers));res.end(req.method==='HEAD'?undefined:Buffer.from(await response.arrayBuffer()));return;
+    }
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{Allow:'GET, HEAD'});return res.end();}
     if(req.url==='/__preview'){res.writeHead(200,{'Content-Type':mime['.json'],'Cache-Control':'no-store'});return res.end(req.method==='HEAD'?undefined:JSON.stringify(metadata));}
     const target=await route(req.url);if(!target)throw Object.assign(new Error('not found'),{code:'ENOENT'});

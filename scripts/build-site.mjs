@@ -1,14 +1,16 @@
 import {cp, mkdir, readFile, readdir, rm, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {build} from 'esbuild';
+import {loadGalleryBase} from './gallery-base.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const output = path.join(dist, 'client');
 const localOnly = new Set(['compare.html', 'compare.css', 'compare.js', '_audit-contact-sheet.html']);
 const hosting = JSON.parse(await readFile(path.join(root, '.openai/hosting.json'), 'utf8'));
-if (!hosting.project_id || hosting.static?.directory !== 'dist/client') {
-  throw new Error('Expected a Sites project with static.directory = dist/client');
+if (!hosting.project_id || hosting.static || hosting.d1 !== 'DB' || hosting.r2 !== 'BUCKET') {
+  throw new Error('Expected Sites Worker hosting with D1 DB and R2 BUCKET');
 }
 // The only removable output is this project's fixed dist directory.
 if (path.dirname(dist) !== root || path.basename(dist) !== 'dist') throw new Error('Invalid build output');
@@ -26,6 +28,11 @@ if (!html.includes('class="store-home" href="https://seatcover.jp/"') || !html.i
 html = html.replace('<a href="/compare.html">制作プレビュー・旧版との比較</a>', '<a href="/preview.html">SP・PCの表示を比較</a>');
 await writeFile(indexPath, html);
 await writeFile(path.join(dist, '.openai/hosting.json'), JSON.stringify(hosting, null, 2) + '\n');
+await cp(path.join(root,'drizzle'),path.join(dist,'drizzle'),{recursive:true});
+const base=await loadGalleryBase(output);
+await mkdir(path.join(root,'.preview'),{recursive:true});
+await writeFile(path.join(root,'.preview/worker-base.json'),JSON.stringify(base));
+await build({stdin:{contents:"import {createGallery} from './worker/gallery.mjs'; import base from './.preview/worker-base.json'; export default createGallery(base);",resolveDir:root,sourcefile:'gallery-worker.mjs'},bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:path.join(dist,'server/index.js'),minify:true});
 
 async function files(directory) {
   const entries = await readdir(directory, {withFileTypes: true});
@@ -57,4 +64,4 @@ for (const [id, match] of Object.entries(fitment.cases)) {
   if (!caseIds.has(id) || Object.keys(match).some(key => !safeCaseFields.has(key)) || !Array.isArray(match.rows) || !match.rows.length) throw new Error(`Unsafe fitment case: ${id}`);
   for (const row of match.rows) if (Object.keys(row).some(key => !safeRowFields.has(key))) throw new Error(`Unsafe fitment field: ${id}`);
 }
-console.log(`Sites static build ready: ${published.length} files, ${cases.length} complete cases.`);
+console.log(`Sites Worker build ready: ${published.length} client files, ${cases.length} complete cases; D1 + R2.`);

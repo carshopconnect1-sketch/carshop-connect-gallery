@@ -280,7 +280,7 @@ async function openDetail(item){
   if(!$('photoDialog').open)$('photoDialog').showModal();$('photoDialog').scrollTop=0;
   try{
     let detail=detailCache.get(item.id);
-    if(!detail){const response=await fetch(`/data/details/${item.id}.json`,{signal:abort.signal});if(!response.ok)throw new Error('detail');detail=await response.json();if(!Array.isArray(detail.images)||!detail.images.length)throw new Error('images');detailCache.set(item.id,detail);}
+    if(!detail){const response=await fetch(`/api/gallery/details/${item.id}`,{signal:abort.signal});if(!response.ok)throw new Error('detail');detail=await response.json();if(!Array.isArray(detail.images)||!detail.images.length)throw new Error('images');detailCache.set(item.id,detail);}
     if(abort.signal.aborted)return;activeDetail={item,...detail};renderDetail();mountFitment(item,detail,abort.signal);
   }catch(error){if(error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry);const fallback=productLink(item);if(fallback)state.append(link(fallback.label,fallback.url,'text-button'));$('detailContent').replaceChildren(state);}
 }
@@ -309,7 +309,7 @@ function renderDetail(){
   layout.append(visual,meta);$('detailContent').replaceChildren(layout);setPhoto(0);
 }
 async function loadFitmentSnapshot(){
-  if(!fitmentSnapshotPromise)fitmentSnapshotPromise=fetch('/data/fitment.json').then(response=>{
+  if(!fitmentSnapshotPromise)fitmentSnapshotPromise=fetch('/api/gallery/fitment').then(response=>{
     if(!response.ok)throw new Error('fitment');return response.json();
   }).catch(error=>{fitmentSnapshotPromise=null;throw error;});
   return fitmentSnapshotPromise;
@@ -356,7 +356,7 @@ function setPhoto(index){
 }
 async function start(){
   try{
-    const response=await fetch('/data/catalog.json');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;vehicleProductUrls=data.vehicleProductUrls||{};vehicleProductLinks=data.vehicleProductLinks||{};
+    const response=await fetch('/api/gallery/catalog');if(!response.ok)throw new Error('catalog');const data=await response.json();cases=data.cases;vehicleProductUrls=data.vehicleProductUrls||{};vehicleProductLinks=data.vehicleProductLinks||{};
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);

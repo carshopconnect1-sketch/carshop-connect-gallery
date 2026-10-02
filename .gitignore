@@ -5,3 +5,5 @@ audit/screenshots/
 dist/
 .deploy/
 .sites-runtime/
+node_modules/
+.env*
