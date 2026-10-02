@@ -1,0 +1,1724 @@
+{
+  "checkedAt": "2026-10-02",
+  "scope": "All 2895 cases. Every case image must match one official installation media set. Only body color fields are compared, not tags, stitches, piping, reviews or visual estimates.",
+  "catalogCases": 2895,
+  "sourcePages": 3793,
+  "sourceErrors": [],
+  "coverage": {
+    "Dotty": {
+      "matched": 148,
+      "source_not_matched": 7
+    },
+    "IXUS": {
+      "source_not_matched": 143
+    },
+    "Refinad": {
+      "source_not_matched": 13,
+      "matched": 1481,
+      "ambiguous_source": 6
+    },
+    "Sandii": {
+      "matched": 1092,
+      "ambiguous_source": 3,
+      "source_not_matched": 2
+    }
+  },
+  "matchedWithExplicitColorNames": 2716,
+  "matchedWithoutRecognizedColorNames": [
+    "a6eb6501f3b5",
+    "f946713eded8",
+    "c92a6345acac",
+    "0c91f0f51078",
+    "083dbf833074"
+  ],
+  "matchedButArchiveMissingColor": [
+    "e6d516dffffa",
+    "81841b5b0522",
+    "d1c1cb63efcd",
+    "a0cdac465f9e",
+    "1443221f586e",
+    "5ebb13eca592",
+    "ec62e0ddf621",
+    "6d83c59bd25e",
+    "adfbc25bc24f",
+    "0f8fed44efb3",
+    "910c8625cac9",
+    "4c9789d3a84b",
+    "3dcf58777dc7",
+    "2a0097e80fb1",
+    "0feefc14118c",
+    "14ea5f80b5db",
+    "c69b02700267",
+    "c31f830e27db",
+    "570740d57ddc",
+    "b111e8143cd7",
+    "80dbe93b5937",
+    "c0a72299986e",
+    "8b11e868649f",
+    "2395395f3433",
+    "9d96fca74e5f",
+    "d1d24c7b9f79",
+    "dcc0254fad2b"
+  ],
+  "unresolvedSourceMatches": [
+    {
+      "caseId": "33b662261b8e",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "8f63611b99c6",
+      "brand": "Sandii",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://sandii.net/portfolio-item/sandii75461/",
+        "https://sandii.net/portfolio-item/sandii83180/"
+      ]
+    },
+    {
+      "caseId": "ea5470899f1a",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1d647692a7ce",
+      "brand": "Sandii",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://sandii.net/portfolio-item/sandii63160/",
+        "https://sandii.net/portfolio-item/sandii81407/"
+      ]
+    },
+    {
+      "caseId": "e09eba5ecbbf",
+      "brand": "Sandii",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://sandii.net/portfolio-item/sandii79982-copy/",
+        "https://sandii.net/portfolio-item/sandii79982/"
+      ]
+    },
+    {
+      "caseId": "3f9cd95da90a",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "695fa514218a",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "fd5d25c5fc32",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/refinad84562/",
+        "https://refinad.com/portfolio-item/refinad84878/"
+      ]
+    },
+    {
+      "caseId": "dffa2f32aeae",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/refinad60440/",
+        "https://refinad.com/portfolio-item/refinad67450/"
+      ]
+    },
+    {
+      "caseId": "a0e00774a749",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "439d90f0e19f",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/refinad72941-copy/",
+        "https://refinad.com/portfolio-item/refinad72941/"
+      ]
+    },
+    {
+      "caseId": "0f5b1d0bc186",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "87cf15a4b222",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e2afd74d0658",
+      "brand": "Sandii",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ec1638d5eeec",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c0b579fbc93b",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "b082c88bfbdf",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/dayz-roox-refinad-leather-series/",
+        "https://refinad.com/portfolio-item/refinad59287/"
+      ]
+    },
+    {
+      "caseId": "28d524fcac20",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/refinad30388-copy/",
+        "https://refinad.com/portfolio-item/refinad30388/"
+      ]
+    },
+    {
+      "caseId": "635f024df355",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "5b4fb38c60b3",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "fe551854e0d7",
+      "brand": "Sandii",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "754b470aa60a",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "04494d145272",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "d27c440ada46",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "fe61c19d9248",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c5d8268a9fe1",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a7f55639ce6f",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ffdd7a6388c2",
+      "brand": "Refinad",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1bf46dd6d35d",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "52f0d26f35d7",
+      "brand": "Refinad",
+      "status": "ambiguous_source",
+      "candidateUrls": [
+        "https://refinad.com/portfolio-item/refinad64259/",
+        "https://refinad.com/portfolio-item/refinad66167/"
+      ]
+    },
+    {
+      "caseId": "36ef9be8ef4f",
+      "brand": "Dotty",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "0f6113b7c1e9",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ef47328e6832",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "682e6281d90e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7bbd8dbbbed9",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6890a446edb2",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "27a24b0d7cf6",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "0581ef2e0461",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2af2ca76a36a",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "163b47be202d",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "51174d3245fe",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "39a47314dc68",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2fed30ef0fca",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4199fb55dc3a",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6bcfbe68d391",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "3a8c69d4efb6",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "dd7c69ee1edb",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4ced2c20aa49",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a3dde6af4afd",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1bd55201c462",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "5d9dcb6c51fc",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "be6623b9087d",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7875b10a6d07",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "33cb2b8053b0",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "d9a867263918",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4ec4d9845128",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "85a34f2de947",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "eb9d410011eb",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "745d514f0f5c",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "24720e7310ff",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "db219073a44e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "9bfc71984f4b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "db77de173ae1",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "090681701dd7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4afb56f76d3b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6ea462ec795f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "3ed7b4df4ff7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "184facdffeb4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a9bae57b74f7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2d3266d78a7f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "715f67f7a912",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "13bba724cffa",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "84c1453b8272",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f020cc45126e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "96c1889e3080",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c3108bdd2206",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4df059e52fed",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "71930efb6bfa",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c771877ff1bf",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "8414d4fc3fc7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "dff4baa49493",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "15ca02a922a3",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4f1331357ca7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "eae75543003b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "50638c953ef4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7615944ede80",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ff79d5c25364",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "36a90e77f9de",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "9c4b305985d7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "d67e376118b0",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6a9b608d3899",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "03f164513fb5",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f7eea9711a8d",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "eef50c8437cd",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a75b9ad642b7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e50bf07c962c",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "3445a69c01a4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f28f995fd8fb",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "66963a1946db",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "81894c13fce6",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "44067eb59789",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f7102676e354",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "884607f6a9e9",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a38337e013b2",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "d1a2befc8ffe",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "0266e5726085",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c392676684e3",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4bac4e82605e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7d95a4315c74",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "029c21cba219",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f8ba05577f85",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "042fe4262ccc",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "3c1a43e541e7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "8e2afdd65790",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e0c3f6a36a8f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4adee1f0521b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "b19e86f57c1d",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "84c46c3ca711",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e480743554c4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ac9daee3fdbd",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "69a4e80fab29",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7be0d31f67ec",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "455d1fefa917",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "be8c615d5708",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "b896122c0695",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f607a5a7f3f4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6b946d0b1e13",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "91f311df5abc",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c1612a526828",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "0ee5bc4d53f4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2997675ae34c",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e1a0955982c7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7691f4b5e687",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "bcad043df449",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c9111cdd96f4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2b4a060b0774",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7d7ca33a4d8e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "06dcd15f9b06",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "9fa83e8b926e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a11b4db64880",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4133897f1922",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "48b80cbaa0fc",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7a291340247e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7a84a5fa666b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "5e73c3912991",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c5e0f18adafc",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "614b7512a2e6",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4d2473aacf62",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4582ca338df9",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "a2071a98fad7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "5fdd37a1b950",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1ed7a3eaf3da",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "06d45f7f2927",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "2a40eac547df",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4c83bb767171",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "68b358a9fad7",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "6a8ccfa004c3",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "ea2db66a7483",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7f42d65d812b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "386319d1e448",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "533450b4fa2f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "58b35582cb4b",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "f4ab94a2f0f1",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "e6e9d35ce99e",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1eff7d1b0fe4",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4c298458272f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "8f45b8dbadab",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "4c13806486bf",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "b041da15ad1f",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "c24857a0c275",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "0489e2518cca",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "574a18fd00ec",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "7f1695981bd1",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    },
+    {
+      "caseId": "1c041a117d83",
+      "brand": "IXUS",
+      "status": "source_not_matched",
+      "candidateUrls": []
+    }
+  ],
+  "confirmedCorrections": 10,
+  "pendingPaletteReviews": 3,
+  "entries": [
+    {
+      "caseId": "b0821a35fd79",
+      "brand": "Sandii",
+      "car": "ZR-V",
+      "series": "デニムサンド",
+      "savedColor": "ビンテージ",
+      "savedColors": [
+        "other"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii72608/",
+      "officialColor": "デニムカラー:D1ブラック / PVCレザーカラー:S20アクアマリン",
+      "colorFields": {
+        "カラー1": "デニムカラー:D1ブラック",
+        "カラー2": "PVCレザーカラー:S20アクアマリン"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/02/2502021618142532.jpg",
+        "https://sandii.net/wp-content/uploads/2025/02/250202161833734.jpg",
+        "https://sandii.net/wp-content/uploads/2025/02/250202161724851.jpg",
+        "https://sandii.net/wp-content/uploads/2025/02/2502021614019862.jpg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "ZR-V",
+          "品番": "H0627-01"
+        },
+        {
+          "型式": "ZR-V",
+          "品番": "H0627-01"
+        },
+        {
+          "型式": "ZR-V",
+          "品番": "H0627-01"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "ブラック / アクアマリン",
+        "colors": [
+          "black",
+          "blue"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "094f25349f43",
+      "brand": "Sandii",
+      "car": "CX-8",
+      "series": "カヌレ",
+      "savedColor": "ダークブラウン",
+      "savedColors": [
+        "brown"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii64287/",
+      "officialColor": "グレージュA700",
+      "colorFields": {
+        "カラー": "グレージュA700"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/06/c9b514f6b8c9266a1c87316fa87f342d.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/a7e166d0303a583234879cacdc1210cf.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/f527f712f9930dc891a49af7bebe4c09.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/31766f22c776de2bba7c0e409f4e075f.jpg",
+        "https://sandii.net/wp-content/uploads/2024/06/884ec294c03f3745966133a402f4ebf3.jpg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "CX-8 KG2P",
+          "品番": "MA0503-04"
+        },
+        {
+          "型式": "CX-8 KG2P",
+          "品番": "MA0503-04"
+        },
+        {
+          "型式": "CX-8 KG2P",
+          "品番": "MA0503-04"
+        },
+        {
+          "型式": "CX-8 KG2P",
+          "品番": "MA0503-04"
+        },
+        {
+          "型式": "CX-8 KG2P",
+          "品番": "MA0503-04"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "グレージュ",
+        "colors": [
+          "gray",
+          "beige"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "29f32f8903e6",
+      "brand": "Dotty",
+      "car": "AUDIA1",
+      "series": "LUXUR-ALCANTARA",
+      "savedColor": "シルバー",
+      "savedColors": [
+        "gray"
+      ],
+      "sourceUrl": "https://www.dotty.co.jp/portfolio-item/dotty49832/",
+      "officialColor": "ブラック / ALCANTARAブラック",
+      "colorFields": {
+        "外カラー": "ブラック",
+        "内カラー": "ALCANTARAブラック"
+      },
+      "verifiedImages": [
+        "https://www.dotty.co.jp/wp-content/uploads/2023/06/f82e82e5-83f1-4294-8d69-983d862962b3.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2023/06/dc43dcbc-0595-46fe-b214-fb215011a9e9.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2023/06/0258b323-51fe-4f22-813c-883b3d8a68a9.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2023/06/cecddd8d-0e03-44be-925c-1283e1805a43.jpg"
+      ],
+      "savedPhotoInfo": [],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "ブラック",
+        "colors": [
+          "black"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "59a755160844",
+      "brand": "Sandii",
+      "car": "デイズ",
+      "series": "マカロン",
+      "savedColor": "ミッドオレンジ",
+      "savedColors": [
+        "orange"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii70002/",
+      "officialColor": "S02ビターショコラ / S17スノーホワイト",
+      "colorFields": {
+        "カラー1": "S02ビターショコラ",
+        "カラー2": "S17スノーホワイト"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_4138.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_4141.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_4142.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_4139.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/11/IMG_4143.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "デイズ　B21W",
+          "品番": "MI0373-02"
+        },
+        {
+          "型式": "デイズ　B21W",
+          "品番": "MI0373-02"
+        },
+        {
+          "型式": "デイズ　B21W",
+          "品番": "MI0373-02"
+        },
+        {
+          "型式": "デイズ　B21W",
+          "品番": "MI0373-02"
+        },
+        {
+          "型式": "デイズ　B21W",
+          "品番": "MI0373-02"
+        }
+      ],
+      "decision": "needs_source_review",
+      "reason": "公式本文はS02ビターショコラ/S17スノーホワイト、品番T0023-01だが、同一写真はオレンジ/白のデイズ。公式本文自体の車種・品番・配色が食い違うため、保存色名ミッドオレンジを維持し、本文の色・品番を採用しない。",
+      "scopeNote": "公式本文の品番T0023-01は掲載車種デイズと整合しないため採用しない。色のみ訂正。"
+    },
+    {
+      "caseId": "3ef54e4931d1",
+      "brand": "Sandii",
+      "car": "クロスビー",
+      "series": "コロール",
+      "savedColor": "シルキーベージュ",
+      "savedColors": [
+        "beige"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii58596/",
+      "officialColor": "S13ブラック",
+      "colorFields": {
+        "カラー": "S13ブラック"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_4178.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_4180.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_4181.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_4179.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0493-01"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "ブラック",
+        "colors": [
+          "black"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "d71c6f59e394",
+      "brand": "Sandii",
+      "car": "アクア",
+      "series": "カチナ",
+      "savedColor": "ディープグリーン",
+      "savedColors": [
+        "green"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii50466/",
+      "officialColor": "ファブリック生地:K3 / PU生地:ダークグリーンA717",
+      "colorFields": {
+        "カラー1": "ファブリック生地:K3",
+        "カラー2": "PU生地:ダークグリーンA717"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2023/09/DSC_0773-1-e1695960822207.jpg",
+        "https://sandii.net/wp-content/uploads/2023/09/DSC_0779-e1695960845372.jpg",
+        "https://sandii.net/wp-content/uploads/2023/09/DSC_0780-e1695960939706.jpg",
+        "https://sandii.net/wp-content/uploads/2023/09/DSC_0783.jpg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "NHP10",
+          "品番": "T0003-01"
+        },
+        {
+          "型式": "NHP10",
+          "品番": "T0003-01"
+        },
+        {
+          "型式": "NHP10",
+          "品番": "T0003-01"
+        },
+        {
+          "型式": "NHP10",
+          "品番": "T0003-01"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "ダークグリーン",
+        "colors": [
+          "green"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。",
+      "scopeNote": "公式本文の商品シリーズ名に食い違いあり。PVC本体色の名称のみ訂正。K3生地の系統は推測しない。"
+    },
+    {
+      "caseId": "615e38a9ff54",
+      "brand": "Sandii",
+      "car": "ジムニー",
+      "series": "カチナ",
+      "savedColor": "チャコールグレー",
+      "savedColors": [
+        "gray"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii75465/",
+      "officialColor": "ファブリック生地:K8 / ダークブラウンA804",
+      "colorFields": {
+        "カラー1": "ファブリック生地:K8",
+        "カラー2": "ダークブラウンA804"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_0974.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_0976.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_0975.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/02/IMG_0977.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0113-02"
+        }
+      ],
+      "decision": "needs_palette_review",
+      "reason": "カチナのK8ファブリックとPVC A804の配色を確定できない。PVCのブラウンだけでファブリックのグレーを否定しない。"
+    },
+    {
+      "caseId": "c31a1560b2b4",
+      "brand": "Sandii",
+      "car": "プリウス",
+      "series": "オールドカヌレ",
+      "savedColor": "ベージュ",
+      "savedColors": [
+        "beige"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii33519/",
+      "officialColor": "グレージュA700",
+      "colorFields": {
+        "カラー": "グレージュA700"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2022/05/7B426F55-E13A-4A6F-BDBA-E24A68011792.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/05/2574E460-6A27-4815-A0B3-134ABC66E513.jpeg",
+        "https://sandii.net/wp-content/uploads/2022/05/91516FCC-BAAE-4A9F-9B62-B432459E91FD.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "T0340-04"
+        },
+        {
+          "型式": "",
+          "品番": "T0340-04"
+        },
+        {
+          "型式": "",
+          "品番": "T0340-04"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "グレージュ",
+        "colors": [
+          "gray",
+          "beige"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "db14494a0265",
+      "brand": "Sandii",
+      "car": "ワゴンR",
+      "series": "マカロン",
+      "savedColor": "ブルーグレー",
+      "savedColors": [
+        "blue",
+        "gray"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii71239/",
+      "officialColor": "S16シルキーベージュ / S17スノーホワイト",
+      "colorFields": {
+        "カラー1": "S16シルキーベージュ",
+        "カラー2": "S17スノーホワイト"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_6590.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_6591.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_6592.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/01/IMG_6593.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "S0122-12"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "シルキーベージュ / スノーホワイト",
+        "colors": [
+          "beige",
+          "white"
+        ],
+        "car": "ワゴンＲスマイル",
+        "photoInfo": [
+          {
+            "型式": "",
+            "品番": "S0561-01"
+          }
+        ],
+        "productUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-mc00561"
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。",
+      "productCheck": {
+        "checkedAt": "2026-10-02",
+        "productTitle": "ワゴンR スマイル かわいいシートカバー 全席セット [Sandii サンディ] マカロン",
+        "selectableCodes": [
+          "S0561-01",
+          "S0561-02",
+          "S0561-03"
+        ],
+        "selectableColors": [
+          "S16シルキーベージュ",
+          "S17スノーホワイト"
+        ],
+        "scope": "公式の同一装着写真の車種・品番・購入リンクと、現在の商品ページの品番選択肢を照合。個別車両の年式・型式・グレード適合は別確認。",
+        "officialVehicleLabel": "ワゴンRスマイル"
+      }
+    },
+    {
+      "caseId": "24eb4b9aaa35",
+      "brand": "Sandii",
+      "car": "ルノー カングー",
+      "series": "デニムロール",
+      "savedColor": "ライトブルー",
+      "savedColors": [
+        "blue"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii57996/",
+      "officialColor": "D3ビンテージ",
+      "colorFields": {
+        "カラー": "D3ビンテージ"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_7690-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_7696.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_7694.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_7695.jpeg",
+        "https://sandii.net/wp-content/uploads/2024/03/IMG_7697.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        },
+        {
+          "型式": "カングー",
+          "品番": "R0416-02"
+        }
+      ],
+      "decision": "needs_palette_review",
+      "reason": "D3ビンテージはデニムの名称。既存のライトブルーとの系統差を公式色見本で確定できない。"
+    },
+    {
+      "caseId": "97659da6571a",
+      "brand": "Refinad",
+      "car": "ヤリスハイブリッド",
+      "series": "Custom Series",
+      "savedColor": "ブラウン",
+      "savedColors": [
+        "brown"
+      ],
+      "sourceUrl": "https://refinad.com/portfolio-item/refinad38183/",
+      "officialColor": "単色ダークブラウン",
+      "colorFields": {
+        "カラー": "単色ダークブラウン"
+      },
+      "verifiedImages": [
+        "https://refinad.com/wp-content/uploads/2022/09/3E2BE6C0-2575-46EB-B479-BC3D227291A1.jpeg.webp",
+        "https://refinad.com/wp-content/uploads/2022/09/F089E8F9-255A-4163-886E-461D36E78AA5.jpeg.webp",
+        "https://refinad.com/wp-content/uploads/2022/09/11FDF5BB-E8B5-4252-85DF-CFA7433D6F2A.jpeg.webp"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "",
+          "品番": "T0557-01"
+        },
+        {
+          "型式": "",
+          "品番": "T0557-01"
+        },
+        {
+          "型式": "",
+          "品番": "T0557-01"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "ダークブラウン",
+        "colors": [
+          "brown"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    },
+    {
+      "caseId": "06a1fdaa7f78",
+      "brand": "Sandii",
+      "car": "ムーヴキャンバス",
+      "series": "ビスキュイ",
+      "savedColor": "セレストブルー",
+      "savedColors": [
+        "blue"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii76772/",
+      "officialColor": "B03アースグレー / S17スノーホワイト",
+      "colorFields": {
+        "カラー1": "B03アースグレー",
+        "カラー2": "S17スノーホワイト"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2025/03/IMG_7117-scaled.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/03/IMG_7120-scaled.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/03/IMG_7111-scaled.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/03/IMG_7125-scaled.jpeg",
+        "https://sandii.net/wp-content/uploads/2025/03/IMG_7108-scaled.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "アースグレー / スノーホワイト",
+        "colors": [
+          "gray",
+          "white"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。",
+      "scopeNote": "色のみ訂正。公式本文の品番と保存品番の差は、このカラー確認では適合確認済みと扱わない。"
+    },
+    {
+      "caseId": "b325a85665c8",
+      "brand": "Sandii",
+      "car": "ムーヴキャンバス",
+      "series": "カヌレグラッセ",
+      "savedColor": "スノーホワイト",
+      "savedColors": [
+        "white"
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii25709/",
+      "officialColor": "ボルドーA721",
+      "colorFields": {
+        "カラー": "ボルドーA721"
+      },
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2021/09/1217-ide-1-1-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/09/1217-ide-3-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/09/1217-ide-2-1.jpeg",
+        "https://sandii.net/wp-content/uploads/2021/09/1217-ide-4-1.jpeg"
+      ],
+      "savedPhotoInfo": [
+        {
+          "型式": "ムーブキャンバス",
+          "品番": "D0488-01"
+        }
+      ],
+      "decision": "needs_palette_review",
+      "reason": "公式本文はボルドーのみ記載。ツートンの白部分を否定する根拠にはならない。"
+    },
+    {
+      "caseId": "cb9f26989c62",
+      "brand": "Dotty",
+      "car": "TTクーペ",
+      "series": "シリーズ名の記載なし",
+      "savedColor": "アイボリー",
+      "savedColors": [
+        "beige"
+      ],
+      "sourceUrl": "https://www.dotty.co.jp/portfolio-item/audi-tt-%e3%82%af%e3%83%bc%e3%83%9a-dia-lux%e3%82%b7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%90%e3%83%bc/",
+      "officialColor": "キャメル（アイボリーステッチ）",
+      "colorFields": {
+        "カラー": "キャメル（アイボリーステッチ）"
+      },
+      "verifiedImages": [
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt31.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt32.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt33.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt34.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt35.jpg",
+        "https://www.dotty.co.jp/wp-content/uploads/2020/08/tt36.jpg"
+      ],
+      "savedPhotoInfo": [],
+      "decision": "corrected",
+      "correction": {
+        "colorName": "キャメル",
+        "colors": [
+          "brown"
+        ]
+      },
+      "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
+    }
+  ],
+  "pendingSourceReviews": 1
+}

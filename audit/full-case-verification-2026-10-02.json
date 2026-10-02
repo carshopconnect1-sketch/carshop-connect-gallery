@@ -1,0 +1,35 @@
+{
+  "auditedAt": "2026-10-02",
+  "sourceCsvSha256": "1f2ab052aa13174472ed1e5cd57fca2c1f55a5ce42646a2f43cd643f4c768457",
+  "sourceRows": 9582,
+  "sourceCatalogDate": "2026-06-04",
+  "catalogCases": 2895,
+  "galleryImages": 10096,
+  "verifiedProductPages": 2079,
+  "unverifiedDirectCandidates": 553,
+  "noDirectCandidates": 263,
+  "publishedFitmentCases": 1937,
+  "latestFitmentCases": 1937,
+  "latestFitmentAudit": {
+    "sourceRows": 9582,
+    "publishedRows": 4066,
+    "photoCases": 2573,
+    "linkedCases": 1937,
+    "noCode": 319,
+    "noCodeMatch": 44,
+    "carMismatch": 592,
+    "conflictingCodes": 0
+  },
+  "fitmentChanges": {
+    "added": [],
+    "removedOrChanged": []
+  },
+  "fitmentChangeDetails": [],
+  "duplicateIds": [],
+  "orphanLinkRows": [],
+  "orphanFitmentRows": [],
+  "forbiddenFitmentFields": [],
+  "issueCounts": {
+    "unknown_vehicle": 143
+  }
+}

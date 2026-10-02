@@ -76,7 +76,7 @@ for (const item of catalog.cases) {
       if (!ledgerRow.approvedUrl?.startsWith('https://seatcover.jp/c/')) issues.push('approved_url_invalid');
       if (detail.productUrl !== ledgerRow.approvedUrl) issues.push('approved_url_not_in_detail');
       if (detail.productLinkStatus !== 'verified_product_page') issues.push('approved_link_status_mismatch');
-      if (!ledgerRow.evidence?.includes('live_product_page_photo_code_selectable_2026-10-01'))
+      if (!ledgerRow.evidence?.some(value=>/^live_product_page_photo_code_selectable_2026-10-0[12]$/.test(value)))
         issues.push('missing_live_photo_code_evidence');
     } else if (detail.productUrl) issues.push('unverified_direct_link_exposed');
   } else if (detail.productUrl) issues.push('direct_link_missing_from_ledger');

@@ -10,7 +10,8 @@ const audit=await read('audit/data-extraction.json');
 const linkAudit=await read('audit/direct-product-links-2026-09-25.json');
 const auditedLinks=new Map(linkAudit.entries.map(row=>[row.caseId,row]));
 const sourceReview=await read('audit/yellow-color-review-2026-10-01.json');
-const correctedColors=new Map(sourceReview.entries.filter(row=>row.correction?.colorName).map(row=>[row.caseId,row]));
+const allColorReview=await read('audit/all-color-review-2026-10-02.json');
+const correctedColors=new Map([...sourceReview.entries,...allColorReview.entries].filter(row=>row.correction?.colorName).map(row=>[row.caseId,row]));
 test('every retained source record is accounted for; IDs and detail files are consistent',async()=>{
  assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
  assert.equal(new Set(data.cases.map(x=>x.id)).size,data.cases.length);
@@ -83,8 +84,8 @@ test('color labels are explicitly present in source descriptions; IXUS gaps are 
    assert.ok(detail.alt.includes(' '+c.colorName+' シートカバー装着写真'));assert.ok(c.colors.length);
    const corrected=correctedColors.get(c.id);
    if(corrected){
-    assert.equal(detail.colorSource,'Sandii公式装着ページのカラー欄（同一写真URLを照合）');
-    assert.equal(detail.sourceMetadata.url,corrected.sourceUrl);
+    assert.equal(detail.colorSource,`${c.brand}公式装着ページのカラー欄（同一写真URLを照合）`);
+    assert.equal((detail.colorReview||detail.sourceMetadata).url,corrected.sourceUrl);
     assert.deepEqual(detail.images,corrected.verifiedImages);
     assert.deepEqual(c.colors,corrected.correction.colors);
    }else assert.equal(detail.colorSource,'保存HTMLの写真説明（alt）');
@@ -148,8 +149,8 @@ test('only audited product pages get a direct CTA; unresolved links use safe des
   if(review.status==='verified_product_page'){
    assert.equal(detail.productUrl,review.approvedUrl,item.id);
    assert.equal(destination.label,'この商品を見る ↗',item.id);
-   assert.ok(review.evidence.includes('live_product_page_photo_code_selectable_2026-10-01'));
-   assert.equal(review.salesState,'公開商品ページの品番選択肢を確認（2026-10-01）');
+   assert.ok(review.evidence.some(value=>/^live_product_page_photo_code_selectable_2026-10-0[12]$/.test(value)));
+   assert.match(review.salesState,/^公開商品ページの品番選択肢を確認（2026-10-0[12]）$/);
   }else{
    assert.equal(detail.productUrl,'',item.id);
    assert.equal(review.approvedUrl,null);

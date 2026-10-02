@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01",
+  "checkedAt": "2026-10-02",
   "method": "All 2,632 archived product candidates reconciled with current product-manager listings and 994 live product-page URLs; direct CTA requires the photo code in that page’s selectable product options.",
   "caveat": "写真品番を注文画面で選べることを確認した。年式・型式・グレード別の個別適合、選択色の在庫、注文の成立は保証しない。",
   "counts": {
@@ -55799,31 +55799,33 @@
     },
     {
       "caseId": "db14494a0265",
-      "originalUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-macaron/sandii-mc00122",
+      "originalUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-mc00561",
       "status": "verified_product_page",
-      "approvedUrl": "https://seatcover.jp/c/suzuki/wagonr/sandii-mc00122",
+      "approvedUrl": "https://seatcover.jp/c/suzuki/wagonrsmile/sandii-mc00561",
       "maker": "スズキ",
-      "car": "ワゴンR",
+      "car": "ワゴンＲスマイル",
       "brand": "Sandii",
       "series": "マカロン",
       "evidence": [
-        "shop_product_manager_published",
-        "http_200_car_brand_title",
         "official_series_category",
-        "live_product_page_photo_code_selectable_2026-10-01",
-        "official_product_page_photo_code_option"
+        "official_product_page_photo_code_option",
+        "live_product_page_photo_code_selectable_2026-10-02",
+        "official_same_photo_vehicle_and_product_link_2026-10-02"
       ],
       "httpStatus": 200,
-      "productTitle": "【決算セール】ワゴンR かわいいシートカバー 全席セット [Sandii サンディ] マカロン | 車のシートカバーの専門店 カーショップコネクト本店",
+      "productTitle": "ワゴンR スマイル かわいいシートカバー 全席セット [Sandii サンディ] マカロン",
       "catalogFetchedAt": null,
       "photoCodeInProductFitTable": false,
-      "shopListing": {
+      "salesState": "公開商品ページの品番選択肢を確認（2026-10-02）",
+      "fitmentScope": "年式・型式・グレード未確認",
+      "originalArchiveUrl": "https://seatcover.jp/c/seatcovermaker/sandii/sandii-macaron/sandii-mc00122",
+      "originalShopListing": {
         "status": "公開中",
         "url": "https://seatcover.jp/c/suzuki/wagonr/sandii-mc00122",
         "checkedAt": "2026-09-25"
       },
-      "salesState": "公開商品ページの品番選択肢を確認（2026-10-01）",
-      "fitmentScope": "年式・型式・グレード未確認"
+      "officialPhotoMetadataSource": "https://sandii.net/portfolio-item/sandii71239/",
+      "verifiedPhotoCode": "S0561-01"
     },
     {
       "caseId": "db1d819d3ba9",

@@ -5,7 +5,7 @@ from urllib.parse import urlparse, unquote
 import hashlib, json, re, unicodedata
 from inspect_source import GalleryParser, ROOT, SOURCE
 from gallery_metadata import photo_color, image_key
-from gallery_source_corrections import apply_source_corrections
+from gallery_source_corrections import apply_source_corrections, apply_color_corrections
 
 VEHICLE_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/vehicle-product-links-2026-09-25.json').read_text(encoding='utf-8'))
 VEHICLE_PRODUCT_LINKS = {
@@ -259,6 +259,7 @@ if __name__=='__main__':
     # Official body fields override copied archive metadata only after exact
     # installation-image matching. Taxonomy color tags are not evidence.
     apply_source_corrections(cases)
+    apply_color_corrections(cases)
     audited_product_links_seen=set()
     for case in cases:
         detail=case['detail']
