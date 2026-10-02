@@ -87,4 +87,7 @@ test('product pages for another series, disabled choices or code prefixes cannot
     '<title>ジムニー Refinad Heritage Mesh Series</title><option disabled>S0113-02</option>',
     '<title>ジムニー Refinad Heritage Mesh Series</title><option>S0113-021</option>',
   ]){globalThis.fetch=async()=>new Response(html,{headers:{'content-type':'text/html'}});assert.equal((await api(`cases/${value.id}/publish`,{method:'POST',data:value})).status,422);}
+  value.draft.series='Heritage Series';
+  globalThis.fetch=async()=>new Response('<title>ジムニー Refinad Heritage Mesh Series</title><option>S0113-02</option>',{headers:{'content-type':'text/html'}});
+  assert.equal((await api(`cases/${value.id}/publish`,{method:'POST',data:value})).status,422);
 });

@@ -1,4 +1,4 @@
-import {canonicalSeries,findSeries} from '../public/series-data.js';
+import {canonicalSeries,findSeries,seriesCatalog} from '../public/series-data.js';
 import {normalize} from '../public/filter.js';
 const JSON_HEADERS = {'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'};
 const families = new Set(['black','brown','beige','white','gray','red','blue','green','yellow','orange','pink','purple','other']);
@@ -95,6 +95,8 @@ export function createGallery(base) {
       const brandAliases={Refinad:['Refinad','レフィナード'],Sandii:['Sandii','サンディ'],IXUS:['IXUS','イクサス'],Dotty:['Dotty','ダティ']};
       const series=findSeries(draft.brand,draft.series);
       if(!title.includes(normalize(draft.car)) || !(brandAliases[draft.brand]||[draft.brand]).some(v=>title.includes(normalize(v))) || ![draft.series,series?.label,...(series?.values||[])].filter(Boolean).some(v=>title.includes(normalize(v))))reject(422,'商品ページの見出しで車種・ブランド・シリーズを確認できませんでした。URLを見直すか、空欄で公開してください。');
+      const identified=seriesCatalog.filter(v=>v.brand===draft.brand).flatMap(v=>[v.label,...v.values].map(alias=>({series:v,alias:normalize(alias)}))).filter(v=>title.includes(v.alias)).sort((a,b)=>b.alias.length-a.alias.length)[0];
+      if(series && identified && series.id!==identified.series.id)reject(422,'商品ページのシリーズが登録したシリーズと異なります。');
     }
     // A text mention alone does not establish selectable fitment. Only option/radio values count.
     const choices=[...html.matchAll(/<option\b[^>]*>([\s\S]*?)<\/option>|<input\b[^>]*\btype=["'](?:radio|checkbox)["'][^>]*>/gi)].map(m=>m[0]).filter(v=>!/^<[^>]*\bdisabled\b/i.test(v));
