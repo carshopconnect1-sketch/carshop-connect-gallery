@@ -1133,8 +1133,8 @@
       "candidateUrls": []
     }
   ],
-  "confirmedCorrections": 10,
-  "pendingPaletteReviews": 3,
+  "confirmedCorrections": 14,
+  "pendingPaletteReviews": 0,
   "entries": [
     {
       "caseId": "b0821a35fd79",
@@ -1309,9 +1309,23 @@
           "品番": "MI0373-02"
         }
       ],
-      "decision": "needs_source_review",
-      "reason": "公式本文はS02ビターショコラ/S17スノーホワイト、品番T0023-01だが、同一写真はオレンジ/白のデイズ。公式本文自体の車種・品番・配色が食い違うため、保存色名ミッドオレンジを維持し、本文の色・品番を採用しない。",
-      "scopeNote": "公式本文の品番T0023-01は掲載車種デイズと整合しないため採用しない。色のみ訂正。"
+      "decision": "user_confirmed",
+      "reason": "番号付きの同一装着写真を提示し、ユーザーが色名を確定。",
+      "scopeNote": "提示した同一写真の色名をユーザーが確定。公式本文の矛盾・不足は履歴に保持。写真・品番・商品リンク・適合情報はこの色確認で変更しない。",
+      "priorDecision": "needs_source_review",
+      "priorReason": "公式本文はS02ビターショコラ/S17スノーホワイト、品番T0023-01だが、同一写真はオレンジ/白のデイズ。公式本文自体の車種・品番・配色が食い違うため、保存色名ミッドオレンジを維持し、本文の色・品番を採用しない。",
+      "userConfirmation": {
+        "confirmedAt": "2026-10-02",
+        "colorName": "ミッドオレンジ",
+        "reference": "番号付き写真①〜④についてのユーザー回答。④の表記はボルドーに訂正。",
+        "scope": "同一装着写真の掲載色名。商品品番・車両適合の承認ではない。"
+      },
+      "correction": {
+        "colorName": "ミッドオレンジ",
+        "colors": [
+          "orange"
+        ]
+      }
     },
     {
       "caseId": "3ef54e4931d1",
@@ -1424,8 +1438,23 @@
           "品番": "S0113-02"
         }
       ],
-      "decision": "needs_palette_review",
-      "reason": "カチナのK8ファブリックとPVC A804の配色を確定できない。PVCのブラウンだけでファブリックのグレーを否定しない。"
+      "decision": "user_confirmed",
+      "reason": "番号付きの同一装着写真を提示し、ユーザーが色名を確定。",
+      "priorDecision": "needs_palette_review",
+      "priorReason": "カチナのK8ファブリックとPVC A804の配色を確定できない。PVCのブラウンだけでファブリックのグレーを否定しない。",
+      "userConfirmation": {
+        "confirmedAt": "2026-10-02",
+        "colorName": "ダークブラウン",
+        "reference": "番号付き写真①〜④についてのユーザー回答。④の表記はボルドーに訂正。",
+        "scope": "同一装着写真の掲載色名。商品品番・車両適合の承認ではない。"
+      },
+      "correction": {
+        "colorName": "ダークブラウン",
+        "colors": [
+          "brown"
+        ]
+      },
+      "scopeNote": "提示した同一写真の色名をユーザーが確定。公式本文の矛盾・不足は履歴に保持。写真・品番・商品リンク・適合情報はこの色確認で変更しない。"
     },
     {
       "caseId": "c31a1560b2b4",
@@ -1574,8 +1603,23 @@
           "品番": "R0416-02"
         }
       ],
-      "decision": "needs_palette_review",
-      "reason": "D3ビンテージはデニムの名称。既存のライトブルーとの系統差を公式色見本で確定できない。"
+      "decision": "user_confirmed",
+      "reason": "番号付きの同一装着写真を提示し、ユーザーが色名を確定。",
+      "priorDecision": "needs_palette_review",
+      "priorReason": "D3ビンテージはデニムの名称。既存のライトブルーとの系統差を公式色見本で確定できない。",
+      "userConfirmation": {
+        "confirmedAt": "2026-10-02",
+        "colorName": "ビンテージ",
+        "reference": "番号付き写真①〜④についてのユーザー回答。④の表記はボルドーに訂正。",
+        "scope": "同一装着写真の掲載色名。商品品番・車両適合の承認ではない。"
+      },
+      "correction": {
+        "colorName": "ビンテージ",
+        "colors": [
+          "blue"
+        ]
+      },
+      "scopeNote": "提示した同一写真の色名をユーザーが確定。公式本文の矛盾・不足は履歴に保持。写真・品番・商品リンク・適合情報はこの色確認で変更しない。ビンテージはこのデニムロール事例のみブルー系として保持。"
     },
     {
       "caseId": "97659da6571a",
@@ -1684,8 +1728,23 @@
           "品番": "D0488-01"
         }
       ],
-      "decision": "needs_palette_review",
-      "reason": "公式本文はボルドーのみ記載。ツートンの白部分を否定する根拠にはならない。"
+      "decision": "user_confirmed",
+      "reason": "番号付きの同一装着写真を提示し、ユーザーが色名を確定。",
+      "priorDecision": "needs_palette_review",
+      "priorReason": "公式本文はボルドーのみ記載。ツートンの白部分を否定する根拠にはならない。",
+      "userConfirmation": {
+        "confirmedAt": "2026-10-02",
+        "colorName": "ボルドー",
+        "reference": "番号付き写真①〜④についてのユーザー回答。④の表記はボルドーに訂正。",
+        "scope": "同一装着写真の掲載色名。商品品番・車両適合の承認ではない。"
+      },
+      "correction": {
+        "colorName": "ボルドー",
+        "colors": [
+          "red"
+        ]
+      },
+      "scopeNote": "提示した同一写真の色名をユーザーが確定。公式本文の矛盾・不足は履歴に保持。写真・品番・商品リンク・適合情報はこの色確認で変更しない。"
     },
     {
       "caseId": "cb9f26989c62",
@@ -1720,5 +1779,7 @@
       "reason": "同じ装着写真の公式本文にある本体色を採用。ステッチ・パイピングの色は本体系統から除外。"
     }
   ],
-  "pendingSourceReviews": 1
+  "pendingSourceReviews": 0,
+  "officialMetadataCorrections": 10,
+  "userConfirmedCases": 4
 }

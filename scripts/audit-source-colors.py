@@ -88,6 +88,24 @@ def main_color_text(text):
     return text.replace('ビターCCL','ビターショコラ').replace('シルキーBEG','シルキーベージュ')
 
 
+def apply_user_confirmation(row, case, detail, entry):
+    """Keep contradictory official evidence; resolve only the exact confirmed set."""
+    if (not entry or not entry.get('userConfirmation')
+        or case['brand'] != entry['brand'] or detail['images'] != entry['verifiedImages']):
+        return False
+    correction = entry['correction']
+    row.update({
+        'officialColorMismatch': row.get('colorMismatch', False),
+        'officialFamilyMismatch': row.get('familyMismatch', False),
+        'reviewResolution': 'user_confirmed',
+        'userConfirmation': entry['userConfirmation'],
+        'userConfirmedColors': correction['colors'],
+        'colorMismatch': case['colorName'] != correction['colorName'],
+        'familyMismatch': set(case['colors']) != set(correction['colors']),
+    })
+    return True
+
+
 def main():
     urls=set()
     offline='--offline' in sys.argv
@@ -111,6 +129,8 @@ def main():
     for source in sources:
         for image in source.get('images',[]):by_image.setdefault(image_key(image),[]).append(source)
     catalog=json.loads((ROOT/'public/data/catalog.json').read_text(encoding='utf-8'))
+    review=json.loads((ROOT/'audit/all-color-review-2026-10-02.json').read_text(encoding='utf-8'))
+    confirmations={e['caseId']:e for e in review['entries'] if e.get('userConfirmation')}
     entries=[]
     for case in catalog['cases']:
         detail=json.loads((ROOT/f'public/data/details/{case["id"]}.json').read_text(encoding='utf-8'))
@@ -131,6 +151,7 @@ def main():
             row['colorMismatch']=bool(names and case['colorName'] and not saved_names.issubset(compatible_names))
             row['familyMismatch']=bool(families and case['colors'] and not set(case['colors']).intersection(families))
         else:row['status']='ambiguous_source' if candidates else 'source_not_matched'
+        apply_user_confirmation(row, case, detail, confirmations.get(case['id']))
         entries.append(row)
     result={'checkedAt':'2026-10-02','scope':'All 2895 cases. Every case image must match one official installation media set. Only body color fields are compared, not tags, stitches, piping, reviews or visual estimates.','sourcePages':len(urls),'sourceErrors':[s for s in sources if 'error' in s],'entries':entries}
     (ROOT/'.preview/all-color-audit.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')

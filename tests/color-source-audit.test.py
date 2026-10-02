@@ -28,17 +28,39 @@ class ColorAuditRegression(unittest.TestCase):
         self.assertEqual(color_audit.main_color_text('BLACK / IVORY PIPING'), 'ブラック / ')
         self.assertEqual(color_audit.main_color_text('黒・アイボリー'), 'ブラック・アイボリー')
 
+    def test_confirmed_colors_keep_source_contradictions_and_detect_regressions(self):
+        entry = dict(brand='Sandii', verifiedImages=['https://sandii.net/seat.jpg'],
+            userConfirmation={'colorName':'ミッドオレンジ'},
+            correction={'colorName':'ミッドオレンジ','colors':['orange']})
+        case = dict(brand='Sandii',colorName='ミッドオレンジ',colors=['orange'])
+        detail = dict(images=entry['verifiedImages'])
+        row = dict(colorMismatch=True, familyMismatch=True, officialColor='ビターショコラ')
+        self.assertTrue(color_audit.apply_user_confirmation(row, case, detail, entry))
+        self.assertFalse(row['colorMismatch'])
+        self.assertTrue(row['officialColorMismatch'])
+        self.assertEqual(row['officialColor'], 'ビターショコラ')
+        case.update(colorName='ビターショコラ', colors=['brown'])
+        color_audit.apply_user_confirmation(row, case, detail, entry)
+        self.assertTrue(row['colorMismatch'])
+        self.assertTrue(row['familyMismatch'])
+        detail['images'] = ['https://sandii.net/different.jpg']
+        self.assertFalse(color_audit.apply_user_confirmation({}, case, detail, entry))
+
     def test_corrections_survive_reextraction_without_changing_photos(self):
         review = json.loads((ROOT/'audit/all-color-review-2026-10-02.json').read_text(encoding='utf-8'))
         cases = [dict(id=e['caseId'], brand=e['brand'], car=e['car'], series=e['series'],
             colorName=e['savedColor'], colors=e['savedColors'], detail=dict(images=e['verifiedImages'],
             photoInfo=e['savedPhotoInfo'], alt=f'{e["car"]} {e["brand"]} {e["series"]} {e["savedColor"]} シートカバー装着写真')) for e in review['entries']]
         before = copy.deepcopy(cases)
-        self.assertEqual(len(apply_color_corrections(cases)), 10)
+        self.assertEqual(len(apply_color_corrections(cases)), 14)
         self.assertEqual([c['detail']['images'] for c in cases], [c['detail']['images'] for c in before])
         for c, original in zip(cases, before):
             if c['id'] in ['615e38a9ff54','24eb4b9aaa35','b325a85665c8','59a755160844']:
-                self.assertEqual(c, original)
+                entry = next(e for e in review['entries'] if e['caseId'] == c['id'])
+                self.assertEqual(c['colorName'], entry['correction']['colorName'])
+                self.assertEqual(c['colors'], entry['correction']['colors'])
+                self.assertEqual(c['detail']['photoInfo'], original['detail']['photoInfo'])
+                self.assertEqual(c['detail']['colorReview']['userConfirmation'], entry['userConfirmation'])
         corrected = copy.deepcopy(cases)
         apply_color_corrections(cases)
         self.assertEqual(cases, corrected)

@@ -71,12 +71,16 @@ def apply_color_corrections(cases, require_all=True):
             for key in ('photoInfo', 'productUrl'):
                 detail[key] = deepcopy(change[key])
         detail['alt'] = f'{case["car"]} {case["brand"]} {case["series"]} {case["colorName"]} シートカバー装着写真'
-        detail['colorSource'] = f'{case["brand"]}公式装着ページのカラー欄（同一写真URLを照合）'
+        confirmation = entry.get('userConfirmation')
+        detail['colorSource'] = ('ユーザー確認（同一写真を提示して色名を確認）' if confirmation
+            else f'{case["brand"]}公式装着ページのカラー欄（同一写真URLを照合）')
         detail['colorReview'] = {
             'url':entry['sourceUrl'], 'checkedAt':review['checkedAt'],
             'colorFields':entry['colorFields'], 'verifiedImages':entry['verifiedImages'],
             'scope':entry.get('scopeNote', '同一写真の本体色のみ確認。縁取り・ステッチの色を除外。'),
         }
+        if confirmation:
+            detail['colorReview']['userConfirmation'] = deepcopy(confirmation)
         seen.add(case['id'])
     if require_all and seen != set(corrections):
         raise ValueError(f'Missing reviewed color cases: {sorted(set(corrections) - seen)}')

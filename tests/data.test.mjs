@@ -84,7 +84,7 @@ test('color labels are explicitly present in source descriptions; IXUS gaps are 
    assert.ok(detail.alt.includes(' '+c.colorName+' シートカバー装着写真'));assert.ok(c.colors.length);
    const corrected=correctedColors.get(c.id);
    if(corrected){
-    assert.equal(detail.colorSource,`${c.brand}公式装着ページのカラー欄（同一写真URLを照合）`);
+    assert.equal(detail.colorSource,corrected.userConfirmation?'ユーザー確認（同一写真を提示して色名を確認）':`${c.brand}公式装着ページのカラー欄（同一写真URLを照合）`);
     assert.equal((detail.colorReview||detail.sourceMetadata).url,corrected.sourceUrl);
     assert.deepEqual(detail.images,corrected.verifiedImages);
     assert.deepEqual(c.colors,corrected.correction.colors);
