@@ -36,13 +36,13 @@ target.mkdir(parents=True, exist_ok=True)
 def export(row):
     source = AUDIT / row['edited']
     sha = digest(source)
-    stem = f"{row['key']}-{sha[:12]}-1280q84"
+    stem = f"{row['key']}-{sha[:12]}-1200q82"
     full, thumb = target / (stem + '.webp'), target / (stem + '-480.webp')
     with Image.open(source) as im:
         im.load()
         im = ImageOps.exif_transpose(im).convert('RGB')
-        im.thumbnail((1280, 1280))
-        if not full.exists(): im.save(full, 'WEBP', quality=84, method=4)
+        im.thumbnail((1200, 1200))
+        if not full.exists(): im.save(full, 'WEBP', quality=82, method=4)
         small = im.copy(); small.thumbnail((480, 480))
         if not thumb.exists(): small.save(thumb, 'WEBP', quality=80, method=4)
         size = list(im.size)
@@ -79,10 +79,10 @@ for item in new_cases:
         if source.startswith('/media/gallery/'):
             if source not in transported:
                 raw = STATE / 'media' / source.rsplit('/', 1)[1]
-                out = mail_target / (raw.name + '-1280q84.webp')
+                out = mail_target / (raw.name + '-1200q82.webp')
                 with Image.open(raw) as im:
-                    im.load(); im=ImageOps.exif_transpose(im).convert('RGB'); im.thumbnail((1280,1280))
-                    if not out.exists(): im.save(out,'WEBP',quality=84,method=4)
+                    im.load(); im=ImageOps.exif_transpose(im).convert('RGB'); im.thumbnail((1200,1200))
+                    if not out.exists(): im.save(out,'WEBP',quality=82,method=4)
                 transported[source] = '/assets/gallery/mail-20261009-lite/' + out.name
             rewritten.append(transported[source])
         else: rewritten.append(url)
