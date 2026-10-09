@@ -16,7 +16,7 @@
 Node.js 24系を使用してください（検証環境は24.14.1）。ローカルCMSは組み込み `node:sqlite` を使用します。現在の実行にReactやPythonは不要です。
 
 ```powershell
-git clone --depth 1 https://github.com/carshopconnect1-sketch/carshop-connect-gallery.git
+git clone --depth 1 --origin github https://github.com/carshopconnect1-sketch/carshop-connect-gallery.git
 cd carshop-connect-gallery
 npm ci
 npm run check
@@ -24,6 +24,8 @@ npm test
 npm run build
 pwsh -NoProfile -File scripts/start-preview.ps1
 ```
+
+このcloneではGitHubのremote名を `github` にします。ローカル確認とGitHubへの保存にはこれだけで足ります。既存Sitesへ更新する場合に限り、DEPLOY.mdに記載した現在のSites URLを `origin` として追加し、そのアカウントのアクセス権を確認してください。
 
 ギャラリーは `http://127.0.0.1:4180/`、比較は `/preview.html`、スタッフ登録画面は `/admin/`。プレビューは独立した非表示プロセスで起動し、同じフォルダーの正常なサーバーを再利用します。4180を別プロジェクトが使用中なら勝手に停止・移動しないでください。
 
@@ -97,4 +99,4 @@ pwsh -NoProfile -File scripts/start-preview.ps1
 
 検索条件なしの2,960件、デリカの旧別表記URLから117件、ブランド・シリーズ・色の複合絞り込み、写真の送り・戻り、装着レビュー、商品導線、スマホでの表示を確認してください。CMSは別途、所有者／編集者／公開者でログイン・保存・競合・掲載確認・公開・非公開を確認します。
 
-既存Sitesへ更新する手順と正しいリモートはDEPLOY.mdにあります。リモート `github` はGitHub、`origin` は現在のSites、`sites-previous` は旧Sitesです。名称を推測して上書きしたり新しいサイトを重複作成したりしないでください。
+既存Sitesへ更新する手順と正しいリモートはDEPLOY.mdにあります。所有者の既存checkoutでは `github` はGitHub、`origin` は現在のSites、`sites-previous` は旧Sitesです。上記の新規cloneには `github` だけが登録されます。名称を推測して上書きしたり新しいサイトを重複作成したりしないでください。
