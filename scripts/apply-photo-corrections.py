@@ -31,25 +31,26 @@ for row in rows:
         assert normal(images[ref['photo'] - 1]) == normal(original['url']), ('Photo changed', row['key'], ref)
         refs.append((row, ref, original['url']))
 
-target = PUBLIC / 'assets/gallery/corrected-20261009'
+target = PUBLIC / 'assets/gallery/corrected-20261009-lite'
 target.mkdir(parents=True, exist_ok=True)
 def export(row):
     source = AUDIT / row['edited']
     sha = digest(source)
-    stem = f"{row['key']}-{sha[:12]}"
+    stem = f"{row['key']}-{sha[:12]}-1280q84"
     full, thumb = target / (stem + '.webp'), target / (stem + '-480.webp')
     with Image.open(source) as im:
         im.load()
         im = ImageOps.exif_transpose(im).convert('RGB')
-        if not full.exists(): im.save(full, 'WEBP', quality=90, method=4)
+        im.thumbnail((1280, 1280))
+        if not full.exists(): im.save(full, 'WEBP', quality=84, method=4)
         small = im.copy(); small.thumbnail((480, 480))
-        if not thumb.exists(): small.save(thumb, 'WEBP', quality=85, method=4)
+        if not thumb.exists(): small.save(thumb, 'WEBP', quality=80, method=4)
         size = list(im.size)
     for file in (full, thumb):
         with Image.open(file) as check: check.load()
-    return {'key':row['key'], 'url':'/assets/gallery/corrected-20261009/' + full.name,
-            'thumbnail':'/assets/gallery/corrected-20261009/' + thumb.name,
-            'previewImage':'/assets/gallery/corrected-20261009/' + full.name,
+    return {'key':row['key'], 'url':'/assets/gallery/corrected-20261009-lite/' + full.name,
+            'thumbnail':'/assets/gallery/corrected-20261009-lite/' + thumb.name,
+            'previewImage':'/assets/gallery/corrected-20261009-lite/' + full.name,
             'privacy':row.get('sourcePrivacyRedacted', False), 'size':size,
             'approvedSha256':sha, 'sha256':digest(full), 'thumbnailSha256':digest(thumb)}
 
@@ -64,7 +65,7 @@ for row, ref, source in refs:
 base_ids = {x['id'] for x in base['cases']}
 new_cases = [dict(x) for x in local['cases'] if x['id'] not in base_ids]
 assert len(new_cases) == 64
-mail_target = PUBLIC / 'assets/gallery/mail-20261009'
+mail_target = PUBLIC / 'assets/gallery/mail-20261009-lite'
 mail_target.mkdir(parents=True, exist_ok=True)
 new_details = {}
 transported = {}
@@ -78,12 +79,11 @@ for item in new_cases:
         if source.startswith('/media/gallery/'):
             if source not in transported:
                 raw = STATE / 'media' / source.rsplit('/', 1)[1]
+                out = mail_target / (raw.name + '-1280q84.webp')
                 with Image.open(raw) as im:
-                    im.load(); ext = {'JPEG':'.jpg', 'PNG':'.png', 'WEBP':'.webp'}[im.format]
-                out = mail_target / (raw.name + ext)
-                if out.exists(): assert digest(out) == digest(raw)
-                else: shutil.copyfile(raw, out)
-                transported[source] = '/assets/gallery/mail-20261009/' + out.name
+                    im.load(); im=ImageOps.exif_transpose(im).convert('RGB'); im.thumbnail((1280,1280))
+                    if not out.exists(): im.save(out,'WEBP',quality=84,method=4)
+                transported[source] = '/assets/gallery/mail-20261009-lite/' + out.name
             rewritten.append(transported[source])
         else: rewritten.append(url)
     detail['images'] = rewritten; new_details[item['id']] = detail
