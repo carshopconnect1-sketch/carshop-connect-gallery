@@ -238,7 +238,7 @@ export const lifestyleThemes = [
         "car": "ハリアー",
         "brand": "Refinad",
         "series": "レザーデラックス",
-        "image": "https://refinad.com/wp-content/uploads/2025/06/IMG_1992.jpeg.webp",
+        "image": "/assets/gallery/archive-20261009/aca826b361e30e9e76fb0786edd7e10d6393ec668b6ec338d96a55209f723909.webp",
         "sourceCaseId": "e96cbf8bdac1",
         "filters": {
           "maker": "トヨタ",

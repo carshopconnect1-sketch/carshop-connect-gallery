@@ -1,6 +1,7 @@
 // The live gallery's Alphard film; playback is independent of gallery data loading.
 const video = document.getElementById('heroVideo');
 const hero = video.closest('.hero');
+const playbackButton = document.getElementById('heroPlayback');
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
 let wantsPlayback = !motion.matches;
 let inView = true;
@@ -8,6 +9,17 @@ let playPending = false;
 
 // Show the opening frame when reduced motion or autoplay restrictions pause the film.
 video.src = video.dataset.src;
+function updateControl(){
+  if(!playbackButton)return;
+  playbackButton.hidden=false;
+  playbackButton.textContent=video.paused?'動画を再生':'動画を一時停止';
+  playbackButton.setAttribute('aria-label',playbackButton.textContent);
+}
+playbackButton?.addEventListener('click',()=>{
+  wantsPlayback=video.paused;
+  if(wantsPlayback&&video.error)video.load();
+  syncPlayback();
+});
 async function syncPlayback() {
   if (!wantsPlayback || !inView || document.hidden) {
     video.pause();
@@ -25,17 +37,21 @@ async function syncPlayback() {
     if (error.name !== 'AbortError') wantsPlayback = false;
   } finally {
     playPending = false;
+    updateControl();
     // The hero may re-enter view while an earlier play request is being cancelled.
     if (wantsPlayback && inView && !document.hidden && video.paused) syncPlayback();
   }
 }
 video.addEventListener('playing', () => {
   hero.classList.add('is-video-ready');
+  updateControl();
 });
+video.addEventListener('pause',updateControl);
 video.addEventListener('loadeddata', () => hero.classList.add('is-video-ready'));
 video.addEventListener('error', () => {
   hero.classList.remove('is-video-ready');
   wantsPlayback = false;
+  updateControl();
 });
 new IntersectionObserver(([entry]) => {
   inView = entry.isIntersecting;
@@ -47,3 +63,4 @@ motion.addEventListener('change', () => {
   syncPlayback();
 });
 syncPlayback();
+updateControl();

@@ -35,6 +35,8 @@ npm test
 
 ## Sitesへの更新
 
+**2026-10-09の全画像保存後は、以下の手順をそのまま実行しないでください。** 現在のGit版には約5GBの保存画像があり、ビルド全体がSitesの圧縮後・展開後256MiB上限を超えます。`scripts/package-site.ps1` の容量チェックを緩めず、画像を既存R2等へ転送して配信用URLへ置き換え、静的梱包から転送済み画像を除外する実装が必要です。あるいは全容量を配信できる別ホストへ、本店組み込みとして移植してください。GitHub保存で現行Sites version13は更新されていません。元URL・保存先・ハッシュは `audit/image-archive-2026-10-09.json` で照合できます。
+
 1. `.openai/hosting.json` と現在のremote・ブランチ・作業差分を確認し、対象Siteの現在の所有権／閲覧範囲を照合する。公開範囲を維持する。
 2. Sitesの短期Git資格情報とsource helperで既存ソースを開く。現在の編集元が同じ履歴に属することを確認する。秘密値はセッション内で保持してstdinだけで渡し、ファイル／引数／ログへ保存しない。
 3. 対象ソースのチェック・テストを行い、source helperでcommit／`HEAD:main`のPUSHを完了させる。PUSHした完全SHAを保持する。
@@ -63,4 +65,4 @@ pwsh -NoProfile -File scripts/package-site.ps1
 
 version13／公開source `c15729bf04686a29f4b310d3d9d46769bb7a90e2`、deployment `appgdep_6ac87accea008191abe9f45ddd8f836b` は2026-10-09 05:27 UTCにsucceeded。2,960事例、補正1,458枚／988事例、新着64事例を配信済み。公開ソースの後続に引き継ぎ資料のコミットがあります。GitHub保存用の最新SHAと公開中のソースSHAを混同しないでください。
 
-今回の既存プレビュー4180と写真比較4183は返答後も停止しません。共有サイトは本店の最新全件同期ではなく、取得不可7写真・旧移行保留1事例が残ります。詳細はPROGRAMMER_HANDOFF.md、CHECKPOINT.md、audit/photo-replacement-2026-10-09.mdを参照してください。
+今回の既存プレビュー4180と写真比較4183は返答後も停止しません。共有version13には以前の取得不可7写真、最新Git版には回収後の取得不可3写真・旧移行保留1事例が残ります。本店の最新全件同期ではありません。詳細はPROGRAMMER_HANDOFF.md、CHECKPOINT.md、audit/photo-replacement-2026-10-09.mdを参照してください。

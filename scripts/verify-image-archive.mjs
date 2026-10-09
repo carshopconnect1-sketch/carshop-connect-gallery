@@ -1,0 +1,16 @@
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const index=JSON.parse(await readFile(path.join(root,'audit/image-archive-2026-10-09.json'),'utf8'));
+const unique=new Map(index.images.filter(image=>image.status==='saved').map(image=>[image.url,image]));
+let next=0,checked=0;const files=[...unique.values()];
+await Promise.all(Array.from({length:6},async()=>{while(next<files.length){const image=files[next++];
+ if(!image.url.startsWith('/assets/'))throw Error('Unexpected archive URL: '+image.url);
+ const file=path.resolve(root,'public','.'+image.url);if(!file.startsWith(path.join(root,'public')+path.sep))throw Error('Image path escaped public');
+ const bytes=await readFile(file);
+ if(bytes.length!==image.bytes||createHash('sha256').update(bytes).digest('hex')!==image.sha256)throw Error('Image archive mismatch: '+image.url);
+ checked++;
+}}));
+console.log(JSON.stringify({checkedFiles:checked,bytes:index.summary.uniqueBytes,savedDetailPhotos:index.summary.savedDetailReferences,unavailableDetailPhotos:index.summary.unavailableDetailReferences}));

@@ -5,7 +5,9 @@ import {lifestyleThemes,lifestyleGalleryUrl} from '../public/lifestyle-data.js';
 import {lifestyleAlbums} from '../public/lifestyle-albums.js';
 import {createHash} from 'node:crypto';
 import {filterCases,emptyFilters,readFilters} from '../public/filter.js';
-const {cases}=JSON.parse(await readFile(new URL('../public/data/catalog.json',import.meta.url),'utf8'));
+import {photoReplacement,detailReplacement} from '../public/photo-replacements.js';
+const replacements=JSON.parse(await readFile(new URL('../public/data/photo-replacements.json',import.meta.url),'utf8'));
+const cases=JSON.parse(await readFile(new URL('../public/data/catalog.json',import.meta.url),'utf8')).cases.map(item=>photoReplacement(item,replacements));
 
 test('editorial gallery links have real results and preserve the promised vehicle/series scope',()=>{
   for(const theme of lifestyleThemes)for(const pick of theme.picks){
@@ -48,7 +50,7 @@ test('photo albums keep the reviewed car and series together without borrowing o
     assert.equal(new Set(album.photos.map(p=>p.src)).size,album.photos.length,'do not repeat photos to inflate the count');
     if(album.sourceCaseId){
       const original=JSON.parse(await readFile(new URL(`../public/data/details/${album.sourceCaseId}.json`,import.meta.url),'utf8'));
-      assert.deepEqual(album.photos.map(p=>p.src),original.images);
+      assert.deepEqual(album.photos.map(p=>p.src),detailReplacement(album.sourceCaseId,original,replacements).images);
     }else{
       const source=sources.find(a=>a.id===pick.album);assert.equal(album.photos.length,source.photos.length);
       for(const [index,photo] of album.photos.entries()){

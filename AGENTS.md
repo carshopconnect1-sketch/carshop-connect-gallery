@@ -126,3 +126,6 @@ Node69テスト、check、build、SP390/PC1440実操作確認済み。4180のPID
 ## 最新: プログラマーへのGitHub引き継ぎ（2026-10-09）
 
 後続の「コミットPUSH、プログラマーに渡す」により、既存github/mainへ補正画像・新着配信画像・ソース・完了資料を保存する。入口はPROGRAMMER_HANDOFF.md、現在のWorker梱包はDEPLOY.mdとscripts/package-site.ps1。Git内の詳細写真は1,679枚、その他8,675枚分は現HP等のURL参照。全原画像がGit内にあると説明しない。原本・比較PNG／ZIP・受注CSV・CMS実DBは除外し保全。今回のGitHub保存用SHAと、共有公開version13のsource c15729bf04686a29f4b310d3d9d46769bb7a90e2を区別する。上記「GitHub未push／資料はローカル追記」は写真公開直後の履歴。今回の送信先はgithub、Sites originへの再PUSH／再デプロイは含めない。
+# 全画像保存後の最新ルール（2026-10-09）
+
+PROGRAMMER_HANDOFF.mdとaudit/image-archive-2026-10-09.mdを優先。装着写真10,354枚分中10,351枚、表紙・車種画像等をGitへ回収。photo-replacements.jsonのarchivedUrlsを通して元URLを保存先へ解決し、承認済み補正／情報非表示版を優先する。ベースJSONの元URLを外部依存だと判断して、この解決処理を撤去しない。詳細3枚の取得不可を他車の写真で埋めない。新着旧媒体URL221件も事例ID・媒体ID照合済み。画像台帳の11,375ファイルをnpm run verify:imagesで検証可能。全画像を含むビルドは約5GBのため、Sites256MiB上限を解除して配信しない。共有Sites version13は従来の公開状態で、Git保存と区別。Chromeのヒーローに再生／一時停止ボタンを追加、元の停止原因は再現未確認。月次登録・他セクションの保留に変更なし。

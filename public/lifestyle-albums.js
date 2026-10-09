@@ -484,23 +484,23 @@ export const lifestyleAlbums = {
     "sourceCaseId": "e96cbf8bdac1",
     "photos": [
       {
-        "src": "https://refinad.com/wp-content/uploads/2025/06/IMG_1992.jpeg.webp",
-        "thumbnail": "https://refinad.com/wp-content/uploads/2025/06/IMG_1992.jpeg.webp",
+        "src": "/assets/gallery/archive-20261009/aca826b361e30e9e76fb0786edd7e10d6393ec668b6ec338d96a55209f723909.webp",
+        "thumbnail": "/assets/gallery/archive-20261009/aca826b361e30e9e76fb0786edd7e10d6393ec668b6ec338d96a55209f723909.webp",
         "caption": "ハリアーのレザーデラックス装着写真 1"
       },
       {
-        "src": "https://refinad.com/wp-content/uploads/2025/06/IMG_1994.jpeg.webp",
-        "thumbnail": "https://refinad.com/wp-content/uploads/2025/06/IMG_1994.jpeg.webp",
+        "src": "/assets/gallery/archive-20261009/093c4365e312504c83e162d4e683feb8c88d34f281044fbff9bf7a8d45ff188c.webp",
+        "thumbnail": "/assets/gallery/archive-20261009/093c4365e312504c83e162d4e683feb8c88d34f281044fbff9bf7a8d45ff188c.webp",
         "caption": "ハリアーのレザーデラックス装着写真 2"
       },
       {
-        "src": "https://refinad.com/wp-content/uploads/2025/06/IMG_1993.jpeg.webp",
-        "thumbnail": "https://refinad.com/wp-content/uploads/2025/06/IMG_1993.jpeg.webp",
+        "src": "/assets/gallery/archive-20261009/8e2d7d27253b688743324cb78d8bb9274b534e3b3c87934fa4ea13bf67c02714.webp",
+        "thumbnail": "/assets/gallery/archive-20261009/8e2d7d27253b688743324cb78d8bb9274b534e3b3c87934fa4ea13bf67c02714.webp",
         "caption": "ハリアーのレザーデラックス装着写真 3"
       },
       {
-        "src": "https://refinad.com/wp-content/uploads/2025/06/IMG_1995.jpeg.webp",
-        "thumbnail": "https://refinad.com/wp-content/uploads/2025/06/IMG_1995.jpeg.webp",
+        "src": "/assets/gallery/corrected-20261009-lite/P06237-fb1d2e9d422a-1200q82.webp",
+        "thumbnail": "/assets/gallery/corrected-20261009-lite/P06237-fb1d2e9d422a-1200q82.webp",
         "caption": "ハリアーのレザーデラックス装着写真 4"
       }
     ]

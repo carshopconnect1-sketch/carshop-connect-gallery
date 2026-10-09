@@ -2,6 +2,8 @@
 
 プログラマー向けの入口は [PROGRAMMER_HANDOFF.md](PROGRAMMER_HANDOFF.md)。起動・構成・画像の受け渡し・共有公開状態・残っている確認事項をまとめています。
 
+最新のGit版（2026-10-09）：装着写真10,354枚中10,351枚と、表紙・車種画像等をGitへ保存。元サイトへの画像依存をなくし、補正版を優先。取得不可3枚は専用表示と対応表に記録。[全画像の保存台帳](audit/image-archive-2026-10-09.json)・[写真対応CSV](audit/image-archive-2026-10-09.csv)。保存台帳の実ファイルは約5.03GB。Chrome用の動画再生／一時停止ボタンも追加。以下の「共有公開version13」は以前の配信状態で、今回のGit版は共有サイトへ未反映です。
+
 - 公開サイト: https://carshop-connect-gallery-renewal.masaruharuyama.chatgpt.site/
 - GitHub: https://github.com/carshopconnect1-sketch/carshop-connect-gallery （公開・`main`）
 - GitHubへ保存: `git push github HEAD:main`。サイトの公開手順は [DEPLOY.md](DEPLOY.md) を参照。

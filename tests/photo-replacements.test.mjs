@@ -5,6 +5,20 @@ import {createGallery} from '../worker/gallery.mjs';
 const id='abcdef123456', original='https://refinad.com/original.jpg';
 const entry={source:original,url:'/assets/gallery/corrected.webp',thumbnail:'/assets/gallery/thumbnail.webp',previewImage:'/assets/gallery/corrected.webp',privacy:true};
 const replacements={cases:{[id]:[entry]}};
+
+test('archived photos remain local after CMS overrides, without changing order or reviews',()=>{
+  const second='https://sandii.net/second.jpg';
+  const archived={...replacements,archivedUrls:{[original]:'/assets/archive/raw.jpg',[second]:'/assets/archive/second.jpg'}};
+  const item={id,image:second,thumbnail:original,previewImage:second,photoCount:2,firstPublishedAt:'2026-10-05'};
+  const result=photoReplacement(item,archived);
+  assert.equal(result.image,'/assets/archive/second.jpg');
+  assert.equal(result.previewImage,'/assets/archive/second.jpg');
+  assert.equal(result.firstPublishedAt,item.firstPublishedAt);
+  assert.equal(result.photoCount,2);
+  assert.deepEqual(detailReplacement(id,{images:[second,original],review:'取付に苦労した'},archived),{images:['/assets/archive/second.jpg',entry.url],review:'取付に苦労した'});
+  assert.equal(photoReplacement({id,image:original},archived).image,entry.url);
+  assert.deepEqual(photoReplacement(result,archived),result);
+});
 test('only the matching photo and case change; reordered photos stay correctly matched',()=>{
   const item={id,image:original,galleryUrl:'https://refinad.com/source',colorName:'ブラック',photoCount:2};
   assert.equal(photoReplacement(item,replacements).image,entry.url);
