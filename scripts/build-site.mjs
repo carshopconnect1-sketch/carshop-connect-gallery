@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
 import {loadGalleryBase} from './gallery-base.mjs';
+import {photoReplacement,detailReplacement} from '../public/photo-replacements.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -51,17 +52,32 @@ const cases = catalog.items ?? catalog.cases ?? catalog;
 const audit = JSON.parse(await readFile(path.join(root, 'audit/data-extraction.json'), 'utf8'));
 const excluded = audit.excluded.reduce((total, item) => total + item.count, 0);
 const accounted = cases.length + audit.deduplicated + audit.curatedMergedRecords + excluded;
-if (!Array.isArray(cases) || cases.length !== audit.caseCount || accounted !== audit.rawRecords + audit.importedRecords) {
+const recoveries=JSON.parse(await readFile(path.join(root,'audit/source-recoveries-2026-10-05.json'),'utf8'));
+const readyRecoveries=recoveries.entries.filter(entry=>entry.status==='ready');
+if (readyRecoveries.length !== (audit.sourceRecoveredRecords || 0) || readyRecoveries.some(entry=>!cases.some(item=>item.id===entry.case.id))) throw new Error('Recovered cases do not match their source audit');
+if (!Array.isArray(cases) || cases.length !== audit.caseCount || accounted !== audit.rawRecords + audit.importedRecords + (audit.sourceRecoveredRecords || 0)) {
   throw new Error('Published cases do not match the extraction audit');
 }
 await Promise.all(cases.map(item => readFile(path.join(output, `data/details/${item.id}.json`))));
 const fitment = JSON.parse(await readFile(path.join(output, 'data/fitment.json'), 'utf8'));
 const safeCaseFields = new Set(['brand', 'car', 'code', 'rows']);
-const safeRowFields = new Set(['year', 'yearStart', 'yearEnd', 'model', 'grade', 'seats']);
+const safeRowFields = new Set(['car', 'year', 'yearStart', 'yearEnd', 'model', 'grade', 'seats']);
+const safeMasterFields = new Set([...safeRowFields,'group','code']);
+if (!Array.isArray(fitment.records) || fitment.records.length < 100) throw new Error('Full public fitment master is missing');
+for (const row of fitment.records) {
+  if (Object.keys(row).some(key => !safeMasterFields.has(key)) || !row.group || !row.car || !row.code) throw new Error('Unsafe public master record');
+}
 const caseIds = new Set(cases.map(item => item.id));
 if (fitment.version !== 1 || Object.keys(fitment.cases || {}).length < 100) throw new Error('Fitment snapshot is missing or incomplete');
 for (const [id, match] of Object.entries(fitment.cases)) {
   if (!caseIds.has(id) || Object.keys(match).some(key => !safeCaseFields.has(key)) || !Array.isArray(match.rows) || !match.rows.length) throw new Error(`Unsafe fitment case: ${id}`);
   for (const row of match.rows) if (Object.keys(row).some(key => !safeRowFields.has(key))) throw new Error(`Unsafe fitment field: ${id}`);
 }
-console.log(`Sites Worker build ready: ${published.length} client files, ${cases.length} complete cases; D1 + R2.`);
+// Direct JSON downloads must use the same corrected photos as the dynamic API.
+const deliveredCatalog={...base.catalog,cases:base.catalog.cases.map(item=>photoReplacement(item,base.replacements))};
+await writeFile(path.join(output,'data/catalog.json'),JSON.stringify(deliveredCatalog)+'\n');
+await Promise.all(base.catalog.cases.map(item=>writeFile(path.join(output,`data/details/${item.id}.json`),JSON.stringify(detailReplacement(item.id,base.details[item.id],base.replacements))+'\n')));
+// These source-only lookup tables contain the pre-replacement references.
+await rm(path.join(output,'data/photo-replacements.json'),{force:true});
+await rm(path.join(output,'data/mail-publications.json'),{force:true});
+console.log(`Sites Worker build ready: ${published.length} client files, ${deliveredCatalog.cases.length} complete cases; D1 + R2.`);

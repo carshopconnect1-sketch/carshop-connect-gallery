@@ -1,5 +1,9 @@
 import {canonicalSeries,findSeries,seriesCatalog} from '../public/series-data.js';
 import {normalize} from '../public/filter.js';
+import {canonicalVehicle} from '../public/vehicle-identity.js';
+import {createFitmentResolver} from '../public/fitment.js';
+import {postedVehicleInfo} from '../public/vehicle-info.js';
+import {photoReplacement,detailReplacement} from '../public/photo-replacements.js';
 const JSON_HEADERS = {'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'};
 const families = new Set(['black','brown','beige','white','gray','red','blue','green','yellow','orange','pink','purple','other']);
 const roles = new Set(['editor','publisher']);
@@ -38,12 +42,16 @@ export function imageType(bytes) {
 function draftFromBase(item, detail={}) {
   const info=detail.photoInfo?.[0]||{};
   return {...Object.fromEntries(publicFields.map(key=>[key,item[key]??(key==='colors'?[]:'')])),
-    code:info['品番']||'',model:info['型式']||'',review:detail.review||'',productUrl:detail.productUrl||'',
+    code:info['品番']||'',model:info['型式']||'',vehicleInfo:info['車両情報']||'',review:detail.review||'',productUrl:detail.productUrl||'',
     photos:(detail.images||[item.image]).map(url=>({url,alt:detail.alt||`${item.car}の装着写真`})),
     photosConfirmed:false,colorConfirmed:false,consentConfirmed:false,internalNote:''};
 }
 export function createGallery(base) {
   const originals = new Map(base.catalog.cases.map(item=>[item.id,item]));
+  const resolveFitment = createFitmentResolver(base.fitment);
+  const publicItem = item => photoReplacement({...item,car:canonicalVehicle(item.maker,item.car)},base.replacements);
+  const publicDetail = (detail,item) => ({...detailReplacement(item?.id,detail,base.replacements),productLinkReason:detail.productLinkReason||detail.productLinkStatus||'',
+    ...(item?{photoInfo:(detail.photoInfo||[]).map(info=>postedVehicleInfo(info,resolveFitment(item,detail)?.rows||[]))}:{})});
   async function actor(request,env) {
     const id=request.headers.get('oai-authenticated-user-id');const address=email(request.headers.get('oai-authenticated-user-email'));
     if(!id || !address)reject(401,'ChatGPTでログインしてください。');
@@ -54,10 +62,15 @@ export function createGallery(base) {
     return {id,email:address,role:member.role,canPublish:member.role==='publisher'};
   }
   async function row(env,id){const found=await env.DB.prepare('SELECT * FROM gallery_cases WHERE id = ?').bind(id).first();if(!found)reject(404,'事例が見つかりません。');return found;}
-  function describe(value){return {id:value.id,draft:JSON.parse(value.draft),status:value.status,revision:value.revision,hasPublished:value.published?!JSON.parse(value.published).hidden:originals.has(value.id),updatedAt:value.updated_at,updatedBy:value.updated_by};}
+  function describe(value){
+    const draft=JSON.parse(value.draft);
+    const detail={photoInfo:[{'品番':draft.code,'型式':draft.model,'車両情報':draft.vehicleInfo}]};
+    const info=postedVehicleInfo(detail.photoInfo[0],resolveFitment(draft,detail)?.rows||[]);
+    return {id:value.id,draft:{...draft,car:canonicalVehicle(draft.maker,draft.car),model:info['型式']||'',vehicleInfo:info['車両情報']||''},status:value.status,revision:value.revision,hasPublished:value.published?!JSON.parse(value.published).hidden:originals.has(value.id),updatedAt:value.updated_at,updatedBy:value.updated_by};
+  }
   function revision(value, input){if(!Number.isInteger(input.revision) || value.revision!==input.revision)reject(409,'他のスタッフが更新しました。入力内容を控えて、最新版を開き直してください。');}
   async function validateDraft(env,id,input) {
-    const result={};for(const key of ['maker','car','brand','category','series','colorName','code','model','productUrl'])result[key]=clean(input[key],key==='productUrl'?1500:160);
+    const result={};for(const key of ['maker','car','brand','category','series','colorName','code','model','vehicleInfo','productUrl'])result[key]=clean(input[key],key==='productUrl'?1500:160);
     result.review=clean(input.review,6000);result.internalNote=clean(input.internalNote,4000);
     result.colors=Array.isArray(input.colors)?[...new Set(input.colors)].filter(v=>families.has(v)):[];
     result.photosConfirmed=input.photosConfirmed===true;result.colorConfirmed=input.colorConfirmed===true;result.consentConfirmed=input.consentConfirmed===true;
@@ -89,7 +102,7 @@ export function createGallery(base) {
     const html=await response.text();const code=draft.code.replace(/[‐‑–—−]/g,'-').toUpperCase();
     const linked=base.catalog.cases.filter(item=>base.details[item.id]?.productUrl===url.href);
     if(linked.length){
-      if(!linked.some(item=>item.maker===draft.maker && item.car===draft.car && item.brand===draft.brand && canonicalSeries(item.brand,item.series)===canonicalSeries(draft.brand,draft.series)))reject(422,'商品URLの車種・ブランド・シリーズが登録内容と一致しません。');
+      if(!linked.some(item=>item.maker===draft.maker && canonicalVehicle(item.maker,item.car)===canonicalVehicle(draft.maker,draft.car) && item.brand===draft.brand && canonicalSeries(item.brand,item.series)===canonicalSeries(draft.brand,draft.series)))reject(422,'商品URLの車種・ブランド・シリーズが登録内容と一致しません。');
     }else{
       const title=normalize([...html.matchAll(/<(?:title|h1)\b[^>]*>([\s\S]*?)<\/(?:title|h1)>/gi)].map(m=>m[1].replace(/<[^>]*>/g,' ')).join(' '));
       const brandAliases={Refinad:['Refinad','レフィナード'],Sandii:['Sandii','サンディ'],IXUS:['IXUS','イクサス'],Dotty:['Dotty','ダティ']};
@@ -108,11 +121,10 @@ export function createGallery(base) {
   }
   function snapshot(id,draft,product) {
     const item={id,...Object.fromEntries(publicFields.map(key=>[key,draft[key]])),carKnown:true,image:draft.photos[0].url,photoCount:draft.photos.length,hasReview:!!draft.review,galleryUrl:'/'};
-    const detail={images:draft.photos.map(p=>p.url),alt:draft.photos[0].alt,review:draft.review,productUrl:product.url,productLinkStatus:product.status,
-      photoInfo:[{...(draft.code?{'品番':draft.code}:{}),...(draft.model?{'型式':draft.model}:{})}]};
-    const code=clean(draft.code).toUpperCase();
-    const fit=Object.values(base.fitment.cases).find(v=>v.brand===draft.brand && v.car===draft.car && clean(v.code).toUpperCase()===code);
-    return {item,detail,...(fit?{fitment:fit}:{})};
+    const detail={images:draft.photos.map(p=>p.url),alt:draft.photos[0].alt,review:draft.review,productUrl:product.url,productLinkStatus:product.status,productLinkReason:product.status,
+      photoInfo:[{...(draft.code?{'品番':draft.code}:{}),...(draft.model?{'型式':draft.model}:{}),...(draft.vehicleInfo?{'車両情報':draft.vehicleInfo}:{})}]};
+    const fit=resolveFitment(item,detail);
+    return {item:publicItem(item),detail:publicDetail(detail,item),...(fit?{fitment:fit}:{})};
   }
   async function update(env,previous,draft,status,user,published=undefined,action='save') {
     const stamp=now();
@@ -125,20 +137,41 @@ export function createGallery(base) {
     if(!results[0].results.length)reject(409,'他のスタッフが更新しました。最新版を開き直してください。');
     return describe(results[0].results[0]);
   }
-  async function publicCases(env){if(!env.DB)return [];return (await env.DB.prepare('SELECT id, published FROM gallery_cases WHERE published IS NOT NULL').all()).results.map(r=>({id:r.id,...JSON.parse(r.published)}));}
+  async function publicCases(env){
+    if(!env.DB)return [];
+    const rows=(await env.DB.prepare(`SELECT c.id, c.published, h.first_published_at
+      FROM gallery_cases c LEFT JOIN (
+        SELECT case_id, MIN(created_at) AS first_published_at FROM gallery_history
+        WHERE action = 'publish' GROUP BY case_id
+      ) h ON h.case_id = c.id WHERE c.published IS NOT NULL`).all()).results;
+    return rows.map(r=>{
+      const value={id:r.id,...JSON.parse(r.published)};
+      // Publishing edits to archived cases must not turn them into new cases.
+      if(!value.hidden&&originals.get(r.id)?.firstPublishedAt)
+        value.item={...value.item,firstPublishedAt:originals.get(r.id).firstPublishedAt};
+      else if(!value.hidden&&!originals.has(r.id)&&r.first_published_at)
+        value.item={...value.item,firstPublishedAt:r.first_published_at};
+      if(!value.hidden){value.item=publicItem(value.item);value.detail=publicDetail(value.detail,value.item);}
+      return value;
+    });
+  }
   async function publicData(path,env){
     if(path==='/api/gallery/catalog'){
       const saved=await publicCases(env);const overridden=new Set(saved.map(v=>v.id));
-      return {...base.catalog,cases:[...saved.filter(v=>!v.hidden).map(v=>v.item),...base.catalog.cases.filter(v=>!overridden.has(v.id))]};
+      return {...base.catalog,cases:[...saved.filter(v=>!v.hidden).map(v=>v.item),...base.catalog.cases.filter(v=>!overridden.has(v.id)).map(publicItem)]};
     }
     if(path==='/api/gallery/fitment'){
-      const saved=await publicCases(env);const result={...base.fitment,cases:{...base.fitment.cases}};
-      for(const v of saved){delete result.cases[v.id];if(v.fitment&&!v.hidden)result.cases[v.id]=v.fitment;}return result;
+      const saved=await publicCases(env);const overridden=new Set(saved.map(v=>v.id));
+      const {records: ignoredRecords,cases: ignoredCases,...metadata}=base.fitment;
+      const result={...metadata,cases:{}};
+      for(const item of base.catalog.cases.filter(v=>!overridden.has(v.id))){const fit=resolveFitment(item,base.details[item.id]);if(fit)result.cases[item.id]=fit;}
+      for(const v of saved.filter(v=>!v.hidden)){const fit=resolveFitment(v.item,v.detail);if(fit)result.cases[v.id]=fit;}
+      return result;
     }
     const id=path.match(/^\/api\/gallery\/details\/([a-f0-9]{12})$/)?.[1];
     if(id){const found=env.DB?await env.DB.prepare('SELECT published FROM gallery_cases WHERE id = ?').bind(id).first():null;
-      if(found?.published){const v=JSON.parse(found.published);if(v.hidden)reject(404,'公開されていない事例です。');return v.detail;}
-      if(base.details[id])return base.details[id];reject(404,'公開されていない事例です。');}
+      if(found?.published){const v=JSON.parse(found.published);if(v.hidden)reject(404,'公開されていない事例です。');return publicDetail(v.detail,v.item);}
+      if(base.details[id])return publicDetail(base.details[id],originals.get(id));reject(404,'公開されていない事例です。');}
     reject(404,'見つかりません。');
   }
   return {async fetch(request,env,ctx){
@@ -155,6 +188,8 @@ export function createGallery(base) {
         const published=source?.published?JSON.parse(source.published):null;
         const isPublic=!published?.hidden && published?.detail?.images.includes(path);
         if(!isPublic)await actor(request,env);
+        const replacement=base.replacements?.cases?.[photo.case_id]?.find(entry=>entry.source===path);
+        if(replacement)return new Response(null,{status:307,headers:{location:replacement.url,'cache-control':'no-store'}});
         const blob=await env.BUCKET.get(photo.storage_key);if(!blob)reject(404,'写真が見つかりません。');
         return new Response(request.method==='HEAD'?null:blob.body,{headers:{'content-type':photo.mime,'cache-control':'no-store','x-content-type-options':'nosniff'}});
       }

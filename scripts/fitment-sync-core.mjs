@@ -1,4 +1,5 @@
 import {readFile} from 'node:fs/promises';
+import {createFitmentResolver} from '../public/fitment.js';
 
 const columnAliases = {
   brand: ['maker_id', 'seatmaker', 'brand', 'maker', 'ブランド', 'シートカバーメーカー'],
@@ -16,7 +17,6 @@ const columnAliases = {
 
 const headerKey = value => String(value).normalize('NFKC').toLowerCase().replace(/[\s_\-／/（）().:：]/g, '');
 const codeKey = value => String(value || '').normalize('NFKC').trim().toUpperCase();
-const carKey = value => String(value || '').normalize('NFKC').toLowerCase().replace(/[\s　]/g, '');
 const text = (value, limit = 1500) => String(value ?? '').trim().slice(0, limit);
 const publicText = value => text(value).replace(/<br\s*\/?\s*>/gi, '\n')
   .replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ')
@@ -112,16 +112,20 @@ export function makeFitmentSnapshot(csvRows, catalog, details, syncedAt = new Da
   if(csvRows.some(row=>row.length!==width))throw new Error('適合CSVに列数が異なる行があります。更新を中止しました。');
   const index = columns(csvRows[0]);
   const byCode = new Map();
+  const records = [];
   let publishedRows = 0;
   for (const values of csvRows.slice(1)) {
     const row = publicRow(values, index);
     if (!row.shown || !row.group || !row.car || !row.code) continue;
     publishedRows++;
+    const {shown: ignoredShown, ...safeRecord} = row;
+    records.push(safeRecord);
     const key = `${row.group}|${row.code}`;
     if (!byCode.has(key)) byCode.set(key, []);
     byCode.get(key).push(row);
   }
   if (!publishedRows) throw new Error('公開中の適合レコードを読み取れませんでした。表示列の値を確認してください。');
+  const resolveFitment = createFitmentResolver({records});
   const cases = {};
   const audit = {sourceRows: csvRows.length - 1, publishedRows, photoCases: 0, linkedCases: 0,
     noCode: 0, noCodeMatch: 0, carMismatch: 0, conflictingCodes: 0, unresolved: []};
@@ -136,16 +140,11 @@ export function makeFitmentSnapshot(csvRows, catalog, details, syncedAt = new Da
     const code = codes[0];
     const candidates = byCode.get(`${caseGroup(item.brand)}|${code}`) || [];
     if (!candidates.length) { audit.noCodeMatch++; audit.unresolved.push({caseId: item.id, reason: 'no_code_match'}); continue; }
-    const matched = candidates.filter(row => carKey(row.car) === carKey(item.car));
-    if (!matched.length) { audit.carMismatch++; audit.unresolved.push({caseId: item.id, reason: 'car_mismatch'}); continue; }
-    const unique = new Map();
-    for (const {group, car, code: ignoredCode, shown: visible, ...publicFields} of matched) {
-      const key = JSON.stringify(publicFields);
-      unique.set(key, publicFields);
-    }
-    cases[item.id] = {brand: item.brand, car: item.car, code, rows: [...unique.values()]};
+    const match = resolveFitment(item,detail);
+    if (!match) { audit.carMismatch++; audit.unresolved.push({caseId: item.id, reason: 'car_mismatch'}); continue; }
+    cases[item.id] = match;
     audit.linkedCases++;
   }
-  const snapshot = {version: 1, source: 'cc_match', syncedAt, cases};
+  const snapshot = {version: 1, source: 'cc_match', syncedAt, cases, records};
   return {snapshot, audit};
 }

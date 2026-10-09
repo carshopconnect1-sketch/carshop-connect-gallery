@@ -38,3 +38,32 @@ test('maker-only records remain visible by brand and never become a car option',
  assert.equal(filterCases([unknown],{...emptyFilters(),color:'black'}).length,0);
  assert.deepEqual(facet([unknown],emptyFilters(),'car'),[]);
 });
+
+test('Kangoo aliases share one facet and both existing search URLs find all cases',()=>{
+ const cars=[{id:'a',maker:'ルノー',car:'カングー',colors:[]},{id:'b',maker:'ルノー',car:'ルノー カングー',colors:[]}];
+ assert.deepEqual(filterCases(cars,{...emptyFilters(),car:'カングー'}).map(v=>v.id),['a','b']);
+ assert.deepEqual(filterCases(cars,{...emptyFilters(),car:'ルノー カングー'}).map(v=>v.id),['a','b']);
+ assert.deepEqual(facet(cars,emptyFilters(),'car'),[['ルノー カングー',2]]);
+});
+
+test('Delica D:5 spelling variants share one selection without merging D:2 or Delica Mini',()=>{
+ const cars=['デリカD:5','デリカ:D5','デリカⅮ：5','デリカ D．5','デリカD:2','デリカミニ'].map((car,index)=>({id:String(index),maker:'三菱',car,colors:[]}));
+ for(const car of ['デリカD:5','デリカ:D5','デリカＤ：５','デリカ D.5']){
+  assert.deepEqual(filterCases(cars,{...emptyFilters(),maker:'三菱',car}).map(v=>v.id),['0','1','2','3']);
+  assert.equal(readFilters(new URLSearchParams({maker:'三菱',car})).car,'デリカD:5');
+ }
+ assert.equal(new Map(facet(cars,emptyFilters(),'car')).get('デリカD:5'),4);
+ assert.equal(facet(cars,emptyFilters(),'car').length,3);
+});
+
+test('Copen GR width variants and the old Progres typo retain all cases under one car choice',()=>{
+ const cars=[
+  {maker:'ダイハツ',car:'コペンGRスポーツ'},{maker:'ダイハツ',car:'コペンＧＲスポーツ'},
+  {maker:'ダイハツ',car:'コペン'},{maker:'ダイハツ',car:'コペンセロ'},
+  {maker:'トヨタ',car:'プログレ'},{maker:'トヨタ',car:'プログレス'}
+ ].map((v,index)=>({...v,id:String(index),colors:[]}));
+ assert.deepEqual(filterCases(cars,{...emptyFilters(),maker:'ダイハツ',car:'コペンＧＲスポーツ'}).map(v=>v.id),['0','1']);
+ assert.deepEqual(filterCases(cars,{...emptyFilters(),maker:'トヨタ',car:'プログレ'}).map(v=>v.id),['4','5']);
+ assert.equal(new Map(facet(cars,emptyFilters(),'car')).get('コペンGRスポーツ'),2);
+ assert.equal(facet(cars,emptyFilters(),'car').length,4);
+});

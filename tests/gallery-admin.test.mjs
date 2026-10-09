@@ -5,6 +5,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {localStore} from '../scripts/local-gallery-store.mjs';
 import {createGallery} from '../worker/gallery.mjs';
+import {productLink} from '../public/product-link.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const original={id:'abcdef123456',maker:'スズキ',car:'ジムニー',brand:'Refinad',category:'seatcover',series:'Heritage Mesh Series',colorName:'ブラウン',colors:['brown'],image:'https://seatcover.jp/example.jpg'};
 const base={catalog:{cases:[original]},details:{[original.id]:{images:[original.image],photoInfo:[{'品番':'S0113-02'}]}},fitment:{version:1,cases:{[original.id]:{brand:'Refinad',car:'ジムニー',code:'S0113-02',rows:[{model:'JB64W',seats:4}]}}},assets:{'/admin/index.html':'管理画面'}};
@@ -24,6 +25,30 @@ async function newCase(api){const result=await api('cases',{method:'POST',data:{
 async function populated(api){const value=await newCase(api);const photo=await api(`cases/${value.id}/photos`,{method:'POST',body:png,headers:{'content-type':'image/png'}});assert.equal(photo.status,201);
   return {...value,draft:{...value.draft,maker:'スズキ',car:'ジムニー',brand:'Refinad',series:'Heritage Mesh Series',colorName:'キャメル',colors:['brown'],code:'S0113-02',photos:[photo.body],photosConfirmed:true,colorConfirmed:true,consentConfirmed:true,internalNote:'private staff note'}};
 }
+
+test('NEW uses first publication history, survives edits and republication, and excludes old gallery cases',async t=>{
+  const {api,request,env}=await setup(t);let value=await populated(api);
+  const catalog=async()=> (await (await request('/api/gallery/catalog',{who:null})).json()).cases;
+  assert.equal((await catalog()).length,1);
+  value=(await api(`cases/${value.id}/publish`,{method:'POST',data:value})).body;
+  const first=(await catalog()).find(c=>c.id===value.id).firstPublishedAt;
+  assert.ok(Number.isFinite(Date.parse(first)));
+  assert.equal((await catalog()).find(c=>c.id===original.id).firstPublishedAt,undefined);
+  // A much older publication catches accidental use of the latest edit/publication.
+  await env.DB.prepare('UPDATE gallery_history SET created_at = ? WHERE case_id = ? AND action = ?').bind('2026-08-01T00:00:00Z',value.id,'publish').run();
+  value.draft.review='感想を追記';
+  value=(await api(`cases/${value.id}`,{method:'PUT',data:value})).body;
+  assert.equal((await catalog()).find(c=>c.id===value.id).firstPublishedAt,'2026-08-01T00:00:00Z');
+  value=(await api(`cases/${value.id}/unpublish`,{method:'POST',data:value})).body;
+  assert.equal((await catalog()).length,1);
+  value=(await api(`cases/${value.id}/publish`,{method:'POST',data:value})).body;
+  assert.equal((await catalog()).find(c=>c.id===value.id).firstPublishedAt,'2026-08-01T00:00:00Z');
+  let old=(await api('cases',{method:'POST',data:{baseId:original.id}})).body;
+  Object.assign(old.draft,{photosConfirmed:true,colorConfirmed:true,consentConfirmed:true});
+  old=(await api(`cases/${old.id}/publish`,{method:'POST',data:old})).body;
+  assert.equal(old.status,'published');
+  assert.equal((await catalog()).find(c=>c.id===original.id).firstPublishedAt,undefined);
+});
 test('staff authentication, role authorization and same-origin writes are enforced on the server',async t=>{
   const {api}=await setup(t);assert.equal((await api('cases',{who:null})).status,401);assert.equal((await api('cases',{who:'stranger@example.test'})).status,403);
   assert.equal((await api('cases',{method:'POST',origin:'https://evil.test',data:{}})).status,403);
@@ -46,6 +71,36 @@ test('drafts and photos remain private; publication exposes a snapshot without i
   const unchanged=await (await request('/api/gallery/catalog',{who:null})).json();assert.equal(unchanged.cases.find(v=>v.id===value.id).colorName,'キャメル');
   value=(await api(`cases/${value.id}/unpublish`,{method:'POST',data:value})).body;assert.equal(value.hasPublished,false);
   assert.equal((await request(photo,{who:null})).status,401);assert.equal((await request(`/api/gallery/details/${value.id}`,{who:null})).status,404);
+});
+
+test('a published case without a product URL consistently leads to official fitment',async t=>{
+  const {api,request}=await setup(t);let value=await populated(api);
+  value=(await api(`cases/${value.id}/publish`,{method:'POST',data:value})).body;
+  const catalog=await (await request('/api/gallery/catalog',{who:null})).json();
+  const detail=await (await request(`/api/gallery/details/${value.id}`,{who:null})).json();
+  const destination=productLink(catalog.cases.find(v=>v.id===value.id),detail.productUrl,{},detail.productLinkReason);
+  assert.equal(destination.url,'https://seatcover.jp/f/match_renewal');
+});
+
+test('existing CMS publications get updated master fitment without republishing',async t=>{
+  const {api,env}=await setup(t);let value=await populated(api);
+  value.draft.code='S0646-01';value.draft.car='ジムニーノマド';
+  value=(await api(`cases/${value.id}/publish`,{method:'POST',data:value})).body;
+  const updated=createGallery({...base,fitment:{...base.fitment,records:[{group:'Refinad/Sandii',car:'ジムニーノマド',code:'S0646-01',model:'JC74W',grade:'JC',year:'R7/4～',seats:'5'}]}});
+  const response=await updated.fetch(new Request('https://example.test/api/gallery/fitment'),env,{});
+  const fit=await response.json();
+  assert.equal(fit.cases[value.id]?.rows[0].model,'JC74W');
+  const detail=await (await updated.fetch(new Request(`https://example.test/api/gallery/details/${value.id}`),env,{})).json();
+  assert.equal(detail.photoInfo[0]['型式'],undefined,'master fitment must not become a claim about the submitted car');
+});
+
+test('free form vehicle information and product codes never become posted vehicle model codes',async t=>{
+  const {api,request}=await setup(t);let value=await populated(api);
+  value.draft.model='ジムニー S0113-02';
+  value=(await api(`cases/${value.id}/publish`,{method:'POST',data:value})).body;
+  const detail=await (await request(`/api/gallery/details/${value.id}`,{who:null})).json();
+  assert.equal(detail.photoInfo[0]['型式'],undefined);
+  assert.doesNotMatch(detail.photoInfo[0]['車両情報'],/S0113-02/);
 });
 test('two PCs cannot overwrite an intervening save; committed content survives closing and reopening storage',async t=>{
   const {api,directory,env,request}=await setup(t);const value=await populated(api);

@@ -1,4 +1,5 @@
 import {canonicalSeries} from './series-data.js';
+import {canonicalVehicle,vehicleSearchNames} from './vehicle-identity.js';
 export const emptyFilters = () => ({ q: '', maker: '', car: '', brand: '', category: '', series: '', color: '', colorName: '', review: false });
 export const colorOptions = [
   ['black','ブラック系','#252424','黒'],['brown','ブラウン系','#825739','茶 キャメル'],
@@ -21,6 +22,7 @@ export function matches(item, filters, ignore = '') {
   for (const key of ['maker', 'car', 'brand', 'category', 'series', 'colorName']) {
     if (key !== ignore && filters[key]) {
       if(key === 'series') {if(canonicalSeries(item.brand,item.series) !== canonicalSeries(item.brand,filters.series))return false;}
+      else if(key === 'car') {if(canonicalVehicle(item.maker,item.car) !== canonicalVehicle(item.maker,filters.car))return false;}
       else if(item[key] !== filters[key]) return false;
     }
   }
@@ -29,7 +31,7 @@ export function matches(item, filters, ignore = '') {
   if (ignore !== 'q' && filters.q) {
     const aliases = { Refinad: 'レフィナード', Sandii: 'サンディ サンディー', Dotty: 'ダティ ダティー', IXUS: 'イクサス' };
     const colorWords=colorOptions.filter(([key])=>item.colors?.includes(key)).map(([,label,,alias])=>label+' '+alias).join(' ');
-    const haystack = normalize([item.maker, item.car, item.brand, aliases[item.brand] || '', item.series, item.colorName || '', colorWords,
+    const haystack = normalize([item.maker, ...vehicleSearchNames(item.maker,item.car), item.brand, aliases[item.brand] || '', item.series, item.colorName || '', colorWords,
       item.category === 'panel' ? 'インテリアパネル' : 'シートカバー'].join(' '));
     const tokens = filters.q.trim().split(/\s+/).map(normalize).filter(Boolean);
     if (!tokens.every(token => haystack.includes(token))) return false;
@@ -42,7 +44,7 @@ export function facet(cases, filters, key) {
   const counts = new Map();
   for (const item of cases) if (matches(item, filters, key)) {
     if(key==='car' && item.carKnown===false) continue;
-    const values=key==='color' ? [...new Set(item.colors || [])] : [key==='series'?canonicalSeries(item.brand,item.series):item[key]];
+    const values=key==='color' ? [...new Set(item.colors || [])] : [key==='series'?canonicalSeries(item.brand,item.series):key==='car'?canonicalVehicle(item.maker,item.car):item[key]];
     for(const value of values) if(value) counts.set(value, (counts.get(value) || 0) + 1);
   }
   return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'));
@@ -51,6 +53,7 @@ export function readFilters(params) {
   const f = emptyFilters();
   for (const k of ['q','maker','car','brand','category','series','color','colorName']) f[k] = params.get(k) || '';
   f.review = params.get('review') === '1';
+  f.car = canonicalVehicle(f.maker,f.car);
   return f;
 }
 export function filtersToParams(f) {

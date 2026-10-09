@@ -1,5 +1,6 @@
 import {emptyFilters, facet, filterCases, normalize, colorOptions} from './filter.js';
 import {findSeries} from './series-data.js';
+import {canonicalVehicle,vehicleSearchNames} from './vehicle-identity.js';
 
 export const conditionLabels={q:'キーワード',maker:'メーカー',car:'車種',brand:'ブランド',category:'カテゴリ',series:'シリーズ',color:'色の系統',colorName:'掲載カラー名',review:'コメント'};
 export function conditionText(filters,key){
@@ -31,7 +32,8 @@ export function recoveryOptions(cases,filters){
 export function carChoices(cases,filters,query=''){
   const all=facet(cases,{...emptyFilters(),maker:filters.maker},'car');
   const counts=new Map(facet(cases,{...filters,car:''},'car'));
-  if(filters.car&&!all.some(([name])=>name===filters.car))all.push([filters.car,0]);
+  const selected=canonicalVehicle(filters.maker,filters.car);
+  if(selected&&!all.some(([name])=>name===selected))all.push([selected,0]);
   const search=normalize(query);
-  return all.filter(([name])=>normalize(name).includes(search)).map(([name])=>({name,count:counts.get(name)||0}));
+  return all.filter(([name])=>vehicleSearchNames(filters.maker,name).some(alias=>normalize(alias).includes(search))).map(([name])=>({name,count:counts.get(name)||0}));
 }

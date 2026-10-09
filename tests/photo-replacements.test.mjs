@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {photoReplacement,detailReplacement} from '../public/photo-replacements.js';
+import {createGallery} from '../worker/gallery.mjs';
+const id='abcdef123456', original='https://refinad.com/original.jpg';
+const entry={source:original,url:'/assets/gallery/corrected.webp',thumbnail:'/assets/gallery/thumbnail.webp',previewImage:'/assets/gallery/corrected.webp',privacy:true};
+const replacements={cases:{[id]:[entry]}};
+test('only the matching photo and case change; reordered photos stay correctly matched',()=>{
+  const item={id,image:original,galleryUrl:'https://refinad.com/source',colorName:'ブラック',photoCount:2};
+  assert.equal(photoReplacement(item,replacements).image,entry.url);
+  assert.equal(photoReplacement(item,replacements).thumbnail,entry.thumbnail);
+  assert.equal(photoReplacement(item,replacements).colorName,item.colorName);
+  assert.equal(photoReplacement(item,replacements).galleryUrl,'');
+  assert.equal(photoReplacement({...item,id:'fedcba654321'},replacements).image,original);
+  assert.deepEqual(detailReplacement(id,{images:['https://example.test/keep.jpg',original],review:'苦労したが満足'},replacements).images,['https://example.test/keep.jpg',entry.url]);
+  assert.equal(detailReplacement(id,{images:[original],review:'苦労したが満足'},replacements).review,'苦労したが満足');
+  assert.equal(photoReplacement(photoReplacement(item,replacements),replacements).image,entry.url);
+});
+test('dynamic CMS overrides receive the same corrections without changing NEW or drafts',async()=>{
+  const item={id,maker:'スズキ',car:'ジムニー',image:original,firstPublishedAt:'2026-10-05T01:00:00Z'};
+  const detail={images:[original],review:'取り付けに時間がかかった'};
+  const base={catalog:{cases:[item]},details:{[id]:detail},fitment:{version:1,cases:{}},assets:{},replacements};
+  const published={item:{...item,firstPublishedAt:undefined},detail};
+  const env={DB:{prepare(sql){return {bind(){return this;},async all(){return {results:[{id,published:JSON.stringify(published),first_published_at:'2026-10-09T01:00:00Z'}]};},async first(){return {published:JSON.stringify(published)};}};}}};
+  const app=createGallery(base);
+  const catalog=await (await app.fetch(new Request('https://example.test/api/gallery/catalog'),env,{})).json();
+  assert.equal(catalog.cases[0].image,entry.url);
+  assert.equal(catalog.cases[0].firstPublishedAt,item.firstPublishedAt);
+  const result=await (await app.fetch(new Request(`https://example.test/api/gallery/details/${id}`),env,{})).json();
+  assert.deepEqual(result.images,[entry.url]);
+  assert.equal(result.review,detail.review);
+  assert.equal(published.detail.images[0],original);
+  const archive=await (await app.fetch(new Request(`https://example.test/api/gallery/details/${id}`),{},{})).json();
+  assert.deepEqual(archive.images,[entry.url]);
+});

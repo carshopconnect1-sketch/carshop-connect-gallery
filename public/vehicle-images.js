@@ -1,8 +1,21 @@
+import {vehicleArtwork} from './vehicle-artwork-data.js';
+import {canonicalVehicle} from './vehicle-identity.js';
 const imageRoot='https://m-connect.co.jp/images/carlist/';
+const artworkKey=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[\s・･:：.．/／‐‑–—−-]/g,'');
+const artworkByVehicle=new Map(vehicleArtwork.map(row=>[`${row.maker}|${artworkKey(canonicalVehicle(row.maker,row.name))}`,row.image]));
+// Image aliases do not merge gallery cases or infer vehicle compatibility.
+const imageNameAliases={'スーパーキャリィ':'スーパーキャリー','スーパーキャリイ':'スーパーキャリー','エブリイ':'エブリィ','エブリィ(バン)':'エブリィ'};
+
+function officialVehicleImage(item){
+  const maker=item.maker==='ミツビシ'?'三菱':item.maker;
+  const car=canonicalVehicle(maker,item.car);
+  return artworkByVehicle.get(`${maker}|${artworkKey(imageNameAliases[car]||car)}`)||'';
+}
 
 const slugAliases={
   avensis:'avensiswagon',
   crownmajesta:'majesta',
+  ekcross:'ekx',
   spadedbansp141:'spade',
   vits:'vitz'
 };
@@ -31,6 +44,7 @@ function productSlug(url=''){
 }
 
 export function vehicleImageCandidates(items=[],vehicleProductUrls={}){
+  const official=items.map(officialVehicleImage).filter(Boolean);
   const slugs=[];
   for(const item of items){
     const galleryPage=item.galleryUrl?.split('#')[0]||'';
@@ -38,5 +52,5 @@ export function vehicleImageCandidates(items=[],vehicleProductUrls={}){
     if(product)slugs.push(product);
     slugs.push(...gallerySlugs(item.galleryUrl));
   }
-  return [...new Set(slugs)].map(slug=>`${imageRoot}${slug}.jpg`);
+  return [...new Set([...official,...slugs.map(slug=>`${imageRoot}${slug}.jpg`)])];
 }

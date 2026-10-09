@@ -5,7 +5,7 @@ from urllib.parse import urlparse, unquote
 import hashlib, json, re, unicodedata
 from inspect_source import GalleryParser, ROOT, SOURCE
 from gallery_metadata import photo_color, image_key
-from gallery_source_corrections import apply_source_corrections, apply_color_corrections
+from gallery_source_corrections import apply_source_corrections, apply_color_corrections, apply_source_recoveries, apply_vehicle_metadata_corrections
 
 VEHICLE_PRODUCT_LINK_AUDIT = json.loads((ROOT/'audit/vehicle-product-links-2026-09-25.json').read_text(encoding='utf-8'))
 VEHICLE_PRODUCT_LINKS = {
@@ -51,6 +51,11 @@ JIMNY_HERITAGE_MESH_SOURCE_IMAGES = {
 # product code, review text, and the installation photos themselves. These
 # source pages either use a broad model label or carry a copied page title.
 SOURCE_CARD_CORRECTIONS = {
+    ('daihatsu_move.html', '0'): {
+        'car': 'ムーヴキャンバス',
+        'alt': 'ムーヴキャンバス Sandii ワッフル ディープグリーン シートカバー装着写真',
+        'reason': '2026-10-01の全件リンク照合で訂正済み。投稿の車種名・D0488-01・公開商品の品番選択がムーヴキャンバスと一致するため、再生成でも訂正を維持。',
+    },
     ('audi_a3a4.html', '0'): {
         'car': 'A3スポーツバック',
         'reason': '写真の型式表記から、A3/A4共通ページ内の車種をA3スポーツバックに特定。',
@@ -202,7 +207,7 @@ if __name__=='__main__':
             if correction.get('productUrl') and product and correction.get('updateVehicleProductUrl', True):
                 vehicle_product_urls[gallery_page]=product
             category='panel' if re.search(r'interior\s*panel|インテリアパネル',series,re.I) else 'seatcover'
-            detail={'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':a.get('alt',''),'sourceFile':file.name}
+            detail={'images':images,'review':a.get('data-review','').strip(),'productUrl':product,'photoInfo':info,'alt':correction.get('alt',a.get('alt','')),'sourceFile':file.name}
             if rejected:
                 detail['productLinkAudit']=rejected['reason']
             if correction:
@@ -270,8 +275,9 @@ if __name__=='__main__':
             raise ValueError(f'Direct product link changed; review audit for {case["id"]}: {product}')
         audited_product_links_seen.add(case['id'])
         detail['productLinkStatus']=entry['status']
-        if entry.get('productLinkReason'):
-            detail['productLinkReason']=entry['productLinkReason']
+        link_reason=entry.get('productLinkReason') or next((reason for reason in ['photo_code_not_selectable','photo_code_absent','identity_unresolved'] if any(evidence.startswith(reason+'_2026-') for evidence in entry.get('evidence',[]))),None)
+        if link_reason:
+            detail['productLinkReason']=link_reason
         approved=entry.get('approvedUrl')
         if entry['status']=='verified_product_page':
             if not approved or not approved.startswith('https://seatcover.jp/c/') or approved.rstrip('/').split('/')[-1] != product.rstrip('/').split('/')[-1]:
@@ -282,6 +288,8 @@ if __name__=='__main__':
             detail['productUrl']=''
     if audited_product_links_seen != set(DIRECT_PRODUCT_LINKS):
         raise ValueError(f'Direct-product audit contains missing cases: {sorted(set(DIRECT_PRODUCT_LINKS)-audited_product_links_seen)}')
+    apply_vehicle_metadata_corrections(cases)
+    source_recovered = apply_source_recoveries(cases)
     # Opening selection uses actual data and keeps a mix of vehicles and brands.
     targets=[('ジムニー','Refinad','Heritage Mesh'),('ムーヴキャンバス','Sandii','マカロン'),('ハイエース','Refinad','Leather Deluxe'),('N-BOX','Sandii','オールドカヌレ'),('ハスラー','Sandii','カヌレ'),('アルファード','Refinad','Quilt'),('デリカ','Refinad','Leather'),('シエンタ','Sandii','ビスキュイ'),('カングー','Sandii','カヌレ'),('FIAT','Sandii','マカロン'),('ヤリス','Refinad','Leather'),('ラパン','Sandii','マカロン')]
     featured=[]
@@ -304,7 +312,7 @@ if __name__=='__main__':
     (public/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
     report={'files':len(files),'rawRecords':raw,'deduplicated':duplicates,'duplicateDetails':duplicate_details,'curatedMergedRecords':curated_merged,'curatedExcludedImages':curated_excluded,'curatedDetails':curated_details,'excluded':exclusions,'caseCount':len(cases),'makers':len(set(x['maker'] for x in cases)),'cars':len(set((x['maker'],x['car']) for x in cases if x.get('carKnown') is not False)),'brands':{b:sum(x['brand']==b for x in cases) for b in ['Refinad','Sandii','Dotty','IXUS']},'sourceDate':data['sourceDate'],'catalogBytes':(public/'data/catalog.json').stat().st_size,'featured':featured}
     (ROOT/'audit').mkdir(exist_ok=True)
-    report.update({'importedRecords':imported,'enrichedSeries':enriched_series,'withColorName':sum(bool(c['colorName']) for c in cases),'withoutColorName':sum(not c['colorName'] for c in cases),'colorNames':sorted({c['colorName'] for c in cases if c['colorName']})})
+    report.update({'importedRecords':imported,'sourceRecoveredRecords':source_recovered,'enrichedSeries':enriched_series,'withColorName':sum(bool(c['colorName']) for c in cases),'withoutColorName':sum(not c['colorName'] for c in cases),'colorNames':sorted({c['colorName'] for c in cases if c['colorName']})})
     (ROOT/'audit/data-extraction.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ['excluded','featured','duplicateDetails','curatedDetails']},ensure_ascii=False))
     print('EXCLUSIONS',len(exclusions))

@@ -28,10 +28,19 @@ test('only a visible, exact brand/code/car match becomes public fitment', () => 
   assert.equal(audit.carMismatch,1);
   assert.equal(snapshot.cases.a.rows[0].grade,'XC\nXL');
   assert.equal(snapshot.cases.a.rows[0].seats,'4');
-  assert.doesNotMatch(JSON.stringify(snapshot),/PRIVATE|SECRET|HIDDEN|WRONG_/);
+  assert.doesNotMatch(JSON.stringify(snapshot.cases),/PRIVATE|SECRET|HIDDEN|WRONG_/);
+  assert.doesNotMatch(JSON.stringify(snapshot.records),/PRIVATE|SECRET|HIDDEN/);
 });
 
 test('quoted commas and line breaks stay within their source cells', () => {
   const rows=parseCsv('車種,グレード\r\nジムニー,"XC, XL\n特別仕様"\r\n');
   assert.deepEqual(rows,[['車種','グレード'],['ジムニー','XC, XL\n特別仕様']]);
+});
+
+test('the public master retains only visible safe rows for future CMS cases', () => {
+  const csv=parseCsv('ブランド,車種,品番,表示,型式,グレード,特記事項,history\nRefinad/Sandii,ジムニーノマド,S0646-01,表示,JC74W,JC,PRIVATE,SECRET\nRefinad/Sandii,ジムニー,S0113-02,非表示,JB64W,XC,HIDDEN,HIDDEN');
+  const {snapshot}=makeFitmentSnapshot(csv,{cases:[]},{},'2026-10-05');
+  assert.equal(snapshot.records?.length,1);
+  assert.equal(snapshot.records[0].code,'S0646-01');
+  assert.doesNotMatch(JSON.stringify(snapshot.records),/PRIVATE|SECRET|HIDDEN/);
 });

@@ -1,0 +1,38 @@
+.review-entry{margin:-8px 0 24px;font-size:1rem}
+.review-entry a{display:inline-flex;align-items:center;min-height:44px;color:var(--red);text-decoration:underline;text-underline-offset:5px}
+.finder .result-toolbar{flex-wrap:wrap}
+.gallery-view-switch{display:flex;gap:4px;flex-basis:100%;border-bottom:1px solid var(--line);margin-bottom:4px}
+.gallery-view-switch button{min-height:52px;padding:12px 20px;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--muted);font-size:1rem;line-height:1.6}
+.gallery-view-switch button[aria-pressed=true]{border-color:var(--red);color:var(--red);font-weight:600}
+.review-intro{font-size:1rem;line-height:1.8;margin:-6px 0 22px;color:var(--muted)}
+.finder .photo-grid.is-reviews{align-items:stretch;gap:24px}
+.review-card{display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;border-radius:14px;overflow:hidden;text-align:left}
+.review-card-header{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:20px 20px 0;align-items:start}
+.review-card .card-image{width:100%;aspect-ratio:4/3;border-radius:8px;box-shadow:none;outline:0;flex:none}
+.review-card .card-open{display:none}
+.review-card .card-content{padding:0 20px 20px;display:flex;flex-direction:column;flex:1;min-width:0;width:100%}
+.review-card .card-topline,.review-card .card-series,.review-card .card-color{font-size:.875rem}
+.review-card-meta h3{font-size:1.125rem;margin-top:6px;line-height:1.6}
+.review-label{font-size:.875rem;color:var(--muted);margin-top:20px;margin-bottom:8px}
+.review-excerpt{font-size:1rem;line-height:1.85;overflow-wrap:anywhere;white-space:pre-wrap;margin-bottom:20px}
+.review-excerpt.is-loading{color:var(--muted)}
+.review-read-more{display:block;border-top:1px solid var(--line);padding-top:15px;margin-top:auto;color:var(--red);font-size:.875rem;font-weight:600;line-height:1.7}
+.review-card:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.review-card:focus-visible .card-image{outline:0}
+.detail-meta .detail-review-title{font-size:1rem}
+.detail-meta .detail-review{font-size:1rem;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.case-new-badge{position:absolute;top:12px;left:12px;z-index:1;padding:6px 9px 4px;border-radius:4px;background:var(--red);color:#fff;font-size:12px;font-weight:600;line-height:1.2;letter-spacing:.08em;pointer-events:none}
+.review-card .case-new-badge{top:5px;left:5px;padding:4px 6px 3px;font-size:10px}
+.gallery-intro .new-case-summary{display:inline-block;margin-left:10px;padding:4px 8px;border-radius:4px;background:var(--red);color:#fff;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.04em;white-space:nowrap}
+.gallery-intro .new-case-summary[hidden]{display:none}
+@media(max-width:760px){
+  .gallery-intro{height:auto;min-height:68px;padding-block:10px}
+  .gallery-intro .new-case-summary:not([hidden]){display:table;margin:3px 0 0 auto;font-size:11px}
+  .review-entry{margin:0 0 18px;font-size:.875rem}
+  .gallery-view-switch{gap:0}
+  .gallery-view-switch button{padding:10px 8px;font-size:.875rem;flex:1}
+  .review-intro{font-size:.875rem;margin-bottom:18px}
+  .finder .photo-grid.is-reviews{grid-template-columns:minmax(0,1fr);gap:22px}
+  .review-card-header{padding:18px 18px 0;gap:14px;grid-template-columns:88px minmax(0,1fr)}
+  .review-card .card-content{padding:0 18px 18px}
+}

@@ -1,0 +1,2303 @@
+{
+  "checkedAt": "2026-10-06T01:20:21.159Z",
+  "caseCount": 2960,
+  "previousVehicleChoices": 356,
+  "vehicleChoices": 335,
+  "aliasGroupsFixed": 17,
+  "changedLabels": [
+    {
+      "id": "a75fc57ba4c0",
+      "maker": "MINI",
+      "from": "ミニ",
+      "to": "MINI"
+    },
+    {
+      "id": "29f32f8903e6",
+      "maker": "アウディ",
+      "from": "AUDIA1",
+      "to": "アウディ A1"
+    },
+    {
+      "id": "ba2c39d06c79",
+      "maker": "ホンダ",
+      "from": "NｰONE",
+      "to": "N-ONE"
+    },
+    {
+      "id": "995560a00292",
+      "maker": "スズキ",
+      "from": "ソリオバンデット",
+      "to": "ソリオバンディット"
+    },
+    {
+      "id": "c28f4d0258d1",
+      "maker": "スズキ",
+      "from": "ソリオバンデット",
+      "to": "ソリオバンディット"
+    },
+    {
+      "id": "89e6340d6993",
+      "maker": "スズキ",
+      "from": "ソリオバンデット",
+      "to": "ソリオバンディット"
+    },
+    {
+      "id": "debc73ffd424",
+      "maker": "トヨタ",
+      "from": "スペイドDBA-NSP141",
+      "to": "スペイド"
+    },
+    {
+      "id": "aa6d90224c4f",
+      "maker": "トヨタ",
+      "from": "プラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "bdb254e84025",
+      "maker": "アウディ",
+      "from": "A1",
+      "to": "アウディ A1"
+    },
+    {
+      "id": "476d5a9d336a",
+      "maker": "アウディ",
+      "from": "Q3",
+      "to": "アウディ Q3"
+    },
+    {
+      "id": "a0e00774a749",
+      "maker": "ジープ",
+      "from": "Jeepラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "05922a028139",
+      "maker": "MINI",
+      "from": "MINI CROSSOVER",
+      "to": "MINI クロスオーバー"
+    },
+    {
+      "id": "614cfbc9d5bd",
+      "maker": "トヨタ",
+      "from": "ルミオン",
+      "to": "カローラルミオン"
+    },
+    {
+      "id": "17ba82441e6e",
+      "maker": "BMW",
+      "from": "BMW2シリーズ",
+      "to": "BMW 2シリーズ"
+    },
+    {
+      "id": "b1dfac275ca3",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "c159af4f2ead",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "bd98102ec71a",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "33454a7c8200",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "803c29e5bc4d",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "2b45a610bbee",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "61981f04abac",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "9a9189579bbc",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "9e400011f814",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "587250311b5e",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "9673c9aa9503",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "14519f415700",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "0f83836285af",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "92a4809d8e23",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "095c3169b5d2",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "f7dc2e673fdf",
+      "maker": "BMW",
+      "from": "BMW3シリーズ",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "6ff1499643b0",
+      "maker": "トヨタ",
+      "from": "タウンエース",
+      "to": "タウンエースバン"
+    },
+    {
+      "id": "cf92b2365dad",
+      "maker": "トヨタ",
+      "from": "タウンエース",
+      "to": "タウンエースバン"
+    },
+    {
+      "id": "700744a61429",
+      "maker": "スズキ",
+      "from": "エブリィ(バン)",
+      "to": "エブリィ"
+    },
+    {
+      "id": "38a685394d21",
+      "maker": "フォルクスワーゲン",
+      "from": "フォルクスワーゲンポロ",
+      "to": "ポロ"
+    },
+    {
+      "id": "6c603240594b",
+      "maker": "アウディ",
+      "from": "Q3",
+      "to": "アウディ Q3"
+    },
+    {
+      "id": "de67eebf1104",
+      "maker": "アウディ",
+      "from": "Q3",
+      "to": "アウディ Q3"
+    },
+    {
+      "id": "0408b53e8923",
+      "maker": "フォルクスワーゲン",
+      "from": "VWゴルフ5",
+      "to": "ゴルフ5"
+    },
+    {
+      "id": "fc0ffc49abc9",
+      "maker": "MINI",
+      "from": "MINIクーパーS",
+      "to": "MINI クーパーS"
+    },
+    {
+      "id": "181656e3830e",
+      "maker": "MINI",
+      "from": "MINICROSSOVER",
+      "to": "MINI クロスオーバー"
+    },
+    {
+      "id": "7522f9c2b673",
+      "maker": "MINI",
+      "from": "MINICROSSOVER",
+      "to": "MINI クロスオーバー"
+    },
+    {
+      "id": "1ea8c027b09d",
+      "maker": "フォルクスワーゲン",
+      "from": "VWポロ",
+      "to": "ポロ"
+    },
+    {
+      "id": "b997162204c0",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "d1c1c307b33e",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "7cba68af1091",
+      "maker": "MINI",
+      "from": "MINIクロスオーバー",
+      "to": "MINI クロスオーバー"
+    },
+    {
+      "id": "805a4622af8e",
+      "maker": "MINI",
+      "from": "MINIクロスオーバー",
+      "to": "MINI クロスオーバー"
+    },
+    {
+      "id": "1a9054a27620",
+      "maker": "スズキ",
+      "from": "ソリオバンディッド",
+      "to": "ソリオバンディット"
+    },
+    {
+      "id": "867cb8766178",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "7a18b0d5a190",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "7d2b288fd0de",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "2914a1702c06",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "e8f5e453cab5",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "29e6af161c95",
+      "maker": "BMW",
+      "from": "BMW2Series",
+      "to": "BMW 2シリーズ"
+    },
+    {
+      "id": "b75d3da2e176",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "70ad42fae6a4",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "8b430af478b9",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "bbaaaf5a3858",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "bdd4b1228ffa",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "67d72b867b62",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "c03fda066217",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "07412e8fae80",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "0d6f4924bd41",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "14a636108bd3",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "615cb77d1f0c",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "b266a50967d3",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "61cbbeb3fc35",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "1e69fc4ff42e",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "60be7f138f16",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "f77ede9943cf",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "884542dba581",
+      "maker": "トヨタ",
+      "from": "ランクルプラド",
+      "to": "ランドクルーザープラド"
+    },
+    {
+      "id": "8b46969db5e2",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "5285c17839be",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "059d5e03adb2",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "c354b6a67801",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "65d61ac6ea4b",
+      "maker": "ジープ",
+      "from": "JEEPラングラー",
+      "to": "ジープラングラー"
+    },
+    {
+      "id": "b6538f335f67",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    },
+    {
+      "id": "0ae9f321a8d9",
+      "maker": "BMW",
+      "from": "BMW3Series",
+      "to": "BMW 3シリーズ"
+    }
+  ],
+  "choiceChecks": [
+    {
+      "maker": "スズキ",
+      "car": "ジムニー",
+      "count": 140
+    },
+    {
+      "maker": "スズキ",
+      "car": "ハスラー",
+      "count": 105
+    },
+    {
+      "maker": "スズキ",
+      "car": "ジムニーシエラ",
+      "count": 84
+    },
+    {
+      "maker": "スズキ",
+      "car": "スペーシア",
+      "count": 58
+    },
+    {
+      "maker": "スズキ",
+      "car": "ラパン",
+      "count": 39
+    },
+    {
+      "maker": "スズキ",
+      "car": "エブリィワゴン",
+      "count": 37
+    },
+    {
+      "maker": "スズキ",
+      "car": "ワゴンR",
+      "count": 34
+    },
+    {
+      "maker": "スズキ",
+      "car": "クロスビー",
+      "count": 31
+    },
+    {
+      "maker": "スズキ",
+      "car": "スイフトスポーツ",
+      "count": 25
+    },
+    {
+      "maker": "スズキ",
+      "car": "ジムニーノマド",
+      "count": 22
+    },
+    {
+      "maker": "スズキ",
+      "car": "ソリオバンディット",
+      "count": 12
+    },
+    {
+      "maker": "スズキ",
+      "car": "スイフト",
+      "count": 10
+    },
+    {
+      "maker": "スズキ",
+      "car": "アルト",
+      "count": 5
+    },
+    {
+      "maker": "スズキ",
+      "car": "イグニス",
+      "count": 5
+    },
+    {
+      "maker": "スズキ",
+      "car": "ソリオ",
+      "count": 3
+    },
+    {
+      "maker": "スズキ",
+      "car": "ラパンLC",
+      "count": 3
+    },
+    {
+      "maker": "スズキ",
+      "car": "ワゴンＲスマイル",
+      "count": 3
+    },
+    {
+      "maker": "スズキ",
+      "car": "MRワゴン",
+      "count": 2
+    },
+    {
+      "maker": "スズキ",
+      "car": "エブリィ",
+      "count": 2
+    },
+    {
+      "maker": "スズキ",
+      "car": "フロンクス",
+      "count": 2
+    },
+    {
+      "maker": "スズキ",
+      "car": "スーパーキャリィ",
+      "count": 1
+    },
+    {
+      "maker": "スズキ",
+      "car": "ランディ",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴキャンバス",
+      "count": 147
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "タント",
+      "count": 26
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "タフト",
+      "count": 23
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "アトレー",
+      "count": 18
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ウェイク",
+      "count": 10
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミラココア",
+      "count": 8
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ロッキー",
+      "count": 8
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストスタイル",
+      "count": 7
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ハイゼットカーゴ",
+      "count": 6
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "アトレーワゴン",
+      "count": 5
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "コペンGRスポーツ",
+      "count": 3
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミライース",
+      "count": 3
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストスポーツ",
+      "count": 2
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "コペン",
+      "count": 2
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "トール",
+      "count": 2
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ロッキーハイブリッド",
+      "count": 2
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "キャストアクティバ",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "コペンセロ",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ソニカ",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "タントファンクロス",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ネイキッド",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ミラココアプラス",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴ・カスタム",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーヴコンテ",
+      "count": 1
+    },
+    {
+      "maker": "ダイハツ",
+      "car": "ムーブコンテカスタム",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOX・N-BOXカスタム",
+      "count": 85
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-VAN",
+      "count": 30
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ヴェゼルハイブリッド",
+      "count": 24
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-ONE",
+      "count": 22
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ステップワゴン",
+      "count": 19
+    },
+    {
+      "maker": "ホンダ",
+      "car": "S660",
+      "count": 17
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フリード",
+      "count": 14
+    },
+    {
+      "maker": "ホンダ",
+      "car": "WR-V",
+      "count": 12
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィット",
+      "count": 12
+    },
+    {
+      "maker": "ホンダ",
+      "car": "オデッセイ",
+      "count": 9
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-WGN",
+      "count": 8
+    },
+    {
+      "maker": "ホンダ",
+      "car": "オデッセイハイブリッド",
+      "count": 8
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ステップワゴンハイブリッド",
+      "count": 6
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOXスラッシュ",
+      "count": 5
+    },
+    {
+      "maker": "ホンダ",
+      "car": "インサイト",
+      "count": 4
+    },
+    {
+      "maker": "ホンダ",
+      "car": "バモス",
+      "count": 4
+    },
+    {
+      "maker": "ホンダ",
+      "car": "エリシオン",
+      "count": 3
+    },
+    {
+      "maker": "ホンダ",
+      "car": "クロスロード",
+      "count": 3
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットハイブリッド",
+      "count": 3
+    },
+    {
+      "maker": "ホンダ",
+      "car": "CR-V",
+      "count": 2
+    },
+    {
+      "maker": "ホンダ",
+      "car": "CR-Z",
+      "count": 2
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-BOXジョイ",
+      "count": 2
+    },
+    {
+      "maker": "ホンダ",
+      "car": "S-MX",
+      "count": 2
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ジェイド",
+      "count": 2
+    },
+    {
+      "maker": "ホンダ",
+      "car": "N-WGNカスタム",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "VEZEL",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ZR-V",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "シビックハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "シャトル",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ビート",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットシャトル",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "フィットシャトルハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "ホンダ",
+      "car": "ライフ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "セレナ",
+      "count": 20
+    },
+    {
+      "maker": "日産",
+      "car": "キャラバン",
+      "count": 18
+    },
+    {
+      "maker": "日産",
+      "car": "リーフ",
+      "count": 18
+    },
+    {
+      "maker": "日産",
+      "car": "ノート",
+      "count": 17
+    },
+    {
+      "maker": "日産",
+      "car": "サクラ",
+      "count": 16
+    },
+    {
+      "maker": "日産",
+      "car": "キューブ",
+      "count": 15
+    },
+    {
+      "maker": "日産",
+      "car": "ルークス",
+      "count": 14
+    },
+    {
+      "maker": "日産",
+      "car": "エクストレイル",
+      "count": 13
+    },
+    {
+      "maker": "日産",
+      "car": "デイズ",
+      "count": 12
+    },
+    {
+      "maker": "日産",
+      "car": "NV100クリッパーリオ",
+      "count": 8
+    },
+    {
+      "maker": "日産",
+      "car": "エルグランド",
+      "count": 7
+    },
+    {
+      "maker": "日産",
+      "car": "フェアレディZ",
+      "count": 7
+    },
+    {
+      "maker": "日産",
+      "car": "マーチ",
+      "count": 7
+    },
+    {
+      "maker": "日産",
+      "car": "デイズルークス",
+      "count": 6
+    },
+    {
+      "maker": "日産",
+      "car": "デュアリス",
+      "count": 6
+    },
+    {
+      "maker": "日産",
+      "car": "NV200バネットワゴン",
+      "count": 3
+    },
+    {
+      "maker": "日産",
+      "car": "クリッパーリオ",
+      "count": 3
+    },
+    {
+      "maker": "日産",
+      "car": "ノートオーラ",
+      "count": 3
+    },
+    {
+      "maker": "日産",
+      "car": "NV200バネットバン",
+      "count": 2
+    },
+    {
+      "maker": "日産",
+      "car": "ジューク",
+      "count": 2
+    },
+    {
+      "maker": "日産",
+      "car": "セレナC26ハイウェイスターVセレクション",
+      "count": 2
+    },
+    {
+      "maker": "日産",
+      "car": "ティアナ",
+      "count": 2
+    },
+    {
+      "maker": "日産",
+      "car": "ムラーノ",
+      "count": 2
+    },
+    {
+      "maker": "日産",
+      "car": "NV100クリッパー",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "キックス",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "クリッパーバン",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "サファリ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "スカイライン",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "ティーダラティオ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "フーガ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "プレサージュ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "モコ",
+      "count": 1
+    },
+    {
+      "maker": "日産",
+      "car": "ラフェスタ",
+      "count": 1
+    },
+    {
+      "maker": "ルノー",
+      "car": "ルノー カングー",
+      "count": 58
+    },
+    {
+      "maker": "ルノー",
+      "car": "ルノー トゥインゴ",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-5",
+      "count": 21
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-8",
+      "count": 19
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアクロスオーバー",
+      "count": 5
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザワゴン",
+      "count": 4
+    },
+    {
+      "maker": "マツダ",
+      "car": "ビアンテ",
+      "count": 4
+    },
+    {
+      "maker": "マツダ",
+      "car": "MAZDA3",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "MPV",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "スクラムワゴン",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴンタフスタイル",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "ベリーサ",
+      "count": 3
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-30",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-60",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "MAZDA2",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラ",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラスポーツ",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "デミオ",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴン",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "プレマシー",
+      "count": 2
+    },
+    {
+      "maker": "マツダ",
+      "car": "AZワゴン",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "CX-3",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "RX-8",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "アクセラハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザスポーツ",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "アテンザセダン",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "スクラム",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレア",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "フレアワゴンカスタムスタイル",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "ボンゴバン",
+      "count": 1
+    },
+    {
+      "maker": "マツダ",
+      "car": "ミレーニア",
+      "count": 1
+    },
+    {
+      "maker": "フィアット",
+      "car": "FIAT/フィアット500/500Cチンクエチェント",
+      "count": 5
+    },
+    {
+      "maker": "フィアット",
+      "car": "FIAT/フィアット",
+      "count": 4
+    },
+    {
+      "maker": "フィアット",
+      "car": "デュカト",
+      "count": 2
+    },
+    {
+      "maker": "フィアット",
+      "car": "FIATドブロ",
+      "count": 1
+    },
+    {
+      "maker": "フィアット",
+      "car": "アバルト595",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI",
+      "count": 7
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI クロスオーバー",
+      "count": 5
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI クーパーS",
+      "count": 2
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI F56",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI R56",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI クーパー R56",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI ビクトリア",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI3door",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI5door",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIclubman(R55)",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIclubmanJCW(F54)",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIJohnCooperWorksDEP-JCW",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIROVERMINI-GT",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIクラブマン(R55・R56前期)",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIクロスオーバー(F60)",
+      "count": 1
+    },
+    {
+      "maker": "MINI",
+      "car": "MINIメイフェア",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイエース",
+      "count": 137
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリスクロス",
+      "count": 74
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アルファード",
+      "count": 41
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ルーミー",
+      "count": 38
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウス",
+      "count": 34
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイラックス",
+      "count": 28
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴォクシー",
+      "count": 25
+    },
+    {
+      "maker": "トヨタ",
+      "car": "シエンタ",
+      "count": 24
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ライズ",
+      "count": 22
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴェルファイア",
+      "count": 20
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プロボックス",
+      "count": 19
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザープラド",
+      "count": 17
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アクア",
+      "count": 14
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カムロード",
+      "count": 14
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウスα",
+      "count": 14
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハリアー",
+      "count": 13
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハリアーハイブリッド",
+      "count": 13
+    },
+    {
+      "maker": "トヨタ",
+      "car": "C-HR",
+      "count": 12
+    },
+    {
+      "maker": "トヨタ",
+      "car": "RAV4",
+      "count": 12
+    },
+    {
+      "maker": "トヨタ",
+      "car": "タウンエースバン",
+      "count": 12
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラクロスハイブリッド",
+      "count": 9
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ノアハイブリッド",
+      "count": 9
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プリウスPHV",
+      "count": 9
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ノア",
+      "count": 8
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイラックスサーフ",
+      "count": 8
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスティマ",
+      "count": 7
+    },
+    {
+      "maker": "トヨタ",
+      "car": "セリカ",
+      "count": 7
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ライズハイブリッド",
+      "count": 7
+    },
+    {
+      "maker": "トヨタ",
+      "car": "SAI",
+      "count": 6
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリスハイブリッド",
+      "count": 6
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カムリ",
+      "count": 5
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラクロス",
+      "count": 5
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンクロスオーバー",
+      "count": 4
+    },
+    {
+      "maker": "トヨタ",
+      "car": "サクシード",
+      "count": 4
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スペイド",
+      "count": 4
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヤリス",
+      "count": 4
+    },
+    {
+      "maker": "トヨタ",
+      "car": "レジアスエースバン",
+      "count": 4
+    },
+    {
+      "maker": "トヨタ",
+      "car": "86",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ウィッシュ",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴィッツ",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンロイヤル",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ソアラ",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ラクティス",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー70",
+      "count": 3
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラルミオン",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スープラ",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "タンク",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "パッソ",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プログレ",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー200系",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー250",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザー5人",
+      "count": 2
+    },
+    {
+      "maker": "トヨタ",
+      "car": "bB",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "FJCRUISER",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "iQ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "SAI（福祉車両）",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アイシス",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アベンシスワゴン",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "アルテッツァジータ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "イプサム",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ヴァンガード7人",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスクァイア",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "エスティマハイブリッド-",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カムリ・ハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラアクシオ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラレビン",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンアスリートS",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "クラウンマジェスタ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "グランドハイエース",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ノア7～8人",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイエース1列",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ハイエースコミューター",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ピクシスジョイ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ピクシスバン",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ピクシスメガ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "プレミオ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ベルタ",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "マーク2",
+      "count": 1
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ラウム",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "パサートヴァリアント",
+      "count": 6
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ニュービートル",
+      "count": 5
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "シャラン",
+      "count": 4
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "T-Cross",
+      "count": 2
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ5",
+      "count": 2
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ6",
+      "count": 2
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ザ・ビートル",
+      "count": 2
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ポロ",
+      "count": 2
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "T-Roc",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "UP!",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ7",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ8ヴァリアント",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフGTI",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフトゥーラン",
+      "count": 1
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ティグアン",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカD:5",
+      "count": 117
+    },
+    {
+      "maker": "三菱",
+      "car": "デリカミニ",
+      "count": 13
+    },
+    {
+      "maker": "三菱",
+      "car": "タウンボックス",
+      "count": 6
+    },
+    {
+      "maker": "三菱",
+      "car": "トライトン",
+      "count": 5
+    },
+    {
+      "maker": "三菱",
+      "car": "i-MiEV",
+      "count": 4
+    },
+    {
+      "maker": "三菱",
+      "car": "アウトランダーPHEV",
+      "count": 4
+    },
+    {
+      "maker": "三菱",
+      "car": "ランサーエボリューション",
+      "count": 4
+    },
+    {
+      "maker": "三菱",
+      "car": "ekスペース",
+      "count": 3
+    },
+    {
+      "maker": "三菱",
+      "car": "ギャランフォルティス",
+      "count": 3
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロイオ",
+      "count": 3
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロミニ",
+      "count": 2
+    },
+    {
+      "maker": "三菱",
+      "car": "パジェロロング",
+      "count": 2
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロス",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロスEV",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "ekクロススペース",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "ekスペースカスタム",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "i(アイ)",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "アウトランダー",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "グランディス",
+      "count": 1
+    },
+    {
+      "maker": "三菱",
+      "car": "ミニキャブバン",
+      "count": 1
+    },
+    {
+      "maker": "ジープ",
+      "car": "ジープラングラー",
+      "count": 11
+    },
+    {
+      "maker": "ジープ",
+      "car": "JEEPグランドチェロキー",
+      "count": 3
+    },
+    {
+      "maker": "ジープ",
+      "car": "JEEPチェロキー",
+      "count": 1
+    },
+    {
+      "maker": "アウディ",
+      "car": "A3スポーツバック",
+      "count": 8
+    },
+    {
+      "maker": "アウディ",
+      "car": "A4アバント",
+      "count": 8
+    },
+    {
+      "maker": "アウディ",
+      "car": "TT",
+      "count": 6
+    },
+    {
+      "maker": "アウディ",
+      "car": "TTクーペ",
+      "count": 5
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディ Q3",
+      "count": 4
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディ A1",
+      "count": 2
+    },
+    {
+      "maker": "アウディ",
+      "car": "A5スポーツバック",
+      "count": 1
+    },
+    {
+      "maker": "アウディ",
+      "car": "Q5",
+      "count": 1
+    },
+    {
+      "maker": "アウディ",
+      "car": "TTロードスター",
+      "count": 1
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディA4",
+      "count": 1
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスGS",
+      "count": 3
+    },
+    {
+      "maker": "レクサス",
+      "car": "LEXUSCT",
+      "count": 1
+    },
+    {
+      "maker": "レクサス",
+      "car": "LEXUSIS",
+      "count": 1
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスHS",
+      "count": 1
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスLS",
+      "count": 1
+    },
+    {
+      "maker": "レクサス",
+      "car": "レクサスRX",
+      "count": 1
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW 3シリーズ",
+      "count": 25
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX1",
+      "count": 7
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX2",
+      "count": 5
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW4-series",
+      "count": 3
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWZ4",
+      "count": 3
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW 2シリーズ",
+      "count": 2
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW5-Series",
+      "count": 2
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW2シリーズ2列",
+      "count": 1
+    },
+    {
+      "maker": "BMW",
+      "car": "BMWX3",
+      "count": 1
+    },
+    {
+      "maker": "スバル",
+      "car": "XV",
+      "count": 17
+    },
+    {
+      "maker": "スバル",
+      "car": "フォレスター",
+      "count": 17
+    },
+    {
+      "maker": "スバル",
+      "car": "クロストレック",
+      "count": 11
+    },
+    {
+      "maker": "スバル",
+      "car": "レヴォーグ",
+      "count": 11
+    },
+    {
+      "maker": "スバル",
+      "car": "BRZ",
+      "count": 5
+    },
+    {
+      "maker": "スバル",
+      "car": "インプレッサスポーツ",
+      "count": 5
+    },
+    {
+      "maker": "スバル",
+      "car": "インプレッサG4",
+      "count": 2
+    },
+    {
+      "maker": "スバル",
+      "car": "エクシーガ",
+      "count": 2
+    },
+    {
+      "maker": "スバル",
+      "car": "レガシィアウトバック",
+      "count": 2
+    },
+    {
+      "maker": "スバル",
+      "car": "レガシィツーリングワゴン",
+      "count": 2
+    },
+    {
+      "maker": "スバル",
+      "car": "XVハイブリッド",
+      "count": 1
+    },
+    {
+      "maker": "スバル",
+      "car": "ジャスティ",
+      "count": 1
+    },
+    {
+      "maker": "スバル",
+      "car": "ステラ",
+      "count": 1
+    },
+    {
+      "maker": "スバル",
+      "car": "レヴォーグレイバック",
+      "count": 1
+    },
+    {
+      "maker": "スバル",
+      "car": "レックス",
+      "count": 1
+    },
+    {
+      "maker": "プジョー",
+      "car": "リフター",
+      "count": 11
+    },
+    {
+      "maker": "ボルボ",
+      "car": "ボルボV40",
+      "count": 5
+    },
+    {
+      "maker": "シトロエン",
+      "car": "ベルランゴ2列",
+      "count": 12
+    },
+    {
+      "maker": "シトロエン",
+      "car": "C3エアクロス",
+      "count": 3
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ CLAクラス",
+      "count": 5
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ SLクラス",
+      "count": 2
+    },
+    {
+      "maker": "メルセデス・ベンツ",
+      "car": "メルセデス・ベンツ GLAクラス",
+      "count": 1
+    },
+    {
+      "maker": "いすゞ",
+      "car": "いすゞ ビッグホーンロング",
+      "count": 1
+    },
+    {
+      "maker": "ポルシェ",
+      "car": "PORSCHE911",
+      "count": 5
+    },
+    {
+      "maker": "クライスラー",
+      "car": "CHRYSLER300",
+      "count": 1
+    },
+    {
+      "maker": "クライスラー",
+      "car": "CHRYSLERPTクルーザー",
+      "count": 1
+    },
+    {
+      "maker": "フォード",
+      "car": "FORDエクスプローラーXLT2012",
+      "count": 1
+    }
+  ],
+  "oldUrlsChecked": 356,
+  "brandFilteredChoiceChecks": 1340,
+  "editorial": [
+    {
+      "id": "33b662261b8e",
+      "car": "ジムニー",
+      "count": 140
+    },
+    {
+      "id": "1dd0d70f1d43",
+      "car": "ムーヴキャンバス",
+      "count": 147
+    },
+    {
+      "id": "374657385fa0",
+      "car": "ハイエース",
+      "count": 137
+    },
+    {
+      "id": "e77c21564a8f",
+      "car": "N-BOX・N-BOXカスタム",
+      "count": 85
+    },
+    {
+      "id": "2b00887e3574",
+      "car": "ハスラー",
+      "count": 105
+    },
+    {
+      "id": "4d4380a47a7b",
+      "car": "アルファード",
+      "count": 41
+    },
+    {
+      "id": "ed4a78adcd33",
+      "car": "デリカD:5",
+      "count": 117
+    },
+    {
+      "id": "883b0a01de5d",
+      "car": "シエンタ",
+      "count": 24
+    },
+    {
+      "id": "81a9c0f96626",
+      "car": "ルノー カングー",
+      "count": 58
+    },
+    {
+      "id": "0a5efd469552",
+      "car": "FIAT/フィアット500/500Cチンクエチェント",
+      "count": 5
+    },
+    {
+      "id": "303573e8f84f",
+      "car": "ヤリス",
+      "count": 4
+    },
+    {
+      "id": "18f9ca69a9aa",
+      "car": "ラパン",
+      "count": 39
+    }
+  ],
+  "lifestyle": [
+    {
+      "theme": "city",
+      "car": "ムーヴキャンバス",
+      "count": 20,
+      "scope": "combination"
+    },
+    {
+      "theme": "city",
+      "car": "ラパン",
+      "count": 39,
+      "scope": "vehicle"
+    },
+    {
+      "theme": "city",
+      "car": "シエンタ",
+      "count": 1,
+      "scope": "combination"
+    },
+    {
+      "theme": "cute",
+      "car": "ハスラー",
+      "count": 20,
+      "scope": "combination"
+    },
+    {
+      "theme": "cute",
+      "car": "ムーヴキャンバス",
+      "count": 62,
+      "scope": "combination"
+    },
+    {
+      "theme": "cute",
+      "car": "N-BOX・N-BOXカスタム",
+      "count": 17,
+      "scope": "combination"
+    },
+    {
+      "theme": "cute",
+      "car": "ムーヴキャンバス",
+      "count": 62,
+      "scope": "combination"
+    },
+    {
+      "theme": "outdoor",
+      "car": "ジムニー",
+      "count": 10,
+      "scope": "combination"
+    },
+    {
+      "theme": "outdoor",
+      "car": "デリカD:5",
+      "count": 117,
+      "scope": "vehicle"
+    },
+    {
+      "theme": "outdoor",
+      "car": "ハイエース",
+      "count": 137,
+      "scope": "vehicle"
+    },
+    {
+      "theme": "outdoor",
+      "car": "ハスラー",
+      "count": 3,
+      "scope": "combination"
+    },
+    {
+      "theme": "quality",
+      "car": "アルファード",
+      "count": 41,
+      "scope": "vehicle"
+    },
+    {
+      "theme": "quality",
+      "car": "ハリアー",
+      "count": 2,
+      "scope": "combination"
+    },
+    {
+      "theme": "quality",
+      "car": "N-BOX・N-BOXカスタム",
+      "count": 85,
+      "scope": "vehicle"
+    }
+  ],
+  "detailApisChecked": 2960,
+  "permittedDetailChanges": [
+    "614cfbc9d5bd",
+    "700744a61429"
+  ],
+  "unexpectedChanges": 0,
+  "limits": [
+    "車種未記載の旧IXUS事例は車種候補・車種別の照合対象外。",
+    "世代・車体・ハイブリッド・定員の明示区分は保持。",
+    "原写真404の旧ムーヴキャンバス1事例の移行保留は別件として継続。"
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "checkedAt": "2026-10-06T01:11:43.217Z",
+  "scope": "local catalog, source aliases, picker counts, old URL variants and car-only editorial links",
+  "before": {
+    "caseCount": 2960,
+    "vehicleChoices": 356
+  },
+  "groups": [
+    {
+      "maker": "ホンダ",
+      "car": "N-ONE",
+      "before": [
+        {
+          "car": "N-ONE",
+          "count": 21
+        },
+        {
+          "car": "NｰONE",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "38d568070ff0",
+        "cc3cb4497bd1",
+        "6875bfe1b0b6",
+        "09bbf578d471",
+        "32e20e81733d",
+        "6f036046995a",
+        "88b4fa0e3cfe",
+        "d451af86a414",
+        "d53a706957c3",
+        "55b37e430257",
+        "cb46678a3451",
+        "f5a5b7a54adc",
+        "40f32ba6f7b6",
+        "71a40b06ea54",
+        "168271fc97e3",
+        "28a40b21b7e2",
+        "6c2185b50b63",
+        "fcd8731d0ee1",
+        "f99d743c35fc",
+        "9800b090e243",
+        "658578cc723f",
+        "ba2c39d06c79"
+      ],
+      "expectedCount": 22,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/honda_none2.html#card-0"
+      ]
+    },
+    {
+      "maker": "ジープ",
+      "car": "ジープラングラー",
+      "before": [
+        {
+          "car": "ジープラングラー",
+          "count": 3
+        },
+        {
+          "car": "Jeepラングラー",
+          "count": 1
+        },
+        {
+          "car": "JEEPラングラー",
+          "count": 7
+        }
+      ],
+      "caseIds": [
+        "46f2fc0d8fb7",
+        "c69b02700267",
+        "c31f830e27db",
+        "a0e00774a749",
+        "d1c1c307b33e",
+        "2914a1702c06",
+        "e8f5e453cab5",
+        "8b46969db5e2",
+        "059d5e03adb2",
+        "c354b6a67801",
+        "65d61ac6ea4b"
+      ],
+      "expectedCount": 11,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/jeep_wrangler.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/jeep_wrangler-dep-h.html#card-0"
+      ]
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディ Q3",
+      "before": [
+        {
+          "car": "アウディ Q3",
+          "count": 1
+        },
+        {
+          "car": "Q3",
+          "count": 3
+        }
+      ],
+      "caseIds": [
+        "3747e70f3bf1",
+        "476d5a9d336a",
+        "6c603240594b",
+        "de67eebf1104"
+      ],
+      "expectedCount": 4,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/audi_q3.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/audi_q3-dep-v.html#card-0"
+      ]
+    },
+    {
+      "maker": "アウディ",
+      "car": "アウディ A1",
+      "before": [
+        {
+          "car": "AUDIA1",
+          "count": 1
+        },
+        {
+          "car": "A1",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "29f32f8903e6",
+        "bdb254e84025"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/audi_audia1.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/audi_a1-dep-h.html#card-0"
+      ]
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW 3シリーズ",
+      "before": [
+        {
+          "car": "BMW 3シリーズ",
+          "count": 1
+        },
+        {
+          "car": "BMW3シリーズ",
+          "count": 16
+        },
+        {
+          "car": "BMW3Series",
+          "count": 8
+        }
+      ],
+      "caseIds": [
+        "ea5470899f1a",
+        "b1dfac275ca3",
+        "c159af4f2ead",
+        "bd98102ec71a",
+        "33454a7c8200",
+        "803c29e5bc4d",
+        "2b45a610bbee",
+        "61981f04abac",
+        "9a9189579bbc",
+        "9e400011f814",
+        "587250311b5e",
+        "9673c9aa9503",
+        "14519f415700",
+        "0f83836285af",
+        "92a4809d8e23",
+        "095c3169b5d2",
+        "f7dc2e673fdf",
+        "b997162204c0",
+        "867cb8766178",
+        "7a18b0d5a190",
+        "7d2b288fd0de",
+        "b75d3da2e176",
+        "5285c17839be",
+        "b6538f335f67",
+        "0ae9f321a8d9"
+      ],
+      "expectedCount": 25,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/bmw_3series.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/bmw_bmw3series.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/bmw_bmw3series-gt-m.html#card-0"
+      ]
+    },
+    {
+      "maker": "スズキ",
+      "car": "ソリオバンディット",
+      "before": [
+        {
+          "car": "ソリオバンデット",
+          "count": 3
+        },
+        {
+          "car": "ソリオバンディット",
+          "count": 8
+        },
+        {
+          "car": "ソリオバンディッド",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "995560a00292",
+        "c28f4d0258d1",
+        "89e6340d6993",
+        "1205fe235309",
+        "d56a95123674",
+        "fef55ab8ba3d",
+        "d12016762e4f",
+        "9b4f3b30d718",
+        "a6638cb47519",
+        "66e6b1df33fb",
+        "99e269991b4c",
+        "1a9054a27620"
+      ],
+      "expectedCount": 12,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/suzuki_solio.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/suzuki_soliobandit.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/suzuki_solio-bandit.html#card-0"
+      ]
+    },
+    {
+      "maker": "トヨタ",
+      "car": "ランドクルーザープラド",
+      "before": [
+        {
+          "car": "プラド",
+          "count": 1
+        },
+        {
+          "car": "ランクルプラド",
+          "count": 16
+        }
+      ],
+      "caseIds": [
+        "aa6d90224c4f",
+        "70ad42fae6a4",
+        "8b430af478b9",
+        "bbaaaf5a3858",
+        "bdd4b1228ffa",
+        "67d72b867b62",
+        "c03fda066217",
+        "07412e8fae80",
+        "0d6f4924bd41",
+        "14a636108bd3",
+        "615cb77d1f0c",
+        "b266a50967d3",
+        "61cbbeb3fc35",
+        "1e69fc4ff42e",
+        "60be7f138f16",
+        "f77ede9943cf",
+        "884542dba581"
+      ],
+      "expectedCount": 17,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/toyota_prado.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/toyota_landcruiserprado.html#card-0"
+      ]
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI クロスオーバー",
+      "before": [
+        {
+          "car": "MINI CROSSOVER",
+          "count": 1
+        },
+        {
+          "car": "MINICROSSOVER",
+          "count": 2
+        },
+        {
+          "car": "MINIクロスオーバー",
+          "count": 2
+        }
+      ],
+      "caseIds": [
+        "05922a028139",
+        "181656e3830e",
+        "7522f9c2b673",
+        "7cba68af1091",
+        "805a4622af8e"
+      ],
+      "expectedCount": 5,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/mini_mini-bmw.html#card-5",
+        "https://seatcover.jp/gallerys/gallery/mini_minicrossover.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/mini_mini-crossover.html#card-0"
+      ]
+    },
+    {
+      "maker": "トヨタ",
+      "car": "カローラルミオン",
+      "before": [
+        {
+          "car": "ルミオン",
+          "count": 1
+        },
+        {
+          "car": "カローラルミオン",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "614cfbc9d5bd",
+        "57016fc2817d"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/toyota_rumion.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/toyota_carollarumion.html#card-0"
+      ]
+    },
+    {
+      "maker": "BMW",
+      "car": "BMW 2シリーズ",
+      "before": [
+        {
+          "car": "BMW2シリーズ",
+          "count": 1
+        },
+        {
+          "car": "BMW2Series",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "17ba82441e6e",
+        "29e6af161c95"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/bmw_bmw2series.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/bmw_bmw2series-euro-lux.html#card-0"
+      ]
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ポロ",
+      "before": [
+        {
+          "car": "フォルクスワーゲンポロ",
+          "count": 1
+        },
+        {
+          "car": "VWポロ",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "38a685394d21",
+        "1ea8c027b09d"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/volkswagen_polo.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/volkswagen_vw-polo.html#card-0"
+      ]
+    },
+    {
+      "maker": "フォルクスワーゲン",
+      "car": "ゴルフ5",
+      "before": [
+        {
+          "car": "VWゴルフ5",
+          "count": 1
+        },
+        {
+          "car": "ゴルフ5",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "0408b53e8923",
+        "8e1a4b1cb223"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/volkswagen_golf3.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/volkswagen_golf5.html#card-0"
+      ]
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI クーパーS",
+      "before": [
+        {
+          "car": "MINIクーパーS",
+          "count": 1
+        },
+        {
+          "car": "MINI クーパーS",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "fc0ffc49abc9",
+        "0d5801bb112a"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/mini_mini-coopers.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/mini_mini-exclusive-design.html#card-0"
+      ]
+    },
+    {
+      "maker": "トヨタ",
+      "car": "スペイド",
+      "before": [
+        {
+          "car": "スペイドDBA-NSP141",
+          "count": 1
+        },
+        {
+          "car": "スペイド",
+          "count": 3
+        }
+      ],
+      "caseIds": [
+        "debc73ffd424",
+        "d42e9553e580",
+        "1ebae562dd7f",
+        "b6b8f64120c3"
+      ],
+      "expectedCount": 4,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/toyota_porte.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/toyota_spade.html#card-0"
+      ]
+    },
+    {
+      "maker": "トヨタ",
+      "car": "タウンエースバン",
+      "before": [
+        {
+          "car": "タウンエース",
+          "count": 2
+        },
+        {
+          "car": "タウンエースバン",
+          "count": 10
+        }
+      ],
+      "caseIds": [
+        "6ff1499643b0",
+        "cf92b2365dad",
+        "08f646597445",
+        "ed1e19f23f3a",
+        "d1d8d76026c4",
+        "583fabe6fe08",
+        "b35e636a8d61",
+        "6bdf86a341e2",
+        "e84c8fe75d34",
+        "9689269eea87",
+        "6e41240ce1c2",
+        "11cc2c9b1081"
+      ],
+      "expectedCount": 12,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/toyota_townace.html#card-0",
+        "https://seatcover.jp/gallerys/gallery/toyota_townacevan.html#card-0"
+      ]
+    },
+    {
+      "maker": "MINI",
+      "car": "MINI",
+      "before": [
+        {
+          "car": "MINI",
+          "count": 6
+        },
+        {
+          "car": "ミニ",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "4d27b8ef4208",
+        "9260dd50bb4e",
+        "06d822e0a808",
+        "9b9bea254a8d",
+        "f9bee71f5b45",
+        "59571b579521",
+        "a75fc57ba4c0"
+      ],
+      "expectedCount": 7,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/mini_mini.html#card-0"
+      ]
+    },
+    {
+      "maker": "スズキ",
+      "car": "エブリィ",
+      "before": [
+        {
+          "car": "エブリィ",
+          "count": 1
+        },
+        {
+          "car": "エブリィ(バン)",
+          "count": 1
+        }
+      ],
+      "caseIds": [
+        "ac5184f24420",
+        "700744a61429"
+      ],
+      "expectedCount": 2,
+      "evidence": [
+        "https://seatcover.jp/gallerys/gallery/suzuki_everyvan.html#card-0"
+      ]
+    }
+  ],
+  "keepSeparate": [
+    [
+      "デリカD:5",
+      "デリカD:2",
+      "デリカミニ"
+    ],
+    [
+      "コペン",
+      "コペンGRスポーツ",
+      "コペンセロ"
+    ],
+    [
+      "ソリオ",
+      "ソリオバンディット"
+    ],
+    [
+      "エブリィ",
+      "エブリィワゴン"
+    ],
+    [
+      "MINI クロスオーバー",
+      "MINIクロスオーバー(F60)"
+    ],
+    [
+      "ハイエース",
+      "ハイエース1列",
+      "ハイエースコミューター"
+    ],
+    [
+      "プリウス",
+      "プリウスPHV",
+      "プリウスα"
+    ],
+    [
+      "BMW 2シリーズ",
+      "BMW2シリーズ2列"
+    ]
+  ],
+  "metadataCorrections": [
+    {
+      "caseId": "614cfbc9d5bd",
+      "brand": "Refinad",
+      "verifiedImages": [
+        "https://refinad.com/wp-content/uploads/2020/07/0171-ide-1.jpg.webp",
+        "https://refinad.com/wp-content/uploads/2020/07/0171-ide-2.jpg.webp"
+      ],
+      "originalPhotoInfo": [
+        {
+          "型式": "DBA-M900A",
+          "品番": "T0394-01"
+        },
+        {
+          "型式": "DBA-M900A",
+          "品番": "T0394-01"
+        }
+      ],
+      "sourceUrl": "https://refinad.com/portfolio-item/corolla-rumion-refinad-leather-series/",
+      "photoInfo": [
+        {
+          "品番": "T0047-02",
+          "車両情報": "ルミオン 平成20年式"
+        },
+        {
+          "品番": "T0047-02",
+          "車両情報": "ルミオン 平成20年式"
+        }
+      ],
+      "reason": "旧ギャラリーの写真情報は別車種の型式・品番。公式投稿で写真全点のURLが一致する本文の明示値へ訂正。"
+    },
+    {
+      "caseId": "700744a61429",
+      "brand": "Sandii",
+      "verifiedImages": [
+        "https://sandii.net/wp-content/uploads/2021/11/1377-ide-1.jpg",
+        "https://sandii.net/wp-content/uploads/2021/11/1377-ide-2.jpg",
+        "https://sandii.net/wp-content/uploads/2021/11/1377-ide-3.jpg"
+      ],
+      "originalPhotoInfo": [
+        {
+          "型式": "38A-DA17W",
+          "品番": "S0110-05"
+        },
+        {
+          "型式": "38A-DA17W",
+          "品番": "S0110-05"
+        },
+        {
+          "型式": "38A-DA17W",
+          "品番": "S0110-05"
+        }
+      ],
+      "sourceUrl": "https://sandii.net/portfolio-item/sandii26606/",
+      "photoInfo": [
+        {
+          "品番": "S0111-06",
+          "型式": "DA17V"
+        },
+        {
+          "品番": "S0111-06",
+          "型式": "DA17V"
+        },
+        {
+          "品番": "S0111-06",
+          "型式": "DA17V"
+        }
+      ],
+      "reason": "旧ギャラリーの写真情報は別車種の型式・品番。公式投稿で写真全点のURLが一致する本文の明示値へ訂正。"
+    }
+  ]
+}

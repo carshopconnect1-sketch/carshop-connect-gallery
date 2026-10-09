@@ -907,17 +907,17 @@
       "count": 1
     }
   ],
-  "caseCount": 2895,
+  "caseCount": 2896,
   "makers": 24,
   "cars": 355,
   "brands": {
-    "Refinad": 1500,
+    "Refinad": 1501,
     "Sandii": 1097,
     "Dotty": 155,
     "IXUS": 143
   },
   "sourceDate": "2026-06-04",
-  "catalogBytes": 1162265,
+  "catalogBytes": 1162663,
   "featured": [
     {
       "id": "33b662261b8e",
@@ -1135,8 +1135,9 @@
     }
   ],
   "importedRecords": 143,
+  "sourceRecoveredRecords": 1,
   "enrichedSeries": 0,
-  "withColorName": 2706,
+  "withColorName": 2707,
   "withoutColorName": 189,
   "colorNames": [
     "アイボリー",

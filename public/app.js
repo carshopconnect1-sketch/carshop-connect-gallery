@@ -6,6 +6,9 @@ import {conditionLabels,conditionText,removeCondition,recoveryOptions,carChoices
 import {mountPhotoStory} from './photo-story.js';
 import {vehicleImageCandidates} from './vehicle-images.js';
 import {productLink as resolveProductLink} from './product-link.js';
+import {reviewExcerpt,createDetailLoader,publishedReviewText} from './reviews.js';
+import {isNewCase} from './new-cases.js';
+import {formatFitmentPeriod} from './fitment.js';
 
 const $ = id => document.getElementById(id);
 const number = n => n.toLocaleString('ja-JP');
@@ -15,7 +18,11 @@ let makerRegion = makerCatalog.find(m=>m.name===filters.maker)?.region || 'domes
 let activePanel=filters.brand?'brand':filters.color||filters.colorName?'color':'vehicle';
 let dockFrame=0;
 let detailAbort, activeDetail = null, photoIndex = 0;
-const detailCache = new Map();
+const loadDetail = createDetailLoader(async id=>{
+  const response=await fetch(`/api/gallery/details/${id}`);
+  if(!response.ok)throw new Error('detail');
+  return response.json();
+});
 let fitmentSnapshotPromise;
 const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="15" height="15" rx="2"/><path d="M17 3H4a1 1 0 0 0-1 1v13"/></svg>';
 function el(tag, cls, text) {const e = document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;}
@@ -29,17 +36,39 @@ function image(src, alt, eager=false) {
   return img;
 }
 function card(item) {
-  const b=el('button','photo-card');b.type='button';b.dataset.id=item.id;
-  b.setAttribute('aria-label',`${item.car} / ${item.brand} ${item.series} / 装着写真${item.photoCount}枚を見る`);
+  const reading=filters.review;
+  const fresh=isNewCase(item);
+  const b=el('button',reading?'photo-card review-card':'photo-card');b.type='button';b.dataset.id=item.id;
+  b.setAttribute('aria-label',`${fresh?'新着 / ':''}${item.car} / ${item.brand} ${item.series} / ${reading?'感想と':''}装着写真${item.photoCount}枚を見る`);
   const picture=el('div','card-image');picture.append(image(item.thumbnail||item.image,`${item.car} ${item.brand} ${item.series}の装着写真`));
+  if(fresh)picture.append(el('span','case-new-badge','NEW'));
   const count=el('span','photo-count');count.innerHTML=photoIcon;count.append(document.createTextNode(item.photoCount+'枚'));
   picture.append(count,el('span','card-open','↗'));
   const body=el('div','card-content');const top=el('div','card-topline');top.append(el('span','card-brand',item.brand),el('span','',item.maker));
   body.append(top,el('h3','',item.car),el('p','card-series',item.series));
   if(item.colorName)body.append(el('p','card-color',item.colorName));
-  if(item.hasReview)body.append(el('p','card-extra','掲載コメントあり'));
+  if(reading){
+    const header=el('div','review-card-header');const meta=el('div','review-card-meta');
+    meta.append(...body.childNodes);header.append(picture,meta);b.append(header);
+    const label=el('p','review-label','お客様の感想');
+    const excerpt=el('p','review-excerpt is-loading','感想を読み込んでいます…');
+    body.append(label,excerpt,el('span','review-read-more','写真と感想を読む'));
+    loadDetail(item.id).then(detail=>{
+      if(!b.isConnected)return;
+      const preview=reviewExcerpt(publishedReviewText(detail));
+      label.textContent=preview.truncated?'お客様の感想（一部）':'お客様の感想';
+      excerpt.textContent=preview.text||'この事例には感想本文がありません。';
+      excerpt.classList.remove('is-loading');
+    }).catch(()=>{
+      if(!b.isConnected)return;
+      excerpt.textContent='感想を読み込めませんでした。詳細画面で再試行できます。';
+      excerpt.classList.remove('is-loading');
+    });
+  }
+  else if(item.hasReview)body.append(el('p','card-extra','お客様の感想あり'));
   else if(item.category==='panel')body.append(el('p','card-extra','インテリアパネル'));
-  b.append(picture,body);b.addEventListener('click',()=>openDetail(item));return b;
+  if(reading)b.append(body);else b.append(picture,body);
+  b.addEventListener('click',()=>openDetail(item));return b;
 }
 function renderFilters() {
   $('category').value=filters.category;$('reviewOnly').checked=filters.review;$('keyword').value=filters.q;
@@ -95,7 +124,7 @@ function renderCars(){
     const b=el('button','car-choice');b.type='button';b.dataset.car=name;
     const active=filters.car===name;b.setAttribute('aria-pressed',String(active));b.disabled=!count&&!active;
     b.setAttribute('aria-label',`${name}を選ぶ ${number(count)}件`);
-    const allVehicleCases=cases.filter(item=>item.carKnown!==false&&item.car===name&&(!filters.maker||item.maker===filters.maker));
+    const allVehicleCases=filterCases(cases.filter(item=>item.carKnown!==false),{...emptyFilters(),maker:filters.maker,car:name});
     const matchingVehicleCases=filterCases(allVehicleCases,{...filters,car:name});
     const visualCases=matchingVehicleCases.length?matchingVehicleCases:allVehicleCases;
     const fallbackItem=visualCases.find(item=>item.thumbnail||item.image)||allVehicleCases[0];
@@ -135,8 +164,8 @@ function renderFinderSummary(){
     $(`tab-${panel}`).classList.toggle('has-selection',!!chosen.length);
   }
   $('resultsSummary').textContent=summary||'すべての装着写真';
-  $('inlineCount').textContent=filtered.length?`${number(filtered.length)}件の装着写真が見つかりました`:'条件に合う写真がありません';
-  $('showPhotos').textContent=filtered.length?`${number(filtered.length)}件の写真を見る ↓`:'条件を見直す ↑';
+  $('inlineCount').textContent=filtered.length?`${number(filtered.length)}件の${filters.review?'装着レビュー':'装着写真'}が見つかりました`:`条件に合う${filters.review?'レビュー':'写真'}がありません`;
+  $('showPhotos').textContent=filtered.length?`${number(filtered.length)}件の${filters.review?'レビュー':'写真'}を見る ↓`:'条件を見直す ↑';
 }
 function renderRecovery(){
   $('filterFeedback').hidden=!!filtered.length;
@@ -227,6 +256,15 @@ function renderSeries(){
 function updateResults() {
   filtered=filterCases(cases,filters);shown=0;$('photoGrid').replaceChildren();
   $('resultCount').textContent=number(filtered.length);$('emptyState').hidden=!!filtered.length;
+  $('resultUnit').textContent=filters.review?'件の装着レビュー':'件の装着写真';
+  $('photoGrid').classList.toggle('is-reviews',filters.review);
+  $('reviewIntro').hidden=!filters.review;
+  $('emptyTitle').textContent=`条件に合う${filters.review?'装着レビュー':'装着写真'}がありません。`;
+  $('emptyHelp').textContent=`選択した条件を減らすと、${filters.review?'レビュー':'写真'}が見つかることがあります。`;
+  $('loadMore').firstChild.textContent=filters.review?'もっと装着レビューを見る ':'もっと装着写真を見る ';
+  document.querySelectorAll('[data-review-view]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.reviewView==='reviews')===filters.review)));
+  const reviewParams=filtersToParams({...filters,review:true}).toString();
+  $('reviewEntry').href=location.pathname+'?'+reviewParams+'#photoResults';
   renderFilters();appendPage();
 }
 function appendPage() {
@@ -256,6 +294,12 @@ function mountControls(){
   document.querySelectorAll('[data-panel]').forEach(b=>b.addEventListener('click',()=>setPanel(b.dataset.panel)));
   document.querySelectorAll('[data-edit-filters]').forEach(b=>b.addEventListener('click',editFilters));
   $('showPhotos').addEventListener('click',showPhotos);
+  $('reviewEntry').addEventListener('click',e=>{
+    if(e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+    e.preventDefault();const url=$('reviewEntry').getAttribute('href');
+    commit({...filters,review:true},false);window.history.pushState(null,'',url);showPhotos();
+  });
+  document.querySelectorAll('[data-review-view]').forEach(b=>b.addEventListener('click',()=>commit({...filters,review:b.dataset.reviewView==='reviews'})));
   $('keywordSearch').hidden=!filters.q;$('keywordToggle').setAttribute('aria-expanded',String(!!filters.q));
   $('keywordToggle').addEventListener('click',()=>{const open=$('keywordSearch').hidden;$('keywordSearch').hidden=!open;$('keywordToggle').setAttribute('aria-expanded',String(open));if(open)$('keyword').focus();});
   document.querySelector('.finder-tabs').addEventListener('keydown',e=>{
@@ -279,13 +323,13 @@ async function openDetail(item){
   const wait=el('div','error-state');wait.append(el('h2','',item.car),el('p','','写真を読み込んでいます…'));wait.firstChild.id='detailCar';$('detailContent').replaceChildren(wait);
   if(!$('photoDialog').open)$('photoDialog').showModal();$('photoDialog').scrollTop=0;
   try{
-    let detail=detailCache.get(item.id);
-    if(!detail){const response=await fetch(`/api/gallery/details/${item.id}`,{signal:abort.signal});if(!response.ok)throw new Error('detail');detail=await response.json();if(!Array.isArray(detail.images)||!detail.images.length)throw new Error('images');detailCache.set(item.id,detail);}
+    const detail=await loadDetail(item.id);
     if(abort.signal.aborted)return;activeDetail={item,...detail};renderDetail();mountFitment(item,detail,abort.signal);
-  }catch(error){if(error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry);const fallback=productLink(item);if(fallback)state.append(link(fallback.label,fallback.url,'text-button'));$('detailContent').replaceChildren(state);}
+  }catch(error){if(abort.signal.aborted||error.name==='AbortError')return;const state=el('div','error-state');const title=el('h2','',item.car);title.id='detailCar';state.append(title,el('p','','詳細を読み込めませんでした。'));const retry=el('button','secondary','もう一度読み込む');retry.addEventListener('click',()=>openDetail(item));state.append(retry);const fallback=productLink(item);if(fallback)state.append(link(fallback.label,fallback.url,'text-button'));$('detailContent').replaceChildren(state);}
 }
 function renderDetail(){
-  const {item,images,review,productUrl,photoInfo}=activeDetail;
+  const {item,images,productUrl,photoInfo}=activeDetail;
+  const review=publishedReviewText(activeDetail);
   const layout=el('div','detail-layout');const visual=el('div','detail-visual');const stage=el('div','detail-stage');stage.id='detailStage';
   const counter=el('p','detail-photo-count');counter.id='detailPhotoCount';counter.setAttribute('aria-live','polite');
   const thumbs=el('div','detail-thumbs');thumbs.id='detailThumbs';thumbs.setAttribute('aria-label','写真を選ぶ');
@@ -298,11 +342,11 @@ function renderDetail(){
   if(item.colorName)info.append(el('dt','','掲載色名'),el('dd','',item.colorName));
   if(activeDetail.carNote)info.append(el('dt','','車種情報'),el('dd','',activeDetail.carNote));
   // Only source-provided fitment values. Never derive year/grade/colour from photos.
-  if(Array.isArray(photoInfo))for(const key of ['型式','品番']){const values=[...new Set(photoInfo.map(row=>row?.[key]).filter(Boolean))];if(values.length===1)info.append(el('dt','',`掲載${key}`),el('dd','',String(values[0])));}
+  if(Array.isArray(photoInfo))for(const key of ['型式','車両情報','品番']){const values=[...new Set(photoInfo.map(row=>row?.[key]).filter(Boolean))];if(values.length===1)info.append(el('dt','',`掲載${key}`),el('dd','',String(values[0])));}
   meta.append(info);
   const fitmentMount=el('div');fitmentMount.id='fitmentMount';meta.append(fitmentMount);
-  if(review)meta.append(el('h3','detail-review-title','掲載コメント'),el('p','detail-review',review));
-  const destination=productLink(item,productUrl,activeDetail.productLinkReason);const links=el('div','detail-links');
+  if(review)meta.append(el('h3','detail-review-title','お客様の感想'),el('p','detail-review',review));
+  const destination=productLink(item,productUrl,activeDetail.productLinkReason||activeDetail.productLinkStatus);const links=el('div','detail-links');
   if(destination){links.append(link(destination.label,destination.url,'primary'));meta.append(links);}
   meta.append(el('p','detail-fit-note','同じ車種でも年式・型式・グレードによって適合が異なります。購入前に必ず適合を確認してください。'));
   if(item.category==='seatcover')meta.append(link('車種・年式から適合を確認 ↗','https://seatcover.jp/f/match_renewal','text-button'));
@@ -333,8 +377,9 @@ async function mountFitment(item,detail,signal){
       const block=el('div','detail-fitment-row');
       if(match.rows.length>1)block.append(el('p','detail-fitment-number',`条件 ${index+1}`));
       const list=el('dl','detail-fitment-info');
+      fitmentField(list,'適合車種',row.car);
       fitmentField(list,'掲載年式',row.year);
-      const period=[row.yearStart,row.yearEnd].map(value=>String(value||'').slice(0,7).replace('-','/')).filter(Boolean).join(' ～ ');
+      const period=formatFitmentPeriod(row);
       fitmentField(list,'年式範囲',period);
       fitmentField(list,'型式',row.model);
       fitmentField(list,'グレード',row.grade);
@@ -342,7 +387,7 @@ async function mountFitment(item,detail,signal){
       block.append(list);body.append(block);
     }
     const date=String(snapshot.syncedAt||'').slice(0,10).replaceAll('-','/');
-    body.append(el('p','detail-fitment-source',`適合マスターの掲載情報（${date}取得）。掲載年式と年式範囲に差がある場合があります。購入前に公式適合表で年式・型式・グレードを再確認してください。販売状態や在庫を示すものではありません。`));
+    body.append(el('p','detail-fitment-source',`適合マスターの掲載情報（${date}反映）。掲載年式と年式範囲に差がある場合があります。購入前に公式適合表で年式・型式・グレードを再確認してください。販売状態や在庫を示すものではありません。`));
     panel.append(body);$('fitmentMount').replaceChildren(panel);
   }catch{ /* An unavailable snapshot must not be mistaken for confirmed fitment. */ }
 }
@@ -360,6 +405,9 @@ async function start(){
     if(!Array.isArray(cases)||!cases.length)throw new Error('empty');
     mountControls();mountPhotoStory(cases,data.featuredIds,openVehicleGallery);$('loading').hidden=true;
     $('totalCases').textContent=number(cases.length);$('totalCars').textContent=number(new Set(cases.filter(c=>c.carKnown!==false).map(c=>c.maker+'|'+c.car)).size);
+    const newCount=cases.filter(item=>isNewCase(item)).length;
+    $('newCaseSummary').hidden=!newCount;
+    $('newCaseSummary').textContent=`NEW ${number(newCount)}件`;
     $('aboutCaseCount').textContent=number(cases.length)+'件の';
     $('sourceNote').textContent=`制作プレビュー｜${data.sourceDate}の保存資料${data.additionalSource?'と提供された旧ギャラリー':''}から${number(cases.length)}件を再構成。色名は保存資料の写真説明に基づきます。適合条件は品番・車種を照合できた事例のみ表示。装着写真の最新全件とは同期していません。`;
     updateResults();

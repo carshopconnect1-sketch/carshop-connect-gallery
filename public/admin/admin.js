@@ -17,7 +17,7 @@ function leave(){return !dirty || window.confirm('保存していない変更が
 function setTab(tab){for(const b of document.querySelectorAll('[data-tab]'))b.classList.toggle('active',b.dataset.tab===tab);$('caseWorkspace').hidden=tab!=='cases';$('existingPanel').hidden=tab!=='existing';$('staffPanel').hidden=tab!=='staff';}
 function readDraft(){
   const data=new FormData(editor);const d={};
-  for(const key of ['maker','car','brand','category','series','colorName','code','model','productUrl','review','internalNote'])d[key]=String(data.get(key)||'').trim();
+  for(const key of ['maker','car','brand','category','series','colorName','code','model','vehicleInfo','productUrl','review','internalNote'])d[key]=String(data.get(key)||'').trim();
   for(const key of ['photosConfirmed','colorConfirmed','consentConfirmed'])d[key]=data.get(key)==='on';
   d.colors=[...document.querySelectorAll('#colorFamilies input:checked')].map(e=>e.value);d.photos=photos.map(p=>({...p}));return d;
 }
@@ -56,7 +56,7 @@ async function refresh(){cases=(await api('cases')).cases;renderList();}
 function acceptRecord(value){active=value;const index=cases.findIndex(v=>v.id===value.id);if(index<0)cases.unshift(value);else cases[index]=value;dirty=false;renderList();}
 function openEditor(value){
   acceptRecord(value);photos=value.draft.photos.map(p=>({...p}));
-  for(const key of ['maker','car','brand','category','series','colorName','code','model','productUrl','review','internalNote'])editor.elements[key].value=value.draft[key]||'';
+  for(const key of ['maker','car','brand','category','series','colorName','code','model','vehicleInfo','productUrl','review','internalNote'])editor.elements[key].value=value.draft[key]||'';
   for(const key of ['photosConfirmed','colorConfirmed','consentConfirmed'])editor.elements[key].checked=!!value.draft[key];
   for(const input of document.querySelectorAll('#colorFamilies input'))input.checked=value.draft.colors?.includes(input.value);
   $('caseStatus').textContent=labels[value.status];$('caseStatus').className='badge '+value.status;

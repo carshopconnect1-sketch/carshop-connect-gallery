@@ -11,9 +11,12 @@ const linkAudit=await read('audit/direct-product-links-2026-09-25.json');
 const auditedLinks=new Map(linkAudit.entries.map(row=>[row.caseId,row]));
 const sourceReview=await read('audit/yellow-color-review-2026-10-01.json');
 const allColorReview=await read('audit/all-color-review-2026-10-02.json');
+const recoveryAudit=await read('audit/source-recoveries-2026-10-05.json');
+const recoveredCases=new Map(recoveryAudit.entries.filter(entry=>entry.status==='ready').map(entry=>[entry.case.id,entry]));
 const correctedColors=new Map([...sourceReview.entries,...allColorReview.entries].filter(row=>row.correction?.colorName).map(row=>[row.caseId,row]));
 test('every retained source record is accounted for; IDs and detail files are consistent',async()=>{
- assert.equal(audit.rawRecords+audit.importedRecords,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
+ assert.equal(audit.sourceRecoveredRecords,recoveredCases.size);
+ assert.equal(audit.rawRecords+audit.importedRecords+recoveredCases.size,data.cases.length+audit.deduplicated+audit.curatedMergedRecords+audit.excluded.reduce((n,x)=>n+x.count,0));
  assert.equal(new Set(data.cases.map(x=>x.id)).size,data.cases.length);
  for(const c of data.cases){
   assert.match(c.id,/^[a-f0-9]{12}$/);const detail=await read(`public/data/details/${c.id}.json`);
@@ -88,11 +91,28 @@ test('color labels are explicitly present in source descriptions; IXUS gaps are 
     assert.equal((detail.colorReview||detail.sourceMetadata).url,corrected.sourceUrl);
     assert.deepEqual(detail.images,corrected.verifiedImages);
     assert.deepEqual(c.colors,corrected.correction.colors);
+   }else if(recoveredCases.has(c.id)){
+    const source=recoveredCases.get(c.id);
+    assert.equal(detail.sourceMetadata.url,source.sourceUrl);
+    assert.equal(c.colorName,source.case.colorName);
+    assert.deepEqual(detail.images,source.case.detail.images);
+    assert.ok(source.imageStatus.every(status=>status===200));
    }else assert.equal(detail.colorSource,'保存HTMLの写真説明（alt）');
   }
   else assert.deepEqual(c.colors,[]);
   if(c.brand==='IXUS'){assert.equal(c.carKnown,false);assert.equal(c.colorName,'');assert.equal(detail.sourceFile,'old.zip/old/v2/index.html');}
  }
+});
+
+test('legacy recovery keeps nonstandard fitment explicit and unavailable photos unpublished',async()=>{
+ const sai=data.cases.find(c=>c.id==='423585552674');
+ const detail=await read(`public/data/details/${sai.id}.json`);
+ assert.equal(sai.car,'SAI（福祉車両）');
+ assert.match(detail.carNote,/福祉車両専用に型取りした製品ではない/);
+ assert.equal(detail.productUrl,'');
+ assert.equal(productLink(sai,detail.productUrl,data.vehicleProductLinks,detail.productLinkReason).url,'https://seatcover.jp/f/match_renewal');
+ assert.equal(sai.firstPublishedAt,undefined);
+ for(const pending of recoveryAudit.entries.filter(entry=>entry.status!=='ready'))assert.ok(!data.cases.some(c=>c.id===pending.caseId));
 });
 test('featured set has distinct cars and retains source product links',async()=>{
  const featured=data.featuredIds.map(id=>data.cases.find(x=>x.id===id));assert.ok(featured.length>=10);assert.equal(new Set(featured.map(x=>x.car)).size,featured.length);

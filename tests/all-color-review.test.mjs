@@ -51,8 +51,9 @@ test('the four previously pending photos use user-confirmed names and color fami
  }
  assert.equal(review.pendingPaletteReviews,0);
  assert.equal(review.pendingSourceReviews,0);
- assert.equal(review.catalogCases,catalog.cases.length);
- assert.equal(Object.values(review.coverage).reduce((n,row)=>n+Object.values(row).reduce((a,b)=>a+b,0),0),catalog.cases.length);
+ const recovered=(await read('audit/source-recoveries-2026-10-05.json')).entries.filter(entry=>entry.status==='ready');
+ assert.equal(review.catalogCases+recovered.length,catalog.cases.length);
+ assert.equal(Object.values(review.coverage).reduce((n,row)=>n+Object.values(row).reduce((a,b)=>a+b,0),0)+recovered.length,catalog.cases.length);
 });
 
 test('contradictory official Dayz metadata cannot replace the installed orange color or photo code',async()=>{

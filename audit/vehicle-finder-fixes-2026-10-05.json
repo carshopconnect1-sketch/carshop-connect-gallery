@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-05T08:56:55.664Z",
+  "scope": "ローカルプレビューのみ。PUSH・共有デプロイなし。",
+  "source": {
+    "url": "https://carshopconnect.itembox.cloud/item/css/images/item_renewal/car-model-link/car-model-link.js?2026-09-18-1610",
+    "httpStatus": 200,
+    "rows": 589,
+    "identicalToSavedRows": true
+  },
+  "extraArtwork": {
+    "vehicle": "コペンGRスポーツ",
+    "sourcePage": "https://toyota.jp/carlineup/archive/copen/",
+    "image": "https://toyota.jp/pages/contents/carlineup/archive/copen/images/copen-2019.jpg",
+    "httpStatus": 200,
+    "browserNaturalWidth": 1308
+  },
+  "fixes": [
+    "新規事例のgalleryUrlが/でもメーカー・車種名から公式車両画像を選択",
+    "デリカD:5の別表記を統一し、旧URL・写真レール・候補選択で117件",
+    "コペンGRスポーツの半角・全角表記を統一し3件",
+    "旧プログレスをプログレへ統一し2件",
+    "候補画像の抽出に検索と同じ車種判定を使用"
+  ],
+  "verifiedArtwork": [
+    {
+      "car": "ekクロス",
+      "image": "https://m-connect.co.jp/images/carlist/ekx.jpg",
+      "width": 183
+    },
+    {
+      "car": "タントファンクロス",
+      "count": "1",
+      "src": "https://m-connect.co.jp/images/carlist/tantofuncross.jpg",
+      "width": 250
+    },
+    {
+      "car": "プログレ",
+      "count": "2",
+      "src": "https://m-connect.co.jp/images/carlist/progres.jpg",
+      "width": 180
+    },
+    {
+      "car": "エブリィ",
+      "image": "https://m-connect.co.jp/images/carlist/everyvan.jpg",
+      "width": 250
+    },
+    {
+      "car": "スーパーキャリィ",
+      "image": "https://m-connect.co.jp/images/carlist/supercarry.jpg",
+      "width": 250
+    },
+    {
+      "car": "コペンGRスポーツ",
+      "image": "https://toyota.jp/pages/contents/carlineup/archive/copen/images/copen-2019.jpg",
+      "width": 1308
+    }
+  ],
+  "counts": {
+    "total": 2960,
+    "legacy": 2896,
+    "newCases": 64,
+    "delicaD5": 117,
+    "copenGR": 3,
+    "progres": 2,
+    "pendingRecovery": 1
+  },
+  "preservation": {
+    "oldIds": 2895,
+    "oldPhotoReviewProductFieldsChanged": 0,
+    "oldLinkReasonsChanged": 0,
+    "newFirstPublicationDatesChanged": 0
+  },
+  "tests": {
+    "nodePass": 69,
+    "nodeFail": 0,
+    "syntaxCheck": "pass",
+    "build": {
+      "status": "pass",
+      "staticCases": 2896,
+      "clientFiles": 3242
+    },
+    "responsive": "SP390・PC1440の車種選択、車両画像、件数付き写真ボタン、写真一覧を実操作で確認",
+    "pythonPass": 7,
+    "localDetailApi": {
+      "total": 2960,
+      "httpAndPhotoCountsPass": 2960,
+      "fail": 0,
+      "scope": "詳細APIと画像枚数の照合。旧画像URLのHTTP全件検査ではない。"
+    }
+  },
+  "limitations": [
+    "公式台帳の589車種の全画像HTTP検証ではない。今回の指摘画像をHTTP・ブラウザー表示で確認。",
+    "ムーヴキャンバス・ネイビーD0488-02は公式の4枚が404で元写真待ち。借用せず未収録を維持。"
+  ]
+}

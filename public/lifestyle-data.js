@@ -172,7 +172,7 @@ export const lifestyleThemes = [
         "imagePosition": "center 68%",
         "filters": {
           "maker": "三菱",
-          "q": "デリカD5"
+          "car": "デリカD:5"
         },
         "label": "デリカD:5の装着写真",
         "scope": "vehicle",

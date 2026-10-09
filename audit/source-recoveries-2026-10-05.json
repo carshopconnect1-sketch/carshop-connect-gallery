@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-05",
+  "scope": "当日取得した現HP全396ページの写真照合から、除外時に失われた2事例を復元。原写真の存在を確認した事例だけ公開用データへ追加。既存HP由来のためNEWを付けない。",
+  "entries": [
+    {
+      "status": "ready",
+      "sourceUrl": "https://refinad.com/portfolio-item/refinad35272-2/",
+      "imageStatus": [
+        200,
+        200
+      ],
+      "case": {
+        "id": "423585552674",
+        "maker": "トヨタ",
+        "car": "SAI（福祉車両）",
+        "brand": "Refinad",
+        "series": "Leather Series",
+        "category": "seatcover",
+        "image": "https://refinad.com/wp-content/uploads/2022/08/4D0C3069-A422-4C41-88A7-217498A6D5A7-1.jpeg.webp",
+        "photoCount": 2,
+        "galleryUrl": "https://refinad.com/portfolio-item/refinad35272-2/",
+        "hasReview": true,
+        "colorName": "ダークブラウン",
+        "colors": [
+          "brown"
+        ],
+        "detail": {
+          "images": [
+            "https://refinad.com/wp-content/uploads/2022/08/4D0C3069-A422-4C41-88A7-217498A6D5A7-1.jpeg.webp",
+            "https://refinad.com/wp-content/uploads/2022/08/938F03E4-CB61-4B13-AB2C-1AD1691F4A0D-1.jpeg.webp"
+          ],
+          "review": "素晴らしいフィット感で、使い込んだ本革のような感じが最初から得られました。Welcabのスライドシートでも問題なく使用できています。",
+          "productUrl": "",
+          "productLinkStatus": "unverified",
+          "productLinkReason": "identity_unresolved",
+          "photoInfo": [
+            {
+              "車両情報": "SAI（福祉車両）",
+              "品番": "T0021-02"
+            }
+          ],
+          "alt": "SAI（福祉車両） Refinad Leather Series ダークブラウン シートカバー装着写真",
+          "sourceFile": "welfare_welfare-cx5.html",
+          "colorSource": "Refinad公式の同一装着写真・本文のカラー欄",
+          "carNote": "SAIの福祉車両への装着例です。メーカーは、福祉車両専用に型取りした製品ではないと案内しています。この写真だけで適合を判断せず、購入前に専門スタッフへ確認してください。",
+          "sourceCorrection": "保存ファイル名のCX-5から車種を判断せず、同一写真と公式本文でSAIと確認して復元。",
+          "sourceMetadata": {
+            "url": "https://refinad.com/portfolio-item/refinad35272-2/",
+            "checkedAt": "2026-10-05",
+            "officialColor": "ダークブラウン",
+            "officialCode": "T0021-02",
+            "verifiedImages": [
+              "https://refinad.com/wp-content/uploads/2022/08/4D0C3069-A422-4C41-88A7-217498A6D5A7-1.jpeg.webp",
+              "https://refinad.com/wp-content/uploads/2022/08/938F03E4-CB61-4B13-AB2C-1AD1691F4A0D-1.jpeg.webp"
+            ]
+          },
+          "originalReview": "素晴らしいフィット感で使い込んだ本革の様な感じが最初から得られました。 Welcabスライドシートにも無問題です。"
+        }
+      }
+    },
+    {
+      "status": "waiting_for_original_photos",
+      "caseId": "164ad9df7087",
+      "sourceUrl": "https://refinad.com/portfolio-item/refinad77863/",
+      "maker": "ダイハツ",
+      "car": "ムーヴキャンバス",
+      "brand": "Refinad",
+      "series": "Leather Deluxe Series",
+      "code": "D0488-02",
+      "colorName": "ネイビー",
+      "images": [
+        "https://refinad.com/wp-content/uploads/2025/05/IMG_3359.jpeg",
+        "https://refinad.com/wp-content/uploads/2025/05/IMG_3361.jpeg",
+        "https://refinad.com/wp-content/uploads/2025/05/IMG_3360.jpeg",
+        "https://refinad.com/wp-content/uploads/2025/05/IMG_3362.jpeg"
+      ],
+      "imageStatus": [
+        404,
+        404,
+        404,
+        404
+      ],
+      "review": "装着には、そこそこの力が必要でしたが、ぴったりと装着できたおかげで高級感がでました。 ネイビーのカラーも良かったです。取り付けにソケットレンチが必要とは知らず、はずしたまましばらく放置となってしまいましたが、やっと装着完了し、できばえに満足しています。",
+      "reason": "公式画像4枚と同名WebP/JPGが404。公式公開メディア検索と元投稿への添付検索に該当なし。共有素材のファイル名検索にも該当なし。別の装着写真を代用しない。"
+    }
+  ]
+}

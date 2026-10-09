@@ -2,10 +2,69 @@
 from copy import deepcopy
 import json
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_PATH = ROOT / 'audit/yellow-color-review-2026-10-01.json'
 COLOR_REVIEW_PATH = ROOT / 'audit/all-color-review-2026-10-02.json'
+RECOVERY_PATH = ROOT / 'audit/source-recoveries-2026-10-05.json'
+VEHICLE_REVIEW_PATH = ROOT / 'audit/vehicle-identity-2026-10-06.json'
+
+
+def apply_vehicle_metadata_corrections(cases, require_all=True):
+    """Replace copied chassis/SKU fields only for reviewed, identical photo sets."""
+    review = json.loads(VEHICLE_REVIEW_PATH.read_text(encoding='utf-8'))
+    corrections = {row['caseId']: row for row in review['metadataCorrections']}
+    seen = set()
+    for case in cases:
+        entry = corrections.get(case['id'])
+        if not entry:
+            continue
+        detail = case['detail']
+        if case['brand'] != entry['brand'] or detail['images'] != entry['verifiedImages']:
+            raise ValueError(f'Vehicle metadata correction no longer matches photos: {case["id"]}')
+        if detail['photoInfo'] not in (entry['originalPhotoInfo'], entry['photoInfo']):
+            raise ValueError(f'Vehicle metadata changed; review before replacing: {case["id"]}')
+        detail.setdefault('originalPhotoInfo', deepcopy(entry['originalPhotoInfo']))
+        detail['photoInfo'] = deepcopy(entry['photoInfo'])
+        detail['vehicleMetadataSource'] = {
+            'url': entry['sourceUrl'], 'checkedAt': review['checkedAt'],
+            'reason': entry['reason'], 'verifiedImages': entry['verifiedImages'],
+        }
+        seen.add(case['id'])
+    if require_all and seen != set(corrections):
+        raise ValueError(f'Missing reviewed vehicle cases: {sorted(set(corrections) - seen)}')
+    return seen
+
+
+def apply_source_recoveries(cases):
+    """Restore audited exclusions only when the original photographs are available."""
+    if not RECOVERY_PATH.is_file():
+        return 0
+    recovery = json.loads(RECOVERY_PATH.read_text(encoding='utf-8'))
+    added = 0
+    for entry in recovery['entries']:
+        if entry['status'] != 'ready':
+            continue
+        case = deepcopy(entry['case'])
+        images = case['detail']['images']
+        if not images or case['photoCount'] != len(images) or entry['imageStatus'] != [200] * len(images):
+            raise ValueError(f'Recovery photographs have not been verified: {case["id"]}')
+        if any(urlsplit(image).scheme != 'https' or urlsplit(image).hostname != 'refinad.com' for image in images):
+            raise ValueError(f'Untrusted recovery image: {case["id"]}')
+        existing = next((item for item in cases if item['id'] == case['id']), None)
+        if existing:
+            if existing != case:
+                raise ValueError(f'Recovery conflicts with an existing case: {case["id"]}')
+            continue
+        if any(case['image'] in item['detail']['images'] for item in cases):
+            raise ValueError(f'Recovery duplicates an existing photograph: {case["id"]}')
+        # These were already on the old shop; migration must not mark them NEW.
+        if case.get('firstPublishedAt'):
+            raise ValueError(f'Legacy recovery cannot reset the NEW date: {case["id"]}')
+        cases.append(case)
+        added += 1
+    return added
 
 
 def apply_source_corrections(cases, require_all=True):

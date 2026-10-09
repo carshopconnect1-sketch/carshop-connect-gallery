@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/design-polish.css">
   <link rel="stylesheet" href="/owner-stories.css">
   <link rel="stylesheet" href="/fitment.css">
+  <link rel="stylesheet" href="/reviews.css">
 </head>
 <body>
   <a class="skip-link" href="#results">装着写真へ進む</a>
@@ -59,7 +60,7 @@
       </div>
       <div class="hero-video-tools"><span>SEAT COVER GALLERY</span></div>
     </section>
-    <div class="gallery-intro wrap"><p>GALLERY <span>/</span> 装着ギャラリー</p><p><strong id="totalCases">—</strong> 件の装着事例 <span class="vehicle-count"><span class="intro-dot">·</span> <span id="totalCars">—</span> 車種・仕様</span></p></div>
+    <div class="gallery-intro wrap"><p>GALLERY <span>/</span> 装着ギャラリー</p><p><strong id="totalCases">—</strong> 件の装着事例 <span class="vehicle-count"><span class="intro-dot">·</span> <span id="totalCars">—</span> 車種・仕様</span> <span class="new-case-summary" id="newCaseSummary" hidden></span></p></div>
     <section class="inspiration" id="inspiration" aria-labelledby="inspiration-title" hidden>
       <div class="inspiration-heading wrap">
         <div class="section-title-block"><p class="section-kicker">DISCOVER BY CAR</p><h2 id="inspiration-title">SEAT COVER GALLERY</h2><p class="section-description">車種から装着写真を探す</p></div>
@@ -82,6 +83,7 @@
     </section>
     <section class="finder wrap" id="finder" aria-labelledby="finder-title">
       <div class="section-head finder-heading"><div class="section-title-block"><p class="section-kicker">FIND YOUR INTERIOR</p><h2 id="finder-title"><span>装着写真を</span><wbr><span>絞り込み検索</span></h2></div><button type="button" class="keyword-toggle" id="keywordToggle" aria-controls="keywordSearch" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>キーワード検索</span></button></div>
+      <p class="review-entry"><a id="reviewEntry" href="/?review=1#photoResults">お客様の装着レビューを見る</a></p>
       <div id="filterWorkbench" class="filter-workbench" tabindex="-1">
         <div class="search-row" id="keywordSearch" hidden><form id="searchForm" role="search"><label class="sr-only" for="keyword">車種名・ブランド・シリーズ・色名を検索</label><input id="keyword" type="search" placeholder="例：ジムニー、マカロン、ベージュ" autocomplete="off"><button type="submit">検索</button></form></div>
         <p class="finder-filter-label" id="finder-filter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg><span>条件を選ぶ</span></p>
@@ -111,7 +113,16 @@
         </div>
         <div class="finder-submit" id="finderSubmit"><div class="finder-action" id="finderAction"><p id="inlineCount" class="sr-only" role="status">装着写真を読み込んでいます…</p><button type="button" class="primary" id="showPhotos">写真を見る ↓</button></div></div>
       </div>
-      <div class="results-area" id="results" tabindex="-1"><div class="result-toolbar" id="photoResults" tabindex="-1"><div><p><strong id="resultCount">—</strong> <span>件の装着写真</span></p><p class="results-summary" id="resultsSummary">すべての装着写真</p></div><button type="button" class="secondary edit-filters" data-edit-filters>絞り込みを変更 ↑</button></div><div id="loading" class="loading">装着写真を読み込んでいます…</div><div class="empty-state" id="emptyState" hidden><span>NO RESULTS</span><h3>条件に合う装着写真がありません。</h3><p>選択した条件を減らすと、写真が見つかることがあります。</p><div id="emptyRecoveryOptions" class="recovery-options"></div><button class="primary" id="resetEmpty">条件をすべて解除する →</button></div><div class="photo-grid" id="photoGrid"></div><div class="load-more-wrap" id="loadMoreWrap" hidden><p id="shownCount"></p><button id="loadMore" class="secondary">もっと装着写真を見る <span>＋</span></button></div></div>
+      <div class="results-area" id="results" tabindex="-1">
+        <div class="result-toolbar" id="photoResults" tabindex="-1">
+          <div class="gallery-view-switch" role="group" aria-label="表示する内容"><button type="button" data-review-view="photos" aria-pressed="true">装着写真</button><button type="button" data-review-view="reviews" aria-pressed="false">お客様の装着レビュー</button></div>
+          <div><p><strong id="resultCount">—</strong> <span id="resultUnit">件の装着写真</span></p><p class="results-summary" id="resultsSummary">すべての装着写真</p></div><button type="button" class="secondary edit-filters" data-edit-filters>絞り込みを変更 ↑</button>
+        </div>
+        <p id="reviewIntro" class="review-intro" hidden>実際に装着されたお客様の感想をご紹介します。掲載にあたり、感想部分を抜粋し、読みやすいように表記・改行を整えています。</p>
+        <div id="loading" class="loading">装着写真を読み込んでいます…</div>
+        <div class="empty-state" id="emptyState" hidden><span>NO RESULTS</span><h3 id="emptyTitle">条件に合う装着写真がありません。</h3><p id="emptyHelp">選択した条件を減らすと、写真が見つかることがあります。</p><div id="emptyRecoveryOptions" class="recovery-options"></div><button class="primary" id="resetEmpty">条件をすべて解除する →</button></div>
+        <div class="photo-grid" id="photoGrid"></div><div class="load-more-wrap" id="loadMoreWrap" hidden><p id="shownCount"></p><button id="loadMore" class="secondary">もっと装着写真を見る <span>＋</span></button></div>
+      </div>
     </section>
     <section class="support-section"><div class="wrap support-inner"><div><div class="eyebrow red">BEFORE YOU CHOOSE</div><h2>その一枚を、<br>安心して選ぶために。</h2></div><div class="support-links"><a href="https://seatcover.jp/support/matchform/"><span><strong>愛車への適合を相談する</strong><small>年式・型式・グレードをもとに、専門スタッフが確認。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/inquiry_renewal.html"><span><strong>生地サンプルを取り寄せる</strong><small>画面ではわからない色味や手触りを、購入前に。</small></span><b>↗</b></a><a href="https://seatcover.jp/f/installation_renewal.html"><span><strong>取付けガイドを見る</strong><small>写真と動画で、装着の手順を確認。</small></span><b>↗</b></a></div></div></section>
     <section class="gallery-about wrap" id="galleryAbout" aria-labelledby="gallery-about-title">
