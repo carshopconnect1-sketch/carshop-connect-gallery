@@ -120,3 +120,9 @@ Node69テスト、check、build、SP390/PC1440実操作確認済み。4180のPID
 - 新着64事例はpublic/data/mail-publications.jsonの公開済みスナップショットを配信。下書き・メール原本・受注CSV・スタッフメモを含めない。NEW初回日を移行や再編集で変えない。
 - 元画像と比較PNGはローカル保全し、最終補正版のWebPのみを配信。情報非表示対象は元写真への外部リンクを抑止。
 - 最終公開記録は.deploy/photo-replacement-20261009.json、証跡は.preview/photo-replacement-20261009/。取得不可7枚・旧移行保留1件は解消したと扱わない。自動巡回・他セクションは再開しない。
+
+同日完了：既存Sites owner/publicのversion13、deployment `appgdep_6ac87accea008191abe9f45ddd8f836b` succeeded。公開source `c15729bf04686a29f4b310d3d9d46769bb7a90e2` は現在のoriginへpush済み、GitHubと旧Sitesは未push。公開で補正1,458枚・988詳細・一覧を含む2,916画像ハッシュ、新着64詳細・221配信画像を確認。共有ギャラリーは2,960事例、NEW初回日を維持。最新の公開元はgallery-next、gallery-publishは今回使用していない。4180/PID26372、比較4183/PID68232を維持。元解像度の承認PNGと元写真を保全。詳細はCHECKPOINTとaudit/photo-replacement-2026-10-09.md。公開後の完了記録はローカル資料追記で、配信済みsourceと区別する。
+
+## 最新: プログラマーへのGitHub引き継ぎ（2026-10-09）
+
+後続の「コミットPUSH、プログラマーに渡す」により、既存github/mainへ補正画像・新着配信画像・ソース・完了資料を保存する。入口はPROGRAMMER_HANDOFF.md、現在のWorker梱包はDEPLOY.mdとscripts/package-site.ps1。Git内の詳細写真は1,679枚、その他8,675枚分は現HP等のURL参照。全原画像がGit内にあると説明しない。原本・比較PNG／ZIP・受注CSV・CMS実DBは除外し保全。今回のGitHub保存用SHAと、共有公開version13のsource c15729bf04686a29f4b310d3d9d46769bb7a90e2を区別する。上記「GitHub未push／資料はローカル追記」は写真公開直後の履歴。今回の送信先はgithub、Sites originへの再PUSH／再デプロイは含めない。

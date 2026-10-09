@@ -1,8 +1,12 @@
 # CONNECT 装着ギャラリー 新案
 
+プログラマー向けの入口は [PROGRAMMER_HANDOFF.md](PROGRAMMER_HANDOFF.md)。起動・構成・画像の受け渡し・共有公開状態・残っている確認事項をまとめています。
+
 - 公開サイト: https://carshop-connect-gallery-renewal.masaruharuyama.chatgpt.site/
 - GitHub: https://github.com/carshopconnect1-sketch/carshop-connect-gallery （公開・`main`）
 - GitHubへ保存: `git push github HEAD:main`。サイトの公開手順は [DEPLOY.md](DEPLOY.md) を参照。
+
+最新（2026-10-09）：承認済み補正1,458枚／988事例を一覧・詳細へ差し替え、既存Sitesのversion13へ反映済み。公開2,960事例・新着64事例の初回日を保持。37枚の情報非表示も適用済み。元画像・補正PNGと比較レポートをローカルに保管。[差し替え記録](audit/photo-replacement-2026-10-09.md)と `.deploy/photo-replacement-20261009.json` を優先。今回の公開元はgallery-next、gallery-publishは使用していない。
 
 2026-09-14。ユーザーの「一個まえがよかった」に合わせ、新TOP（4177の確認画面／実体4173）の書体・白背景を使う案へ戻し、動画は現行ギャラリーのものに差し替えた、検索・詳細閲覧ができるローカル制作プレビュー。
 

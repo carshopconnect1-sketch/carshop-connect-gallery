@@ -686,3 +686,21 @@ AI補正は画素の再生成であり、細かな色・織り・縫製・模様
 - 新着64事例はpublic/data/mail-publications.jsonの公開済みスナップショットを配信。下書き・メール原本・受注CSV・スタッフメモを含めない。NEW初回日を移行や再編集で変えない。
 - 元画像と比較PNGはローカル保全し、最終補正版のWebPのみを配信。情報非表示対象は元写真への外部リンクを抑止。
 - 最終公開記録は.deploy/photo-replacement-20261009.json、証跡は.preview/photo-replacement-20261009/。取得不可7枚・旧移行保留1件は解消したと扱わない。自動巡回・他セクションは再開しない。
+
+### 2026-10-09 写真差し替え・共有反映完了
+
+- 既存Sites owner/publicを維持し、version13／deployment `appgdep_6ac87accea008191abe9f45ddd8f836b` は05:27:00UTCにsucceeded。同じ共有URL。公開source `c15729bf04686a29f4b310d3d9d46769bb7a90e2` はSites originのmainへpush済み。GitHub githubと旧sites-previousへは今回pushしていない。
+- 承認済み1,458枚／988事例と一覧用480px画像を差し替え。37枚の情報非表示版も適用。公開用は長辺1,200px・WebP品質82。元解像度のPNGと元写真、以前の配信変換・ZIPはローカル保全。
+- 共有版は2,960事例。掲載同意確認済み新着64事例・256枚を配信（補正35枚、形式変換221枚）。初回日・コメント・写真順・枚数を保持。非公開メール・受注CSV・スタッフ認証を配信しない。
+- 76テスト、構文チェック、共有ビルド成功。公開URLで988詳細・補正／一覧画像2,916経路のSHA256一致、221メール配信画像と64詳細の一致を確認。PC実ブラウザーでデリカ117件、補正画像の読込、写真5/5、横はみ出し0、最新エラー／警告0を確認。
+- ローカル4180を所属確認後に必要な再起動、PID26372。比較4183/PID68232、別プロジェクト4177・4182を維持。両ギャラリーサーバーは返答後も停止しない。
+- 展開後256MiB制限を検証し234,444,800bytesに収めた。公式source helperによるcommit/push後、Windowsで起動できない梱包部分だけnative tarで代替。記録はpackage-verification.json、live-verification.json、mail-live-verification.jsonとpublic-delica-detail.png。
+- README・AGENTS・CHECKPOINT・差し替え監査メモの完了記録は公開後のローカル追記。配信された写真／Worker／データは上記source。取得不可7枚・旧移行保留1件は未解決のまま。
+
+## 2026-10-09 プログラマー向けGit保存
+
+- ユーザーの「コミットPUSH、プログラマーに渡す」に対応する保存対象は、前記4資料の完了記録、PROGRAMMER_HANDOFF.md、Worker構成に更新したDEPLOY.md、Windowsの配信梱包用scripts/package-site.ps1。既存GitHubのgithub/mainへ、Sitesに保存済みの写真差し替え3コミットと一緒に渡す。
+- 画像の受け渡しは補正写真1,458枚＋新着の未補正配信写真221枚＝詳細写真1,679実ファイルと一覧用画像。その他の既存写真8,675枚分は現HP等の外部URL参照。ギャラリー画像フォルダーの追跡ファイル3,161件を確認。原本PNG・比較ZIP・受注CSV・CMS実DBは除外を維持。
+- Node24.14.1で76テスト、構文チェック、Workerビルド成功。空のローカルCMSで2,960事例・新着64・全10,354写真の対応とGit内1,679実ファイルの存在を検証。個人データ・既存CMSを使用せず、新しいPCで取得する場合の読み込みを確認した。
+- 新しい梱包スクリプトの実行成功。圧縮217,724,839bytes、展開234,444,800bytes、6,485経路。Worker・設定・静的配信・SQLを収録し、照合用JSON等を配信から除外。証跡は.preview/programmer-handoff-20261009/と.deploy/programmer-handoff-qa-20261009.tar.gz.json。
+- 今回はGitHub保存とプログラマーへの引き継ぎ。共有公開はversion13／source c15729bf04686a29f4b310d3d9d46769bb7a90e2を維持し、Sites originと旧sites-previousへ追加PUSH／再デプロイしない。プレビュー4180・4183を維持。
